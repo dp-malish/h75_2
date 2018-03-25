@@ -1,0 +1,104 @@
+h1,h2,h3,h4{margin:4px 7px 4px;font-family:"Monotype Corsiva"}
+h1{font-size:35px}
+h2{font-size:30px}
+h3{font-size:25px}
+h4{font-size:20px}
+.colorhed,.menu_title{
+    font:25px "Monotype Corsiva";
+}
+p,ol,ul,ul li{margin:5px}
+ul{list-style:none}
+
+
+.fon,.fon_c{margin:0 0 7px}
+@media screen and (max-width: 920px){.fon,.fon_c{margin:0 0 7px}}
+#l_col .fon,#l_col .fon_c,#r_col .fon,#r_col .fon_c{margin:0 0 7px}
+
+@media screen and (max-width:800px){
+    .hfc,.hsc{display:none}
+}
+
+
+
+.preview{
+    position:relative;
+    min-width:230px;
+    max-width:360px;
+    /*border:#353535 dotted thin;*/
+    margin:9px 2px;
+    box-sizing:border-box;
+}
+@media screen and (min-width:920px) and (max-width:1020px){
+    .preview{max-width:320px}
+}
+@media screen and (min-width:871px) and (max-width:919px){
+    .preview{max-width:300px}
+}
+@media screen and (min-width:835px) and (max-width:870px){
+    .preview{max-width:280px}
+}
+@media screen and (min-width:200px) and (max-width:870px){
+    .preview{margin:3px 0}
+}
+.previewbtn{height:38px}
+.btnmore{
+    display:block;
+    width:145px;
+    height:35px;
+    background-color:#000000;
+    text-align:center;
+    line-height:33px;
+    font-size:104%;
+    position:absolute;
+    right:5px;
+    bottom:5px;
+    border-radius:4px;
+}
+.btnmore:hover{background-color:#f78f07}
+a.btnmore:link{color:#ffffff;text-decoration:none}
+a.btnmore:visited{color:#fffff0}
+a.btnmore:hover{color:#696969}
+/*.btnmore a:hover{color:#ff1212;text-decoration:underline;background-color:#1c7a05}*/
+
+
+
+.colorbox{cursor: url(../img/site/colorbox/zoomin.cur),pointer !important;}
+
+/*рекламные блоки*/
+.adsbygoogle{
+    display:inline-block;width:240px;/*height:400px*/
+}
+.caprek{width:322px;margin:0 26px}
+@media screen and (min-width:240px) and (max-width:840px){.caprek{width:322px;margin:0 3px}}
+/*кнопки share*/
+#share .rel{margin:15px 3px}
+#informer{margin:6px 0;display:block}
+
+/*навигация*/
+.nav_link a{margin:0 3px;display:inline-block}
+@media screen and (min-width:240px) and (max-width:780px){.nav_link a{margin:25px 24px}}
+
+.nav1{
+    margin:5px 0;
+    text-align:center;
+}
+.nav1 span{
+    display:inline-block;
+    margin:3px;
+    width:35px;
+    height:38px;
+    background-color:#1e1e1e;
+    color:#FFFFFF;
+    border-radius:6px;
+    line-height:36px;
+    font-size:110%;
+    font-weight:500;
+}
+.nav1 span a{
+    text-decoration:none;
+    display:block;
+    color:#f78f07
+}
+.nav1 span a:hover{
+    color:#ffffff;
+}
