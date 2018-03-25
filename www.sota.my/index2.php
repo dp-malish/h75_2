@@ -39,52 +39,44 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
 
 <body>
 <header>
-    <div class="header rel">
-        <div class="headertop rel" id="getsizehed">
+    <div class="header headerimg rel">
+        <div class="headertop rel">
             <div id="headcontact" class="maxw five_ z01 headerimg">
-                <div id="logo">
-                    <a href="/">
-                        <img src="/img/site/logo.png">
-                    </a>
-                </div>
-
-                <div id="logoname" class="h_field ac">
+                <div id="logoname" class="ac">
                     <h1>Сервисный центр «Cота плюс»</h1>
                 </div>
 
-                <div id="topcontact" class="h_field">
+                <div class="dwf">
 
-                    <div class="dwf">
-
-                        <div id="clock">
-                            <div class="fl clock mt"></div>
-                            <div class="fr five_">
-                                <div class="ac"><span class="grey">пн-пт:</span> 10:00-18:00</div>
-                                <div class="ac"><span class="grey">сб:</span> 10:00-14:00</div>
-                                <div class="ac"><span class="grey">вс:</span> выходной</div>
-                            </div>
-                            <div class="cl"></div>
+                    <div>
+                        <div class="fl clock mt"></div>
+                        <div class="fr five_">
+                            <div class="ac"><span class="grey">пн-пт:</span> 10:00-18:00</div>
+                            <div class="ac"><span class="grey">сб:</span> 10:00-14:00</div>
+                            <div class="ac"><span class="grey">вс:</span> выходной</div>
                         </div>
-                        <div>
-                            <div class="fl tel mt"></div>
-                            <div class="fr five_">
-                                <div class="ac mb">Наши контакты:</div>
-                                <div><span class="grey telcountry">+38</span>(097) 523-77-87</div>
-                                <div><span class="grey telcountry">+38</span>(066) 911-84-44</div>
-                            </div>
-                            <div class="cl"></div>
+                        <div class="cl"></div>
+                    </div>
+                    <div>
+                        <div class="fl tel mt"></div>
+                        <div class="fr five_">
+                            <div class="ac mb">Наши контакты:</div>
+                            <div><span class="grey">+38</span>(097) 523-77-87</div>
+                            <div><span class="grey">+38</span>(066) 911-84-44</div>
                         </div>
-                        <div id="adres">
-                            <div class="fl adres mt"></div>
-                            <div class="fr five_">
-                                <div class="ac mb">Наш адрес:</div>
-                                <div class="ac">г. Мариуполь</div>
-                                <div>пр-т Строителей, 39</div>
-                            </div>
-                            <div class="cl"></div>
+                        <div class="cl"></div>
+                    </div>
+                    <div>
+                        <div class="fl adress mt"></div>
+                        <div class="fr five_">
+                            <div class="ac mb">Наш адрес:</div>
+                            <div class="ac">г. Мариуполь</div>
+                            <div>пр-т Строителей, 39</div>
                         </div>
+                        <div class="cl"></div>
                     </div>
                 </div>
+
 
                 <div class="cl"></div>
             </div>
@@ -94,8 +86,9 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
 
         <script type="text/javascript">
 
+            //document.addEventListener("scroll", function(){
             window.onscroll=function(){
-                if(window.pageYOffset>0&&window.pageYOffset<310&&document.body.clientWidth>800){
+                if(window.pageYOffset>0&&window.pageYOffset<330&&document.body.clientWidth>800){
                     document.getElementById('headcontact').style.position="fixed";
                     document.getElementById('headcontact').style.width="100%";
                     document.getElementById('headcontact').style.margin="auto";
@@ -110,21 +103,34 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
 
 
 
-        <div class="headercen rel">
-            <div class="maxw rel">
-                <div id="main_slider" class="rel">
+        <div class="headercen maxw rel">
+
+            <div class="colorhed" id="logo">
 
 
-                    <img src="/img/site/slider/site.png" alt="Сделать сайт в Мариуполе">
-                    <img src="/img/site/main_slider/jpg.php?i=img2" alt="Психология">
-                    <img src="/img/site/main_slider/jpg.php?i=img3" alt="Лайфхаки">
-                    <img src="/img/site/main_slider/jpg.php?i=img4" alt="Личности">
-                    <div></div>
-                    <span id="btnSlider"><button type="button" value="0">&nbsp;</button><button type="button" value="1">&nbsp;</button><button
-                                type="button" value="2">&nbsp;</button><button type="button"
-                                                                               value="3">&nbsp;</button></span>
+                <div id="logoimg">
+                <a href="/">
+                    <img src="/img/site/logo.png">
+                </a>
                 </div>
+
             </div>
+            <div class="h_field rel gt">
+
+                <div class="maxw rel" id="getsizehed4">
+                    <div id="main_slider" class="rel">
+                        <img src="/img/site/slider/site.png" alt="Мода">
+                        <img src="/img/site/main_slider/jpg.php?i=img2" alt="Психология">
+                        <img src="/img/site/main_slider/jpg.php?i=img3" alt="Лайфхаки">
+                        <img src="/img/site/main_slider/jpg.php?i=img4" alt="Личности">
+                        <div></div>
+                        <span id="btnSlider"><button type="button" value="0">&nbsp;</button><button type="button" value="1">&nbsp;</button><button
+                                    type="button" value="2">&nbsp;</button><button type="button" value="3">&nbsp;</button></span></div>
+                </div>
+
+
+            </div>
+            <div class="cl"></div>
         </div>
 
 
@@ -153,7 +159,6 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
         </div>-->
     </div>
 </header>
-<div class="maxw">
 <p>1</p>
 <p>1</p>
 <p>1</p>
@@ -197,8 +202,8 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
 <p>1</p>
 <p>1</p>
 <p>1</p>
-</div>
+
 <script type="text/javascript">
-    alert(document.getElementById("getsizehed").clientHeight+' высота  '+document.getElementById("getsizehed").clientWidth);
+    //alert(document.getElementById("getsizehed4").clientHeight+' высота  '+document.getElementById("getsizehed4").clientWidth);
 </script>
 </body></html>

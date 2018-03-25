@@ -4,7 +4,7 @@
     max-height:300px;/* можно ограничить по высоте в любых единицах, в т.ч. px(необязательно)*/
     overflow:hidden;/* удалить, если нет max-width, max-height и outline у img*/
     margin:0;
-    border:#ffffff solid 4px;
+    border:#EFEFEF solid 4px;
     box-sizing:border-box;
 }
 #main_slider img{
@@ -19,18 +19,23 @@
     position:relative;
     margin-bottom:27%/*  процент от ширины (тут есть калькулятор) */
 }
+#main_slider img{
+    display: none;
+}
+
 #main_slider img:nth-of-type(1){
-    z-index:2
+    display: block;
 }
 #main_slider button:nth-of-type(1){
     opacity:0.4
 }
 #main_slider button{
+    background-color:#CD7700;
     border-radius:9px;min-width:18px
 }
 #btnSlider{
     position:absolute;
-    right:13px;
+    left:13px;
     bottom:13px;
     z-index:3
 }
