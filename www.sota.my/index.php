@@ -95,42 +95,6 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
         </div>
 
 
-        <script type="text/javascript">
-
-            window.onscroll=function(){
-                if(window.pageYOffset>0&&window.pageYOffset<310&&document.body.clientWidth>800){
-                    document.getElementById('headcontact').style.position="fixed";
-                    document.getElementById('headcontact').style.width="100%";
-                    document.getElementById('headcontact').style.margin="auto";
-                    document.getElementById('headcontact').style.left=0;
-                    document.getElementById('headcontact').style.right=0;
-                }else{
-                    document.getElementById('headcontact').style.position="relative";
-                }
-                //**** burger
-                burger(468);
-            };
-            function burger(posY) {
-                //**** burger
-                if(window.pageYOffset>=posY/*&&document.body.clientWidth>800*/){
-                    //alert(window.pageYOffset);
-                    document.getElementById('burger').style.position="fixed";
-                    document.getElementById('burger').style.float="null";
-                    /*document.getElementById('burger').style.width="100%";
-                    document.getElementById('burger').style.margin="auto";*/
-                    document.getElementById('burger').style.left=0;
-                    document.getElementById('burger').style.top=0;
-
-                }else{
-                    document.getElementById('burger').style.position="relative";
-                    document.getElementById('burger').style.float="left";
-                    /* document.getElementById('headcontact').style.position="relative";*/
-                }
-            }
-
-        </script>
-
-
 
         <div class="headercen rel">
             <div class="maxw rel">
@@ -138,9 +102,9 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
 
 
                     <img src="/img/site/slider/site.png" alt="Сделать сайт в Мариуполе">
-                    <img src="/img/site/main_slider/jpg.php?i=img2" alt="Психология">
+                    <!--<img src="/img/site/main_slider/jpg.php?i=img2" alt="Психология">
                     <img src="/img/site/main_slider/jpg.php?i=img3" alt="Лайфхаки">
-                    <img src="/img/site/main_slider/jpg.php?i=img4" alt="Личности">
+                    <img src="/img/site/main_slider/jpg.php?i=img4" alt="Личности">-->
                     <div></div>
                     <span id="btnSlider"><button type="button" value="0">&nbsp;</button><button type="button" value="1">&nbsp;</button><button
                                 type="button" value="2">&nbsp;</button><button type="button"
@@ -156,48 +120,55 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
 
             <div class="main_menu rel">
                 <div id="burger" class="burger rel">
-                    <div class="rel red">
-                        <div class="burger_line"></div>
-                        <div class="burger_line"></div>
-                        <div class="burger_line"></div>
+                    <div>
+                        <div class="burger_line"></div><div class="burger_line"></div><div class="burger_line"></div>
                     </div>
-                    <div id="burger_menu" class="burger_canvas"></div>
+                    <div id="burger_menu" class="burger_canvas">
+                        <nav>
+                            <ul class="top_menu_m">
+                                <li><a href="#" role="menuitem">Parity</a></li>
+                                <li><a href="#" role="menuitem">Abstract</a></li>
+                                <li><a href="#" role="menuitem">Educated</a></li>
+                                <li><a href="#" role="menuitem">Decorum</a></li>
+                                <li><a href="#" role="menuitem">Tenuous</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-                <div id="div23" class="main_menu_pc green">f545655645465456</div>
+                <div id="main_menu_pc">
+                    <nav>
+                        <ul class="top_menu_pc">
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Shop</a></li>
+                            <li><a href="" class="top_menu_pc_down">Blog</a>
+                                <ul class="top_menu_pc_submenu">
+                                    <li><a href="">Category</a></li>
+                                    <li><a href="">Author</a></li>
+                                    <li><a href="">Archive</a></li>
+                                    <li><a href="">Tags</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="top_menu_pc_down">Portfolio</a>
+                                <ul class="top_menu_pc_submenu">
+                                    <li><a href="">Category</a></li>
+                                    <li><a href="">Author</a></li>
+                                    <li><a href="">Archive</a></li>
+                                    <li><a href="">Tags</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
                 <div class="cl"></div>
             </div>
 
-            <script type="text/javascript">
-
-                document.getElementById("burger").addEventListener('click', function() {
-
-                    if(document.getElementById('burger_menu').clientHeight<1){
-                        burger(0);
-                        var myHeight = window.innerHeight;
-                        //alert(myHeight);
-                        document.getElementById('burger_menu').style.height=myHeight+"px";
-                    document.getElementById('burger_menu').style.width="90px";
-                    }else{
-                        document.getElementById('burger_menu').style.height=0;
-                        document.getElementById('burger_menu').style.width=0;
-                    }
-                    //alert(1);
-                });
-            </script>
+            <script type="text/javascript" src="/js/scroll.js"></script>
 
 
 
-            <div class="overlay">
-                <nav class="overlayMenu">
-                    <ul role="menu">
-                        <li><a href="#" role="menuitem">Parity</a></li>
-                        <li><a href="#" role="menuitem">Abstract</a></li>
-                        <li><a href="#" role="menuitem">Educated</a></li>
-                        <li><a href="#" role="menuitem">Decorum</a></li>
-                        <li><a href="#" role="menuitem">Tenuous</a></li>
-                    </ul>
-                </nav>
-            </div>
+
 
 
 
@@ -213,7 +184,7 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
 
 
 <div class="maxw">
-<p>1</p>
+<p>dfg fdg fg fd gdfghj 1 g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<</p>
 <p>1</p>
 <p>1</p>
 <p>1</p>

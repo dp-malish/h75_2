@@ -1,36 +1,26 @@
 .main_menu{
-    min-height:55px;
+    min-height:50px;
 }
 .burger{
-    height:55px;
+    display: none;
+    height:50px;
     width:55px;
-    float:left;
     background-color:#FC761E;
     border-radius: 0 0 10px 0;
 }
+@media screen  and (max-width:800px){
+    .burger{display:block}
+}
 .burger>div:first-child{
+    background-color:#FC761E;
     position:absolute;
     left:8px;
-    top:5px;
-    height:45px;
+    top:3px;
+    height:35px;
     width:39px;
     cursor:pointer;
     z-index:13;
 }
-.burger_canvas{
-    position: absolute;
-    left:0;
-    top:0;
-    background-color:#FC761E;
-    /*background-color: #520c0e;*/
-    z-index: 12;
-    transition: all 0.4s linear;
-}
-
-.burger>div:hover .burger_line{
-    background-color:#5C4B3F;
-}
-
 .burger_line{
     height:7px;
     margin:6px 0;
@@ -38,10 +28,107 @@
     border-radius:2px;
 
 }
-/****************************/
-.main_menu_pc{
-    float: left;
+.burger>div:hover .burger_line{
+    background-color:#5C4B3F;
+}
+
+
+.burger_canvas{
+
+    position: absolute;
+    left:0;
+    top:0;
+    background-color:#FC761E;
+    z-index: 12;
+    /*transition: width 0.3s;*/
+}
+#burger_menu{
+    display: none;
+}
+
+
+/**********/
+
+
+.top_menu_m{
+
+    display:block;
+    margin-top: 55px;
+
+}
+
+
+
+
+
+
+/***************************************/
+/***************************************/
+/***************************************/
+#main_menu_pc{
     min-height:1px;
-    min-width:440px;
-    max-width:1185px;
+}
+@media screen  and (max-width:800px){
+    #main_menu_pc{display:none;}
+}
+.top_menu_pc{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    backface-visibility: hidden;
+    /*background: rgba(255,255,255,.8);*/
+}
+.top_menu_pc a {
+    display: block;
+    text-decoration: none;
+    outline: none;
+    transition: .4s ease-in-out;
+}
+.top_menu_pc > li {
+    display: inline-block;
+    position: relative;
+}
+
+.top_menu_pc > li > a {
+    font-family:Verdana, sans-serif;
+    height: 35px;
+    line-height: 36px;
+    padding: 0 20px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.top_menu_pc li a:hover {color:#000000}
+
+.top_menu_pc_down:after {
+    content: "\203A";
+    margin-left:7px;
+}
+
+.top_menu_pc_submenu{
+    background: white;
+    border: 2px solid #003559;
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+    width: 190px;
+    transform: perspective(600px) rotateX(-90deg);
+    transform-origin: 0 0;
+    transition: .6s ease-in-out;
+}
+
+.top_menu_pc > li:hover .top_menu_pc_submenu{
+    visibility: visible;
+    opacity: 1;
+    transform: perspective(600px) rotateX(0deg);
+}
+
+.top_menu_pc_submenu li a{
+    color:#000000;
+    font-size: 15px;
+    line-height: 36px;
+    padding: 0 25px;
 }

@@ -103,11 +103,9 @@ html,body{height:100%;
 /************************************************/
 
 .headerbot{
-	box-sizing: border-box;
-	min-height:90px;
-	padding-top:5px;
-	padding-bottom:28px;
-	overflow:hidden;
+	min-height:30px;
+	padding:2px 0;
+	/*overflow:hidden;*/
 	background-color: #FC761E;
 }
 
