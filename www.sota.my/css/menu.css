@@ -1,0 +1,47 @@
+.main_menu{
+    min-height:55px;
+}
+.burger{
+    height:55px;
+    width:55px;
+    float:left;
+    background-color:#FC761E;
+    border-radius: 0 0 10px 0;
+}
+.burger>div:first-child{
+    position:absolute;
+    left:8px;
+    top:5px;
+    height:45px;
+    width:39px;
+    cursor:pointer;
+    z-index:13;
+}
+.burger_canvas{
+    position: absolute;
+    left:0;
+    top:0;
+    background-color:#FC761E;
+    /*background-color: #520c0e;*/
+    z-index: 12;
+    transition: all 0.4s linear;
+}
+
+.burger>div:hover .burger_line{
+    background-color:#5C4B3F;
+}
+
+.burger_line{
+    height:7px;
+    margin:6px 0;
+    background-color:#ffffff;
+    border-radius:2px;
+
+}
+/****************************/
+.main_menu_pc{
+    float: left;
+    min-height:1px;
+    min-width:440px;
+    max-width:1185px;
+}

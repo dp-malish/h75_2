@@ -28,6 +28,9 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
     <link rel="stylesheet" type="text/css" href="/css/common.css">
 
 
+    <link rel="stylesheet" type="text/css" href="/css/menu.css">
+
+
 
 
     <!--<script async src="/js/common.php?v=2"></script>
@@ -41,7 +44,7 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
 <header>
     <div class="header rel">
         <div class="headertop rel" id="getsizehed">
-            <div id="headcontact" class="maxw five_ z01 headerimg">
+            <div id="headcontact" class="maxw five_ headerimg">
                 <div id="logo">
                     <a href="/">
                         <img src="/img/site/logo.png">
@@ -104,7 +107,26 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
                 }else{
                     document.getElementById('headcontact').style.position="relative";
                 }
+                //**** burger
+                burger(468);
             };
+            function burger(posY) {
+                //**** burger
+                if(window.pageYOffset>=posY/*&&document.body.clientWidth>800*/){
+                    //alert(window.pageYOffset);
+                    document.getElementById('burger').style.position="fixed";
+                    document.getElementById('burger').style.float="null";
+                    /*document.getElementById('burger').style.width="100%";
+                    document.getElementById('burger').style.margin="auto";*/
+                    document.getElementById('burger').style.left=0;
+                    document.getElementById('burger').style.top=0;
+
+                }else{
+                    document.getElementById('burger').style.position="relative";
+                    document.getElementById('burger').style.float="left";
+                    /* document.getElementById('headcontact').style.position="relative";*/
+                }
+            }
 
         </script>
 
@@ -127,32 +149,69 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
             </div>
         </div>
 
+        <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>-->
 
-        <!--<div class="headerbot maxw rel">
-            <div id="categories" class="dwfte">
 
-                <div><div class="colorhed"><span><a href="/мода/">Мода</a></span></div><p class="gt">Самые последние модные тренды и бьюти-советы на каждый день для истинной женщины, а также советы по стилю - индивидуальности имиджа.</p>
+        <div class="headerbot maxw rel">
+
+            <div class="main_menu rel">
+                <div id="burger" class="burger rel">
+                    <div class="rel red">
+                        <div class="burger_line"></div>
+                        <div class="burger_line"></div>
+                        <div class="burger_line"></div>
+                    </div>
+                    <div id="burger_menu" class="burger_canvas"></div>
                 </div>
-
-                <div><div class="colorhed"><span><a href="/психология/">Психология</a></span></div><p class="gt">Психология отношений - интересные советы и ответы на неразрешимые вопросы.</p>
-                </div>
-
-                <div><div class="colorhed"><span><a href="/личности/">Личности</a></span></div><p class="gt">Знаменитые личности, повлиявшие на женскую моду. Знаменитости кинематографии и другие не менее интересные личности.</p>
-                </div>
-
-                <div><div class="colorhed"><span><a href="/лайфхаки/">Лайфхаки</a></span></div><p class="gt">Советы, секреты, хитрости, идеи,применяемые в повседневной жизни.</p>
-                </div>
-
-                <div><div class="colorhed"><span><a href="/рецепты-блюд/">Рецепты блюд</a></span></div><p class="gt">Подборка вкусных блюд с подробным описанием и фото для идеальной хозяйки.</p>
-                </div>
-
-                <div><div class="colorhed"><span><a href="/обо-всём/">Обо всём</a></span></div><p class="gt">Разные увлекательные, полезные тематики или Все обо всем.</p>
-                </div>
-
+                <div id="div23" class="main_menu_pc green">f545655645465456</div>
+                <div class="cl"></div>
             </div>
-        </div>-->
+
+            <script type="text/javascript">
+
+                document.getElementById("burger").addEventListener('click', function() {
+
+                    if(document.getElementById('burger_menu').clientHeight<1){
+                        burger(0);
+                        var myHeight = window.innerHeight;
+                        //alert(myHeight);
+                        document.getElementById('burger_menu').style.height=myHeight+"px";
+                    document.getElementById('burger_menu').style.width="90px";
+                    }else{
+                        document.getElementById('burger_menu').style.height=0;
+                        document.getElementById('burger_menu').style.width=0;
+                    }
+                    //alert(1);
+                });
+            </script>
+
+
+
+            <div class="overlay">
+                <nav class="overlayMenu">
+                    <ul role="menu">
+                        <li><a href="#" role="menuitem">Parity</a></li>
+                        <li><a href="#" role="menuitem">Abstract</a></li>
+                        <li><a href="#" role="menuitem">Educated</a></li>
+                        <li><a href="#" role="menuitem">Decorum</a></li>
+                        <li><a href="#" role="menuitem">Tenuous</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+
+
+
+
+
+        </div>
     </div>
 </header>
+
+
+
+
 <div class="maxw">
 <p>1</p>
 <p>1</p>
@@ -199,6 +258,6 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
 <p>1</p>
 </div>
 <script type="text/javascript">
-    alert(document.getElementById("getsizehed").clientHeight+' высота  '+document.getElementById("getsizehed").clientWidth);
+    //alert(document.getElementById("div23").clientHeight+' высота  '+document.getElementById("getsizehed").clientWidth);
 </script>
 </body></html>
