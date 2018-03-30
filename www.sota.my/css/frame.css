@@ -16,7 +16,7 @@ html,body{height:100%;
 }
 /*++++++++++++*/
 .headertop{
-	min-height:169px;
+	min-height:100px;
 	border-bottom:#353535 solid thin;
 }
 
