@@ -101,6 +101,7 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
                 <div id="main_slider" class="rel">
 
 
+                    <img src="/img/site/slider/servesniy_centor.png" alt="Сервисный центр Мариуполь">
                     <img src="/img/site/slider/site.png" alt="Сделать сайт в Мариуполе">
                     <!--<img src="/img/site/main_slider/jpg.php?i=img2" alt="Психология">
                     <img src="/img/site/main_slider/jpg.php?i=img3" alt="Лайфхаки">
