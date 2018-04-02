@@ -1,6 +1,10 @@
 <?php
-/*$site=$_SERVER['SERVER_NAME'];$root=$_SERVER['DOCUMENT_ROOT'];
-Error_Reporting(E_ALL & ~E_NOTICE);ini_set('display_errors',1);*/
+/**
+ * Created by PhpStorm.
+ * User: Аватар
+ * Date: 02.04.2018
+ * Time: 23:28
+ */
 
 set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register();
 ?>
@@ -31,10 +35,10 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
     <link rel="stylesheet" type="text/css" href="/css/menu.css">
 
 
-    <script type="text/javascript" src="/js/scroll.js"></script>
+
 
     <!--<script async src="/js/common.php?v=2"></script>
-
+    <script async src="/js/slider.php?v=2"></script>
     <script async src="/js/scroll.php?id=1"></script>-->
 
 
@@ -103,16 +107,17 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
 
                     <img src="/img/site/slider/servesniy_centor.png" alt="Сервисный центр Мариуполь">
                     <img src="/img/site/slider/site.png" alt="Сделать сайт в Мариуполе">
-                    <img src="/img/site/slider/servesniy_centor.png" alt="Сервисный центр Мариуполь">
-                    <img src="/img/site/slider/site.png" alt="Сделать сайт в Мариуполе">
-
+                    <!--<img src="/img/site/main_slider/jpg.php?i=img2" alt="Психология">
+                    <img src="/img/site/main_slider/jpg.php?i=img3" alt="Лайфхаки">
+                    <img src="/img/site/main_slider/jpg.php?i=img4" alt="Личности">-->
                     <div></div>
                     <span id="btnSlider"><button type="button" value="0">&nbsp;</button><button type="button" value="1">&nbsp;</button><button
-                                type="button" value="2">&nbsp;</button><button type="button" value="3">&nbsp;</button></span>
+                            type="button" value="2">&nbsp;</button><button type="button"
+                                                                           value="3">&nbsp;</button></span>
                 </div>
             </div>
         </div>
-        <script async src="/js/slider.js"></script>
+
         <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>-->
 
 
@@ -164,7 +169,7 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
                 <div class="cl"></div>
             </div>
 
-
+            <script type="text/javascript" src="/js/scroll.js"></script>
 
 
 
@@ -184,49 +189,49 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
 
 
 <div class="maxw">
-<p>dfg fdg fg fd gdfghj 1 g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
-<p>1</p>
+    <p>dfg fdg fg fd gdfghj 1 g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
 </div>
 <script type="text/javascript">
     //alert(document.getElementById("div23").clientHeight+' высота  '+document.getElementById("getsizehed").clientWidth);
