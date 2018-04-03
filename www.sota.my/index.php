@@ -31,10 +31,10 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
     <link rel="stylesheet" type="text/css" href="/css/menu.css">
 
 
-    <script type="text/javascript" src="/js/scroll.js"></script>
+
 
     <!--<script async src="/js/common.php?v=2"></script>
-
+<script type="text/javascript" src="/js/scroll.js"></script>
     <script async src="/js/scroll.php?id=1"></script>-->
 
 

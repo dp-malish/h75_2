@@ -26,14 +26,13 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
     <link rel="stylesheet" type="text/css" href="/css/default.css">
     <link rel="stylesheet" type="text/css" href="/css/z-index.css">
 
-    <link rel="stylesheet" type="text/css" href="/css/slider.css">
 
+
+    <!--
     <link rel="stylesheet" type="text/css" href="/css/color.css">
     <link rel="stylesheet" type="text/css" href="/css/common.css">
-
-
     <link rel="stylesheet" type="text/css" href="/css/menu.css">
-
+    -->
 
 
 
@@ -45,147 +44,26 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
 </head>
 
 <body>
-<header>
-    <div class="header rel">
-        <div class="headertop rel" id="getsizehed">
-            <div id="headcontact" class="maxw five_ headerimg">
-                <div id="logo">
-                    <a href="/">
-                        <img src="/img/site/logo.png">
-                    </a>
-                </div>
 
-                <div id="logoname" class="h_field ac">
-                    <h1>Сервисный центр «Cота плюс»</h1>
-                </div>
-
-                <div id="topcontact" class="h_field">
-
-                    <div class="dwf">
-
-                        <div id="clock">
-                            <div class="fl clock mt"></div>
-                            <div class="fr five_">
-                                <div class="ac"><span class="grey">пн-пт:</span> 10:00-18:00</div>
-                                <div class="ac"><span class="grey">сб:</span> 10:00-14:00</div>
-                                <div class="ac"><span class="grey">вс:</span> выходной</div>
-                            </div>
-                            <div class="cl"></div>
-                        </div>
-                        <div>
-                            <div class="fl tel mt"></div>
-                            <div class="fr five_">
-                                <div class="ac mb">Наши контакты:</div>
-                                <div><span class="grey telcountry">+38</span>(097) 523-77-87</div>
-                                <div><span class="grey telcountry">+38</span>(066) 911-84-44</div>
-                            </div>
-                            <div class="cl"></div>
-                        </div>
-                        <div id="adres">
-                            <div class="fl adres mt"></div>
-                            <div class="fr five_">
-                                <div class="ac mb">Наш адрес:</div>
-                                <div class="ac">г. Мариуполь</div>
-                                <div>пр-т Строителей, 39</div>
-                            </div>
-                            <div class="cl"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cl"></div>
-            </div>
-
+<header><div id="header" class="maxw rel">
+        <div class="header_back">
+            <img src="/img/site/jpg.php?i=head">
         </div>
-
-
-
-        <div class="headercen rel">
-            <div class="maxw rel">
-                <div id="main_slider" class="rel">
-
-
-                    <img src="/img/site/slider/servesniy_centor.png" alt="Сервисный центр Мариуполь">
-                    <img src="/img/site/slider/site.png" alt="Сделать сайт в Мариуполе">
-                    <!--<img src="/img/site/main_slider/jpg.php?i=img2" alt="Психология">
-                    <img src="/img/site/main_slider/jpg.php?i=img3" alt="Лайфхаки">
-                    <img src="/img/site/main_slider/jpg.php?i=img4" alt="Личности">-->
-                    <div></div>
-                    <span id="btnSlider"><button type="button" value="0">&nbsp;</button><button type="button" value="1">&nbsp;</button><button
-                            type="button" value="2">&nbsp;</button><button type="button"
-                                                                           value="3">&nbsp;</button></span>
-                </div>
-            </div>
-        </div>
-
-        <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>-->
-
-
-        <div class="headerbot maxw rel">
-
-            <div class="main_menu rel">
-                <div id="burger" class="burger rel">
-                    <div>
-                        <div class="burger_line"></div><div class="burger_line"></div><div class="burger_line"></div>
-                    </div>
-                    <div id="burger_menu" class="burger_canvas">
-                        <nav>
-                            <ul class="top_menu_m">
-                                <li><a href="#" role="menuitem">Parity</a></li>
-                                <li><a href="#" role="menuitem">Abstract</a></li>
-                                <li><a href="#" role="menuitem">Educated</a></li>
-                                <li><a href="#" role="menuitem">Decorum</a></li>
-                                <li><a href="#" role="menuitem">Tenuous</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div id="main_menu_pc">
-                    <nav>
-                        <ul class="top_menu_pc">
-                            <li><a href="">Home</a></li>
-                            <li><a href="">Shop</a></li>
-                            <li><a href="" class="top_menu_pc_down">Blog</a>
-                                <ul class="top_menu_pc_submenu">
-                                    <li><a href="">Category</a></li>
-                                    <li><a href="">Author</a></li>
-                                    <li><a href="">Archive</a></li>
-                                    <li><a href="">Tags</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="" class="top_menu_pc_down">Portfolio</a>
-                                <ul class="top_menu_pc_submenu">
-                                    <li><a href="">Category</a></li>
-                                    <li><a href="">Author</a></li>
-                                    <li><a href="">Archive</a></li>
-                                    <li><a href="">Tags</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="">Contact</a></li>
-                        </ul>
-                    </nav>
-
-                </div>
-                <div class="cl"></div>
-            </div>
-
-            <script type="text/javascript" src="/js/scroll.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-        </div>
+    <div id="logo" class="fl rel">1
+        <!--<a href="/"><img src="/img/site/.php?img=logo" alt=""WinTeH" title="WinTeH"></a>-->
+        <div class="cl"></div>
     </div>
-</header>
+    <div class="h_field">&nbsp;</div>
+    <div class="fon_c h_field ac"><h2>Сервисный центр &laquo;Винтех&raquo;</h2></div>
+    <div class="fon_c h_field">
+        <div class="top_l ac"><strong>Телефоны:</strong><br><div class="inline telkiev">+38 (097) 523-77-87</div><br><div class="inline vodafon">+38 (066) 911-84-44</div></div>
+        <div class="top_c ac"><strong>Наш адрес:</strong><br>г. Мариуполь,<br>пр. Строителей, 39</div>
+        <div class="top_r ac"><strong>Режим работы:</strong><br>пн-пт 10.00-18.00,<br>сб 10.00-14.00</div>
+        <div class="cl"></div></div>
+    <div class="h_field"><div class="cl"></div></div>
+    <div class="cl"></div>
 
-
+</div></header>
 
 
 <div class="maxw">
