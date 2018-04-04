@@ -23,13 +23,13 @@ html,body{height:100%;
 	min-height:100px;
 	border-bottom:#353535 solid thin;
 }
-/*
+
 #logo{
 	float:left;
 	width:13%;
 	text-align: center;
 }
-@media screen and (min-width:1100px) and (max-width:1240px){
+@media screen and (min-width:1100px){
 	#logo{width:14%}
 }
 @media screen and (min-width:1000px) and (max-width:1099px){
@@ -47,7 +47,7 @@ html,body{height:100%;
 @media screen and (max-width:540px){
 	#logo{width:100%}
 }
-
+/*
 .h_field{
 	min-width:240px;
 	max-width:1240px;

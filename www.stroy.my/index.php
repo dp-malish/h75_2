@@ -9,8 +9,7 @@
 set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register();
 ?>
 
-<!doctype html>
-<html lang="ru">
+<!doctype html><html lang="ru">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="author" content="Александр Баранов">
@@ -34,12 +33,9 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
     <link rel="stylesheet" type="text/css" href="/css/menu.css">
     -->
 
-
-
     <!--<script async src="/js/common.php?v=2"></script>
     <script async src="/js/slider.php?v=2"></script>
     <script async src="/js/scroll.php?id=1"></script>-->
-
 
 </head>
 
@@ -49,7 +45,7 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
         <div class="header_back">
             <img src="/img/site/pic.php?i=head">
         </div>
-    <div id="logo" class="fl rel">1
+    <div id="logo" class="fl rel">
         <a href="/"><img src="/img/site/pic.php?i=logo&ep=1" alt="Stroymans" title="Stroymans"></a>-
         <div class="cl"></div>
     </div>
