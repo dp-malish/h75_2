@@ -76,12 +76,7 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
                 </div>
             </div>
 
-
-
-
         </div>
-
-        <!--<div class="header_bbb_d"></div>-->
     </div>
 
 
