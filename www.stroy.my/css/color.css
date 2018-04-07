@@ -1,0 +1,40 @@
+h1,h2,h3,h4,.tegh{color:#000000}
+
+body{background-color:#fefef5}
+
+A:link,.link{color:#5c3317;text-decoration:underline}
+A:active{color:#5c3317}
+A:visited{color:#520c0e}
+A:hover,.link:hover{color:#B2251F;text-decoration:blink}
+
+
+.grey{color: #969696}
+
+
+
+
+
+/***********************************************/
+.red{background-color:#ff0000 }
+.green{background-color: #1c7a05}
+
+
+
+/***********************************************/
+
+
+
+
+
+
+.fon_c,.fon_c0{/*общий фон обводки*/
+	background:#FEFEE4;
+	background:rgba(254,255,244,0.92)
+}
+.border,.fon_c{border:#353535 dotted thin;}
+#foot{
+	background-color:#000000;
+}
+#up{
+	background:#f78f07;
+}

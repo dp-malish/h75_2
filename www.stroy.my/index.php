@@ -27,8 +27,9 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
 
 
 
-    <!--
+
     <link rel="stylesheet" type="text/css" href="/css/color.css">
+    <!--
     <link rel="stylesheet" type="text/css" href="/css/common.css">
     <link rel="stylesheet" type="text/css" href="/css/menu.css">
     -->
@@ -41,29 +42,55 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
 
 <body>
 
-<header><div id="header" class="maxw rel">
-        <div class="header_back">
-            <img src="/img/site/pic.php?i=head">
-        </div>
-    <div id="logo" class="fl rel">
-        <a href="/"><img src="/img/site/pic.php?i=logo&ep=1" alt="Stroymans" title="Stroymans"></a>-
-        <div class="cl"></div>
-    </div>
-    <div class="h_field">&nbsp;</div>
-    <div class="fon_c h_field ac"><h2>Сервисный центр &laquo;Винтех&raquo;</h2></div>
-    <div class="fon_c h_field">
-        <div class="top_l ac"><strong>Телефоны:</strong><br><div class="inline telkiev">+38 (097) 523-77-87</div><br><div class="inline vodafon">+38 (066) 911-84-44</div></div>
-        <div class="top_c ac"><strong>Наш адрес:</strong><br>г. Мариуполь,<br>пр. Строителей, 39</div>
-        <div class="top_r ac"><strong>Режим работы:</strong><br>пн-пт 10.00-18.00,<br>сб 10.00-14.00</div>
-        <div class="cl"></div></div>
-    <div class="h_field"><div class="cl"></div></div>
-    <div class="cl"></div>
+<header>
+    <div id="header" class="maxw rel red">
 
-</div></header>
+        <div class="header_bbb">
+            <div class="header_back">
+                <img src="/img/site/pic.php?i=head">
+            </div>
+
+            <div class="headerbot">
+
+                <div id="logo" class="fl rel">
+                    <a href="/"><img src="/img/site/pic.php?i=logo&ep=1" alt="Stroymans" title="Stroymans"></a>
+                    <div class="cl"></div>
+                </div>
+                <div class="h_field">
+
+                    <div id="top_tel">
+                        <div id="top_tel_pic" class="fl"></div>
+                        <div id="top_tel_text" class="fr">
+
+                            <div>
+                                <span class="grey">+38</span>(067) 621 01 86
+                            </div>
+                            <div>
+                                <span class="grey">+38</span>(097) 778 60 63
+                            </div>
+
+                        </div>
+                        <div class="cl"></div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <!--<div class="header_bbb_d"></div>-->
+    </div>
+
+
+</header>
 
 
 <div class="maxw">
-    <p>dfg fdg fg fd gdfghj 1 g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<</p>
+    <p>dfg fdg fg fd gdfghj 1 g fdg fg fd gdfghj 1
+    </p>
     <p>1</p>
     <p>1</p>
     <p>1</p>
