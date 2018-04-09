@@ -112,6 +112,20 @@ html,body{height:100%;
 
 
 /**************************/
+/**************************/
+#l_col{
+	float:left;
+	width:240px;
+	overflow:hidden
+}
+
+#m_col{
+	min-width:240px;
+	max-width:1000px;
+	overflow:hidden;
+	min-height:1px
+}
+/**************************/
 #r_col,.r_col{
 	width:240px;
 	float:right;
@@ -121,12 +135,14 @@ html,body{height:100%;
 @media screen and (max-width:613px){
 	#r_col,.r_col{width:100%}
 }
-#m_col,.m_col{
+#c_col{
 	min-width:240px;
-	max-width:800px;
+	max-width:760px;
 	overflow:hidden;
 	min-height:1px
 }
+/**************************/
+/**************************/
 /**************************/
 
 

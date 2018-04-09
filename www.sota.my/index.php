@@ -31,11 +31,13 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
     <link rel="stylesheet" type="text/css" href="/css/menu.css">
 
 
+    <script async src="/js/slider.js"></script>
+    <script async src="/js/burger_menu.js"></script>
+    <script async type="text/javascript" src="/js/scroll.js"></script>
 
 
-    <!--<script async src="/js/common.php?v=2"></script>
-<script type="text/javascript" src="/js/scroll.js"></script>
-    <script async src="/js/scroll.php?id=1"></script>-->
+
+    <!--<script async src="/js/common.php?v=2"></script>-->
 
 
 </head>
@@ -112,7 +114,7 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
                 </div>
             </div>
         </div>
-        <script async src="/js/slider.js"></script>
+
         <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>-->
 
 
@@ -138,9 +140,8 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
                 <div id="main_menu_pc">
                     <nav>
                         <ul class="top_menu_pc">
-                            <li><a href="">Home</a></li>
-                            <li><a href="">Shop</a></li>
-                            <li><a href="" class="top_menu_pc_down">Blog</a>
+                            <li><a href="/">Главная</a></li>
+                            <li><a href="" class="top_menu_pc_down">Ремонт</a>
                                 <ul class="top_menu_pc_submenu">
                                     <li><a href="">Category</a></li>
                                     <li><a href="">Author</a></li>
@@ -148,7 +149,7 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
                                     <li><a href="">Tags</a></li>
                                 </ul>
                             </li>
-                            <li><a href="" class="top_menu_pc_down">Portfolio</a>
+                            <li><a href="" class="top_menu_pc_down">Программы</a>
                                 <ul class="top_menu_pc_submenu">
                                     <li><a href="">Category</a></li>
                                     <li><a href="">Author</a></li>
@@ -156,7 +157,16 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
                                     <li><a href="">Tags</a></li>
                                 </ul>
                             </li>
-                            <li><a href="">Contact</a></li>
+                            <li><a href="" class="top_menu_pc_down">Сайты</a>
+                                <ul class="top_menu_pc_submenu">
+                                    <li><a href="">Category</a></li>
+                                    <li><a href="">Author</a></li>
+                                    <li><a href="">Archive</a></li>
+                                    <li><a href="">Tags</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Магазин</a></li>
+                            <li><a href="">Контакты</a></li>
                         </ul>
                     </nav>
 
@@ -180,12 +190,45 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
     </div>
 </header>
 
+<div class="maxw rel">
+    <div id="l_col" class="rel">
+
+        <div class="l_menu rel">
+            <div class="l_menu_title">Математика</div>
+            <nav>
+                <ul>
+                    <li><a href="/математика/соседи-числа/">Соседи числа</a></li>
+                    <li><a href="/математика/сложение/">Сложение</a></li>
+                    <li><a href="/математика/вычитание/">Вычитание</a></li>
+                </ul>
+            </nav>
+        </div>
 
 
+        левая колонка
+        <div class="cl"></div>
+    </div>
+
+    <div id="m_col" class="rel red"><!--Пр кол-->
+        <div id="r_col" class="green">
+            Правая
+            <div class="cl"></div>
+        </div><!--Центр кол-->
+
+        <div id="c_col" class="rel">
+            <main>центр</main>
+            <div class="cl"></div>
+        </div><!--Конец Центр кола-->
+        <div class="cl"></div>
+    </div><!--end m_col-->
+    <div class="cl"></div>
+</div><!--end maxw-->
 
 <div class="maxw">
-<p>dfg fdg fg fd gdfghj 1 g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<g fdg fg fd gdfghj 1<</p>
-<p>1</p>
+
+
+
+<p>dfg fdg fg fd gdfghj 1 g fdg fg fd gdfghj 1 fdg fg fd gdfghj </p>
 <p>1</p>
 <p>1</p>
 <p>1</p>
