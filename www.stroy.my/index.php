@@ -116,16 +116,27 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
 
 
 
-<div class="maxw">
-    <div class="l_col">
+<div class="maxw rel">
+    <div class="l_col rel">
         s
     </div>
-    <div class="m_col">
-        <div class="r_col">
+    <div class="m_col rel">
+        <div class="r_col rel">
             <div class="r_menu">
 
-                <div class="r_menu_btn"></div>
-                <div class="r_menu_btn">4</div>
+                <div class="r_menu_btn">
+                    <a href="">
+                        <img src="/img/site/pic.php?i=krovlya">
+                    </a>
+                </div>
+
+                <div class="r_menu_btn">
+                    <a href="">
+                        <img src="/img/site/pic.php?i=fasad">
+                    </a>
+                </div>
+
+                <div class="r_menu_btn">4iuoi</div>
 
             </div>
 
@@ -134,7 +145,7 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
 
 
         </div>
-        <div class="c_col red">
+        <div class="c_col green">
             s
         </div>
         <div class="cl"></div>
