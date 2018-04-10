@@ -1,6 +1,6 @@
 /*Бурогер меню*/
 .main_menu{
-    min-height:45px;
+    min-height:50px;
     background-color:#FF3334;
 }
 .burger{
@@ -14,7 +14,6 @@
     .burger{display:block}
 }
 .burger>div:first-child{
-    background-color:#FF3334;
     position:absolute;
     left:8px;
     top:3px;
@@ -40,8 +39,8 @@
     position: absolute;
     left:0;
     top:0;
-    background-color:#FC761E;
-    z-index: 12;
+    background-color:#C5E1EC;
+    z-index:12;
     /*transition: width 0.3s;*/
 }
 #burger_menu{
@@ -50,14 +49,15 @@
 
 
 /**********/
+/********** после нажатия на бутер*/
 .top_menu_m{
     list-style: none;
     display:block;
     margin:55px 3px 3px;
     padding: 15px;
-    background: white;
+    background:white;
     width: 203px;
-    box-shadow: 2px 2px 8px rgba(0,0,0,.1);
+    box-shadow: 2px 2px 8px rgba(0,0,0,.2);
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
     border-top: 1px solid rgba(0,0,0,.3);
@@ -83,17 +83,14 @@
     line-height: 16px;
 }
 .top_menu_m a:hover {
-    background:rgba(252,118,30,.9);
+    background:rgba(127, 189, 226,.9);
     color:#ffffff;
 }
+/***************************************/
+/***************************************/
+/***************************************/
+/*#main_menu_pc{min-height:1px}*/
 
-/***************************************/
-/***************************************/
-/***************************************/
-#main_menu_pc{
-    min-height:1px;
-
-}
 @media screen  and (max-width:800px){
     #main_menu_pc{display:none;}
 }
@@ -129,7 +126,7 @@
     white-space:nowrap;
     font-family:Verdana, sans-serif;
     height:100%;
-    line-height:42px;
+    line-height:47px;
     padding: 0 20px;
     font-weight: bold;
     color:#ffffff;
@@ -145,8 +142,9 @@
 
 .top_menu_pc_submenu{
     list-style:none;
-    background: white;
-    border: 2px solid #003559;
+    /*background:#C5E1EC;*/
+    background-color:rgba(197, 225, 236,.95);
+    /*border:1px solid #003559;*/
     position: absolute;
     left: 0;
     visibility: hidden;
@@ -237,4 +235,26 @@
     border-radius:6px;
     width:96%;
 }
+/**************Левое меню конец**************/
 /********************************************/
+/********************************************/
+/********************************************/
+/********************************************/
+/********************************************/
+/********************************************/
+/********************************************/
+/*************Правое меню********************/
+
+.r_menu{
+    margin:3px 0;
+    /*background:#C5E1EC;*/
+    background-color:rgba(197, 225, 236,.5);
+    /*border: 1px solid #003559;*/
+    min-height: 100px;
+}
+.r_menu_btn{
+    margin: 3px;
+    min-height:35px;
+    border: 1px solid #003559;
+    box-shadow: 3px 3px 8px rgba(0,0,0,.3);
+}

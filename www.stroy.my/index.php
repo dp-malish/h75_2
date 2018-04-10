@@ -42,52 +42,39 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
     <script async src="/js/slider.php?v=2"></script>
     <script async src="/js/scroll.php?id=1"></script>-->
 
-</head>
-
-<body>
+</head><body>
 
 <header>
     <div id="header" class="maxw rel">
-
         <div class="header_bbb">
             <div class="header_back">
                 <img src="/img/site/pic.php?i=head">
             </div>
-
             <div class="headerbot">
-
                 <div id="logo" class="fl rel">
                     <a href="/"><img src="/img/site/pic.php?i=logo&ep=1" alt="Stroymans" title="Stroymans"></a>
                     <div class="cl"></div>
                 </div>
                 <div class="h_field">
-
                     <div id="top_tel">
                         <div id="top_tel_pic" class="fl"></div>
                         <div id="top_tel_text" class="fr">
-
                             <div>
                                 <span class="grey">+38</span>(067) 621 01 86
                             </div>
                             <div>
                                 <span class="grey">+38</span>(097) 778 60 63
                             </div>
-
                         </div>
                         <div class="cl"></div>
                     </div>
-
                 </div>
             </div>
-
         </div>
     </div>
-
-
 </header>
 
 <div class="maxw rel">
-
     <div class="main_menu rel">
         <div id="burger" class="burger rel">
             <div>
@@ -96,11 +83,12 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
             <div id="burger_menu" class="burger_canvas">
                 <nav>
                     <ul class="top_menu_m">
-                        <li><a href="#" role="menuitem">Parity</a></li>
-                        <li><a href="#" role="menuitem">Abstract</a></li>
-                        <li><a href="#" role="menuitem">Educated</a></li>
-                        <li><a href="#" role="menuitem">Decorum</a></li>
-                        <li><a href="#" role="menuitem">Tenuous</a></li>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="">О нас</a>
+                        <li><a href="">Контакты</a></li>
+                        <li><a href="">Статьи</a></li>
+                        <li><a href="">Цены</a></li>
+                        <li><a href="">Галерея</a></li>
                     </ul>
                 </nav>
             </div>
@@ -124,13 +112,37 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
         </div>
         <div class="cl"></div>
     </div>
-
-
 </div>
 
 
 
 <div class="maxw">
+    <div class="l_col">
+        s
+    </div>
+    <div class="m_col">
+        <div class="r_col">
+            <div class="r_menu">
+
+                <div class="r_menu_btn"></div>
+                <div class="r_menu_btn">4</div>
+
+            </div>
+
+
+
+
+
+        </div>
+        <div class="c_col red">
+            s
+        </div>
+        <div class="cl"></div>
+    </div>
+    <div class="cl"></div>
+
+
+
     <p>dfg fdg fg fd gdfghj 1 g fdg fg fd gdfghj 1
     </p>
     <p>1</p>
