@@ -126,17 +126,27 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
 
                 <div class="r_menu_btn">
                     <a href="">
-                        <img src="/img/site/pic.php?i=krovlya">
+                        <img src="/img/site/pic.php?i=krovlya" alt="Кровельные работы" title="Кровельные работы">
+                        <div class="down_title">Кровельные работы</div>
                     </a>
                 </div>
 
                 <div class="r_menu_btn">
                     <a href="">
-                        <img src="/img/site/pic.php?i=fasad">
+                        <img src="/img/site/pic.php?i=fasad" alt="Фасадные работы" title="Фасадные работы">
+                        <div class="down_title">Фасадные работы</div>
                     </a>
                 </div>
 
-                <div class="r_menu_btn">4iuoi</div>
+                <div class="r_menu_btn">
+                    <a href="">
+                        <img src="/img/site/pic.php?i=stroy" alt="Строительные работы" title="Строительные работы">
+                        <div class="down_title">Строительные работы</div>
+                    </a>
+                </div>
+
+
+
 
             </div>
 
