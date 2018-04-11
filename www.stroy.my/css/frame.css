@@ -107,7 +107,7 @@ html,body{height:100%;
 	width:240px;
 	overflow:hidden
 }
-@media screen and (max-width:720px){
+@media screen and (max-width:740px){
 	.l_col{width:100%}
 }
 

@@ -1,10 +1,10 @@
-h1,h2,h3,h4,.tegh{color:#000000}
+h1,h2,h3,h4,.tegh{color:#6B3708}
 
 body{background-color:#fefef5}
 
-A:link,.link{color:#5c3317;text-decoration:underline}
+A:link,.link{color:#6B3708;text-decoration:underline}
 A:active{color:#5c3317}
-A:visited{color:#520c0e}
+A:visited{color:#6B3708}
 A:hover,.link:hover{color:#B2251F;text-decoration:blink}
 
 
@@ -33,7 +33,7 @@ A:hover,.link:hover{color:#B2251F;text-decoration:blink}
 }
 .border,.fon_c{border:#353535 dotted thin;}
 #foot{
-	background-color:#000000;
+	background-color:#C5E1EC;
 }
 #up{
 	background:#f78f07;

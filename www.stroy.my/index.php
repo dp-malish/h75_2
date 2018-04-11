@@ -25,16 +25,16 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
     <link rel="stylesheet" type="text/css" href="/css/default.css">
     <link rel="stylesheet" type="text/css" href="/css/z-index.css">
 
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+
     <link rel="stylesheet" type="text/css" href="/css/color.css">
 
     <link rel="stylesheet" type="text/css" href="/css/menu.css">
 
+    <!---->
 
 
-    <!--
-    <link rel="stylesheet" type="text/css" href="/css/common.css">
 
-    -->
 
     <script async src="/js/burger_menu.js"></script>
 
@@ -118,11 +118,38 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
 
 <div class="maxw rel">
     <div class="l_col rel">
-        s
+
+        <div class="l_menu">
+            <div class="l_menu_title">Ремонт квартир</div>
+            <nav>
+                <ul>
+                    <li><a href="">Косметический ремонт</a></li>
+                    <li><a href="">Капитальный ремонт</a></li>
+                    <li><a href="">Комплексный ремонт</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="l_menu">
+            <div class="l_menu_title">Ремонт квартир и домов</div>
+            <nav>
+                <ul>
+                    <li><a href="">Демонтажные работы</a></li>
+                    <li><a href="">Кладка стен / перегородок</a></li>
+                    <li><a href="">Малярные работы</a></li>
+                    <li><a href="">Монтаж гипсокартона</a></li>
+                    <li><a href="">и т.д.</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <div class="cl"></div>
     </div>
     <div class="m_col rel">
         <div class="r_col rel">
             <div class="r_menu">
+                <nav>
 
                 <div class="r_menu_btn">
                     <a href="">
@@ -145,71 +172,72 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
                     </a>
                 </div>
 
+                <div class="r_menu_btn">
+                    <a href="">
+                        <img src="/img/site/pic.php?i=otdelka" alt="Отделочные работы" title="Отделочные работы">
+                        <div class="down_title">Отделочные работы</div>
+                    </a>
+                </div>
 
+                <div class="r_menu_btn">
+                    <a href="">
+                        <img src="/img/site/pic.php?i=kompleks" alt="Комплексные работы" title="Комплексные работы">
+                        <div class="down_title">Комплексные работы</div>
+                    </a>
+                </div>
 
+                <div class="r_menu_btn">
+                    <a href="">
+                        <img src="/img/site/pic.php?i=doma" alt="Строительство домов" title="Строительство домов">
+                        <div class="down_title">Строительство домов</div>
+                    </a>
+                </div>
 
+                    <div class="r_menu_btn">
+                        <a href="">
+                            <img src="/img/site/pic.php?i=uteplenie" alt="Утепление фасадов" title="Утепление фасадов">
+                            <div class="down_title">Утепление фасадов</div>
+                        </a>
+                    </div>
+
+                </nav>
             </div>
 
 
 
-
-
         </div>
-        <div class="c_col green">
-            s
+        <div class="c_col">
+            <main>
+                <h2>Пример</h2>
+                <p>каор  ара вра   орп оарп оапо аовр парп равоп роарп оарвоп ра а павр ав пав апо аоп оа рповаопр оа поаврпоаорпарвправо рпоаврпорав ав рпав прваорпо арвпо раовр поавр поаоарвоп ра а павр ав пав апо аоп оа рповаопр оа поаврпоаорпарвправо рпоаврпорав ав рпав прваорпо арвпо раовр поавр поаоарвоп ра а павр ав пав апо аоп оа рповаопр оа поаврпоаорпарвправо рпоаврпорав ав рпав прваорпо арвпо раовр поавр поаоарвоп ра а павр ав пав апо аоп оа рповаопр оа поаврпоаорпарвправо рпоаврпорав ав рпав прваорпо арвпо раовр поавр поаоарвоп ра а павр ав пав апо аоп оа рповаопр оа поаврпоаорпарвправо рпоаврпорав ав рпав прваорпо арвпо раовр поавр поа</p>
+
+
+            </main>
         </div>
         <div class="cl"></div>
     </div>
     <div class="cl"></div>
-
-
-
-    <p>dfg fdg fg fd gdfghj 1 g fdg fg fd gdfghj 1
-    </p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
-    <p>1</p>
 </div>
-<script type="text/javascript">
-    //alert(document.getElementById("div23").clientHeight+' высота  '+document.getElementById("getsizehed").clientWidth);
-</script>
+
+
+<div id="af"></div>
+<footer>
+
+    <div id="foot">
+
+
+
+
+
+    </div>
+
+
+
+    <div id="bf">
+        <div id="up"> ^ Наверх</div>
+    </div>
+</footer>
+
+
+
 </body></html>
