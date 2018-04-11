@@ -128,11 +128,11 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
                     <div id="burger_menu" class="burger_canvas">
                         <nav>
                             <ul class="top_menu_m">
-                                <li><a href="#" role="menuitem">Parity</a></li>
-                                <li><a href="#" role="menuitem">Abstract</a></li>
-                                <li><a href="#" role="menuitem">Educated</a></li>
-                                <li><a href="#" role="menuitem">Decorum</a></li>
-                                <li><a href="#" role="menuitem">Tenuous</a></li>
+                                <li><a href="#">Parity</a></li>
+                                <li><a href="#">Abstract</a></li>
+                                <li><a href="#">Educated</a></li>
+                                <li><a href="#">Decorum</a></li>
+                                <li><a href="#">Tenuous</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -141,14 +141,7 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
                     <nav>
                         <ul class="top_menu_pc">
                             <li><a href="/">Главная</a></li>
-                            <li><a href="" class="top_menu_pc_down">Ремонт</a>
-                                <ul class="top_menu_pc_submenu">
-                                    <li><a href="">Category</a></li>
-                                    <li><a href="">Author</a></li>
-                                    <li><a href="">Archive</a></li>
-                                    <li><a href="">Tags</a></li>
-                                </ul>
-                            </li>
+
                             <li><a href="" class="top_menu_pc_down">Программы</a>
                                 <ul class="top_menu_pc_submenu">
                                     <li><a href="">Category</a></li>
@@ -157,6 +150,16 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
                                     <li><a href="">Tags</a></li>
                                 </ul>
                             </li>
+
+                            <li><a href="" class="top_menu_pc_down">Ремонт</a>
+                                <ul class="top_menu_pc_submenu">
+                                    <li><a href="">Category</a></li>
+                                    <li><a href="">Author</a></li>
+                                    <li><a href="">Archive</a></li>
+                                    <li><a href="">Tags</a></li>
+                                </ul>
+                            </li>
+
                             <li><a href="" class="top_menu_pc_down">Сайты</a>
                                 <ul class="top_menu_pc_submenu">
                                     <li><a href="">Category</a></li>
@@ -191,9 +194,9 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
 </header>
 
 <div class="maxw rel">
-    <div id="l_col" class="rel">
+    <div class="l_col rel">
 
-        <div class="l_menu rel">
+        <div class="l_menu">
             <div class="l_menu_title">Математика</div>
             <nav>
                 <ul>
@@ -205,12 +208,27 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
         </div>
 
 
-        левая колонка
+        Профилактика<br>
+        Услуги
+
         <div class="cl"></div>
     </div>
 
     <div id="m_col" class="rel red"><!--Пр кол-->
-        <div id="r_col" class="green">
+        <div class="r_col">
+
+            <div class="r_menu">
+                <div class="r_menu_title">Правая математика</div>
+                <nav>
+                    <ul>
+                        <li><a href="/математика/соседи-числа/">Соседи числа</a></li>
+                        <li><a href="/математика/сложение/">Сложение</a></li>
+                        <li><a href="/математика/вычитание/">Вычитание</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
             Правая
             <div class="cl"></div>
         </div><!--Центр кол-->

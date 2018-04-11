@@ -14,13 +14,12 @@ function topContactScroll(){
 }
 
 
-
+window.onresize=function () {
+    document.getElementById('headcontact').style.position="relative";
+};
 window.onscroll=function(){
             topContactScroll();
             //Add function scroll
-
-
-
 };
 
 

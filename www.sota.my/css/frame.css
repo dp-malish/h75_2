@@ -95,7 +95,6 @@ html,body{height:100%;
 
 /************************************************/
 .headercen{
-	/*background-color:#EDEDED;*/
 	background-color:#EFEFEF;
 	border-bottom:#696969 solid thin;
 }
@@ -109,16 +108,19 @@ html,body{height:100%;
 	background-color: #FC761E;
 }
 
-
-
 /**************************/
 /**************************/
-#l_col{
+.l_col{
 	float:left;
 	width:240px;
 	overflow:hidden
 }
-
+@media screen and (max-width:/*495*/735px){
+	.l_col{
+		float: none;
+		width:100%;
+	}
+}
 #m_col{
 	min-width:240px;
 	max-width:1000px;
@@ -126,14 +128,14 @@ html,body{height:100%;
 	min-height:1px
 }
 /**************************/
-#r_col,.r_col{
+.r_col{
 	width:240px;
 	float:right;
 	overflow:hidden;
 	min-height:1px
 }
-@media screen and (max-width:613px){
-	#r_col,.r_col{width:100%}
+@media screen and (max-width:735px){
+	.r_col{width:100%}
 }
 #c_col{
 	min-width:240px;
