@@ -10,31 +10,14 @@ A:hover,.link:hover{color:#B2251F;text-decoration:blink}
 
 .grey{color: #969696}
 
-
-
-
-
-/***********************************************/
-.red{background-color:#ff0000 }
-.green{background-color: #1c7a05}
-
-
-
-/***********************************************/
-
-
-
-
-
-
 .fon_c,.fon_c0{/*общий фон обводки*/
 	background:#FEFEE4;
 	background:rgba(254,255,244,0.92)
 }
-.border,.fon_c{border:#353535 dotted thin;}
+.fon_c{border:#353535 dotted thin;}
 #foot{
-	background-color:#000000;
+	background-color:#EFEFEF;
 }
 #up{
-	background:#f78f07;
+	background:#FC761E;
 }

@@ -234,7 +234,6 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
         <div class="cl"></div>
     </div>
 
-    </div>
 
 
 

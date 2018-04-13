@@ -1,7 +1,7 @@
 
 function burgerClickOpen(){
     document.getElementById('burger').style.position="fixed";
-    document.getElementById('burger_menu').style.display="block";
+    document.getElementById('burger_menu').style.display="blocks";
 
     document.getElementById('burger').style.left=0;
     document.getElementById('burger').style.top=0;
