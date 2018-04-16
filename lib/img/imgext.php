@@ -1,6 +1,9 @@
 <?php
 namespace lib\Img;
-
+/*
+ *
+ *
+ * */
 use lib\Def as Def;
 
 class ImgExt{

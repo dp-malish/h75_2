@@ -4,6 +4,7 @@
 }
 .burger{
     display: none;
+    position: relative;
     height:50px;
     width:55px;
     background-color:#FC761E;

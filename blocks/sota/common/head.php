@@ -25,7 +25,7 @@
 
 
     <script async src="/js/slider.js"></script>
-    <script async src="/js/burger_menu.js"></script>
+    <script async src="/js/burger.js"></script>
     <script async type="text/javascript" src="/js/scroll.js"></script>
 
 

@@ -9,6 +9,7 @@ function burgerClickOpen(){
 
     document.getElementById('burger_menu').style.height=window.innerHeight+"px";
     document.getElementById('burger_menu').style.width="240px";
+    document.getElementById('burger_menu').style.display="block";
 }
 
 function burgerClickClose(){
@@ -20,18 +21,14 @@ function burgerClickClose(){
 
 
 
-
-
-
 window.addEventListener("load", function(){
     try{
         document.getElementById("burger").addEventListener('click', function() {
             if(document.getElementById('burger_menu').clientHeight<1){
-                burgerClickOpen()
-
+                burgerClickOpen();
             }else{
-                burgerClickClose();//burger(468);
+                burgerClickClose();
             }
         });
     }catch(e){}
-}, true);
+},true);

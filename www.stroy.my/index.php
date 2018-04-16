@@ -57,9 +57,3 @@ require'../blocks/stroy/common/body.php';
 
 require'../blocks/stroy/common/footer.php';
 
-
-
-
-
-
-

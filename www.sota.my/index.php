@@ -1,17 +1,18 @@
 <?php
 namespace lib\Def;
 /*
-//$site=$_SERVER['SERVER_NAME'];$root=$_SERVER['DOCUMENT_ROOT'];
-/*Error_Reporting(E_ALL & ~E_NOTICE);ini_set('display_errors',1);*/
+Error_Reporting(E_ALL & ~E_NOTICE);ini_set('display_errors',1);*/
+
 set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register();
 
 
 //echo Opt::COOKIE_SALT;
 
-/*
 
-set_include_path(get_include_path().PATH_SEPARATOR.'../lib'.PATH_SEPARATOR.'../include/taimod'.PATH_SEPARATOR.'../lib/admin');spl_autoload_extensions("_class.php");spl_autoload_register();
-$Cash=new Cache_File('../cache_all/taimod/');$bot=new UserAgent();
+$Cash=new Cache_File('../cache_all/sota/');
+
+/*
+$bot=new UserAgent();
 //if(!$bot->isBot()){include'../blocks/taimod/rek/google.php';}
 
 $set='set';$setAdminCook='lena'.Data::DatePass();

@@ -7,10 +7,8 @@ class Opt{
 	static $protocol='https://';
 	static $site='';
 
-
 	static $css='';
 	static $jscript='';
-
 
 	static $title='';
 	static $description='';
