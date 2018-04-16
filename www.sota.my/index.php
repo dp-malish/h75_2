@@ -6,7 +6,7 @@ namespace lib\Def;
 set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register();
 
 
-echo Opt::COOKIE_SALT;
+//echo Opt::COOKIE_SALT;
 
 /*
 
@@ -29,8 +29,21 @@ if($_SERVER['REQUEST_URI']!='/'){$uri=htmlspecialchars($_SERVER['REQUEST_URI'],E
             }
         }
     }catch(Exception $e){$module='404';}
-}else{$index=1;}if($module=='404'){Route::modul404();}
+}else{$index=1;}if($module=='404'){Route::modul404();}*/
 
-if($index){include'../modul/taimod/main.php';}
-require '../modul/taimod/popular.php';
-require '../blocks/taimod/common/head.php';require '../blocks/taimod/common/header.php';require '../blocks/taimod/common/r_col.php';require '../blocks/taimod/common/body.php';require '../blocks/taimod/common/foot.php';
+//if($index){include'../modul/taimod/main.php';}
+
+
+require '../blocks/sota/menu/burger.php';
+
+
+
+
+require '../blocks/sota/common/head.php';
+
+require '../blocks/sota/common/header.php';
+
+require '../blocks/sota/common/l_col.php';
+
+require '../blocks/sota/common/body.php';
+require '../blocks/sota/common/footer.php';

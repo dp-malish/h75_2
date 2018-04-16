@@ -1,4 +1,5 @@
-<div class="main_menu rel">
+<?php
+$burger='<div class="main_menu rel">
     <div id="burger" class="burger rel">
         <div>
             <div class="burger_line"></div><div class="burger_line"></div><div class="burger_line"></div>
@@ -53,4 +54,4 @@
 
     </div>
     <div class="cl"></div>
-</div>
+</div>';

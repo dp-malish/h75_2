@@ -7,6 +7,15 @@ class Opt{
 	static $protocol='https://';
 	static $site='';
 
+
+	static $css='';
+	static $jscript='';
+
+
+	static $title='';
+	static $description='';
+	static $keywords='';
+
 	static $l_content='';
 	static $main_content='';
 	static $r_content='';
