@@ -1,9 +1,25 @@
 <?php
+/*
+ * construct $dir два вида каталог8а
+ * при $add=false заменяет $dir
+ * при $add=екгу прибавляет к $dir путь
+ */
 namespace lib\Def;
 class Cache_File{
-    protected $dir;
-function __construct($dir='cache_all/'){$this->dir=$dir;}
 
+    protected $dir='../cache_all/';
+
+function __construct($dir=[],$add=false){
+    if(!empty($dir)){
+        if($add){
+            foreach($dir as $v){$this->dir=$this->dir.$v.'/';}
+        }else $this->dir=$dir;
+    }else{
+        if($add){
+            foreach($dir as $v){$this->dir=$this->dir.$v.'/';}
+        }else $this->dir=$dir;
+    }
+}
 
 function IsSetCacheFile($cache_file){$cache_file=$this->dir.$cache_file;
 if(file_exists($cache_file))return file_get_contents($cache_file);else return 0;}

@@ -1,0 +1,33 @@
+h1,h2,h3,h4{margin:7px 4px;text-align:center}
+h1{font-size:35px}
+h2{font-size:30px}
+h3{font-size:25px}
+h4{font-size:20px}
+
+p,ol,ul,ul li{margin:5px}
+ul{list-style:none}
+
+
+.fon,.fon_c{margin:0 0 7px}
+
+.check::before{
+    content:'✔ ';
+}
+.item:hover .check{
+    color: red;
+}
+/*.colorbox{cursor: url(../img/site/colorbox/zoomin.cur),pointer !important;}*/
+
+/*рекламные блоки*/
+.adsbygoogle{
+    display:inline-block;width:240px;/*height:400px*/
+}
+.caprek{width:322px;margin:0 26px}
+@media screen and (min-width:240px) and (max-width:840px){.caprek{width:322px;margin:0 3px}}
+
+
+
+/*кнопки share*/
+#share .rel{margin:15px 3px}
+#informer{margin:6px 0;display:block}
+

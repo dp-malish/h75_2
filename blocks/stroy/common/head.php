@@ -10,22 +10,22 @@
     <link rel="shortcut icon" href="/img/site/ico.png" type="image/png">
 
 
-    <link rel="stylesheet" type="text/css" href="/css/frame.css">
-    <link rel="stylesheet" type="text/css" href="/css/default.css">
-    <link rel="stylesheet" type="text/css" href="/css/z-index.css">
 
+    <!--<link rel="stylesheet" type="text/css" href="/css/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/z-index.css">
+    <link rel="stylesheet" type="text/css" href="/css/frame.css">
     <link rel="stylesheet" type="text/css" href="/css/common.css">
 
-    <link rel="stylesheet" type="text/css" href="/css/color.css">
+    <link rel="stylesheet" type="text/css" href="/css/color.css">-->
 
+
+
+    <link rel="stylesheet" type="text/css" href="/css.php">
     <link rel="stylesheet" type="text/css" href="/css/menu.css">
+      <!--  <script async src="/js/burger.php"></script>-->
 
-
-
-    <script async src="/js/burger.php"></script>
-
-    <!--<script async src="/js/common.php?v=2"></script>
-    <script async src="/js/scroll.php?id=1"></script>-->
+        <!--<script async src="/js/common.php?v=2"></script>
+        <script async src="/js/scroll.php?id=1"></script>-->
 
     <?=$Opt::$jscript.$Opt::$css.'<meta name="description" content="'.$Opt::$description.'"><meta name="keywords" content="'.$Opt::$keywords.'"><title>'.$Opt::$title.'</title>';?>
 

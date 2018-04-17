@@ -12,4 +12,10 @@ class Gzip extends Cache_File{
             if($l_str>2048){header('Content-Encoding: '.$encoding);echo("\x1f\x8b\x08\x00\x00\x00\x00\x00");$f=gzcompress($f,3);
         }}echo $f;
     }
+    protected function CashArrFile($arr_file){//Создать и Вернуть кеш массива файлов
+        ob_start();
+        foreach($arr_file as $v){include $v;}
+        $f=ob_get_contents();ob_end_clean();
+        return $f;
+    }
 }
