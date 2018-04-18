@@ -1,73 +1,77 @@
-/*Бурогер меню*/
-.main_menu{
-    min-height:50px;
-    background-color:#FF3334;
+.main_menu { /*burger*/
+    min-height: 50px;
+    background-color: #FF3334;
 }
-.burger{
+
+.burger {
     display: none;
-    height:50px;
-    width:55px;
-    background-color:#FF3334;
+    height: 50px;
+    width: 55px;
+    background-color: #FF3334;
     border-radius: 0 0 10px 0;
 }
-@media screen  and (max-width:800px){
-    .burger{display:block}
-}
-.burger>div:first-child{
-    position:absolute;
-    left:8px;
-    top:3px;
-    height:35px;
-    width:39px;
-    cursor:pointer;
-    z-index:13;
-}
-.burger_line{
-    height:7px;
-    margin:6px 0;
-    background-color:#ffffff;
-    border-radius:2px;
 
-}
-.burger>div:hover .burger_line{
-    background-color:#5C4B3F;
+@media screen and (max-width: 800px) {
+    .burger {
+        display: block
+    }
 }
 
+.burger > div:first-child {
+    position: absolute;
+    left: 8px;
+    top: 3px;
+    height: 35px;
+    width: 39px;
+    cursor: pointer;
+    z-index: 13;
+}
 
-.burger_canvas{
+.burger_line {
+    height: 7px;
+    margin: 6px 0;
+    background-color: #ffffff;
+    border-radius: 2px;
+
+}
+
+.burger > div:hover .burger_line {
+    background-color: #5C4B3F;
+}
+
+.burger_canvas {
 
     position: absolute;
-    left:0;
-    top:0;
-    background-color:#C5E1EC;
-    z-index:12;
+    left: 0;
+    top: 0;
+    background-color: #C5E1EC;
+    z-index: 12;
     /*transition: width 0.3s;*/
 }
-#burger_menu{
+
+#burger_menu {
     display: none;
 }
 
-
 /**********/
-/********** после нажатия на бутер*/
-.top_menu_m{
+/**********click burger*/
+.top_menu_m {
     list-style: none;
-    display:block;
-    margin:55px 3px 3px;
+    display: block;
+    margin: 55px 3px 3px;
     padding: 15px;
-    background:white;
+    background: white;
     width: 203px;
-    box-shadow: 2px 2px 8px rgba(0,0,0,.2);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .2);
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-    border-top: 1px solid rgba(0,0,0,.3);
+    border-top: 1px solid rgba(0, 0, 0, .3);
 }
 
 .top_menu_m li {
-    margin:7px 0;
-    display:block;
-    background-color:#E4E4E4;
-
+    margin: 7px 0;
+    display: block;
+    background-color: #E4E4E4;
 
 }
 
@@ -75,75 +79,85 @@
     text-decoration: none;
     display: block;
     font-size: 15px;
-    color:#000000;
+    color: #000000;
     padding: 8px 5px 0;
     position: relative;
     transition: .3s linear;
     height: 25px;
     line-height: 16px;
 }
-.top_menu_m a:hover {
-    background:rgba(127, 189, 226,.9);
-    color:#ffffff;
-}
-/***************************************/
-/***************************************/
-/***************************************/
-/*#main_menu_pc{min-height:1px}*/
 
-@media screen  and (max-width:800px){
-    #main_menu_pc{display:none;}
+.top_menu_m a:hover {
+    background: rgba(127, 189, 226, .9);
+    color: #ffffff;
 }
-.top_menu_pc{
+
+/***************************************/
+/***************************************/
+/***************************************/
+
+@media screen and (max-width: 800px) {
+    #main_menu_pc {
+        display: none;
+    }
+}
+
+.top_menu_pc {
     list-style: none;
     margin: 0;
     padding: 0;
     backface-visibility: hidden;
     /*background: rgba(255,255,255,.8);*/
 }
-.top_menu_pc li{margin: 0 2.5%}
+
+.top_menu_pc li {
+    margin: 0 2.5%
+}
 
 .top_menu_pc a {
     margin: 0 10%;
     display: block;
-    text-decoration:none;
+    text-decoration: none;
     outline: none;
     transition: .4s ease-in-out;
 }
 
 .top_menu_pc > li {
-    list-style:none;
+    list-style: none;
     display: inline-block;
     position: relative;
 }
-@media screen  and (max-width:895px){
+
+@media screen and (max-width: 895px){
     .top_menu_pc > li:first-child {
         display: none;
     }
 }
 
 .top_menu_pc > li > a {
-    white-space:nowrap;
-    font-family:Verdana, sans-serif;
-    height:100%;
-    line-height:47px;
+    white-space: nowrap;
+    font-family: Verdana, sans-serif;
+    height: 100%;
+    line-height: 47px;
     padding: 0 20px;
     font-weight: bold;
-    color:#ffffff;
-    text-transform:uppercase;
+    color: #ffffff;
+    text-transform: uppercase;
 }
 
-.top_menu_pc li a:hover {color:#000000}
+.top_menu_pc li a:hover {
+    color: #000000
+}
 
 .top_menu_pc_down:after {
     content: "\203A";
-    margin-left:7px;
+    margin-left: 7px;
 }
 
-.top_menu_pc_submenu{
-    list-style:none;
+.top_menu_pc_submenu {
+    list-style: none;
     /*background:#C5E1EC;*/
-    background-color:rgba(197, 225, 236,.95);
+    background-color: rgba(197, 225, 236, .95);
     /*border:1px solid #003559;*/
     position: absolute;
     left: 0;
@@ -156,21 +170,21 @@
     transition: .6s ease-in-out;
 }
 
-.top_menu_pc > li:hover .top_menu_pc_submenu{
+.top_menu_pc > li:hover .top_menu_pc_submenu {
     visibility: visible;
     opacity: 1;
     transform: perspective(600px) rotateX(0deg);
 }
 
-.top_menu_pc_submenu li a{
+.top_menu_pc_submenu li a {
 
-    color:#000000;
+    color: #000000;
     font-size: 15px;
     line-height: 36px;
     padding: 0 25px;
 }
 
-/***********Бурогер меню конец***************/
+/*****************burger end*****************/
 /********************************************/
 /********************************************/
 /********************************************/
@@ -179,49 +193,60 @@
 /********************************************/
 /********************************************/
 /********************************************/
-/**************Левое меню********************/
+/**************Left menu*********************/
 
-.l_menu{
-    margin:3px 0 13px;
-    padding:3px 2px 1px;
-    background-color:rgba(197,225,236,.5);
-    min-height:100px
-}
-@media screen and (min-width:300px) and (max-width:735px){
-
-    .l_menu{margin:7px 5%}
-}
-.l_menu li{
-    list-style:none;
-    position:relative;
+.l_menu {
+    margin: 3px 0 13px;
+    padding: 3px 2px 1px;
+    background-color: rgba(197, 225, 236, .5);
+    min-height: 100px
 }
 
-.l_menu_title{
-    color:#6B3708;
-    font-size:120%;
-    text-align:center;
-    line-height:40px;/*центрировать вертикально одну строчку */
+@media screen and (min-width: 300px) and (max-width: 735px) {
+
+    .l_menu {
+        margin: 7px 5%
+    }
+}
+
+.l_menu li {
+    list-style: none;
+    position: relative;
+}
+
+.l_menu_title {
+    color: #6B3708;
+    font-size: 120%;
+    text-align: center;
+    line-height: 40px;
 
 }
-.l_menu ul{
-    display:block;
+
+.l_menu ul {
+    display: block;
 }
-.l_menu ul li{
+
+.l_menu ul li {
     margin: 1px 0;
-    border-bottom:#003559 thin solid;
+    border-bottom: #003559 thin solid;
 }
-.l_menu ul li a{
-    display:block;
-    text-decoration:none;
-    line-height:30px;
-    padding:0 2px 0 7px;
+
+.l_menu ul li a {
+    display: block;
+    text-decoration: none;
+    line-height: 30px;
+    padding: 0 2px 0 7px;
     transition: .3s linear;
 }
-@media screen and (max-width:480px){
-    .l_menu ul li a{line-height:45px;font-size:120%}
+
+@media screen and (max-width: 480px) {
+    .l_menu ul li a {
+        line-height: 45px;
+        font-size: 120%
+    }
 }
 
-/**************Левое меню конец**************/
+/*****************Left menu end**************/
 /********************************************/
 /********************************************/
 /********************************************/
@@ -229,34 +254,39 @@
 /********************************************/
 /********************************************/
 /********************************************/
-/*************Правое меню********************/
+/**************Right menu********************/
 
-.r_menu{
-    margin:3px 0;
-    padding:3px 2px 1px;
-    background-color:rgba(197,225,236,.5);
-    min-height:100px
+.r_menu {
+    margin: 3px 0;
+    padding: 3px 2px 1px;
+    background-color: rgba(197, 225, 236, .5);
+    min-height: 100px
 }
-.r_menu_btn{
-    margin:5px 3px 15px;
-    min-height:35px;
-    border:1px solid #003559;
-    box-shadow:3px 3px 8px rgba(0,0,0,.3);
-    border-radius:3px;
+
+.r_menu_btn {
+    margin: 5px 3px 15px;
+    min-height: 35px;
+    border: 1px solid #003559;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, .3);
+    border-radius: 3px;
 }
-.r_menu_btn:hover{
-    box-shadow:4px 3px 8px rgba(0,0,0,.7);
+
+.r_menu_btn:hover {
+    box-shadow: 4px 3px 8px rgba(0, 0, 0, .7);
 }
-.r_menu_btn img{
-    border-radius:4px 4px 0 0;
+
+.r_menu_btn img {
+    border-radius: 4px 4px 0 0;
 }
-.r_menu .down_title{
-    text-align:center;
-    font-size:120%;
-    text-decoration:none;
-    line-height:25px;
-    padding-bottom:3px;
+
+.r_menu .down_title {
+    text-align: center;
+    font-size: 120%;
+    text-decoration: none;
+    line-height: 25px;
+    padding-bottom: 3px;
 }
-.r_menu a{
-    text-decoration:none;
+
+.r_menu a {
+    text-decoration: none;
 }

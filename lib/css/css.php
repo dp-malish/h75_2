@@ -20,10 +20,9 @@ class Css extends Def\Gzip{
         }
     }
 
-
     private function SendCssMono($dir,$all_def){//отправка css без дополнений
+        header('Content-type: text/css; charset: UTF-8');header('Cache-Control: public, max-age=14515200');
         if(file_exists($this->dir.$this->def_f_name.$this->def_f_ext)){
-            header('Content-type: text/css; charset: UTF-8');header('Cache-Control: public, max-age=14515200');
             $this->SendGzip(file_get_contents($this->dir.$this->def_f_name.$this->def_f_ext));
         }else{
             foreach($this->def_css as $v){$arr_file[]='../css/'.$v.'.css';}

@@ -1,8 +1,8 @@
 <?php
 /*
- * construct $dir два вида каталог8а
+ * construct $dir два вида каталога
  * при $add=false заменяет $dir
- * при $add=екгу прибавляет к $dir путь
+ * при $add=true прибавляет к $dir путь
  */
 namespace lib\Def;
 class Cache_File{
