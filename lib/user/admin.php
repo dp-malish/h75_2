@@ -22,9 +22,9 @@ class Admin extends User{
 
   public function loginAdminFormIn($l,$p){$err=false;
     if(\lib\Post\Post::issetPostKey(['name','pass'])){
-      $login=Validator::auditText($_POST['name'],'логин',100);
+      $login=Def\Validator::auditText($_POST['name'],'логин',100);
       if(!$login){$err=true;}
-      $pass=Validator::auditText($_POST['pass'],'пароль',100);
+      $pass=Def\Validator::auditText($_POST['pass'],'пароль',100);
       if(!$pass){$err=true;}
       if(!$err){//добавить как в БД
         if($l!=$login || $p!=$pass){$err=true;}else{$this->setCookieAdminForm($login,$pass);}
