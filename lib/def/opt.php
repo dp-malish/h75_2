@@ -15,6 +15,7 @@ class Opt{
 	static $keywords='';
 
 	static $l_content='';
+	static $l_content_up='';
 	static $main_content='';
 	static $r_content='';
 

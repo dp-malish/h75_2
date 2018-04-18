@@ -34,7 +34,7 @@ class Admin extends User{
   }
   public function loginAdminFormExit(){
     $this->setCookieAdminForm(0,0,0);
-    Route::location();
+    Def\Route::location();
   }
 
 
