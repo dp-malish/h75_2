@@ -3,8 +3,8 @@ try{if($count_uri_parts>3){throw new Exception();}else{
     //all_page
     require'../modul/'.$dir_site.'/admin/common/options.php';//тут выход - он первый
     require'../modul/'.$dir_site.'/admin/common/img.php';
-    /*require'../modul/'.$dir_site.'/admin/common/clear_cache.php';
-    require'../modul/'.$dir_site.'/admin/common/sitemap.php';*/
+    require'../modul/'.$dir_site.'/admin/common/clear_cache.php';
+    require'../modul/'.$dir_site.'/admin/common/sitemap.php';
 
     if(!isset($uri_parts[1])){
         /*$DB=new SQLi();
