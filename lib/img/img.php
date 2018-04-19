@@ -25,7 +25,7 @@ class Img{
      *************/
     //SQL
     static function getImg($id=1,$DBTable='default_img',$font='../../../img/font/Rosamunda Two.ttf'){
-        try{$DB=new SQLi(true);$mob=new UserAgent();$mob=$mob->isMobile();
+        try{$DB=new Def\SQLi(true);$mob=new Def\UserAgent();$mob=$mob->isMobile();
             $res=$DB->strSQL('SELECT png,content FROM '.$DBTable.' WHERE id ='.$DB->realEscapeStr($id));
             if(!$res){self::badImg();}else{
                 ($res['png']=='1')?header('Content-Type: image/png'):header('Content-Type: image/jpeg');

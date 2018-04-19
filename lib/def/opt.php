@@ -6,6 +6,7 @@ class Opt{
 
 	static $protocol='https://';
 	static $site='';
+	static $dir_name_site='';
 
 	static $css='';
 	static $jscript='';
@@ -19,9 +20,10 @@ class Opt{
 	static $main_content='';
 	static $r_content='';
 
-	function __construct(){
+	function __construct($dir_name_site=''){
         self::$protocol=((!empty($_SERVER['HTTPS'])&&$_SERVER['HTTPS']!='off')||$_SERVER['SERVER_PORT']==443)?"https://":"http://";
         self::$site=$_SERVER['SERVER_NAME'];
+        self::$dir_name_site=$dir_name_site;
     }
 
 

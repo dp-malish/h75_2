@@ -5,7 +5,7 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register(
 
 
 
-$Opt=new Opt();//Def opt
+$Opt=new Opt('stroy');//Def opt
 $Cash=new Cache_File(['stroy'],true);
 
 
