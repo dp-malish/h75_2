@@ -2,7 +2,8 @@
     <input type="hidden" name="imgaddext" value="1">
     <select id="tableimg" name="tableimg" onchange="setSection()"><option value="">Выбрать раздел</option>
         <?php
-        for($i=0;$i<count(SqlTable::IMG);$i++){echo'<option value="'.$i.'">'.SqlTable::IMG[$i][1].'</option>';}?>
+        $SqlTable='incl\\'.\lib\Def\Opt::$dir_name_site.'\SqlTable';
+        for($i=0;$i<count($SqlTable::IMG);$i++){echo'<option value="'.$i.'">'.$SqlTable::IMG[$i][1].'</option>';}?>
     </select>
     <input name="imgfiles[]" type="file" multiple required>
     <input type="submit" value="Загрузить (jpg/jpeg/png8)">

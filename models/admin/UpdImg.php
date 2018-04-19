@@ -2,7 +2,8 @@
     <input type="hidden" name="imgupd" value="1">
     <select id="tableimg" name="tableimg"><option value="">Выбрать раздел</option>
         <?php
-        for($i=0;$i<count(SqlTable::IMG);$i++){echo'<option value="'.$i.'">'.SqlTable::IMG[$i][1].'</option>';}?>
+        $SqlTable='incl\\'.\lib\Def\Opt::$dir_name_site.'\SqlTable';
+        for($i=0;$i<count($SqlTable::IMG);$i++){echo'<option value="'.$i.'">'.$SqlTable::IMG[$i][1].'</option>';}?>
     </select>
     <div id="htmlimg" class="ac five"></div>
     <div id="showimg" class="ac scry five"></div><div class="cl"></div>
@@ -23,7 +24,7 @@
                 var sendurl="t="+tableimg.value;
                 ajaxPostSend(sendurl,answerFeedback,true,true,'/img/site/admin.php');
             }else{
-                preView();ranKarusel()
+                preView();ranKarusel();
             }
         }else{showimg.innerHTML="";showimg.style.height="0";karuselimg.innerHTML="";karuselimg.style.height="0";htmlimg.innerHTML="";}
     },false);

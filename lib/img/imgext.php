@@ -15,14 +15,13 @@ class ImgExt{
 
     private static $SqlTable='';
 
-    static function SqlTable(){
+    static function SqlTable(){//костыль для разделения файлов сайтов по папкам incl
             self::$SqlTable='incl\\'.Def\Opt::$dir_name_site.'\SqlTable';
             self::$SqlTable=self::$SqlTable::IMG;
     }
 
 
-
-    static function getImgDir($post){
+    static function getImgDir($post){//взять каталог рисунка /img/site/pic.php?id=
         if(self::$SqlTable=='')self::SqlTable();
         $dir=Def\Validator::html_cod($post);
         $count=count(self::$SqlTable);
@@ -30,7 +29,7 @@ class ImgExt{
         }elseif($count>=0 && $count<$dir){return false;
         }else{return self::$SqlTable[$dir][2];}
     }
-    static function getImgSection($post){
+    static function getImgSection($post){//взять описание каталог рисунка'Общие'
         if(self::$SqlTable=='')self::SqlTable();
         $post=Def\Validator::html_cod($post);
         $count=count(self::$SqlTable);
@@ -38,7 +37,7 @@ class ImgExt{
         }elseif($count>=0 && $count<$post){return false;
         }else{return self::$SqlTable[$post][1];}
     }
-    static function getMaxIdDir($post){
+    static function getMaxIdDir($post){//Узнать максимальное количество картинок в одной таблице БД
         $post=Def\Validator::html_cod($post);
         $table=self::getImgTableName($post);
         if($table){
@@ -49,16 +48,17 @@ class ImgExt{
         }else{Def\Validator::$ErrorForm[]='Ошибочка!';return false;}
     }
     static function getMaxIdDirExt($post){
+      if(self::$SqlTable=='')self::SqlTable();
         $res=false;
         $post=Def\Validator::html_cod($post);
-        $count=count(SqlTable::IMG);
-        for($i=0;$i<$count;$i++){if(SqlTable::IMG[$i][2]==$post)$res=SqlTable::IMG[$i][0];}
-        if($res){$DB=new SQLi(true);
+        $count=count(self::$SqlTable);
+        for($i=0;$i<$count;$i++){if(self::$SqlTable[$i][2]==$post)$res=self::$SqlTable[$i][0];}
+        if($res){$DB=new Def\SQLi(true);
             $res=$DB->intSQL('SELECT id FROM '.$res.' ORDER BY id DESC LIMIT 1');
             if($res)return $res;else{Def\Validator::$ErrorForm[]='Неизвестная ошибка!';return false;}
         }else return false;
     }
-    function insImg($postTable,$postImg,$upd=0){
+    function insImg($postTable,$postImg,$upd=0){//загрузить/обновить картинку
         try{
             $err=false;
             if(\lib\Post\Post::issetPostKey([$postTable]) && !empty($_FILES)){
@@ -93,10 +93,10 @@ class ImgExt{
             return($err)?false:true;
         }catch(Exception $e){return false;}
     }
-    function insImgExt($postTable,$postImg){
+    function insImgExt($postTable,$postImg){//Загрузить группу картинок
         try{
             $err=false;
-            if(PostRequest::issetPostKey([$postTable]) && !empty($_FILES)){
+            if(\lib\Post\Post::issetPostKey([$postTable]) && !empty($_FILES)){
                 $table=self::getImgTableName($_POST[$postTable]);
                 if($table){
                     $count=count($_FILES[$postImg]['name']);
@@ -106,12 +106,12 @@ class ImgExt{
                             if($extFile!==false){
                                 $content=file_get_contents($_FILES[$postImg]['tmp_name'][$i]);
                                 unlink($_FILES[$postImg]['tmp_name'][$i]);
-                                $DB=new SQLi(true);
-                                $file_name=$DB->realEscapeStr(Validator::html_cod($_FILES[$postImg]['name'][$i]));
+                                $DB=new Def\SQLi(true);
+                                $file_name=$DB->realEscapeStr(Def\Validator::html_cod($_FILES[$postImg]['name'][$i]));
                                 $content=$DB->realEscapeStr($content);
                                 if($DB->boolSQL('INSERT INTO '.$table.' VALUES(NULL,'.$file_name.','.$extFile.','.$content.');')){
                                     $this->imgExt[]=$DB->lastId();
-                                }else{Validator::$ErrorForm[]='Ошибка базы данных';}
+                                }else{Def\Validator::$ErrorForm[]='Ошибка базы данных';}
                             }
                         }
                     }
@@ -123,7 +123,7 @@ class ImgExt{
     }
 
 
-    static function getImgTableName($post){
+    static function getImgTableName($post){//Взять название таблицы БД
         if(self::$SqlTable=='')self::SqlTable();
         $table=Def\Validator::html_cod($post);
         $count=count(self::$SqlTable);
@@ -131,7 +131,8 @@ class ImgExt{
         }elseif($count>=0 && $count<$table){Def\Validator::$ErrorForm[]='не таблица';return false;
         }else{return self::$SqlTable[$table][0];}
     }
-    private function auditBlackListImg($postName,$arr=false){$err=false;
+    private function auditBlackListImg($postName,$arr=false){//Проверить валидность запрещённых расширений
+      $err=false;
         foreach($this->badf as $v){
             if($arr===false){
                 if(preg_match("/$v\$/i",$_FILES[$postName]['name'])){Def\Validator::$ErrorForm[]='Вы пытаетесь загрузить недопустимый файл.';$err=true;}
@@ -140,7 +141,8 @@ class ImgExt{
                 }
         }return($err)?false:true;
     }
-    private function getImgExt($postName,$arr=false){$err=false;
+    private function getImgExt($postName,$arr=false){//Узнать расширение загружаемого рисунка
+      $err=false;
         if($arr===false){
             if(substr($_FILES[$postName]['type'],0,5)=='image'){
                 $imgInfo=getimagesize($_FILES[$postName]['tmp_name']);

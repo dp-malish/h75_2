@@ -1,6 +1,5 @@
 <?php
 namespace lib\Def;
-
 use lib\Img as Img;
 
 if(\lib\Post\Post::issetPostArr()){
@@ -11,21 +10,17 @@ if(\lib\Post\Post::issetPostArr()){
         }else{
             if(count(Validator::$ErrorForm)>0)Opt::$main_content .= Validator::$ErrorForm[0];else Opt::$main_content.= 'Неизвестная ошибка...';
         }
-    }
-
-    /*
-    elseif(isset($_POST['imgaddext'])){$img->insImgExt('tableimg','imgfiles');
+    }elseif(isset($_POST['imgaddext'])){$img->insImgExt('tableimg','imgfiles');
         foreach($img->imgExt as $v){
-            Opt::$main_content.='<p>'.Img::getImgDir($_POST['tableimg']).$v.'<div class="ac"><img class="five" src="'.Img::getImgDir($_POST['tableimg']).$v.'" alt="" style="max-width:200px"></div></p>';
+            Opt::$main_content.='<p>'.Img\ImgExt::getImgDir($_POST['tableimg']).$v.'<div class="ac"><img class="five" src="'.Img\ImgExt::getImgDir($_POST['tableimg']).$v.'" alt="" style="max-width:200px"></div></p>';
         }
         if(count(Validator::$ErrorForm)>0){Opt::$main_content.='<br>';foreach(Validator::$ErrorForm as $v){Opt::$main_content.='<p>'.$v.'</p>';}}
     }
     elseif(isset($_POST['imgupd'])){
         if($img->insImg('tableimg','imgfile',$_POST['imgnumber'])){
-            Opt::$main_content.='<div class="fon_c"><p>Изображение обновлено в раздел "'.Img::getImgSection($_POST['tableimg']).'"</p></div><h4>html код:</h4><div class="fon_c"><xmp><img class="five" src="'.Img::getImgDir($_POST['tableimg']).$img->img.'" alt="" title=""></xmp></div><div class="fon_c"><xmp>'.Img::getImgDir($_POST['tableimg']).$img->img.'</xmp></div>';}
+            Opt::$main_content.='<div class="fon_c"><p>Изображение обновлено в раздел "'.Img\ImgExt::getImgSection($_POST['tableimg']).'"</p></div><h4>html код:</h4><div class="fon_c"><xmp><img class="five" src="'.Img\ImgExt::getImgDir($_POST['tableimg']).$img->img.'" alt="" title=""></xmp></div><div class="fon_c"><xmp>'.Img\ImgExt::getImgDir($_POST['tableimg']).''.$img->img.'</xmp></div>';}
         else{if(count(Validator::$ErrorForm)>0)Opt::$main_content.=Validator::$ErrorForm[0];else Opt::$main_content.='Неизвестная ошибка...';}
-    }*/
-
+    }
 }
 if($uri_parts[1]=='картинки'){
     Opt::$main_content.='<div class="fon_c"><h3>Добавить рисунок</h3>'.$Cash->SendHTML('../models/admin/AddImg.php').'</div>';
