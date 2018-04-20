@@ -14,14 +14,14 @@ if(!$user->loginAdmin()){$module='404';}else{
       if($user->loginAdminFormIn($login,$pass)){
         include '../modul/'.$dir_site.'/admin/rout.php';
       }else{
-        Opt::$main_content=$Cash->SendHTML('../models/admin/AdminLogin.php');
+        Opt::$main_content=$Cash->SendHTML('../model/admin/AdminLogin.php');
       }
     }else{
-      Opt::$main_content=$Cash->SendHTML('../models/admin/AdminLogin.php');
+      Opt::$main_content=$Cash->SendHTML('../model/admin/AdminLogin.php');
     }
   }elseif(!$user->loginAdminForm($login,$pass)){//проверка куков формы админа на соответствие
     $user->setCookieAdminForm($login,'',0);
-    Opt::$main_content=$Cash->SendHTML('../models/admin/AdminLogin.php');
+    Opt::$main_content=$Cash->SendHTML('../model/admin/AdminLogin.php');
   }else{//куки впороядке вход
     include '../modul/'.$dir_site.'/admin/rout.php';
   }

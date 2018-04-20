@@ -4,10 +4,8 @@ Error_Reporting(E_ALL & ~E_NOTICE);ini_set('display_errors',1);
 set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register();
 
 
-
 $Opt=new Opt('stroy');//Def opt
 $Cash=new Cache_File(['stroy'],true);
-
 
 
 //$bot=new UserAgent();
@@ -34,6 +32,7 @@ if($_SERVER['REQUEST_URI']!='/'){$uri=htmlspecialchars($_SERVER['REQUEST_URI'],E
 
 if($module=='404'){
     //Route::modul404();
+  include '../modul/stroy/index.php';
 }
 
 if($index){include '../modul/stroy/index.php';}

@@ -23,9 +23,9 @@ if(\lib\Post\Post::issetPostArr()){
     }
 }
 if($uri_parts[1]=='картинки'){
-    Opt::$main_content.='<div class="fon_c"><h3>Добавить рисунок</h3>'.$Cash->SendHTML('../models/admin/AddImg.php').'</div>';
+    Opt::$main_content.='<div class="fon_c"><h3>Добавить рисунок</h3>'.$Cash->SendHTML('../model/admin/AddImg.php').'</div>';
 }elseif($uri_parts[1]=='картинки-пакетно'){
-    Opt::$main_content.='<div class="fon_c"><h3>Добавить рисуноки (пакетно)</h3>'.$Cash->SendHTML('../models/admin/AddImgExt.php').'</div>';
+    Opt::$main_content.='<div class="fon_c"><h3>Добавить рисуноки (пакетно)</h3>'.$Cash->SendHTML('../model/admin/AddImgExt.php').'</div>';
 }elseif($uri_parts[1]=='картинки-изменить'){
-    Opt::$main_content.='<div class="fon_c"><h3>Изменить рисунок</h3>'.$Cash->SendHTML('../models/admin/UpdImg.php').'</div>';
+    Opt::$main_content.='<div class="fon_c"><h3>Изменить рисунок</h3>'.$Cash->SendHTML('../model/admin/UpdImg.php').'</div>';
 }
