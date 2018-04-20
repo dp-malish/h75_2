@@ -3,7 +3,7 @@
     <div id="header" class="maxw rel">
         <div class="header_bbb">
             <div class="header_back">
-                <img src="/img/site/pic.php?i=head">
+                <img src="/img/site/pic.php?i=head" alt="">
             </div>
             <div class="headerbot">
                 <div id="logo" class="fl rel">

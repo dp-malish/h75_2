@@ -10,7 +10,7 @@ $Opt::$main_content.='<div class="fon_c rel"><article><h3>Stroymans – ремо
 
 $Opt::$main_content.='<div class="fon_c rel item"><article>
 <h3 id="lider-rinka">Преимущества сотрудничества с нами</h3>
-<img src="/img/site/pic.php?i=1-mesto&ep=1" class="fr five">
+<img src="/img/site/pic.php?i=1-mesto&ep=1" class="fr five" alt="качество">
 
             <p><span class="check"></span>Внутренний контроль качества: мы не закупаем второсортную продукцию.</p>
             <p><span class="check"></span>Гарантийные сроки и развитое постобслуживание.</p>
