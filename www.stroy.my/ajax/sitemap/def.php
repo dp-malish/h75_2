@@ -11,7 +11,7 @@ echo $map->StartSiteMap();
 
 echo $map->StaticFileMap('../modul/stroy/index.php','','monthly','0.5');
 
-$res=$DB->arrSQL('SELECT link,data FROM content WHERE heading IS NULL');
+$res=$DB->arrSQL('SELECT link,data FROM def_content WHERE menu=1');
 foreach($res as $k=>$v){echo $map->DBUrlMap($v['link'],Def\Data::IntToStrMap($v['data']),'monthly');}
 
 echo $map->EndSiteMap();
