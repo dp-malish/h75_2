@@ -1,15 +1,12 @@
 <?php
-$r_menu='
-<div class="r_menu">
-    <nav>
-
+$r_menu='<div class="r_menu"><nav>
         <div class="r_menu_btn">
-            <a href="">
+            <a href="/кровельные-работы">
                 <img src="/img/site/pic.php?i=krovlya" alt="Кровельные работы" title="Кровельные работы">
                 <div class="down_title">Кровельные работы</div>
             </a>
-        </div>
-
+        </div>';
+/*
         <div class="r_menu_btn">
             <a href="">
                 <img src="/img/site/pic.php?i=fasad" alt="Фасадные работы" title="Фасадные работы">
@@ -51,6 +48,5 @@ $r_menu='
                 <div class="down_title">Утепление фасадов</div>
             </a>
         </div>
-
-    </nav>
-</div>';
+*/
+$r_menu.='</nav></div>';

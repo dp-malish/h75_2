@@ -9,10 +9,10 @@
                     <ul class="top_menu_m">
                         <li><a href="/">Главная</a></li>
                         <li><a href="/о-нас">О нас</a>
-                        <li><a href="">Контакты</a></li>
+                        <!--<li><a href="">Контакты</a></li>
                         <li><a href="">Статьи</a></li>
                         <li><a href="">Цены</a></li>
-                        <li><a href="">Галерея</a></li>
+                        <li><a href="">Галерея</a></li>-->
                     </ul>
                 </nav>
             </div>
@@ -23,13 +23,13 @@
                     <li><a href="/">Главная</a></li>
                     <li><a href="/о-нас" class="top_menu_pc_down">О нас</a>
                         <ul class="top_menu_pc_submenu">
-                            <li><a href="">Контакты</a></li>
-                            <li><a href="">Партнёры</a></li>
+                            <!--<li><a href="">Контакты</a></li>
+                            <li><a href="">Партнёры</a></li>-->
                         </ul>
                     </li>
-                    <li><a href="">Статьи</a></li>
+                    <!--<li><a href="">Статьи</a></li>
                     <li><a href="">Цены</a></li>
-                    <li><a href="">Галерея</a></li>
+                    <li><a href="">Галерея</a></li>-->
                 </ul>
             </nav>
 

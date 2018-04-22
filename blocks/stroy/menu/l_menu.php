@@ -2,6 +2,14 @@
 $l_menu='
 <div class="l_menu">
     <div class="l_menu_title">Ремонт квартир</div>
+    
+</div>
+
+<div class="l_menu">
+    <div class="l_menu_title">Ремонт квартир и домов</div>
+
+</div>';
+/*
     <nav>
         <ul>
             <li><a href="">Косметический ремонт</a></li>
@@ -9,10 +17,6 @@ $l_menu='
             <li><a href="">Комплексный ремонт</a></li>
         </ul>
     </nav>
-</div>
-
-<div class="l_menu">
-    <div class="l_menu_title">Ремонт квартир и домов</div>
     <nav>
         <ul>
             <li><a href="">Демонтажные работы</a></li>
@@ -21,5 +25,4 @@ $l_menu='
             <li><a href="">Монтаж гипсокартона</a></li>
             <li><a href="">и т.д.</a></li>
         </ul>
-    </nav>
-</div>';
+    </nav>*/
