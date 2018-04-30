@@ -24,12 +24,12 @@
   box-shadow:0 1px 2px -1px rgba(0,0,0,.2) inset, 0 0 transparent;
 }
 .form input:hover, .form textarea:hover, .form select:hover{
-  border-color:#1c7a05;
+  border-color:#003559;
   box-shadow:0 1px 2px -1px rgba(0,0,0,.2) inset, 0 0 transparent;
 }
 .form input:focus, .form textarea:focus, .form select:focus{
   outline: none;
-  border-color: #1c7a05;
+  border-color:#003559;
   box-shadow: 0 1px 2px -1px rgba(0,0,0,.2) inset, 0 0 4px rgba(35,146,243,.5);
   transition:.2s linear;
 }
@@ -60,7 +60,7 @@
 }
 .form input[type="submit"]:hover,.form .formbtn:hover{
   background:linear-gradient(to top, #FF8E00, #ffe100);
-  border: #1c7a05 1px solid;
+  border:#003559 1px solid;
 }
 .form input[type="submit"]:focus,.form .formbtn:focus{
   box-shadow: 0 1px 1px #fff, inset 0 1px 2px rgba(0,0,0,.8), inset 0 -1px 0 rgba(0,0,0,.05);

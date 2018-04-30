@@ -1,13 +1,10 @@
 <?php
-$l_menu='
-<div class="l_menu">
-    <div class="l_menu_title">Ремонт квартир</div>
-    
+$l_menu='<div class="l_menu"><div class="l_menu_title">Ремонт квартир</div>
+<nav><ul>
+<li><a href="/капитальный-ремонт-квартир">Капитальный ремонт</a></li>
+</ul></nav>
 </div>
-
-<div class="l_menu">
-    <div class="l_menu_title">Ремонт квартир и домов</div>
-
+<div class="l_menu"><div class="l_menu_title">Ремонт квартир и домов</div>
 </div>';
 /*
     <nav>

@@ -68,7 +68,7 @@ class Validator{
 		$str=self::html_cod($str);
 		if(self::paternInt($str)){
 			self::$captcha=$str;
-			$captcha=Captcha::dp_md_hash($str);
+			$captcha=\lib\img\Captcha::dp_md_hash($str);
 		}else{$err=true;}
 		$cook=self::issetCookie('dp_ses');
 		if(!$cook){$err=true;}elseif($captcha!=$cook){$err=true;}
