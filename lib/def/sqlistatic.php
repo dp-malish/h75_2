@@ -1,4 +1,5 @@
 <?php
+namespace lib\Def;
 class SQListatic extends SQLi{
 
     public static function boolSQL_($sql){

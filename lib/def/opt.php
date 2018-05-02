@@ -9,15 +9,18 @@ class Opt{
 	static $dir_name_site='';
 
 	static $css='';
+	static $css_down='';
 	static $jscript='';
+	static $js_down='';
 
 	static $title='';
 	static $description='';
 	static $keywords='';
 
-	static $l_content='';
 	static $l_content_up='';
-	static $main_content='';
+	static $l_content='';
+	static $main_content_up='';
+    static $main_content='';
 	static $r_content='';
 
 	function __construct($dir_name_site=''){

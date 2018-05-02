@@ -32,10 +32,30 @@ if($_SERVER['REQUEST_URI']!='/'){
 }else{Route::$index=1;}
 
 if(Route::$module404){Route::modul404();}
+
+require '../blocks/vt/block/main_slyder.php';
 if(Route::$index){
-    Opt::$main_content='Начальная страница'.Route::$uri_parts[0];
-    echo 'Начальная страница: '.Route::$uri_parts[0];
+
+  //include '../blocks/vt/index_news.php';
+  include '../modul/vt/top_menu/main.php';
 }
 
 
-echo $Opt::$main_content;
+
+
+
+//left - all stranici
+require '../blocks/vt/menu/l_menu.php';
+
+require'../blocks/vt/block/google_adsense.php';
+
+//right - all stranici
+require '../blocks/vt/menu/fish_menu.php';
+//require $root.'/blocks/common/block/last_article.php';
+//require $root.'/blocks/common/block/new_user'.($live_user==1?'_link':'').'.php';
+//body
+require '../blocks/vt/head.php';
+require '../blocks/vt/header.php';
+require '../blocks/vt/l_column.php';
+require '../blocks/vt/r_column.php';
+require '../blocks/vt/copyright.php';
