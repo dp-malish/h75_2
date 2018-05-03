@@ -7,7 +7,7 @@ use lib\Def as Def;
 class IndexNews extends Def\Cache_File{
 
   static function getContent(){
-    return '777'.self::$dir;
+    return '777';
   }
 
   static function temp(){
