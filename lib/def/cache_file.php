@@ -7,6 +7,8 @@
 namespace lib\Def;
 class Cache_File{
 
+  static $cash=null;
+
     protected $dir='../cache_all/';
 
 function __construct($dir=[],$add=false){

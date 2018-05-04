@@ -10,23 +10,38 @@ Error_Reporting(E_ALL & ~E_NOTICE);ini_set('display_errors',1);
 set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register();
 
 
-$Opt=new Opt('vt');//Def opt
-$Cash=new Cache_File(['vt'],true);
+new Opt('vt');//Def opt
+Cache_File::$cash=new Cache_File(['vt'],true);
 
 
 $set='set';$setAdminCook='vt'.Data::DatePass();
+
+//require '../incl/vt/user/authentication.php';
+
+$js_common='async ';
+
 
 if($_SERVER['REQUEST_URI']!='/'){
 
     if(Route::requestURI(3)) {
         switch(Route::$uri_parts[0]){
-            case $setAdminCook:
-                $setAdminCook=new \lib\User\User();$setAdminCook->setCookieAdmin();Route::$index=1;
-                break;
-            case $set:
-                include '../modul/vt/admin/main.php';
-                break;
-            default:header('Location: http://vt-fishing.com.ua');exit;
+          case $setAdminCook:
+              $setAdminCook=new \lib\User\User();$setAdminCook->setCookieAdmin();Route::$index=1;
+              break;
+          case $set:
+              include '../modul/vt/admin/main.php';
+              break;
+
+          //top_menu
+          //case 'news':include '../modul/vt/top_menu/news.php';break;
+          //case 'article':include $root.'/blocks/top_menu/article.php';break;
+          case 'contacts':include'../modul/vt/top_menu/contacts.php';break;
+          case 'about':include'../modul/vt/top_menu/about.php';break;
+          //case 'обзор':include $root.'/modul/t/obzor/obzor.php';break;
+
+
+
+          default:header('Location: http://vt-fishing.com.ua');exit;
         }
     }
 }else{Route::$index=1;}
@@ -35,24 +50,21 @@ if(Route::$module404){Route::modul404();}
 
 require '../blocks/vt/block/main_slyder.php';
 if(Route::$index){
-
   //include '../blocks/vt/index_news.php';
   include '../modul/vt/top_menu/main.php';
 }
 
 
 
-
-
 //left - all stranici
 require '../blocks/vt/menu/l_menu.php';
-
 require'../blocks/vt/block/google_adsense.php';
 
 //right - all stranici
 require '../blocks/vt/menu/fish_menu.php';
-//require $root.'/blocks/common/block/last_article.php';
-//require $root.'/blocks/common/block/new_user'.($live_user==1?'_link':'').'.php';
+
+Opt::$r_content.=\incl\vt\Menu\RMenuLastArticle::getContent().\incl\vt\Menu\RMNewUser::getContent(Opt::$live_user);
+
 //body
 require '../blocks/vt/head.php';
 require '../blocks/vt/header.php';

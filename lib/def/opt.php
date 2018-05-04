@@ -23,6 +23,8 @@ class Opt{
     static $main_content='';
 	static $r_content='';
 
+	static $live_user=0;
+
 	function __construct($dir_name_site=''){
         self::$protocol=((!empty($_SERVER['HTTPS'])&&$_SERVER['HTTPS']!='off')||$_SERVER['SERVER_PORT']==443)?"https://":"http://";
         self::$site=$_SERVER['SERVER_NAME'];
