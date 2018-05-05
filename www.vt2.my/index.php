@@ -16,7 +16,7 @@ Cache_File::$cash=new Cache_File(['vt'],true);
 
 $set='set';$setAdminCook='vt'.Data::DatePass();
 
-//require '../incl/vt/user/authentication.php';
+//require '../incl/vt/user/authentication_old.php';
 
 $js_common='async ';
 
