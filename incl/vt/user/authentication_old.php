@@ -46,7 +46,7 @@ if($live_user==1){
 	if(isset($_GET['do'])){
 	$exit=Validator::html_cod($_GET['do']);
 		if($exit=='logout'){//выйти надо
-		$end_time_cookie = mktime(0,0,0,1,1,2015);
+		$end_time_cookie = mktime(0,0,0,1,1,2017);
 		setcookie("bb_userid","",$end_time_cookie, '/', '.'.$site);
 		setcookie("bb_password","",$end_time_cookie, '/', '.'.$site);
 		setcookie("bb_sessionhash","",$end_time_cookie, '/', '.'.$site);
