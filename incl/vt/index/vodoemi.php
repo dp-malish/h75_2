@@ -6,8 +6,7 @@ namespace incl\vt\Index;
 use lib\Def as Def;
 class Vodoemi extends Def\Gzip{
 
-  function __construct()
-  {
+  function __construct(){
 
     header("Content-type: text/html; charset=UTF-8");
 
@@ -15,7 +14,7 @@ class Vodoemi extends Def\Gzip{
 
     $main_content=$this->IsSetCacheFileTime(604800,'index.html');
     if(!$main_content){
-      $DB=new SQLi();
+      $DB=new Def\SQLi();
       $res=$DB->arrSQL('SELECT id,base_name,coordinats,contacts FROM vodoemi');
       if($res){
         $main_content='<script type="text/javascript">map.style.minHeight="250px";map.style.maxHeight="650px";ymaps.ready(init);var myMap,myPlacemark;function init(){';
@@ -28,37 +27,11 @@ class Vodoemi extends Def\Gzip{
           $map='myMap=new ymaps.Map(\'map\',{center:['.$coordinats.'],zoom:8,controls:[\'rulerControl\',\'fullscreenControl\',\'zoomControl\',\'typeSelector\']});';
         }
         $main_content.=$map.$placemark.'}</script>';
-
-
       }
-
-
+        $this->StartCache();
+        echo $main_content;
+        $this->StopCache('index.html');
     }
-
-    echo $main_content;
+      header('Cache-Control: public, max-age=604800');$this->SendGzip($main_content);
   }
-
-
-/*
-
-
-
-
-
-
-
-
-
-
-
-header('Cache-Control: public, max-age=604800');
-$Cash->StartCache();
-echo $main_content;
-$Cash->StopCacheWithOut('index.html');
-}
-}else{header('Cache-Control: public, max-age=604800');echo $main_content;}*/
-
-
-
-
 }

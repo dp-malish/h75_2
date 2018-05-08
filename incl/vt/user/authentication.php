@@ -113,9 +113,9 @@ class Authentication{
   }
   private function UserLinkCabinet(){
     if(Def\Opt::$live_user==1){
-      self::$user_link_cabinet='<div id="hello_user"><ul class="float-right"><li><a href="http://forum.vt-fishing.com.ua/members/user-'.self::$userid.'/" target="_blank" >Добро пожаловать, '.self::$username.'</a></li><li><a href="http://forum.vt-fishing.com.ua/usercp.php" >Кабинет</a></li><li><a href="/?do=logout" >Выход</a></li></ul></div>';
+      self::$user_link_cabinet='<div id="hello_user"><ul class="fr"><li><a href="http://forum.vt-fishing.com.ua/members/user-'.self::$userid.'/" target="_blank">Добро пожаловать, '.self::$username.'</a></li><li><a href="http://forum.vt-fishing.com.ua/usercp.php">Кабинет</a></li><li><a href="/?do=logout" >Выход</a></li></ul></div>';
     }else{
-      self::$user_link_cabinet='<div id="no_user"><ul class="float-right"><li><a href="http://forum.vt-fishing.com.ua/faq.php" >Помощь</a></li><li><a href="http://forum.vt-fishing.com.ua/register.php" >Регистрация</a></li></ul></div>';
+      self::$user_link_cabinet='<div id="no_user"><ul class="fr"><li><a href="http://forum.vt-fishing.com.ua/faq.php">Помощь</a></li><li><a href="http://forum.vt-fishing.com.ua/register.php">Регистрация</a></li></ul></div>';
     }
   }
 }

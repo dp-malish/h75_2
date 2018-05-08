@@ -12,8 +12,8 @@ class Optsql{
             default:Route::location();
             }
         }else{
-            switch($_SERVER['SERVER_NAME']) {
-                case 'vt2.my':$this->db_con=['root','root','vt'];break;
+            switch($_SERVER['SERVER_NAME']){
+                case 'vt2.my':$this->db_con=['root','root','vt_img'];break;
                 default:Route::location();
             }
         }

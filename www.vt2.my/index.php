@@ -33,7 +33,8 @@ if($_SERVER['REQUEST_URI']!='/'){
 
 
 
-          default:header('Location: http://vt-fishing.com.ua');exit;
+          default:Route::$module404=true;
+              //header('Location: http://vt-fishing.com.ua');exit;
         }
     }
 }else{Route::$index=1;}
