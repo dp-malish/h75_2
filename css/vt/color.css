@@ -12,7 +12,7 @@ body{background:#eae1b8 none;}
 
 .left_menu_child{border-bottom:#edcdb7 thin solid;}
 
-.fon,.section,.td_date,.td_linc,.ind_news{border-color:#edcdb7;}
+.fon,.fon_c,.section,.td_date,.td_linc,.ind_news{border-color:#edcdb7;}
 
 .fon_head{border-color:#edcdb7;background-color:#854a21;}
 .fon_head h4,.fon_head h4 a{color:#fff}

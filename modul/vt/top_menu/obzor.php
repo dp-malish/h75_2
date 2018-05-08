@@ -1,17 +1,18 @@
 <?php
-\lib\Def\Opt::$title='Обзор аксессуаров для рыбалки - Портал о рыбалке';
-\lib\Def\Opt::$description='Обзор аксессуаров для рыбалки. Рассматриваемые темы: ';
-\lib\Def\Opt::$keywords='обзор, аксессуары для рыбалки, ';
-$table_name='obzor';
-try{if(\lib\Def\Route::$count_uri_parts>2){throw new Exception();}else{
+namespace lib\Def;
+Opt::$title='Обзор аксессуаров для рыбалки - Портал о рыбалке';
+Opt::$description='Обзор аксессуаров для рыбалки. Рассматриваемые темы: ';
+Opt::$keywords='обзор, аксессуары для рыбалки, ';
+
+try{if(Route::$count_uri_parts>2){throw new Exception();}else{
 
 
 
-if(!isset(\lib\Def\Route::$uri_parts[1])){
+if(!isset(Route::$uri_parts[1])){
+  Str_navigation::navigation(Route::$uri_parts[0],'obzor',1,1,true);
 
-    \lib\Def\Opt::$main_content='ef77';
-	//$page=1;include $root.'/modul/t/obzor/str_navigat.php';
-	//$main_content.='<section><h2>Обзоры</h2><div class="fon">'.$navigation.'<div class="cl"></div><h3>Аксессуары для рыбалки</h3></div>'.$search_content.'<div class="fon cl">'.$navigation.'</div>'.'</section>';
+  Opt::$main_content.='<section><h2>Обзоры</h2><div class="fon"><h3>Аксессуары для рыбалки</h3></div>'.Str_navigation::$navigation.'<div class="cl"></div>'.$search_content.'<div class="cl"></div>'.Str_navigation::$navigation.'</section>';
+
 }
 
 
