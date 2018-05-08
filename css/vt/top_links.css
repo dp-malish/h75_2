@@ -27,7 +27,7 @@
 .data_news{margin:3px 17px;font-size:85%;}
 /*End News End*/
 /*Article*/
-.level{background-repeat:no-repeat;background-image:url(/img/site/level_star.png);height:12px;width:42px;display:inline-block;}
+.level{background-repeat:no-repeat;background-image:url(/img/site/pic.php?i=level_star&ep=1);height:12px;width:42px;display:inline-block;}
 .level.low{background-position:0 0;}
 .level.mid{background-position:0 -12px;}
 .level.high{background-position:0 -24px;}
