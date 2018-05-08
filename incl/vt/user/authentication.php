@@ -2,16 +2,20 @@
 /**
  * User авторизация
  */
-namespace incl\vt\Authentication;
+namespace incl\vt\User;
 use lib\Def as Def;
 
 class Authentication{
 
   private const COOKIE_SALT='ruT5Pjv6TOXdc4zMGVXdp7GmINV';
   private $err=0;
+  static $bad_login_form='';
 
   static $username='';
   static $userid='';
+
+  static $user_link_cabinet='';
+
 
   function __construct(){//Проверить куки юзвера два варианта
     if(isset($_COOKIE['bb_userid']) && isset($_COOKIE['bb_password'])){$this->ValidCoolieVariant1();
@@ -21,6 +25,7 @@ class Authentication{
       $this->ExitSite();
     }elseif(isset($_POST['login']) && isset($_POST['pass'])){//Вход из формы
       $this->LoginSite();}
+    $this->UserLinkCabinet();
   }
   //******************//******************//******************
   //******************//******************//******************
@@ -67,6 +72,7 @@ class Authentication{
   }
   //******************
   private function LoginSite(){
+
     $login=Def\Validator::html_cod($_POST['login']);
     $pass=Def\Validator::html_cod($_POST['pass']);
     if(preg_match("/[^0-9А-Яа-яЁёa-zA-Z]+/u",$login)){$this->err=1;}
@@ -77,34 +83,39 @@ class Authentication{
       $DB=new Def\SQLi();
 
       $res=$DB->strSQL('SELECT userid, username, password, salt FROM user WHERE username ='.$DB->realEscapeStr($login));
-      if($res["userid"]==''){$bad_login_form='<p>Неверное имя пользователя или пароль</p>';
+      if($res["userid"]==''){self::$bad_login_form='<p>Неверное имя пользователя или пароль</p>';
       }else{
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+//***************************допилить
+//***************************допилить
+//***************************допилить
+//***************************допилить
+//***************************допилить
+//***************************допилить
+//***************************допилить
+//***************************допилить
 
         $pass=md5($pass);$pass=md5($pass.$res["salt"]);
         if($res["password"]==$pass){
             //всё гуд
-            $live_user=1; $username=$res['username']; $userid=$res['userid'];
+            $live_user=1;
+            $username=$res['username'];
+            self::$userid=$res['userid'];
             //ОТПРАВИТЬ КУКИ  18144000; 30 дней
             $hash_pass=md5($res['password'].self::COOKIE_SALT);
-            setcookie("bb_userid",$userid,time()+18144000, '/', '.'.$site);
-            setcookie("bb_password",$hash_pass,time()+18144000, '/', '.'.$site);
-            unset($_SESSION['kol_vo']);
-        }else{$bad_login_form='<p>Неверное имя пользователя или пароль</p>';}
+            setcookie("bb_userid",self::$userid,time()+18144000, '/', '.'.Def\Opt::$site);
+            setcookie("bb_password",$hash_pass,time()+18144000, '/', '.'.Def\Opt::$site);
+        }else{self::$bad_login_form='<p>Неверное имя пользователя или пароль</p>';}
       }
-    }else{$bad_login_form='<p>Неверное имя пользователя или пароль</p>';}
+    }else{self::$bad_login_form='<p>Неверное имя пользователя или пароль</p>';}
+
+
+  }
+  private function UserLinkCabinet(){
+    if(Def\Opt::$live_user==1){
+      self::$user_link_cabinet='<div id="hello_user"><ul class="float-right"><li><a href="http://forum.vt-fishing.com.ua/members/user-'.self::$userid.'/" target="_blank" >Добро пожаловать, '.self::$username.'</a></li><li><a href="http://forum.vt-fishing.com.ua/usercp.php" >Кабинет</a></li><li><a href="/?do=logout" >Выход</a></li></ul></div>';
+    }else{
+      self::$user_link_cabinet='<div id="no_user"><ul class="float-right"><li><a href="http://forum.vt-fishing.com.ua/faq.php" >Помощь</a></li><li><a href="http://forum.vt-fishing.com.ua/register.php" >Регистрация</a></li></ul></div>';
+    }
   }
 }

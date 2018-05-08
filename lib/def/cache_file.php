@@ -45,13 +45,15 @@ fwrite($handle,ob_get_contents());fclose($handle);ob_end_flush();}
 //-------------------------------
 function SendHTML($f){//Отправка файла в буфер без записи
     ob_start();include $f;$f=ob_get_contents();ob_end_clean();return $f;}
-function SendHTMLext($f,$params){$f=file_get_contents($f);$l=strlen('#?');$offset=0;
+function SendHTMLext($f,$params){//читает из файла html и подставляет
+  $f=file_get_contents($f);$l=strlen('#?');$offset=0;
 	foreach($params as $v){
 	$pos=strpos($f,'#?',$offset);
 	$f=substr_replace($f,$v,$pos,$l);
 	$offset=$pos+strlen($v);}return $f;
 }
-function SendHTMLextPlus($f,$params){ob_start();include $f;$f=ob_get_contents();ob_end_clean();
+function SendHTMLextPlus($f,$params){//исполняет php скрипт
+  ob_start();include $f;$f=ob_get_contents();ob_end_clean();
 	$l=strlen('#?');$offset=0;
 	foreach($params as $v){$pos=strpos($f,'#?',$offset);$f=substr_replace($f,$v,$pos,$l);$offset=$pos+strlen($v);}return $f;
 }

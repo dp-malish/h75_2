@@ -4,7 +4,8 @@
  */
 namespace lib\Def;
 class Gzip extends Cache_File{
-    protected function SendGzip($f){//Проверкка неоходимости сжимать файл перед отправкой
+    protected function SendGzip($f){//Отправить строку
+      //Проверкка неоходимости сжимать строку перед отправкой
         $gzip=Validator::html_cod($_SERVER["HTTP_ACCEPT_ENCODING"]);
         if(strpos($gzip,'x-gzip')!==false)$encoding='x-gzip';
         else if(strpos($gzip,'gzip')!==false)$encoding='gzip';else $encoding=false;
