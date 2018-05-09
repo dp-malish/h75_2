@@ -1,5 +1,5 @@
 <?php
-namespace lib\User;
+namespace lib\user;
 use lib\Def as Def;
 class User_old{
     private $user_id;

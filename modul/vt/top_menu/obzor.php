@@ -6,13 +6,11 @@ Opt::$keywords='обзор, аксессуары для рыбалки, ';
 
 try{if(Route::$count_uri_parts>2){throw new Exception();}else{
 
-
+$msg=1;
 
 if(!isset(Route::$uri_parts[1])){
-  Str_navigation::navigation(Route::$uri_parts[0],'obzor',1,1,true);
-
-  Opt::$main_content.='<section><h2>Обзоры</h2><div class="fon"><h3>Аксессуары для рыбалки</h3></div>'.Str_navigation::$navigation.'<div class="cl"></div>'.$search_content.'<div class="cl"></div>'.Str_navigation::$navigation.'</section>';
-
+  Str_navigation::navigation(Route::$uri_parts[0],'obzor',1,$msg,true);
+  Opt::$main_content.='<section><h2>Обзоры</h2><div class="fon"><h3>Аксессуары для рыбалки</h3></div>'.Str_navigation::$navigation.'<div class="cl"></div>'.\incl\vt\Top_menu\Obzor::GetContentNav(1,$msg).'<div class="cl"></div>'.Str_navigation::$navigation.'</section>';
 }
 
 

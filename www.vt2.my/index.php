@@ -1,6 +1,10 @@
 <?php
 namespace lib\Def;
-Error_Reporting(E_ALL & ~E_NOTICE);ini_set('display_errors',1);
+
+
+
+
+//Error_Reporting(E_ALL & ~E_NOTICE);ini_set('display_errors',1);
 set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register();
 
 
@@ -9,7 +13,9 @@ Cache_File::$cash=new Cache_File(['vt'],true);
 
 $set='set';$setAdminCook='vt'.Data::DatePass();
 
-new \incl\vt\User\Authentication();
+new \incl\vt\user\Authentication();
+
+
 
 $js_common='async ';//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -18,7 +24,7 @@ if($_SERVER['REQUEST_URI']!='/'){
     if(Route::requestURI(3)) {
         switch(Route::$uri_parts[0]){
           case $setAdminCook:
-              $setAdminCook=new \lib\User\User();$setAdminCook->setCookieAdmin();Route::$index=1;
+              $setAdminCook=new \lib\user\User();$setAdminCook->setCookieAdmin();Route::$index=1;
               break;
           case $set:
               include '../modul/vt/admin/main.php';
@@ -29,7 +35,9 @@ if($_SERVER['REQUEST_URI']!='/'){
           //case 'article':include $root.'/blocks/top_menu/article.php';break;
           case 'contacts':include'../modul/vt/top_menu/contacts.php';break;
           case 'about':include'../modul/vt/top_menu/about.php';break;
-          case 'обзор':include'../modul/vt/top_menu/obzor.php';break;
+          case 'обзор': new \incl\vt\topMenu\Obzor();
+            //include'../modul/vt/top_menu/obzor.php';
+            break;
 
 
 
