@@ -1,4 +1,5 @@
 <?php
+namespace lib\Def;
 /**
  * Str_navigation::navigation($uri_parts[0],'article',1,$msg,true);
  * Str_navigation::navigation($uri_parts[0],'article',$uri_parts[1],$msg,true);
@@ -9,9 +10,8 @@
  * $page - страница отсчёта (где находишься)
  * $msg - кол-во на странице сообщений
  * $fon - с фоном или без
- * $nav - разновидность навигации
+ * @param $nav - разновидность навигации
  */
-namespace lib\Def;
 class Str_navigation{
     public static $navigation=null;//строка навигации
     public static $start_nav=1;

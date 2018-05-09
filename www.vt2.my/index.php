@@ -35,9 +35,7 @@ if($_SERVER['REQUEST_URI']!='/'){
           //case 'article':include $root.'/blocks/top_menu/article.php';break;
           case 'contacts':include'../modul/vt/top_menu/contacts.php';break;
           case 'about':include'../modul/vt/top_menu/about.php';break;
-          case 'обзор': new \incl\vt\topMenu\Obzor();
-            //include'../modul/vt/top_menu/obzor.php';
-            break;
+          case 'обзор':new \incl\vt\topMenu\Obzor();break;
 
 
 

@@ -14,6 +14,13 @@ class Route{
         header('Location: '.Opt::$protocol.Opt::$site);
         exit;
     }
+    static function location301($uri=null){
+      if(Opt::$site===''){new Opt();}
+      if(!is_null($uri))Opt::$site.=$uri;
+      header('HTTP/1.1 301 Moved Permanently');
+      header('Location: '.Opt::$protocol.Opt::$site);
+      exit;
+    }
     static function modul404(){
       header("HTTP/1.0 404 Not Found");/*header("Status: 404 Not Found");*/
       Opt::$title='Извините, страница не найдена';
