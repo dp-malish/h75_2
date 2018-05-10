@@ -6,7 +6,7 @@ use lib\Def as Def;
  */
 class Obzor{
 
-  private $msg=1;
+  private $msg=2;
   private $table_name='obzor';
 
   private $title='Обзор аксессуаров для рыбалки - Портал о рыбалке';
@@ -38,11 +38,11 @@ class Obzor{
       $content='';
       foreach($res as $k=>$v){
         if($v['img_s']!=''){$img_s='<a href="/'.Def\Route::$uri_parts[0].'/'.$v['link'].'"><img class="fl five img_link" src="/img/obzor/pic.php?id='.$v['img_s'].'" alt="'.$v['img_alt_s'].'" title="'.$v['img_title_s'].' - узнать подробнее..."></a>';}else{$img_s='';}
-        if($start!=1)$this->title.=' страница '.$start;
         $this->description.=$v['link_name'].', ';//добавить все
 
         $content.='<div class="fon_c"><article>'.$img_s.'<a href="/'.Def\Route::$uri_parts[0].'/'.$v['link'].'"><h4>'.$v['caption'].'</h4></a>'.$v['short_text'].'</article><div class="cl"></div></div>';
       }
+      if($start!=1)$this->title.=' страница '.$start;
       Def\Opt::$title=$this->title;
       Def\Opt::$description=$this->description.='подробнее...';
       Def\Opt::$keywords=$this->keywords;
