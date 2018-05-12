@@ -35,7 +35,7 @@ class News{
 
 
   private function viewListContent($start=1){
-    $res=Def\SQListatic::arrSQL_('SELECT id,link,title,meta_d,meta_k,caption,
+    $res=Def\SQListatic::arrSQL_('SELECT id,link,title,meta_d,meta_k,caption,data,
 	img_s,img_alt_s,img_title_s,short_text FROM '.$this->table_name.' ORDER BY id DESC LIMIT '.Def\Str_navigation::$start_nav.','.$this->msg);
     if($res){
       $content='';
@@ -43,7 +43,7 @@ class News{
         if($v['img_s']!=''){$img_s='<a href="/'.Def\Route::$uri_parts[0].'/'.$v['link'].'"><img class="fl five img_link" src="/img/news/pic.php?id='.$v['img_s'].'" alt="'.$v['img_alt_s'].'" title="'.$v['img_title_s'].' - узнать подробнее..."></a>';}else{$img_s='';}
         $this->description.=$v['title'].', ';//добавить все
 
-        $content.='<div class="fon_c"><article>'.$img_s.'<a href="/'.Def\Route::$uri_parts[0].'/'.$v['link'].'"><h4>'.$v['caption'].'</h4></a><div>Дата публикации !!!!!!!!!!!!!!!!!!!!</div>'.$v['short_text'].'</article><div class="cl"></div></div>';
+        $content.='<div class="fon_c"><article><a href="/'.Def\Route::$uri_parts[0].'/'.$v['link'].'"><h4 class="ac">'.$v['caption'].'</h4></a><div><div class="fr b">Дата публикации: <time>'.$v["data"].'</time></div><div class="cl"></div>'.$img_s.$v['short_text'].'</article><div class="cl"></div></div>';
       }
       if($start!=1)$this->title.=' страница '.$start;
       Def\Opt::$title=$this->title;
