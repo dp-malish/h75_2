@@ -26,7 +26,7 @@ if($_SERVER['REQUEST_URI']!='/'){
 
           //top_menu
           case 'news':new  \incl\vt\topMenu\News();break;
-          //case 'article':include $root.'/blocks/top_menu/article.php';break;
+          case 'article':new \incl\vt\topMenu\Article();break;
           case 'contacts':include'../modul/vt/top_menu/contacts.php';break;
           case 'about':include'../modul/vt/top_menu/about.php';break;
           case 'обзор':new \incl\vt\topMenu\Obzor();break;

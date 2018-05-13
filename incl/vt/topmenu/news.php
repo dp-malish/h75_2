@@ -55,16 +55,14 @@ class News{
   }
 
   private function viewText(){
-    $DB=new Def\SQLi();
-    $res=$DB->strSQL('SELECT link,title,meta_d,meta_k,caption,img,img_alt,img_title,full_text FROM '.$this->table_name.' WHERE link='.$DB->realEscapeStr(Def\Route::$uri_parts[1]));
-    if($res['title']!=''){
-      Def\Opt::$title=$res['title'];
-      Def\Opt::$description='Обзор рыболовных аксессуаров вместе с школой рыболова. '.$res['meta_d'];
-      Def\Opt::$keywords=$res['meta_k'];
-      if($res['img']!=''){$img='<img class="fl five img_link" src="/img/news/pic.php?id='.$res['img'].'" alt="'.$res['img_alt'].'" title="'.$res['img_title'].'">';}else{$img='';}
-      Def\Opt::$main_content.='<section><div class="fon_c"><article><h3>'.$res['caption'].'</h3><div class="cl"></div><p><a href="/'.Def\Route::$uri_parts[0].'/" onclick="button_back(\'news/\');return false;" rel="nofollow">&#9668;&mdash;</a><br></p>'.$img.$res['full_text'].'<p><a href="/'.Def\Route::$uri_parts[0].'/" onclick="button_back(\'news/\');return false;" rel="nofollow">&#9668;&mdash; Вернуться к меню обзоров</a></p></article><div class="cl"></div></div></section>';
-    }else{Def\Route::$module404=true;}
-  }
-
-
+  $DB=new Def\SQLi();
+  $res=$DB->strSQL('SELECT link,title,meta_d,meta_k,caption,img,img_alt,img_title,full_text FROM '.$this->table_name.' WHERE link='.$DB->realEscapeStr(Def\Route::$uri_parts[1]));
+  if($res['title']!=''){
+    Def\Opt::$title=$res['title'];
+    Def\Opt::$description='Обзор рыболовных аксессуаров вместе с школой рыболова. '.$res['meta_d'];
+    Def\Opt::$keywords=$res['meta_k'];
+    if($res['img']!=''){$img='<img class="fl five img_link" src="/img/news/pic.php?id='.$res['img'].'" alt="'.$res['img_alt'].'" title="'.$res['img_title'].'">';}else{$img='';}
+    Def\Opt::$main_content.='<section><div class="fon_c"><article><h3>'.$res['caption'].'</h3><div class="cl"></div><p><a href="/'.Def\Route::$uri_parts[0].'/" onclick="button_back(\'news/\');return false;" rel="nofollow">&#9668;&mdash;</a><br></p>'.$img.$res['full_text'].'<p><a href="/'.Def\Route::$uri_parts[0].'/" onclick="button_back(\'news/\');return false;" rel="nofollow">&#9668;&mdash; Вернуться к меню обзоров</a></p></article><div class="cl"></div></div></section>';
+  }else{Def\Route::$module404=true;}
+}
 }
