@@ -31,6 +31,9 @@ if($_SERVER['REQUEST_URI']!='/'){
           case 'about':include'../modul/vt/top_menu/about.php';break;
           case 'обзор':new \incl\vt\topMenu\Obzor();break;
 
+          //right_menu
+          case 'fish':new \incl\vt\Rmenu\FishArticle();break;
+
 
 
           default:Route::$module404=true;
