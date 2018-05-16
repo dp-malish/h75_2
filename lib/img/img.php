@@ -35,8 +35,8 @@ class Img{
                 $x=imagesx($im);$y=imagesy($im);
                 ($x>1000)?$koef_font=25:$koef_font=12;$font_size=(int)($x/$koef_font);
                 ($x>1000)?$rotate=8:$rotate=1;
-                ($x>1000)?$koef_sdviga=0.35:$koef_sdviga=0.52;$x=$x-($x*$koef_sdviga);
-                $y=$y-($y*0.03);
+                ($x>1000)?$koef_sdviga=0.38:$koef_sdviga=0.55;$x=$x-($x*$koef_sdviga);
+                $y=$y-($y*0.043);
                 $color=imagecolorallocate($im,255,215,0);
                 $text=$_SERVER['HTTP_HOST'];
                 imagettftext($im,$font_size,$rotate,$x,$y,$color,$font,$text);}

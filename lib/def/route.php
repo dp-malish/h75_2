@@ -3,8 +3,8 @@ namespace lib\Def;
 class Route{
     static public $module404=false;
 
-    static public $uri_parts=[];//массив
-    static public $count_uri_parts=0;
+    static public $uri_parts=[];//массив url по частям
+    static public $count_uri_parts=0;//количество частей массива url частей
 
     static public $index=0;
 
@@ -21,13 +21,13 @@ class Route{
       header('Location: '.Opt::$protocol.Opt::$site);
       exit;
     }
-    static function modul404(){
+    static function modul404(){/**Несуществующая страница*/
       header("HTTP/1.0 404 Not Found");/*header("Status: 404 Not Found");*/
       Opt::$title='Извините, страница не найдена';
       Opt::$main_content='<h4>'.Opt::$title.'</h4><p>Пожалуйста, убедитесь, что ссылка указанна правильно!</p><script type="text/javascript">setTimeout(\'location.replace("/")\', 13000);</script>';
     }
     //***************************
-    static function requestURI($count_uri_parts_max=4){
+    static function requestURI($count_uri_parts_max=4){/**Нарезать url на части*/
         $uri=htmlspecialchars($_SERVER['REQUEST_URI'],ENT_QUOTES);
         try{
             $uri=urldecode($uri);

@@ -18,7 +18,8 @@ $js_common='async ';//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 if($_SERVER['REQUEST_URI']!='/'){
 
-    if(Route::requestURI(3)) {
+    if(Route::requestURI(3)){
+
         switch(Route::$uri_parts[0]){
           case $setAdminCook:
               $setAdminCook=new \lib\user\User();$setAdminCook->setCookieAdmin();Route::$index=1;break;
@@ -36,7 +37,8 @@ if($_SERVER['REQUEST_URI']!='/'){
 
 
 
-          default:Route::$module404=true;
+          default:include '/modul/def/def.php';
+            //Route::$module404=true;
               //header('Location: http://vt-fishing.com.ua');exit;
         }
     }
