@@ -35,9 +35,11 @@ if($_SERVER['REQUEST_URI']!='/'){
           //right_menu
           case 'fish':new \incl\vt\Rmenu\FishArticle();break;
 
+          //left_menu
+          case 'рыбалка-и-закон':new \incl\vt\lmenu\Polezno\Zakon();break;
 
 
-          default:include '/modul/def/def.php';
+          default:new \incl\vt\Def\DefContent();
             //Route::$module404=true;
               //header('Location: http://vt-fishing.com.ua');exit;
         }

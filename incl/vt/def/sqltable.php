@@ -11,8 +11,8 @@ class SqlTable extends \lib\Img\SqlTableDef{
         ['everything_interesting_img','Обо всём интересном','/img/everything_interesting/dbpic.php?id=']
 
     ];
-    static function getImgDirTable($table_name){
-      return parent::getImgDirTable($table_name,self::IMG);
+    static function getImgDirTable($table_name,$arr_img=self::IMG){
+      return parent::getImgDirTable($table_name,$arr_img);
     }
 
 }
