@@ -14,7 +14,7 @@ set_include_path('../../../');spl_autoload_register();
 
 if(isset($_GET['id'])){//Искать в БД
   $id=htmlspecialchars($_GET['id'],ENT_QUOTES);
-  if(preg_match("/[0-9]+$/",$id))Img::getImg($id,'def_content_img');
+  if(preg_match("/[0-9]+$/",$id))Img::getImg($id);
 }elseif(isset($_GET['i'])){//Искать в каталоге
     $i=Def\Validator::html_cod($_GET['i']);
     if(Def\Validator::paternStrLink($i)){
