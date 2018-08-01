@@ -1,0 +1,1 @@
+<div id="wrap" class="maxw"><div id="l_col" class="rel"><?=$Opt::$l_content_up.$remont.$rek_winteh_l.$Opt::$l_content?><div class="cl"></div></div>

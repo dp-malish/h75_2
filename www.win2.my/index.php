@@ -55,15 +55,14 @@ if(Route::$index){include'../modul/win/main.php';}
 //require'../blocks/win/menu/r/dop_mat.php';
 
 require'../blocks/win/common/head.php';
-require'../blocks/win/common/befor_header.php';
+require '../blocks/win/common/b_header.php';
 require'../blocks/win/common/header.php';
+require '../blocks/win/common/a_header.php';
 
-/*
-require'../blocks/win/common/after_header.php';require'../blocks/win/common/left_column.php';
-switch($column){
-case'1':include'../blocks/win/common/body_one.php';break;
-case'2':include'../blocks/win/common/body_two.php';break;
-default:include'../blocks/win/common/body_two_ext.php';}
-require'../blocks/win/common/befor_footer.php';*/
+require '../blocks/win/common/l_column.php';
+
+require'../blocks/win/common/body_two_ext.php';
+
+require '../blocks/win/common/b_footer.php';
 
 require'../blocks/win/common/foot.php';
