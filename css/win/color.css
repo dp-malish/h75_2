@@ -1,0 +1,24 @@
+h1,h2,h3,h4{color:#004e6f;}
+
+A:link,.link{color:#5c3317;text-decoration:underline;}
+A:active{color:#5c3317}
+A:visited{color:#520c0e}
+A:hover,.link:hover{color:#B2251F;text-decoration:blink;}
+
+.fon_c,.tb2_l_col,.tb2_r_col{/*общий фон обводки*/
+	border:#004e6f 2px solid;
+	border-radius:4px;
+}
+.fon_c,.tb2_l_col,.tb2_r_col{
+	background:#fefee2;
+	background:rgba(254,254,226,0.88);
+	border-radius:4px;}
+.h_field{color:#004e6f;font-size:16px}
+	
+
+.tb2_img img{border:#FF8E00 2px solid;border-radius:9px 9px 0 0;}
+
+#foot{
+	background:#fefee2;
+	background:rgba(254,254,226,0.8);
+}

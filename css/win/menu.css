@@ -1,0 +1,65 @@
+.l_menu,.r_menu{/*общий фон обводки*/
+	margin:0 auto;
+	box-sizing:border-box;
+	border:#004e6f 2px solid;
+	background:#B8D3C9;
+	background:linear-gradient(to top right, #ffe100, #B8D3C9);
+	border-radius:4px;
+}.r_menu{background:linear-gradient(to top left, #ffe100, #B8D3C9);}
+
+@media screen and (min-width:481px) and (max-width:740px){.l_menu,.r_menu{width:70%}}
+@media screen and (max-width:480px){.l_menu,.r_menu{width:100%}}
+.l_menu,.r_menu{
+	padding-bottom:7px;
+	margin-bottom:7px;
+}
+.l_menu_title,.r_menu_title{
+	font-size:120%;
+	color:#004e6f;
+	text-align:center;
+	line-height:40px;/*центрировать вертикально одну строчку*/
+}
+.l_menu ul,.r_menu ul{
+	display:block;
+}
+.l_menu li{
+	list-style:none;
+	position:relative;
+}
+.l_menu ul li{
+	border-bottom:#7D6D3C thin solid;
+}
+.l_menu ul li a{
+	display:block;
+	text-decoration:none;
+	line-height:30px;
+	padding:0 2px 0 7px;
+}
+@media screen and(min-width:240px)and(max-width:480px){.l_menu ul li a{line-height:45px;font-size:120%}}
+.l_menu ul li a:hover{
+	background:linear-gradient(to top, #FF8E00, #ffe100);
+}
+
+/********************************************/
+
+.r_menu li{
+	list-style:none;
+	position:relative;
+}
+
+.r_menu ul li{
+	border-bottom:#fefee2 thin solid;
+}
+.r_menu ul li a{
+	display:block;
+	text-decoration:none;
+	line-height:30px;
+	padding:0 2px 0 7px;
+}
+@media screen and (max-width:480px){
+.r_menu{margin:0 0 7px;}
+.r_menu ul li a{line-height:45px;font-size:120%}
+}
+.r_menu ul li a:hover{
+	background:linear-gradient(to top, #FF8E00, #ffe100);
+}

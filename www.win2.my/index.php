@@ -24,19 +24,14 @@ if($_SERVER['REQUEST_URI']!='/'){
                 $setAdminCook=new \lib\user\User();$setAdminCook->setCookieAdmin();Route::$index=1;break;
             //case $set:include'../modul/vt/admin/main.php';break;
 
-            //top_menu
-            case 'contacts':include'../modul/vt/top_menu/contacts.php';break;
-            case 'about':include'../modul/vt/top_menu/about.php';break;
-            case 'обзор':new \incl\vt\topMenu\Obzor();break;
-
-            //right_menu
+            //r_menu
             case 'fish':new \incl\vt\Rmenu\FishArticle();break;
 
-            //left_menu
+            //l_menu
             case 'рыбалка-и-закон':new \incl\vt\lmenu\Polezno\Zakon();break;
 
 
-            default:new \incl\vt\Def\DefContent();
+            //default:new \incl\win\Def\DefContent();
             //Route::$module404=true;
             //header('Location: http://vt-fishing.com.ua');exit;
         }
@@ -49,9 +44,9 @@ if(Route::$index){include'../modul/win/main.php';}
 
 
 //left - all stranici
-//require'../blocks/win/menu/l/remont.php';
+require'../blocks/win/menu/l/remont.php';
 //right - all stranici
-//require'../blocks/win/menu/r/web.php';
+require'../blocks/win/menu/r/web.php';
 //require'../blocks/win/menu/r/dop_mat.php';
 
 require'../blocks/win/common/head.php';
