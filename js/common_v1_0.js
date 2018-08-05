@@ -89,7 +89,7 @@ function start_show(res,obj,res_s){
     temp_obj.style.opacity = res_s;
     show_element(res);
 }
-//*************************show_element**************************
+//*************************Модальная форма**************************
 function modalload(loadimg){
     var d=document.createElement("div");
     d.setAttribute("id","modalload");
@@ -135,10 +135,11 @@ function modalloadclose(){
         if(modalloadform!==null){modalloadform.parentNode.removeChild(modalloadform);}
     }catch(e){}
 }
-//*************************show_element**************************
+//*************************Автозагрузка**************************
 window.addEventListener("load", function(){
     try{
     if(document.cookie.length>4){
+        //alert('Ready!  7777');
         /*var js=document.createElement("script");
         js.type='text/javascript';
         js.src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js";
@@ -150,3 +151,12 @@ window.addEventListener("load", function(){
     }
 }catch(e){}
 },true);
+
+//*************************Автозагрузка**************************
+
+
+//*************************Куки**************************
+function setCookie(name,value){document.cookie=name+"="+value;}
+function getCookie(name){var r=document.cookie.match("(^|;) ?"+name+"=([^;]*)(;|$)");if(r)return r[2];else return"";}
+//*************************Куки**************************
+
