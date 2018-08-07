@@ -46,7 +46,7 @@ p{margin:5px;}
 /*кнопки share*/
 #share .rel{margin:15px 3px}
 #informer{margin:6px 0;}
-@media screen and (min-width: 801px) and (max-width: 1920px){
+@media screen and (min-width: 801px){
 	#share{
 		z-index:333;
 		position:fixed;
