@@ -1,0 +1,3 @@
+<?php
+$rek_winteh='<ins class="adsbygoogle" data-ad-client="ca-pub-0781640196587335" data-ad-slot="5338454119" data-ad-format="auto"></ins><script>(adsbygoogle=window.adsbygoogle ||[]).push({});</script>';
+$rek_winteh_l='<ins class="adsbygoogle" style="display:inline-block;width:240px;height:400px" data-ad-client="ca-pub-0781640196587335" data-ad-slot="7624678510"></ins><script>(adsbygoogle=window.adsbygoogle || []).push({});</script>';

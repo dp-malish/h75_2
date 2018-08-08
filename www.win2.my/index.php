@@ -7,7 +7,7 @@ $Cash=new Cache_File(['win'],true);
 
 $bot=new UserAgent();
 
-if(!$bot->isBot()){include'../blocks/win/rek/google.php';}
+//if(!$bot->isBot()){include'../blocks/win/rek/google.php';}
 
 if($_SERVER['REQUEST_URI']!='/'){
     if(Route::requestURI(3)){
