@@ -21,6 +21,7 @@ class Opt{
 	static $l_content='';
 	static $main_content_up='';
     static $main_content='';
+	static $r_content_up='';
 	static $r_content='';
 
 	static $live_user=0;

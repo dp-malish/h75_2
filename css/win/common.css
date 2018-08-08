@@ -1,0 +1,56 @@
+h1,h2,h3,h4{text-align:center;margin:5px auto}
+p{margin:5px;}
+
+.fon,.fon_c{margin:0 5px 7px;}
+@media screen and (max-width: 920px){.fon,.fon_c{margin:0 0 7px}}
+#l_col .fon,#l_col .fon_c,#r_col .fon,#r_col .fon_c{margin:0 0 7px}
+
+.tb2_l_col{
+	float:left;
+	width:48.8%;
+	margin:5px 0 0.8%;
+}
+.tb2_r_col{
+	float:right;
+	width:48.8%;
+	margin:5px 0 0.8%;
+}
+.tb2_img{
+	padding:5px;
+	text-align:center
+}
+
+.tel{font-size: 130%}
+
+/*.tel a,.tel img{display:inline-block; margin:0}
+@media screen and (min-width:240px) and (max-width:780px){.tel a{margin:25px 0}}*/
+
+.telkiev::before{content: url(../img/site/dbpic.php?i=kievstar&ep=1)" "}
+.vodafon::before{content: url(../img/site/dbpic.php?i=vodafon&ep=1)" "}
+
+
+.nav_link a{margin:0 3px;display:inline-block}
+@media screen and (min-width:240px) and (max-width:780px){.nav_link a{margin:25px 24px}}
+
+.pechat{position:absolute; right:-1px; bottom:-11px;}
+.tableprice, .pricetdtwo, .pricetdone{border:#03C thin solid}
+.tableprice{width:100%;}
+.pricetdone{width:73%;padding:5px}
+.pricetdtwo{width:25%;padding:5px}
+.note{font-size:70%}
+/*рекламные блоки*/
+.adsbygoogle{display:block}
+.caprek{width:322px;margin:0 26px}
+.grek{margin:0 auto; background-color: #7D6D3C}
+@media screen and (min-width:240px) and (max-width:840px){.caprek{width:322px;margin:0 3px}}
+/*кнопки share*/
+#share .rel{margin:15px 3px}
+#informer{margin:6px 0;}
+@media screen and (min-width: 801px){
+	#share{
+		z-index:333;
+		position:fixed;
+		left:50px;
+		bottom:50px
+	}
+}

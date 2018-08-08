@@ -89,7 +89,7 @@ function start_show(res,obj,res_s){
     temp_obj.style.opacity = res_s;
     show_element(res);
 }
-//*************************show_element**************************
+//*************************Модальная форма**************************
 function modalload(loadimg){
     var d=document.createElement("div");
     d.setAttribute("id","modalload");
@@ -135,18 +135,12 @@ function modalloadclose(){
         if(modalloadform!==null){modalloadform.parentNode.removeChild(modalloadform);}
     }catch(e){}
 }
-//*************************show_element**************************
+//*************************AutoLoad**************************
+/*
 window.addEventListener("load", function(){
     try{
     if(document.cookie.length>4){
-        /*var js=document.createElement("script");
-        js.type='text/javascript';
-        js.src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js";
-        document.getElementsByTagName("head")[0].appendChild(js,document.head.lastChild);
-        js=document.createElement("script");
-        js.type='text/javascript';
-        js.src="//yastatic.net/share2/share.js";
-        document.getElementsByTagName("head")[0].appendChild(js,document.head.lastChild);*/
+        //alert('Ready!  7777');
     }
 }catch(e){}
-},true);
+},true);*/
