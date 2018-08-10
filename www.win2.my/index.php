@@ -28,5 +28,6 @@ if(Route::$index){include'../modul/win/main.php';}
 require'../blocks/win/menu/l/remont.php';
 //right - all stranici
 require'../blocks/win/menu/r/web.php';
-//require'../blocks/win/menu/r/dop_mat.php';
+require'../blocks/win/menu/r/dop_mat.php';
+
 require'../blocks/win/common/head.php';require '../blocks/win/common/b_header.php';require'../blocks/win/common/header.php';require '../blocks/win/common/a_header.php';require '../blocks/win/common/l_column.php';require'../blocks/win/common/body_two_ext.php';require '../blocks/win/common/b_footer.php';require'../blocks/win/common/foot.php';
