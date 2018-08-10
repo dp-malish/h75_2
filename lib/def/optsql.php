@@ -10,12 +10,14 @@ class Optsql{
             switch($_SERVER['SERVER_NAME']){
             case 'vt2.my':$this->db_con=['root','root','vt'];break;
             case 'win2.my':$this->db_con=['root','root','winteh'];break;
+            case 'stroy.my':$this->db_con=['root','root','stroy'];break;
             default:Route::location();
             }
         }else{
             switch($_SERVER['SERVER_NAME']){
                 case 'vt2.my':$this->db_con=['root','root','vt_img'];break;
                 case 'win2.my':$this->db_con=['root','root','winteh_img'];break;
+                case 'stroy.my':$this->db_con=['root','root','stroy_img'];break;
                 default:Route::location();
             }
         }

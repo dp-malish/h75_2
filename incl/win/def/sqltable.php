@@ -4,7 +4,7 @@ namespace incl\win\Def;
 
 class SqlTable extends \lib\Img\SqlTableDef{
     const IMG=[
-      ['def_content_img','Общие','/img/site/dbpic.php?id='],
+      ['default_img','Общие','/img/site/dbpic.php?id='],
 
         ['everything_interesting_img','Пример','/img/everything_interesting/dbpic.php?id=']
 

@@ -16,7 +16,7 @@ class ImgExt{
     private static $SqlTable='';
 
     static function SqlTable(){//костыль для разделения файлов сайтов по папкам incl
-            self::$SqlTable='incl\\'.Def\Opt::$dir_name_site.'\SqlTable';
+            self::$SqlTable='incl\\'.Def\Opt::$dir_name_site.'\def\SqlTable';
             self::$SqlTable=self::$SqlTable::IMG;
     }
 
