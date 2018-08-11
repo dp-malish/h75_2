@@ -5,7 +5,7 @@ var uri=decodeURI(window.location.pathname);
 var temp_obj;//для проявления объекта
 var loaderImg=new Image();loaderImg.src="/img/site/loader.gif";
 var mesyacstr=["месяц","января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];
-
+var adblock=true;
 //*************************ajax**************************
 function ajaxPostSend(urlparts, callback, json, asinc, url) {
     if (asinc === undefined) {
@@ -136,11 +136,32 @@ function modalloadclose(){
     }catch(e){}
 }
 //*************************AutoLoad**************************
-/*
+
 window.addEventListener("load", function(){
     try{
     if(document.cookie.length>4){
+
+
+        if(adblock){
+            setCookie("_adnow",0);//first load adBlock; Не используется сейчас adBlock;
+        }else{
+            alert("111");
+            setCookie("_adnow",1);//first load adBlock; Используется сейчас adBlock;
+            setCookie("_flad",1);//first load adBlock; Использует adBlock;
+            alert("yui");
+        }
+
+        /*var adf=getCookie("adframe");
+
+        if(adf!=""){
+
+
+
+
+        }*/
+
+
         //alert('Ready!  7777');
     }
 }catch(e){}
-},true);*/
+},true);
