@@ -5,7 +5,7 @@ var uri=decodeURI(window.location.pathname);
 var temp_obj;//для проявления объекта
 var loaderImg=new Image();loaderImg.src="/img/site/loader.gif";
 var mesyacstr=["месяц","января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];
-var adblock=true;
+var adblock=false;
 //*************************ajax**************************
 function ajaxPostSend(urlparts, callback, json, asinc, url) {
     if (asinc === undefined) {
@@ -143,12 +143,13 @@ window.addEventListener("load", function(){
 
 
         if(adblock){
+            alert("Не используется сейчас adBlock");
             setCookie("_adnow",0);//first load adBlock; Не используется сейчас adBlock;
         }else{
-            alert("111");
+            alert("Используется сейчас adBlock;");
             setCookie("_adnow",1);//first load adBlock; Используется сейчас adBlock;
             setCookie("_flad",1);//first load adBlock; Использует adBlock;
-            alert("yui");
+            alert("777");
         }
 
         /*var adf=getCookie("adframe");

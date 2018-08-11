@@ -1,4 +1,4 @@
-var adblock=false;
+var adblock=true;
 
 /*(function(){
     // Code goes here
