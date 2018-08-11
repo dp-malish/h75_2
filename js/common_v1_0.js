@@ -140,28 +140,6 @@ function modalloadclose(){
 window.addEventListener("load", function(){
     try{
     if(document.cookie.length>4){
-
-
-        if(adblock){
-            alert("Не используется сейчас adBlock");
-            setCookie("_adnow",0);//first load adBlock; Не используется сейчас adBlock;
-        }else{
-            alert("Используется сейчас adBlock;");
-            setCookie("_adnow",1);//first load adBlock; Используется сейчас adBlock;
-            setCookie("_flad",1);//first load adBlock; Использует adBlock;
-            alert("777");
-        }
-
-        /*var adf=getCookie("adframe");
-
-        if(adf!=""){
-
-
-
-
-        }*/
-
-
         //alert('Ready!  7777');
     }
 }catch(e){}
