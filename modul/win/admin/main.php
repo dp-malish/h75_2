@@ -6,7 +6,7 @@ $login='win';
 $pass='123';
 
 $user=new User\Admin();
-if(!$user->loginAdmin()){$module='404';}else{
+if(!$user->loginAdmin()){Route::$module404=true;}else{
   if(!isset($_COOKIE[$user->admin_form_login_cookie])){//если нет куков формы админа
     if(\lib\Post\Post::issetPostArr()){
 

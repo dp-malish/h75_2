@@ -7,6 +7,8 @@ try{if(Route::$count_uri_parts>3){throw new Exception();}else{
     require'../modul/'.Opt::$dir_name_site.'/admin/common/clear_cache.php';
     require'../modul/'.Opt::$dir_name_site.'/admin/common/sitemap.php';
 
+    require'../modul/'.Opt::$dir_name_site.'/admin/common/download.php';
+
     if(!isset(Route::$uri_parts[1])){
       /*$DB=new SQLi();
       $res=$DB->arrSQL('SELECT id,data FROM feedback WHERE readed IS NULL');
@@ -38,6 +40,9 @@ try{if(Route::$count_uri_parts>3){throw new Exception();}else{
             case 'картинки-пакетно':include'../modul/'.Opt::$dir_name_site.'/admin/img/main.php';break;
             case 'картинки-изменить':include'../modul/'.Opt::$dir_name_site.'/admin/img/main.php';break;
             //*************************
+
+            case 'прошивальщики':include'../modul/'.Opt::$dir_name_site.'/admin/download/firmware.php';break;
+
 
             //case 'общие-страницы':include'../modul/'.$dir_site.'/admin/section/blog_def.php';break;
             //case 'блог':include'../modul/'.$dir_site.'/admin/section/blog.php';break;
