@@ -10,38 +10,21 @@ class Download{
     public $last_id=1;
 
 
-static function getFileDB(){
-    if(isset($_GET['id'])){
-
-        try{
-            $Link=@mysql_connect($Host,$Admin,$Password);
-            @mysql_select_db($DBName,$Link);
-            @mysql_query("SET NAMES utf8");
-            $sql='SELECT name_file,size_file,content FROM '.$DBTable.$kind_s_ext.' WHERE id =\''.$id.'\'';
-            $sound=@mysql_query($sql);
-            $res=@mysql_fetch_array($sound);
-            if($res['content']=='')exit();
-            @mysql_free_result($sound);
-            @mysql_close($Link);
-        }catch(Exception $e){}
-        if(!$load_f){
-            if($kind_sound==1){header('Content-Type: audio/mpeg');}
-            if($kind_sound==2){header('Content-Type: audio/ogg');}
-            header('Cache-Control: public, max-age=29030400');
-            header('Content-Length: '.$res['size_file']);
-        }else{
-            header('Content-Description: File Transfer');
-            header('Content-Type: application/octet-stream');
-            header('Content-Disposition: attachment; filename='.$res['name_file']);
-            header('Content-Transfer-Encoding: binary');
-            header('Expires: 0');
-            header('Cache-Control: must-revalidate');
-            header('Pragma: public');
-            header('Content-Length: '.$res['size_file']);
-        }
+static function getFileDB($DBTable,$id){
+    $DB=new Def\SQLi();
+    $sql='SELECT name_file,content_type,size_file,content FROM '.$DBTable.' WHERE id ='.$DB->realEscapeStr($id);
+    $res=$DB->strSQL($sql);
+    if($res){
+        header('Content-Description: File Transfer');
+        header('Content-Type: '.$res['content_type']);
+        header('Content-Disposition: attachment; filename='.$res['name_file']);
+        header('Content-Transfer-Encoding: binary');
+        header('Expires: 0');
+        header('Cache-Control: must-revalidate');
+        header('Pragma: public');
+        header('Content-Length: '.$res['size_file']);
         echo $res['content'];
-    }
-
+    }else echo '0x000010';
 }
 
 function saveFileDB($DBTable,$last_id=false){
