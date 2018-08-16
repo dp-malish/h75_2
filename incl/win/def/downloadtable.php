@@ -9,6 +9,9 @@ class DownloadTable extends \lib\Download\Download{
     const DOWNLOAD_DB=[
         'zzzzzz'=>['zzzzzz','download_firmware___zzz','Прошивальщики_zzz'],
         'firmware'=>['firmware','download_firmware','Прошивальщики'],
+        'bios_asus'=>['bios_asus','download_bios_asus','Биос Asus'],
+
+
         'are'=>['are','dload_fie','Прошивальщики'],
         'firmware2'=>['firmware2','download_firmware2','Прошивальщики2']
     ];
