@@ -1,3 +1,13 @@
+CREATE TABLE IF NOT EXISTS `manufacturer` (
+  `manufacturer_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(64) NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `sort_order` int(3) DEFAULT 0,
+  PRIMARY KEY (`manufacturer_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+
 CREATE TABLE IF NOT EXISTS def_content(
   id int(11) NOT NULL AUTO_INCREMENT,
   link varchar(255) NOT NULL,
