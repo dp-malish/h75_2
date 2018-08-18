@@ -14,5 +14,13 @@ $dfg=json_decode($er,true);
 
 var_dump($dfg);
 
-echo $dfg[0]["name"];
+echo $dfg[0]["name"].'<br>'.'<br>'.'<br>'.'<br>'.'<br>';
 
+foreach($dfg AS $v){
+    echo $v['manufacturer_id'].'  '.mb_strtolower($v['name'],'UTF-8').'<br>';
+
+
+
+}
+
+print_r($dfg);

@@ -18,6 +18,15 @@ class Bios{
 
         Def\Opt::$main_content.='<div class="fon_c">bios'.$this->manuf_laptop_arr[1]['name'].'</div>';
 
+
+        Def\Opt::$main_content.='<div class="fon_c">bios  -  '.$this->getManufacturerId('dell').'</div>';
+
+    }
+
+    private function getManufacturerId($val){
+        foreach($this->manuf_laptop_arr AS $v){
+            if($v['name']==$val || mb_strtolower($v['name'],'UTF-8')==$val)break;
+        }return $v['manufacturer_id'];
     }
 
 
