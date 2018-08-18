@@ -3,10 +3,11 @@ CREATE TABLE IF NOT EXISTS `manufacturer` (
   `name` varchar(64) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
   `sort_order` int(3) DEFAULT 0,
+  laptop int(3) DEFAULT 0,
   PRIMARY KEY (`manufacturer_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-
+#ALTER TABLE `manufacturer` ADD `laptop` TINYINT NOT NULL DEFAULT '0' AFTER `sort_order`;
 
 CREATE TABLE IF NOT EXISTS def_content(
   id int(11) NOT NULL AUTO_INCREMENT,
