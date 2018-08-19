@@ -18,7 +18,7 @@ if($_SERVER['REQUEST_URI']!='/'){
                 $setAdminCook=new \lib\user\User();$setAdminCook->setCookieAdmin();Route::$index=1;break;
             case $set:include'../modul/win/admin/main.php';break;
 
-            case'биос':new \incl\win\Bios\Bios();break;
+            case'bios-laptop':new \incl\win\Bios\Bios();break;
 
 
 

@@ -24,7 +24,7 @@ class Route{
     static function modul404(){/**Несуществующая страница*/
       header("HTTP/1.0 404 Not Found");/*header("Status: 404 Not Found");*/
       Opt::$title='Извините, страница не найдена';
-      Opt::$main_content='<h4>'.Opt::$title.'</h4><p>Пожалуйста, убедитесь, что ссылка указанна правильно!</p><script type="text/javascript">setTimeout(\'location.replace("/")\', 13000);</script>';
+      Opt::$main_content='<div class="fon_c"><h4>'.Opt::$title.'</h4><p>Пожалуйста, убедитесь, что ссылка указанна правильно!</p></div><script type="text/javascript">setTimeout(\'location.replace("/")\', 13000);</script>';
     }
     //***************************
     static function requestURI($count_uri_parts_max=4){/**Нарезать url на части*/
