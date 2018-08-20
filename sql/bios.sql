@@ -23,7 +23,7 @@ DROP TABLE bios_laptop;
 
 
 
-CREATE TABLE IF NOT EXISTS bios_laptop_(
+CREATE TABLE IF NOT EXISTS bios_laptop_second(
   id int(11) NOT NULL AUTO_INCREMENT,
   link varchar(255) NOT NULL,
   manufacturer_id int(11),
