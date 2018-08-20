@@ -25,12 +25,20 @@ DROP TABLE bios_laptop;
 
 CREATE TABLE IF NOT EXISTS bios_laptop_second(
   id int(11) NOT NULL AUTO_INCREMENT,
-  link varchar(255) NOT NULL,
-  manufacturer_id int(11),
-  model varchar(64) NOT NULL,
+  id_bios_laptop int(11),
+
+  model_motherboard varchar(50) NOT NULL,
+  rev_motherboard varchar(20),
+  ver_bios varchar(23),
+
+  download_table SMALLINT DEFAULT 1,
+
+  level SMALLINT DEFAULT 1,
+
+  notes varchar(255),
+
   PRIMARY KEY (id),
-  UNIQUE KEY link(link),
-  KEY (manufacturer_id)
+  KEY (id_bios_laptop)
 )ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
