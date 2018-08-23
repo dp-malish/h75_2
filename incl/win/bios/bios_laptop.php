@@ -3,7 +3,7 @@
 namespace incl\win\Bios;
 use lib\Def as Def;
 
-class Bios{
+class Bios_laptop{
 
     private $manuf_laptop_arr;//производители ноутбуков (массив)
 
