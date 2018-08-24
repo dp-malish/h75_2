@@ -45,10 +45,10 @@ class Bios_laptop{
 
         //Допилить title desc и т.д.!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-        Def\Opt::$main_content.='<div class="fon_c"><h3>БИОС для ноутбука</h3><p>Выбрать производителя:</p>';
+        Def\Opt::$main_content.='<div class="fon_c"><h3>БИОС ноутбука</h3><p>Выбрать производителя:</p>';
 
 
-        Def\Opt::$main_content.='<ul class="nav_link">';
+        Def\Opt::$main_content.='<ul class="nav_link five">';
         foreach($this->manuf_laptop_arr AS $v){
             Def\Opt::$main_content.='<li><a href="'.mb_strtolower($v['name'],'UTF-8').'">'.$v['name'].'</a></li>';
         }
@@ -58,16 +58,17 @@ class Bios_laptop{
     }
 
     private function routUri1_Manufacture(){
+
         $id=$this->getManufacturerId(Def\Route::$uri_parts[1]);
         if($id){
             $DB=new Def\SQLi();
             $res=$DB->arrSQL('SELECT link,manufacturer_id,model FROM bios_laptop WHERE manufacturer_id='.$id);
             if($res){
-                Def\Opt::$main_content.='<div class="fon_c"><h3>БИОС для ноутбуков '.$this->getManufacturer($id).'</h3><ul class="nav_link">';
+                Def\Opt::$main_content.='<div class="fon_c"><h3>БИОС для ноутбуков '.$this->getManufacturer($id).'</h3><ul class="nav_link five">';
                 foreach($res as $k=>$v){
                     Def\Opt::$main_content.='<li><a href="/'.Def\Route::$uri_parts[0].'/'.Def\Route::$uri_parts[1].'-'.$v['link'].'">'.Def\Route::$uri_parts[1].'-'.$v['model'].'</a></li>';
                 }
-                Def\Opt::$main_content.='</ul></div>';
+                Def\Opt::$main_content.='<li> </li><li><a href="/'.Def\Route::$uri_parts[0].'/">&#8656; Назад в раздел</a></li></ul></div>';
             }else Def\Route::$module404=true;
         }else Def\Route::$module404=true;
     }
@@ -76,16 +77,30 @@ class Bios_laptop{
 
         $id_manufactur=$this->getManufacturerId($manufactur);
         if($id_manufactur){
-        $manufactur_name=$this->getManufacturer($id_manufactur);
+        $manufactur_name=$this->getManufacturer($id_manufactur);//Надпись типа Asus
 
 
-        Def\Opt::$main_content.='<div class="fon_c"><h3>bios  -  '.$manufactur_name.'===='.$model.'</h3>';
+        Def\Opt::$main_content.='<div class="fon_c"><h3>BIOS  -  '.$manufactur_name.'</h3>';
 
 
-        //SELECT f.id, f.link, f.manufacturer_id, f.model, s.model_motherboard, s.rev_motherboard, s.ver_bios, s.download_table, s.level, s.notes FROM bios_laptop f RIGHT JOIN bios_laptop_second s ON f.id = s.id_bios_laptop
+            Def\Opt::$main_content.='===='.$model.'<br>';
+
+            $DB=new Def\SQLi();
+            $sql='SELECT f.id, f.link, f.manufacturer_id, f.model, s.model_motherboard, s.rev_motherboard, s.ver_bios, s.download_table, s.level, s.notes FROM bios_laptop f RIGHT JOIN bios_laptop_second s ON f.id = s.id_bios_laptop WHERE f.link='.$DB->realEscapeStr($model).' AND f.manufacturer_id='.$DB->realEscapeStr($id_manufactur);
+
+            $res=$DB->arrSQL($sql);
+            if($res){
+                foreach ($res as $k => $v){
+
+                Def\Opt::$main_content.='id  -  '.$id_manufactur.'  '.$v['id'];
 
 
-        Def\Opt::$main_content.='id  -  '.$id_manufactur.'</div>';
+                }
+            }else{
+                Def\Opt::$main_content.='XYZ';
+            }
+
+            Def\Opt::$main_content.='</div>';
 
 
         }else Def\Route::$module404=true;
