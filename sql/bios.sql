@@ -32,6 +32,7 @@ CREATE TABLE IF NOT EXISTS bios_laptop_second(
   ver_bios varchar(23),
 
   download_table SMALLINT DEFAULT 1,
+  download_table_id int(11),
 
   level SMALLINT DEFAULT 1,
 
