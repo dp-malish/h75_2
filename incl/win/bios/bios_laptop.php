@@ -89,15 +89,43 @@ class Bios_laptop{
                 Def\Opt::$main_content.='<div class="fon_c"><h3><abbr title="Basic input/output system">BIOS</abbr> '.$manufactur_name.' '.$model.'</h3><br><h4 class="al ml">Скачать <abbr title="Базовая система ввода-вывода">БИОС</abbr> для ноутбука '.$manufactur_name.' '.$model.'</h4><br><br>';
 
                 foreach($res as $k=>$v){
-                    Def\Opt::$main_content.='<ul class="five"><li><b>Motherboard  -  '.($v['model_motherboard']==''?'не указана':$v['model_motherboard']).'</b></li><li>Rev  -  '.($v['rev_motherboard']==''?'не указана':$v['rev_motherboard']).'</li><li>Version <abbr title="Basic input/output system">BIOS</abbr>   -  '.($v['ver_bios']==''?'не указана':$v['ver_bios']).'</li><li>Примечание: '.($v['notes']==''?'отсутствует':$v['notes']).'</li><li></li>';
+                    Def\Opt::$main_content.='<ul class="five"><li><b>Motherboard  -  '.($v['model_motherboard']==''?'не указана':$v['model_motherboard']).'</b></li><li>Rev  -  '.($v['rev_motherboard']==''?'не указана':$v['rev_motherboard']).'</li><li>Version <abbr title="Basic input/output system">BIOS</abbr>   -  '.($v['ver_bios']==''?'не указана':$v['ver_bios']).'</li><li>Примечание: '.($v['notes']==''?'отсутствует':$v['notes']).'</li>';
 
-                    Def\Opt::$main_content.='<li><span class="link">Скачать файл</span></li>
+                    Def\Opt::$main_content.='<li><div class="link" onclick="fountainG(this)">Скачать файл</div>
+<link rel="stylesheet" type="text/css" href="/fountainG.css">
 
-</ul><br><br>';
+<div class="fountainG_loader">
+	<div id="fountainG_1" class="fountainG"></div>
+	<div id="fountainG_2" class="fountainG"></div>
+	<div id="fountainG_3" class="fountainG"></div>
+	<div id="fountainG_4" class="fountainG"></div>
+	<div id="fountainG_5" class="fountainG"></div>
+	<div id="fountainG_6" class="fountainG"></div>
+	<div id="fountainG_7" class="fountainG"></div>
+	<div id="fountainG_8" class="fountainG"></div>
+</div>
+
+
+</li></ul><br>
+<script type="application/javascript">
+function fountainG(el){
+    //el.style.display="none";
+    //el.remove();
+    el.parentNode.removeChild(el);
+    el.parentNode.style.display="block";
+    //alert("86");
+  //document.getElementById("fountainG").style.display="block";
+  //el.parentNode.style.display="block";
+  //alert( el.parentNode );
+}
+
+</script>
+
+';
 
                     Def\Start::$start['AdminCook']=new \lib\user\User();
 
-                    if(!Def\Start::$start['AdminCook']->loginAdmin()){Def\Route::$module404=true;}
+                    if(!Def\Start::$start['AdminCook']->loginAdmin()){/*Def\Route::$module404=true;*/}
                     else{
                         Def\Opt::$main_content.='download_table  -  '.$v['download_table'];
                         Def\Opt::$main_content.='download_table_id  -  '.$v['download_table_id'].'<br>';
@@ -106,6 +134,8 @@ class Bios_laptop{
                     }
 
                 }
+
+
             }else{
                 Def\Opt::$main_content.='XYZ';
             }
