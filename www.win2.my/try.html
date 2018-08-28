@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css.php">
+    <link rel="stylesheet" type="text/css" href="/fountainG.css">
+    <title>Title</title>
+</head>
+<body>
+<div id="d1">
+
+    hdfgui
+</div>
+
+<div id="d2">
+
+    hdfgui
+</div>
+
+<div id="d3">
+
+    hdfgui
+</div>
+
+
+<div  id="d4" style="background-color: white; min-width: 500px;min-height: 400px">
+    <span class="link five" data-l="1" onclick="fountainG(this)">Скачать файл</span>
+
+<div class="fountainG_loader">
+    <div class="fountainG"></div>
+    <div class="fountainG"></div>
+    <div class="fountainG"></div>
+    <div class="fountainG"></div>
+    <div class="fountainG"></div>
+    <div class="fountainG"></div>
+    <div class="fountainG"></div>
+    <div class="fountainG"></div>
+</div>
+    <script type="application/javascript">
+        function fountainG(el){
+            var mDiv=el.parentNode;
+            mDiv.removeChild(el);
+            var loader=mDiv.children[0];
+            loader.style.display="block";
+
+            //alert(el.dataset.l);
+            //var interval=1000;
+            if(el.dataset.l==1){
+                //interval=7000;
+                errDownload(mDiv);
+
+
+            }
+
+            //setTimeout(getDownload,interval,el.dataset.l);
+
+
+        }
+        function getDownload(p){
+            alert(p);
+        }
+        function errDownload(el){
+            //alert(el);
+            //el.removeChild(el.firstChild);
+            el.innerHTML='<p>Ошибка загрузки возможна по причине использования блокировщика рекламы</p>';
+
+        }
+
+    </script>
+
+
+
+    <script type="application/javascript">
+
+
+        //alert('er')
+
+        function dellDiv(){
+            document.getElementById('d2').remove();
+
+        }
+
+    </script>
+</div>
+
+<div>
+<span onclick="dellDiv()">click</span>
+    hdfgui
+</div>
+</body>
+</html>

@@ -3,8 +3,8 @@
     position:relative;
     width:234px;
     height:28px;
-    /*margin:5px auto 13px;*/
-    background-color: #6B3708;
+    /*margin:5px auto 13px;
+    background-color: #6B3708;*/
 }
 
 .fountainG{
@@ -45,7 +45,7 @@
     -moz-border-radius:19px;*/
 }
 
-#fountainG_1{
+.fountainG:nth-child(1){
     left:0;
     animation-delay:0.6s;
    /* -o-animation-delay:0.6s;
@@ -54,7 +54,9 @@
     -moz-animation-delay:0.6s;*/
 }
 
-#fountainG_2{
+
+.fountainG:nth-child(2)
+/*#fountainG_2*/{
     left:29px;
     animation-delay:0.75s;
    /* -o-animation-delay:0.75s;
@@ -63,7 +65,7 @@
     -moz-animation-delay:0.75s;*/
 }
 
-#fountainG_3{
+.fountainG:nth-child(3){
     left:58px;
     animation-delay:0.9s;
     /*-o-animation-delay:0.9s;
@@ -72,7 +74,7 @@
     -moz-animation-delay:0.9s;*/
 }
 
-#fountainG_4{
+.fountainG:nth-child(4){
     left:88px;
     animation-delay:1.05s;
     /*-o-animation-delay:1.05s;
@@ -81,7 +83,7 @@
     -moz-animation-delay:1.05s;*/
 }
 
-#fountainG_5{
+.fountainG:nth-child(5){
     left:117px;
     animation-delay:1.2s;
     /*-o-animation-delay:1.2s;
@@ -90,7 +92,7 @@
     -moz-animation-delay:1.2s;*/
 }
 
-#fountainG_6{
+.fountainG:nth-child(6){
     left:146px;
     animation-delay:1.35s;
     /*-o-animation-delay:1.35s;
@@ -99,7 +101,7 @@
     -moz-animation-delay:1.35s;*/
 }
 
-#fountainG_7{
+.fountainG:nth-child(7){
     left:175px;
     animation-delay:1.5s;
     /*-o-animation-delay:1.5s;
@@ -108,7 +110,7 @@
     -moz-animation-delay:1.5s;*/
 }
 
-#fountainG_8{
+.fountainG:nth-child(8){
     left:205px;
     animation-delay:1.64s;
     /*-o-animation-delay:1.64s;
