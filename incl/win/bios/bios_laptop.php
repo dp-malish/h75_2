@@ -97,31 +97,30 @@ class Bios_laptop{
 
 <div class="five"><p>Version <abbr title="Basic input/output system">BIOS</abbr>   -  '.($v['ver_bios']==''?'не указана':$v['ver_bios']).'</p></div>
 
+<div class="five"><p>Сложность: '.$v['level'].'</p></div>
+
 <div class="five"><p>Примечание: '.($v['notes']==''?'отсутствует':$v['notes']).'</p></div>';
 
 
 
-                    if($v['level']=1){$ses=$Down->genLinkDownload($v['download_table_id'],$v['download_table']);}
+                    if($v['level']==1 || $v['level']==2 || Def\Start::$start['AdminCook']->loginAdmin()){
+                        $ses=$Down->genLinkDownload($v['download_table_id'],$v['download_table']);
+                    }
+
+
 
 Def\Opt::$main_content.='<div class="five">
 
 <span class="link" data-l="'.$v['level'].'" data-s="'.$ses.'" data-id="'.$v['download_table_id'].'" data-t="'.$v['download_table'].'" onclick="fountainG(this)">Скачать файл</span>
 
+<div class="fountainG_loader"><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div></div>
+
+</div><br>';
 
 
-<div class="fountainG_loader">
-    <div class="fountainG"></div>
-    <div class="fountainG"></div>
-    <div class="fountainG"></div>
-    <div class="fountainG"></div>
-    <div class="fountainG"></div>
-    <div class="fountainG"></div>
-    <div class="fountainG"></div>
-    <div class="fountainG"></div>
-</div>
-</div>
+                }
 
-<br><link rel="stylesheet" type="text/css" href="/fountainG.css">
+                Def\Opt::$main_content.='<link rel="stylesheet" type="text/css" href="/fountainG.css">
 <script type="application/javascript">
 function fountainG(el){
     var mDiv=el.parentNode;
@@ -133,8 +132,7 @@ function fountainG(el){
     
     if(el.dataset.s==""){
         alert("error");
-        
-        
+        mDiv.innerHTML="Ошибка ...";
     }else{
         if(el.dataset.l==1){
             interval=2000;
@@ -155,22 +153,7 @@ function getDownload(mDiv,id,t,ses){
 
 
 
-</script>
-
-';
-
-                    Def\Start::$start['AdminCook']=new \lib\user\User();
-
-                    if(!Def\Start::$start['AdminCook']->loginAdmin()){/*Def\Route::$module404=true;*/}
-                    else{
-                        Def\Opt::$main_content.='download_table  -  '.$v['download_table'];
-                        Def\Opt::$main_content.='download_table_id  -  '.$v['download_table_id'].'<br>';
-                        Def\Opt::$main_content.='level  -  '.$v['level'].'<br>';
-
-                    }
-
-                }
-
+</script>';
 
             }else{
                 Def\Opt::$main_content.='XYZ';
