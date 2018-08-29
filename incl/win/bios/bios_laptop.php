@@ -2,7 +2,7 @@
 /***Гдавный класс работы с биосом*/
 namespace incl\win\Bios;
 use lib\Def as Def;
-
+use incl\win\Def as WinDef;
 class Bios_laptop{
 
     private $manuf_laptop_arr;//производители ноутбуков (массив)
@@ -86,38 +86,74 @@ class Bios_laptop{
                 Def\Opt::$title='BIOS '.$manufactur_name.' '.$model.' - Скачать БИОС для ноутбука '.$manufactur_name.' '.$model;
                 Def\Opt::$description='БИОС для ноутбука. BIOS '.$manufactur_name.' '.$model.' - Скачать БИОС для ноутбука '.$manufactur_name.' '.$model.'. Сервисный центр «WinTeh». Ремонт компьютерной и офисной техники.';
 
-                Def\Opt::$main_content.='<div class="fon_c"><h3><abbr title="Basic input/output system">BIOS</abbr> '.$manufactur_name.' '.$model.'</h3><br><h4 class="al ml">Скачать <abbr title="Базовая система ввода-вывода">БИОС</abbr> для ноутбука '.$manufactur_name.' '.$model.'</h4><br><br>';
+                Def\Opt::$main_content.='<div class="fon_c"><h3><abbr title="Basic input/output system">BIOS</abbr> '.$manufactur_name.' '.$model.'</h3><br><h4 class="al ml">Скачать <abbr title="Базовая система ввода-вывода">БИОС</abbr> для ноутбука '.$manufactur_name.' '.$model.'</h4><br>';
 
+                $Down=new WinDef\DownloadTable();
                 foreach($res as $k=>$v){
-                    Def\Opt::$main_content.='<ul class="five"><li><b>Motherboard  -  '.($v['model_motherboard']==''?'не указана':$v['model_motherboard']).'</b></li><li>Rev  -  '.($v['rev_motherboard']==''?'не указана':$v['rev_motherboard']).'</li><li>Version <abbr title="Basic input/output system">BIOS</abbr>   -  '.($v['ver_bios']==''?'не указана':$v['ver_bios']).'</li><li>Примечание: '.($v['notes']==''?'отсутствует':$v['notes']).'</li>';
+                    $ses='';
+                    Def\Opt::$main_content.='<div class="five"><p><b>Motherboard  -  '.($v['model_motherboard']==''?'не указана':$v['model_motherboard']).'</b></p></div>
 
-                    Def\Opt::$main_content.='<li><div class="link" onclick="fountainG(this)">Скачать файл</div>
-<link rel="stylesheet" type="text/css" href="/fountainG.css">
+<div class="five"><p>Rev  -  '.($v['rev_motherboard']==''?'не указана':$v['rev_motherboard']).'</p></div>
+
+<div class="five"><p>Version <abbr title="Basic input/output system">BIOS</abbr>   -  '.($v['ver_bios']==''?'не указана':$v['ver_bios']).'</p></div>
+
+<div class="five"><p>Примечание: '.($v['notes']==''?'отсутствует':$v['notes']).'</p></div>';
+
+
+
+                    if($v['level']=1){$ses=$Down->genLinkDownload($v['download_table_id'],$v['download_table']);}
+
+Def\Opt::$main_content.='<div class="five">
+
+<span class="link" data-l="'.$v['level'].'" data-s="'.$ses.'" data-id="'.$v['download_table_id'].'" data-t="'.$v['download_table'].'" onclick="fountainG(this)">Скачать файл</span>
+
+
 
 <div class="fountainG_loader">
-	<div id="fountainG_1" class="fountainG"></div>
-	<div id="fountainG_2" class="fountainG"></div>
-	<div id="fountainG_3" class="fountainG"></div>
-	<div id="fountainG_4" class="fountainG"></div>
-	<div id="fountainG_5" class="fountainG"></div>
-	<div id="fountainG_6" class="fountainG"></div>
-	<div id="fountainG_7" class="fountainG"></div>
-	<div id="fountainG_8" class="fountainG"></div>
+    <div class="fountainG"></div>
+    <div class="fountainG"></div>
+    <div class="fountainG"></div>
+    <div class="fountainG"></div>
+    <div class="fountainG"></div>
+    <div class="fountainG"></div>
+    <div class="fountainG"></div>
+    <div class="fountainG"></div>
+</div>
 </div>
 
-
-</li></ul><br>
+<br><link rel="stylesheet" type="text/css" href="/fountainG.css">
 <script type="application/javascript">
 function fountainG(el){
-    //el.style.display="none";
-    //el.remove();
-    el.parentNode.removeChild(el);
-    el.parentNode.style.display="block";
-    //alert("86");
-  //document.getElementById("fountainG").style.display="block";
-  //el.parentNode.style.display="block";
-  //alert( el.parentNode );
+    var mDiv=el.parentNode;
+    mDiv.removeChild(el);
+    var loader=mDiv.children[0];
+    loader.style.display="block";
+    
+    var interval;
+    
+    if(el.dataset.s==""){
+        alert("error");
+        
+        
+    }else{
+        if(el.dataset.l==1){
+            interval=2000;
+        }else if(el.dataset.l==2){
+            alert("not err 2");
+            interval=2000;
+        }else interval=3500;
+        
+        setTimeout(getDownload,interval,mDiv,el.dataset.id,el.dataset.t,el.dataset.s);
+    }
+
 }
+function getDownload(mDiv,id,t,ses){
+            mDiv.removeChild(mDiv.children[0]);
+            var win =window.open(my_protocol+"//"+my_host+"/download.php?id="+id+"&t="+t+"&ses="+ses);
+            if(!win){alert("Закачка залокирована браузером!");}
+}
+
+
 
 </script>
 
