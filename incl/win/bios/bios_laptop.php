@@ -59,7 +59,7 @@ class Bios_laptop{
         $id=$this->getManufacturerId(Def\Route::$uri_parts[1]);
         if($id){
             $DB=new Def\SQLi();
-            $res=$DB->arrSQL('SELECT link,manufacturer_id,model FROM bios_laptop WHERE manufacturer_id='.$id);
+            $res=$DB->arrSQL('SELECT link,manufacturer_id,model FROM bios_laptop WHERE manufacturer_id='.$id.' AND status=1');
             if($res){
                 $manufactur=$this->getManufacturer($id);
                 Def\Opt::$title='БИОС для ноутбука '.$manufactur.' - Скачать БИОС для ноутбука '.$manufactur;
@@ -89,91 +89,38 @@ class Bios_laptop{
                 Def\Opt::$main_content.='<div class="fon_c"><h3><abbr title="Basic input/output system">BIOS</abbr> '.$manufactur_name.' '.$model.'</h3><br><h4 class="al ml">Скачать <abbr title="Базовая система ввода-вывода">БИОС</abbr> для ноутбука '.$manufactur_name.' '.$model.'</h4><br>';
 
                 $Down=new WinDef\DownloadTable();
-                foreach($res as $k=>$v){
-                    $ses='';
-                    Def\Opt::$main_content.='<div class="five"><p><b>Motherboard  -  '.($v['model_motherboard']==''?'не указана':$v['model_motherboard']).'</b></p></div>
-
-<div class="five"><p>Rev  -  '.($v['rev_motherboard']==''?'не указана':$v['rev_motherboard']).'</p></div>
-
-<div class="five"><p>Version <abbr title="Basic input/output system">BIOS</abbr>   -  '.($v['ver_bios']==''?'не указана':$v['ver_bios']).'</p></div>
-
-<div class="five"><p>Сложность: '.$v['level'].'</p></div>
-
-<div class="five"><p>Примечание: '.($v['notes']==''?'отсутствует':$v['notes']).'</p></div>';
-
+                foreach($res as $k=>$v){$ses='';
+                    Def\Opt::$main_content.='<div class="five"><p><b>Motherboard  -  '.($v['model_motherboard']==''?'не указана':$v['model_motherboard']).'</b></p></div><div class="five"><p>Rev  -  '.($v['rev_motherboard']==''?'не указана':$v['rev_motherboard']).'</p></div><div class="five"><p>Version <abbr title="Basic input/output system">BIOS</abbr>   -  '.($v['ver_bios']==''?'не указана':$v['ver_bios']).'</p></div><div class="five"><p>Сложность: '.$v['level'].'</p></div><div class="five"><p>Примечание: '.($v['notes']==''?'отсутствует':$v['notes']).'</p></div>';
 
                     $AdminCook=new \lib\user\User();
-
-
-                    //Def\Start::$start['AdminCook']->loginAdmin();
-                    if($AdminCook->loginAdmin()){
-                        $ses=$Down->genLinkDownload($v['download_table_id'],$v['download_table']);
-                    }
-                    $jsErr='<p>Ошибка загрузки. Возможно включены блокировщики рекламного контента... Отключите блокировщики рекламы и обновите страницу</p>';
+                    $jsErr='<p>Ошибка загрузки. Возможно включены блокировщики рекламного контента... Отключите блокировщики рекламы и обновите страницу два раза с интервалом 7 секунд.</p>';
                     if($v['level']==1&&isset($_COOKIE['_adnow'])){
                         $adBlock=Def\Validator::html_cod($_COOKIE['_adnow']);
                         if(Def\Validator::paternInt($adBlock)){
                             if($adBlock==0)$ses=$Down->genLinkDownload($v['download_table_id'],$v['download_table']);
                         }
-                    }elseif($v['level']==2 && !isset($_COOKIE['_flad'])){
+                    }elseif($v['level']==2 && !isset($_COOKIE['_flad']) || $AdminCook->loginAdmin()){
                         $ses=$Down->genLinkDownload($v['download_table_id'],$v['download_table']);
                     }else $jsErr.='<p>Необходимо почистить куки браузера...</p>';
 
-
-Def\Opt::$main_content.='<div class="five">
-
-<span class="link" data-err="'.$jsErr.'" data-l="'.$v['level'].'" data-s="'.$ses.'" data-id="'.$v['download_table_id'].'" data-t="'.$v['download_table'].'" onclick="fountainG(this)">Скачать файл</span>
-
-<div class="fountainG_loader"><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div></div>
-
+Def\Opt::$main_content.='<div class="fon_c">
+<span class="link" data-err="'.$jsErr.'" data-l="'.$v['level'].'" data-s="'.$ses.'" data-id="'.$v['download_table_id'].'" data-t="'.$v['download_table'].'" onclick="fountainG(this)"><p>Скачать файл</p></span><div class="fountainG_loader"><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div></div>
 </div><br>';
-
-
                 }
 
                 Def\Opt::$main_content.='<link rel="stylesheet" type="text/css" href="/fountainG.css">
-<script type="application/javascript">
-function fountainG(el){
-    var mDiv=el.parentNode;
-    mDiv.removeChild(el);
-    var loader=mDiv.children[0];
-    loader.style.display="block";
-    
-    var interval;
-    
-    if(el.dataset.s==""){
-        alert("error");
-        mDiv.innerHTML=el.dataset.err;
-    }else{
-        if(el.dataset.l==1){
-            interval=2000;
-        }else if(el.dataset.l==2){
-            alert("not err 2");
-            interval=2000;
-        }else interval=3500;
-        
+
+
+
+<script type="application/javascript">function fountainG(el){var mDiv=el.parentNode;mDiv.removeChild(el);var loader=mDiv.children[0];loader.style.display="block";var interval;
+    if(el.dataset.s==""){mDiv.innerHTML=el.dataset.err;
+    }else{if(el.dataset.l==1){interval=13000;}else if(el.dataset.l==2){interval=13700;}else interval=3500;        
         setTimeout(getDownload,interval,mDiv,el.dataset.id,el.dataset.t,el.dataset.s);
     }
+}function getDownload(mDiv,id,t,ses){mDiv.removeChild(mDiv.children[0]);var win =window.open(my_protocol+"//"+my_host+"/download.php?id="+id+"&t="+t+"&ses="+ses);if(!win){alert("Закачка залокирована браузером!");}}</script>';
 
-}
-function getDownload(mDiv,id,t,ses){
-            mDiv.removeChild(mDiv.children[0]);
-            var win =window.open(my_protocol+"//"+my_host+"/download.php?id="+id+"&t="+t+"&ses="+ses);
-            if(!win){alert("Закачка залокирована браузером!");}
-}
-
-
-
-</script>';
-
-            }else{
-                Def\Opt::$main_content.='XYZ';
-            }
-
-            Def\Opt::$main_content.='</div>';
-
-
+                Def\Opt::$main_content.='</div>';
+            }else{Def\Route::$module404=true;}
         }else Def\Route::$module404=true;
     }
-
 }

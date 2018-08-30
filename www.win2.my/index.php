@@ -15,7 +15,7 @@ if($_SERVER['REQUEST_URI']!='/'){
         $setAdminCook='win'.Data::DatePass();$set='set';
         switch(Route::$uri_parts[0]){
             case $setAdminCook:
-                Start::$start['AdminCook']=new \lib\user\User();Start::$start['AdminCook']->setCookieAdmin();Route::$index=1;break;
+                $AdminCook=new \lib\user\User();$AdminCook->setCookieAdmin();Route::$index=1;break;
             case $set:include'../modul/win/admin/main.php';break;
 
             case'bios-laptop':new \incl\win\Bios\Bios_laptop();break;

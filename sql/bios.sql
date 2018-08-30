@@ -13,14 +13,15 @@ CREATE TABLE IF NOT EXISTS bios_laptop(
   id int(11) NOT NULL AUTO_INCREMENT,
   link varchar(255) NOT NULL,
   manufacturer_id int(11),
-  model varchar(64) NOT NULL,
+  model TINYINT DEFAULT 0,
+  status varchar(64) NOT NULL,
   PRIMARY KEY (id),
   UNIQUE KEY link(link),
   KEY (manufacturer_id)
 )ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 #DROP TABLE bios_laptop;
-
+ALTER TABLE bios_laptop ADD status TINYINT DEFAULT '0' AFTER model;
 
 
 CREATE TABLE IF NOT EXISTS bios_laptop_second(
