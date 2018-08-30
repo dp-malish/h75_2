@@ -1,5 +1,5 @@
 <?php
-/***Гдавный класс работы с биосом*/
+/***Гдавный класс работы с биосом laptop*/
 namespace incl\win\Bios;
 use lib\Def as Def;
 use incl\win\Def as WinDef;
@@ -102,16 +102,27 @@ class Bios_laptop{
 <div class="five"><p>Примечание: '.($v['notes']==''?'отсутствует':$v['notes']).'</p></div>';
 
 
+                    $AdminCook=new \lib\user\User();
 
-                    if($v['level']==1 || $v['level']==2 || Def\Start::$start['AdminCook']->loginAdmin()){
+
+                    //Def\Start::$start['AdminCook']->loginAdmin();
+                    if($AdminCook->loginAdmin()){
                         $ses=$Down->genLinkDownload($v['download_table_id'],$v['download_table']);
                     }
-
+                    $jsErr='<p>Ошибка загрузки. Возможно включены блокировщики рекламного контента... Отключите блокировщики рекламы и обновите страницу</p>';
+                    if($v['level']==1&&isset($_COOKIE['_adnow'])){
+                        $adBlock=Def\Validator::html_cod($_COOKIE['_adnow']);
+                        if(Def\Validator::paternInt($adBlock)){
+                            if($adBlock==0)$ses=$Down->genLinkDownload($v['download_table_id'],$v['download_table']);
+                        }
+                    }elseif($v['level']==2 && !isset($_COOKIE['_flad'])){
+                        $ses=$Down->genLinkDownload($v['download_table_id'],$v['download_table']);
+                    }else $jsErr.='<p>Необходимо почистить куки браузера...</p>';
 
 
 Def\Opt::$main_content.='<div class="five">
 
-<span class="link" data-l="'.$v['level'].'" data-s="'.$ses.'" data-id="'.$v['download_table_id'].'" data-t="'.$v['download_table'].'" onclick="fountainG(this)">Скачать файл</span>
+<span class="link" data-err="'.$jsErr.'" data-l="'.$v['level'].'" data-s="'.$ses.'" data-id="'.$v['download_table_id'].'" data-t="'.$v['download_table'].'" onclick="fountainG(this)">Скачать файл</span>
 
 <div class="fountainG_loader"><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div></div>
 
@@ -132,7 +143,7 @@ function fountainG(el){
     
     if(el.dataset.s==""){
         alert("error");
-        mDiv.innerHTML="Ошибка ...";
+        mDiv.innerHTML=el.dataset.err;
     }else{
         if(el.dataset.l==1){
             interval=2000;
