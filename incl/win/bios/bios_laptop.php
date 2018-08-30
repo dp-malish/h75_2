@@ -74,20 +74,13 @@ class Bios_laptop{
     }
 
     private function routUri1_GetBios($manufactur,$model){
-
         $id_manufactur=$this->getManufacturerId($manufactur);
-        if($id_manufactur){
-            $DB=new Def\SQLi();
-            $sql='SELECT /*f.id, f.link,*/ f.manufacturer_id, /*f.model,*/ s.model_motherboard, s.rev_motherboard, s.ver_bios, s.download_table, s.download_table_id, s.level, s.notes FROM bios_laptop f RIGHT JOIN bios_laptop_second s ON f.id = s.id_bios_laptop WHERE f.link='.$DB->realEscapeStr($model).' AND f.manufacturer_id='.$DB->realEscapeStr($id_manufactur);
-            $res=$DB->arrSQL($sql);
-            if($res){
-                $manufactur_name=$this->getManufacturer($id_manufactur);//Надпись типа Asus
-
+        if($id_manufactur){$DB=new Def\SQLi();
+            $res=$DB->arrSQL('SELECT f.manufacturer_id, s.model_motherboard, s.rev_motherboard, s.ver_bios, s.download_table, s.download_table_id, s.level, s.notes FROM bios_laptop f RIGHT JOIN bios_laptop_second s ON f.id = s.id_bios_laptop WHERE f.link='.$DB->realEscapeStr($model).' AND f.manufacturer_id='.$DB->realEscapeStr($id_manufactur));
+            if($res){$manufactur_name=$this->getManufacturer($id_manufactur);//Надпись типа Asus
                 Def\Opt::$title='BIOS '.$manufactur_name.' '.$model.' - Скачать БИОС для ноутбука '.$manufactur_name.' '.$model;
                 Def\Opt::$description='БИОС для ноутбука. BIOS '.$manufactur_name.' '.$model.' - Скачать БИОС для ноутбука '.$manufactur_name.' '.$model.'. Сервисный центр «WinTeh». Ремонт компьютерной и офисной техники.';
-
                 Def\Opt::$main_content.='<div class="fon_c"><h3><abbr title="Basic input/output system">BIOS</abbr> '.$manufactur_name.' '.$model.'</h3><br><h4 class="al ml">Скачать <abbr title="Базовая система ввода-вывода">БИОС</abbr> для ноутбука '.$manufactur_name.' '.$model.'</h4><br>';
-
                 $Down=new WinDef\DownloadTable();
                 foreach($res as $k=>$v){$ses='';
                     Def\Opt::$main_content.='<div class="five"><p><b>Motherboard  -  '.($v['model_motherboard']==''?'не указана':$v['model_motherboard']).'</b></p></div><div class="five"><p>Rev  -  '.($v['rev_motherboard']==''?'не указана':$v['rev_motherboard']).'</p></div><div class="five"><p>Version <abbr title="Basic input/output system">BIOS</abbr>   -  '.($v['ver_bios']==''?'не указана':$v['ver_bios']).'</p></div><div class="five"><p>Сложность: '.$v['level'].'</p></div><div class="five"><p>Примечание: '.($v['notes']==''?'отсутствует':$v['notes']).'</p></div>';
@@ -103,22 +96,17 @@ class Bios_laptop{
                         $ses=$Down->genLinkDownload($v['download_table_id'],$v['download_table']);
                     }else $jsErr.='<p>Необходимо почистить куки браузера...</p>';
 
-Def\Opt::$main_content.='<div class="fon_c">
-<span class="link" data-err="'.$jsErr.'" data-l="'.$v['level'].'" data-s="'.$ses.'" data-id="'.$v['download_table_id'].'" data-t="'.$v['download_table'].'" onclick="fountainG(this)"><p>Скачать файл</p></span><div class="fountainG_loader"><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div></div>
-</div><br>';
+                    Def\Opt::$main_content.='<div class="fon_c"><span class="link" data-err="'.$jsErr.'" data-l="'.$v['level'].'" data-s="'.$ses.'" data-id="'.$v['download_table_id'].'" data-t="'.$v['download_table'].'" onclick="fountainG(this)"><p>Скачать файл</p></span><div class="fountainG_loader"><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div></div></div><br>';
                 }
+
+
 
                 Def\Opt::$main_content.='<link rel="stylesheet" type="text/css" href="/fountainG.css">
 
 
 
-<script type="application/javascript">function fountainG(el){var mDiv=el.parentNode;mDiv.removeChild(el);var loader=mDiv.children[0];loader.style.display="block";var interval;
-    if(el.dataset.s==""){mDiv.innerHTML=el.dataset.err;
-    }else{if(el.dataset.l==1){interval=13000;}else if(el.dataset.l==2){interval=13700;}else interval=3500;        
-        setTimeout(getDownload,interval,mDiv,el.dataset.id,el.dataset.t,el.dataset.s);
-    }
-}function getDownload(mDiv,id,t,ses){mDiv.removeChild(mDiv.children[0]);var win =window.open(my_protocol+"//"+my_host+"/download.php?id="+id+"&t="+t+"&ses="+ses);if(!win){alert("Закачка залокирована браузером!");}}</script>';
 
+<script type="application/javascript">function fountainG(el){var mDiv=el.parentNode;mDiv.removeChild(el);var loader=mDiv.children[0];loader.style.display="block";var interval;if(el.dataset.s==""){mDiv.innerHTML=el.dataset.err;}else{if(el.dataset.l==1){interval=13000;}else if(el.dataset.l==2){interval=13700;}else interval=3500;setTimeout(getDownload,interval,mDiv,el.dataset.id,el.dataset.t,el.dataset.s);}}function getDownload(mDiv,id,t,ses){mDiv.removeChild(mDiv.children[0]);var win =window.open(my_protocol+"//"+my_host+"/download.php?id="+id+"&t="+t+"&ses="+ses);if(!win){alert("Закачка залокирована браузером!");}}</script>';
                 Def\Opt::$main_content.='</div>';
             }else{Def\Route::$module404=true;}
         }else Def\Route::$module404=true;
