@@ -13,8 +13,8 @@ CREATE TABLE IF NOT EXISTS bios_laptop(
   id int(11) NOT NULL AUTO_INCREMENT,
   link varchar(255) NOT NULL,
   manufacturer_id int(11),
-  model TINYINT DEFAULT 0,
-  status varchar(64) NOT NULL,
+  model varchar(64),
+  status TINYINT DEFAULT 0,
   PRIMARY KEY (id),
   UNIQUE KEY link(link),
   KEY (manufacturer_id)

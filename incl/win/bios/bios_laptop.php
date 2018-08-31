@@ -98,15 +98,7 @@ class Bios_laptop{
 
                     Def\Opt::$main_content.='<div class="fon_c"><span class="link" data-err="'.$jsErr.'" data-l="'.$v['level'].'" data-s="'.$ses.'" data-id="'.$v['download_table_id'].'" data-t="'.$v['download_table'].'" onclick="fountainG(this)"><p>Скачать файл</p></span><div class="fountainG_loader"><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div></div></div><br>';
                 }
-
-
-
-                Def\Opt::$main_content.='<link rel="stylesheet" type="text/css" href="/fountainG.css">
-
-
-
-
-<script type="application/javascript">function fountainG(el){var mDiv=el.parentNode;mDiv.removeChild(el);var loader=mDiv.children[0];loader.style.display="block";var interval;if(el.dataset.s==""){mDiv.innerHTML=el.dataset.err;}else{if(el.dataset.l==1){interval=13000;}else if(el.dataset.l==2){interval=13700;}else interval=3500;setTimeout(getDownload,interval,mDiv,el.dataset.id,el.dataset.t,el.dataset.s);}}function getDownload(mDiv,id,t,ses){mDiv.removeChild(mDiv.children[0]);var win =window.open(my_protocol+"//"+my_host+"/download.php?id="+id+"&t="+t+"&ses="+ses);if(!win){alert("Закачка залокирована браузером!");}}</script>';
+                Def\Opt::$main_content.='<script type="application/javascript">function fountainG(el){var mDiv=el.parentNode;mDiv.removeChild(el);var loader=mDiv.children[0];loader.style.display="block";var interval;if(el.dataset.s==""){mDiv.innerHTML=el.dataset.err;}else{if(el.dataset.l==1){interval=13000;}else if(el.dataset.l==2){interval=13700;}else interval=3500;setTimeout(getDownload,interval,mDiv,el.dataset.id,el.dataset.t,el.dataset.s);}}function getDownload(mDiv,id,t,ses){mDiv.removeChild(mDiv.children[0]);var win =window.open(my_protocol+"//"+my_host+"/download.php?id="+id+"&t="+t+"&ses="+ses);if(!win){alert("Закачка залокирована браузером!");}}</script>';
                 Def\Opt::$main_content.='</div>';
             }else{Def\Route::$module404=true;}
         }else Def\Route::$module404=true;
