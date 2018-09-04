@@ -3,5 +3,6 @@
 <ul>
 <li><a href="/ajax/sitemap/?view" target="_blank">Общая карта сайта</a></li>
 <li><a href="/ajax/sitemap/def.php?view" target="_blank">Основной контент</a></li>
+<li><a href="/ajax/sitemap/bios_laptop.php?view" target="_blank">Биос для ноутбука</a></li>
 </ul>
 </div>';
