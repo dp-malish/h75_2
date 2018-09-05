@@ -12,19 +12,21 @@ echo $map->StartSiteMap();
 echo $map->StaticFileMap('../incl/win/bios/bios_laptop.php','bios-laptop/','monthly','0.5');
 //echo $map->StaticFileMap('../modul/stroy/contacts.php','контакты','monthly','0.5');
 
-//$cache_arr=new Def\Cache_Arr(['win'],true);
+
+$cache_arr=new Def\Cache_Arr(['..','..','../cache_all','win']);
 //берём массив производителей
-//$manuf_laptop_arr=$cache_arr->getCacheAssocArr('manufacturer_laptop','manufacturer WHERE laptop IS TRUE');
+$manuf_laptop_arr=$cache_arr->getCacheAssocArr('manufacturer_laptop','manufacturer WHERE laptop IS TRUE');
 
-$manuf_laptop_arr=$DB->arrSQL('SELECT * FROM manufacturer WHERE laptop IS TRUE');
 foreach($manuf_laptop_arr as $k=>$v){
-    echo $map->DBUrlMap($v['link'],date ('Y-m-d'),'monthly');
+    $manufacturer=mb_strtolower($v['name'], 'UTF-8');
+    echo $map->DBUrlMap('bios-laptop/'.$manufacturer,date('Y-m-d'),'monthly');
+    $res=$DB->arrSQL('SELECT link FROM bios_laptop WHERE manufacturer_id='.$v['manufacturer_id']);
+    if($res){
+        foreach($res as $k=>$v){
+            echo $map->DBUrlMap('bios-laptop/'.$manufacturer.'-'.$v['link'],date('Y-m-d'),'monthly');
+        }
+    }
 }
-
-/*$res=$DB->arrSQL('SELECT link,data FROM default_content WHERE menu<3');
-//foreach($res as $k=>$v){echo $map->DBUrlMap($v['link'],Def\Data::IntToStrMap($v['data']),'monthly');}
-foreach($res as $k=>$v){echo $map->DBUrlMap($v['link'],$v['data'],'monthly');}*/
-
 echo $map->EndSiteMap();
 $map->StopCache($xml);
 

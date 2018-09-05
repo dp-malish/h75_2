@@ -97,7 +97,7 @@ class Bios_laptop{
                     }elseif($v['level']==2 && !isset($_COOKIE['_flad'])){
                         $ses=$Down->genLinkDownload($v['download_table_id'],$v['download_table']);
                     }elseif($v['level']==3 || $v['level']==4){
-                        $jsErr.='<p>БИОС отмеченный сложностью 3 или 4 для внутреннего использования или  предоставляются по запросу</p>';
+                        $jsErr='<p>БИОС отмеченный сложностью 3 или 4 для внутреннего использования или  предоставляются по запросу</p>';
                     }else $jsErr.='<p>Необходимо почистить куки браузера...</p>';
 
                     Def\Opt::$main_content.='<div class="fon_c"><span class="link" data-err="'.$jsErr.'" data-l="'.$v['level'].'" data-s="'.$ses.'" data-id="'.$v['download_table_id'].'" data-t="'.$v['download_table'].'" onclick="fountainG(this)"><p>Скачать файл</p></span><div class="fountainG_loader"><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div><div class="fountainG"></div></div></div><br>';

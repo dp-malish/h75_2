@@ -11,11 +11,20 @@ class Cache_File{
 
     protected $dir='../cache_all/';
 
+    /**
+     * Cache_File constructor.
+     * @param array $dir массив папок каталога
+     * @param bool $add если да, сделает новый путь куда хочешь
+     */
 function __construct($dir=[],$add=false){
     if(!empty($dir)){
         if($add){
             foreach($dir as $v){$this->dir=$this->dir.$v.'/';}
-        }else $this->dir=$dir;
+        }else{
+            $this->dir='';
+            foreach($dir as $v){$this->dir.=$v.'/';}
+            //$this->dir=$dir;
+        }
     }else{
         if($add){
             foreach($dir as $v){$this->dir=$this->dir.$v.'/';}
