@@ -1,0 +1,27 @@
+.on,.off,.manufacturer_name,.manufacturer_laptop{
+    text-align: center;
+    margin: 5px;
+    min-height:20px;
+    width: 30px;
+    position: relative;
+    float: left;
+
+}
+.on{
+    background-color:#1c7a05;
+}
+.off{
+    background-color:#aa1111;
+}
+
+.manufacturer_name{
+    width:100px;
+    background-color: #72b572;
+}
+
+.manufacturer_laptop{
+
+}
+
+
+

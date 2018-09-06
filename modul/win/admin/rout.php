@@ -36,6 +36,9 @@ try{if(Route::$count_uri_parts>3){throw new Exception();}else{
 
     }elseif(isset(Route::$uri_parts[1])&& !isset(Route::$uri_parts[2])){
         switch(Route::$uri_parts[1]){
+            case 'manufacturer':include'../modul/'.Opt::$dir_name_site.'/admin/manufacturer/manufacturer.php';break;
+            //*************************
+
             case 'картинки':include'../modul/'.Opt::$dir_name_site.'/admin/img/main.php';break;
             case 'картинки-пакетно':include'../modul/'.Opt::$dir_name_site.'/admin/img/main.php';break;
             case 'картинки-изменить':include'../modul/'.Opt::$dir_name_site.'/admin/img/main.php';break;
