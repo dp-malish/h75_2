@@ -1,27 +1,23 @@
-.on,.off,.manufacturer_name,.manufacturer_laptop{
+.on,.off,.manufacturer_name,.manufacturer_laptop,.manufacturer_order{
     text-align: center;
-    margin: 5px;
+    margin:5px;
     min-height:20px;
-    width: 30px;
-    position: relative;
-    float: left;
-
+    min-width:33px;
+    position:relative;
+    float:left
 }
-.on{
-    background-color:#1c7a05;
-}
-.off{
-    background-color:#aa1111;
-}
+.on{background-color:#1c7a05}
+.off{background-color:#aa1111}
 
 .manufacturer_name{
     width:100px;
-    background-color: #72b572;
+    background-color:#72b572;
 }
-
 .manufacturer_laptop{
-
+    width:53px;
 }
-
+.manufacturer_order{
+    background-color:#72b572;
+}
 
 
