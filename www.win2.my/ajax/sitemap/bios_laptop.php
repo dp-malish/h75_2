@@ -20,7 +20,7 @@ $manuf_laptop_arr=$cache_arr->getCacheAssocArr('manufacturer_laptop','manufactur
 foreach($manuf_laptop_arr as $k=>$v){
     $manufacturer=mb_strtolower($v['name'], 'UTF-8');
     echo $map->DBUrlMap('bios-laptop/'.$manufacturer,date('Y-m-d'),'monthly');
-    $res=$DB->arrSQL('SELECT link FROM bios_laptop WHERE manufacturer_id='.$v['manufacturer_id']);
+    $res=$DB->arrSQL('SELECT link FROM bios_laptop WHERE manufacturer_id='.$v['manufacturer_id'].' AND status=1');
     if($res){
         foreach($res as $k=>$v){
             echo $map->DBUrlMap('bios-laptop/'.$manufacturer.'-'.$v['link'],date('Y-m-d'),'monthly');

@@ -44,8 +44,10 @@ try{if(Route::$count_uri_parts>3){throw new Exception();}else{
             case 'картинки-изменить':include'../modul/'.Opt::$dir_name_site.'/admin/img/main.php';break;
             //*************************
 
-            case 'прошивальщики':include'../modul/'.Opt::$dir_name_site.'/admin/download/firmware.php';break;
             case 'download':include'../modul/'.Opt::$dir_name_site.'/admin/download/bios_laptop.php';break;
+
+
+            case 'bios-laptop':include'../modul/'.Opt::$dir_name_site.'/admin/download/bios_laptop.php';break;
 
 
             //case 'общие-страницы':include'../modul/'.$dir_site.'/admin/section/blog_def.php';break;

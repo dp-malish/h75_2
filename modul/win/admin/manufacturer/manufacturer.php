@@ -13,7 +13,7 @@ Opt::$main_content.='<div class="fon_c"><h3>Производители</h3>';
 
 $manufactur=new Manufactur\Manufacturer();
 
-$res=$manufactur->getManufacturer();
+$res=$manufactur->getManufacturerDB();
 
 foreach($res as $k=>$v){
     Opt::$main_content.='<div class="fon_c" data-man_id="' . $v['manufacturer_id'] . '" data-man_name="' . $v['name'] . '" data-man_laptop="'.$v['laptop'].'">
@@ -29,13 +29,11 @@ foreach($res as $k=>$v){
 }
 
 Opt::$main_content.='<script type="application/javascript">
-
-function onManufacturer(el){
-    
+function onManufacturer(el){    
+    var res=confirm("Производители - Подтвердить операцию...");
+    if(res){
     var mDiv=el.parentNode;
-    
-    var sendurl="id="+mDiv.dataset.man_id+"&laptop=";
-    
+    var sendurl="id="+mDiv.dataset.man_id+"&laptop=";    
     if(mDiv.dataset.man_laptop==1){
         el.classList.remove("on");
         el.classList.add("off");
@@ -47,11 +45,8 @@ function onManufacturer(el){
     }
     sendurl+=mDiv.dataset.man_laptop;   
     ajaxPostSend(sendurl,answerLaptop,true,true,"/ajax/admin/manufacturer.php");
+    }
 }
 function answerLaptop(arr){alert(arr.answer);}
-
-
 </script>';
-
 Opt::$main_content.='</div>';
-//Opt::$main_content.=$manufactur->getManufacturer();
