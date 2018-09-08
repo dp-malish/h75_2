@@ -37,6 +37,10 @@ try{if(Route::$count_uri_parts>3){throw new Exception();}else{
     }elseif(isset(Route::$uri_parts[1])&& !isset(Route::$uri_parts[2])){
         switch(Route::$uri_parts[1]){
             case 'manufacturer':include'../modul/'.Opt::$dir_name_site.'/admin/manufacturer/manufacturer.php';break;
+
+            case 'bios-laptop':include'../modul/'.Opt::$dir_name_site.'/admin/bios/bios_laptop.php';break;
+
+
             //*************************
 
             case 'картинки':include'../modul/'.Opt::$dir_name_site.'/admin/img/main.php';break;
@@ -45,9 +49,6 @@ try{if(Route::$count_uri_parts>3){throw new Exception();}else{
             //*************************
 
             case 'download':include'../modul/'.Opt::$dir_name_site.'/admin/download/bios_laptop.php';break;
-
-
-            case 'bios-laptop':include'../modul/'.Opt::$dir_name_site.'/admin/download/bios_laptop.php';break;
 
 
             //case 'общие-страницы':include'../modul/'.$dir_site.'/admin/section/blog_def.php';break;
