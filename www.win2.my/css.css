@@ -1,4 +1,4 @@
-.on,.off,.manufacturer_name,.manufacturer_laptop,.manufacturer_order{
+.on,.off,.manufacturer_name,.manufacturer_laptop,.manufacturer_order,.static_data{
     text-align: center;
     margin:5px;
     min-height:20px;
@@ -9,7 +9,7 @@
 .on{background-color:#1c7a05}
 .off{background-color:#aa1111}
 
-.manufacturer_name{
+.manufacturer_name,.static_data{
     width:100px;
     background-color:#72b572;
 }
