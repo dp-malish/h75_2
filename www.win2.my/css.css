@@ -1,4 +1,4 @@
-.on,.off,.manufacturer_name,.manufacturer_laptop,.manufacturer_order,.static_data{
+.on,.off,.manufacturer_name,.manufacturer_laptop,.manufacturer_order,.static_data,.bios_25{
     text-align: center;
     margin:5px;
     min-height:20px;
@@ -20,4 +20,9 @@
     background-color:#72b572;
 }
 
-
+.bios_salat{
+    background-color:#72b572;
+}
+.bios_25{
+    width: 25%;
+}
