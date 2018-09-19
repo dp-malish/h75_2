@@ -1893,7 +1893,5 @@ protected function _enddoc()
 	$this->_put('startxref');
 	$this->_put($offset);
 	$this->_put('%%EOF');
-	$this->state = 3;
-}
-}
-?>
+	$this->state=3;
+}}

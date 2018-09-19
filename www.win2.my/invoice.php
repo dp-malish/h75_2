@@ -24,13 +24,15 @@ $pdf->AddPage();
 
 
 $pdf->SetLineWidth(0.5);
-$pdf->SetFillColor(5, 255, 184);
+$pdf->SetFillColor(5,255, 184);
 //$pdf->SetTextColor(255,45,165);
 $pdf->SetFontSize(16);
 
+$pdf->Write(39,iconv('utf-8', 'windows-1251',"Коммерческое предложение26"));
+
 $txt='Рахунок на оплату № 1 від 30 серпня 2018 р.';
 
-$txt = iconv( 'utf-8','utf-8//IGNORE', $txt);
+$txt = iconv( 'utf-8','windows-1251', $txt);
 
 $pdf->Cell(190,10,$txt,"BT");
 
