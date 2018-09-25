@@ -151,22 +151,142 @@ $pdf->Cell(157,7,$txt,1,1,'L',false);
 
 //*************************
 //*************************
+//*************************
+//*************************
+//*************************
+//*************************
 
-
-$pdf->SetXY(10,77);
+$pdf->SetXY(10,76);
 $txt='Договір:';
 $txt=iconv( 'utf-8','windows-1251',$txt);
 $pdf->Cell(33,28,$txt,false,1,'C',false);
 //*************************
 //*************************
-//1 столбец
-$pdf->SetLineWidth(0.5);
-$pdf->SetXY(43,74);
+//1 столбец - порядковый номер
+$pdf->SetLineWidth(0.4);
+$pdf->SetXY(10,95);
 // Arial 12
 $pdf->SetFont('Arial','',10);
 
-$txt=iconv( 'utf-8','windows-1251',$kontr_agent_inn);
-$pdf->Cell(157,7,$txt,1,1,'L',false);
+$txt=iconv( 'utf-8','windows-1251','№');
+$pdf->Cell(10,5,$txt,1,1,'C',false);
+
+
+//2 столбец - Товари
+$pdf->SetXY(20,95);
+// Arial 12
+$pdf->SetFont('Arial','',10);
+
+$txt=iconv( 'utf-8','windows-1251','Товари (роботи, послуги)');
+$pdf->Cell(100,5,$txt,1,1,'C',false);
+
+
+//3 столбец - количество
+$pdf->SetXY(120,95);
+// Arial 12
+$pdf->SetFont('Arial','',10);
+
+$txt=iconv( 'utf-8','windows-1251','Кіл-сть');
+$pdf->Cell(15,5,$txt,1,1,'C',false);
+
+
+//4 столбец - Одиниця - грн
+$pdf->SetXY(135,95);
+// Arial 12
+$pdf->SetFont('Arial','',10);
+
+$txt=iconv( 'utf-8','windows-1251','Од.');
+$pdf->Cell(15,5,$txt,1,1,'C',false);
+
+
+//5 столбец - Ціна
+$pdf->SetXY(150,95);
+// Arial 12
+$pdf->SetFont('Arial','',10);
+
+$txt=iconv( 'utf-8','windows-1251','Ціна');
+$pdf->Cell(23,5,$txt,1,1,'C',false);
+
+
+//6 столбец - Сумма
+$pdf->SetXY(173,95);
+// Arial 12
+$pdf->SetFont('Arial','',10);
+
+$txt=iconv( 'utf-8','windows-1251','Сума');
+$pdf->Cell(27,5,$txt,1,1,'C',false);
+
+//***********************
+//***********************
+$x=10;
+$y=95;
+$kol_vo=0;
+$sum_total=0;
+
+$pdf->SetLineWidth(0.4);
+$pdf->SetFont('Arial','',10);
+/**
+ * @$perechen ['Виїзд до обладнення','2','100']
+ */
+$perechen=[
+    ['Виїзд до обладнення','2','100.33'],
+    ['Виїзд до обладнення2','1','1200']
+];
+for($i=0; $i<count($perechen); $i++)
+{
+    $y+=5;
+    //1 столбец - порядковый номер
+    $pdf->SetXY(10,$y);
+    $pdf->Cell(10,5,$i+1,1,1,'C',false);
+//2 столбец - Товари
+    $pdf->SetXY(20,$y);
+    $txt=iconv( 'utf-8','windows-1251',$perechen[$i][0]);
+    $pdf->Cell(100,5,$txt,1,1,'L',false);
+//3 столбец - количество
+    $pdf->SetXY(120,$y);
+    $pdf->Cell(15,5,$perechen[$i][1],1,1,'C',false);
+    $kol_vo+=$perechen[$i][1];
+//4 столбец - Одиниця - грн
+    $pdf->SetXY(135,$y);
+    $txt=iconv( 'utf-8','windows-1251','грн.');
+    $pdf->Cell(15,5,$txt,1,1,'C',false);
+//5 столбец - Ціна
+    $pdf->SetXY(150,$y);
+    $txt=iconv( 'utf-8','windows-1251',number_format($perechen[$i][2], 2, ',', ' '));
+    $pdf->Cell(23,5,$txt,1,1,'C',false);
+//6 столбец - Сумма
+    $pdf->SetXY(173,$y);
+    $sum=$perechen[$i][1]*$perechen[$i][2];
+    $txt=iconv( 'utf-8','windows-1251',number_format($sum, 2, ',', ' '));
+    $pdf->Cell(27,5,$txt,1,1,'C',false);
+    $sum_total+=$sum;
+}
+
+$y+=5;
+$pdf->SetXY(10,$y);
+
+$txt=iconv( 'utf-8','windows-1251','Підсумок:');
+$pdf->Cell(190,5,$txt,1,1,'L');
+$pdf->SetXY(173,$y);
+$pdf->Cell(27,5,number_format($sum_total, 2, ',', ' '),1,1,'C');
+
+//***********************
+//***********************
+
+$y+=9;
+$pdf->SetXY(10,$y);
+
+$txt='Всього найменувань '.$kol_vo.', на суму '.number_format($sum_total, 2, ',', ' ').' грн.';
+$txt=iconv( 'utf-8','windows-1251',$txt);
+$pdf->Cell(190,5,$txt,0,1,'L');
+
+$y+=5;
+$pdf->SetXY(10,$y);
+$txt='Всього найменувань '.$kol_vo.', на суму '.number_format($sum_total, 2, ',', ' ').' грн.';
+$txt=iconv( 'utf-8','windows-1251',$txt);
+$pdf->Cell(190,5,$txt,0,1,'L');
+
+
 
 
 
