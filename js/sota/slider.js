@@ -1,7 +1,7 @@
 window.requestAnimationFrame=(function(){// для поддержки requestAnimationFrame всеми браузерами
     return window.requestAnimationFrame||function(callback){return window.setTimeout(callback,1000/60)}
 })();
-// функция слайдера
+//функция слайдера
 function slider(f,img,button,V,Vo){
     var iii=0,
         start=null,
@@ -41,7 +41,7 @@ function slider(f,img,button,V,Vo){
     }
 }
 
-// вызов функции слайдера
+//вызов функции слайдера
 window.addEventListener("load", function(){
     try{
         var f=document.getElementById("main_slider"),
@@ -49,4 +49,4 @@ window.addEventListener("load", function(){
             button=btnSlider.getElementsByTagName("button");
         slider(f,img,button,"7000","1000");  // '5000' — скорость смены картинок, '1000' — скорость прозрачности
     }catch(e){}
-}, true);
+},true);

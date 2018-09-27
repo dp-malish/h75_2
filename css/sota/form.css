@@ -1,0 +1,75 @@
+.form{
+	margin:0 auto;
+	max-width:400px;
+	padding:2%;
+	border-radius:13px;
+}
+.form h4{margin:0}
+.form p{font-size:92%;margin:1px 5px}
+@media screen and (max-width: 920px){
+  .form input,form select{margin:0;padding:0;min-height:13px;}
+}
+
+.inp_captcha{
+	width:60%;
+}
+.form input, .form textarea, .form select{
+  width: 100%;
+  min-height: 33px;
+  box-sizing: border-box;
+  margin: 2px 0 2px 0;
+  padding: 2%;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius:3px;
+  box-shadow:0 1px 2px -1px rgba(0,0,0,.2) inset, 0 0 transparent;
+}
+.form input:hover, .form textarea:hover, .form select:hover{
+  border-color:#003559;
+  box-shadow:0 1px 2px -1px rgba(0,0,0,.2) inset, 0 0 transparent;
+}
+.form input:focus, .form textarea:focus, .form select:focus{
+  outline: none;
+  border-color:#003559;
+  box-shadow: 0 1px 2px -1px rgba(0,0,0,.2) inset, 0 0 4px rgba(35,146,243,.5);
+  transition:.2s linear;
+}
+.form .chislo{
+  width: 57px;
+  margin-right:12px;
+}
+.form .mesyac{
+  width: 100px;margin-right:12px;
+}
+.form .god{
+  width: 70px;
+}
+.form .nakladn{
+  width: 120px;
+}
+
+
+.form input[type="submit"],.form .formbtn{
+  padding:1.5%;
+  border-radius:3px;
+  border: 1px solid rgba(0,0,0,.1);
+  box-shadow:0 0 0 1px rgba(0,0,0,.2) inset;
+  background:linear-gradient(to top, #ffe100, #FF8E00);
+  color:#B2251F;
+  font-size:115%;
+  cursor: pointer;
+}
+.form input[type="submit"]:hover,.form .formbtn:hover{
+  background:linear-gradient(to top, #FF8E00, #ffe100);
+  border:#003559 1px solid;
+}
+.form input[type="submit"]:focus,.form .formbtn:focus{
+  box-shadow: 0 1px 1px #fff, inset 0 1px 2px rgba(0,0,0,.8), inset 0 -1px 0 rgba(0,0,0,.05);
+}
+.form input[type="file"]{
+background-color:#fff;
+}
+.form .formbtn{
+  min-width: 100px;
+  max-width: 270px;
+  margin: 8px 0;
+}

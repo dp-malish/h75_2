@@ -7,7 +7,7 @@ $burger='<div class="main_menu rel">
         <div id="burger_menu" class="burger_canvas">
             <nav>
                 <ul class="top_menu_m">
-                    <li><a href="#">Parity</a></li>
+                    <li><a href="#">Ремонт</a></li>
                     <li><a href="#">Abstract</a></li>
                     <li><a href="#">Educated</a></li>
                     <li><a href="#">Decorum</a></li>

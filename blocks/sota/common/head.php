@@ -8,25 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index,follow">
 
-    <!--<link rel="shortcut icon" href="/img/site/ico.png" type="image/png">-->
+    <link rel="shortcut icon" href="/img/site/ico.png" type="image/png">
+
+    <link rel="stylesheet" type="text/css" href="/css.php">
 
 
-    <link rel="stylesheet" type="text/css" href="/css/frame.css">
-    <link rel="stylesheet" type="text/css" href="/css/default.css">
-    <link rel="stylesheet" type="text/css" href="/css/z-index.css">
-
-    <link rel="stylesheet" type="text/css" href="/css/slider.css">
-
-    <link rel="stylesheet" type="text/css" href="/css/color.css">
-    <link rel="stylesheet" type="text/css" href="/css/common.css">
 
 
-    <link rel="stylesheet" type="text/css" href="/css/menu.css">
 
-
-    <script async src="/js/slider.js"></script>
-    <script async src="/js/burger.js"></script>
-    <script async type="text/javascript" src="/js/scroll.js"></script>
+    <script async src="/js/slider.php"></script>
+    <script async src="/js/burger.php"></script>
+    <script async src="/js/scroll.php"></script>
 
 
 

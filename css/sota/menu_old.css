@@ -1,4 +1,4 @@
-/*Бурогер меню*/
+/*Burger menu*/
 .main_menu{
     min-height:50px;
 }
@@ -10,7 +10,7 @@
     background-color:#FC761E;
     border-radius: 0 0 10px 0;
 }
-@media screen  and (max-width:800px){
+@media screen and (max-width:800px){
     .burger{display:block}
 }
 .burger>div:first-child{
@@ -36,8 +36,7 @@
 
 
 .burger_canvas{
-
-    position: absolute;
+    position:absolute;
     left:0;
     top:0;
     background-color:#FC761E;
@@ -63,7 +62,7 @@
     border-top: 1px solid rgba(0,0,0,.3);
 }
 
-.top_menu_m li {
+.top_menu_m li{
     margin:7px 0;
     display:block;
     background-color:#E4E4E4;
@@ -93,7 +92,7 @@
 #main_menu_pc{
     min-height:1px;
 }
-@media screen  and (max-width:800px){
+@media screen and(max-width:800px){
     #main_menu_pc{display:none;}
 }
 .top_menu_pc{
@@ -113,7 +112,7 @@
     display: inline-block;
     position: relative;
 }
-@media screen  and (max-width:895px){
+@media screen and (max-width:895px){
     .top_menu_pc > li:first-child {
         display: none;
     }
@@ -129,10 +128,10 @@
     text-transform: uppercase;
 }
 
-.top_menu_pc li a:hover {color:#000000}
+.top_menu_pc li a:hover{color:#000000}
 
 .top_menu_pc_down:after {
-    content: "\203A";
+    content:"\203A";
     margin-left:7px;
 }
 
@@ -180,13 +179,13 @@
     padding-bottom:7px;
     margin:7px 0;
 }
-@media screen and (min-width:300px) and (max-width:735px){
+@media screen and(min-width:300px) and(max-width:735px){
 
     .l_menu{margin:7px 5%}
 }
-@media screen and (min-width:300px) and (max-width:735px){
+@media screen and(min-width:300px)and(max-width:735px){
 
-.r_menu{margin:7px 5%}
+    .r_menu{margin:7px 5%}
 }
 
 
@@ -199,7 +198,7 @@
 .l_menu_title,.r_menu_title{
     color:#FC761E;
     font-size:120%;
-/*    color:#B2251F;*/
+    /*    color:#B2251F;*/
     text-align:center;
     line-height:40px;/*центрировать вертикально одну строчку */
 
@@ -217,7 +216,7 @@
     padding:0 2px 0 7px;
     transition: .3s linear;
 }
-@media screen and (max-width:480px){
+@media screen and(max-width:480px){
     .l_menu ul li a,.r_menu ul li a{line-height:45px;font-size:120%}
 }
 

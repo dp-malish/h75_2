@@ -4,9 +4,7 @@
         <div class="headertop rel" id="getsizehed">
             <div id="headcontact" class="maxw five_ headerimg">
                 <div id="logo">
-                    <a href="/">
-                        <img src="/img/site/logo.png">
-                    </a>
+                    <a href="/"><img src="/img/site/dbpic.php?i=logo&ep=1"></a>
                 </div>
 
                 <div id="logoname" class="h_field ac">
@@ -59,14 +57,13 @@
                 <div id="main_slider" class="rel">
 
 
-                    <img src="/img/site/slider/servesniy_centor.png" alt="Сервисный центр Мариуполь">
-                    <img src="/img/site/slider/site.png" alt="Сделать сайт в Мариуполе">
-                    <img src="/img/site/slider/servesniy_centor.png" alt="Сервисный центр Мариуполь">
-                    <img src="/img/site/slider/site.png" alt="Сделать сайт в Мариуполе">
+                    <img src="/img/site/slider/dbpic.php?i=servesniy_centor&ep=0" alt="Сервисный центр Мариуполь">
+                    <img src="/img/site/slider/dbpic.php?i=site&ep=0" alt="Сделать сайт в Мариуполе">
+                    <img src="/img/site/slider/dbpic.php?i=servesniy_centor&ep=0" alt="Сервисный центр Мариуполь">
+                    <img src="/img/site/slider/dbpic.php?i=site&ep=0" alt="Сделать сайт в Мариуполе">
 
                     <div></div>
-                    <span id="btnSlider"><button type="button" value="0">&nbsp;</button><button type="button" value="1">&nbsp;</button><button
-                            type="button" value="2">&nbsp;</button><button type="button" value="3">&nbsp;</button></span>
+                    <span id="btnSlider"><button type="button" value="0">&nbsp;</button><button type="button" value="1">&nbsp;</button><button type="button" value="2">&nbsp;</button><button type="button" value="3">&nbsp;</button></span>
                 </div>
             </div>
         </div>

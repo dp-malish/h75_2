@@ -22,9 +22,9 @@ window.onscroll=function(){
             //Add function scroll
     //при скролле показывать и прятать блок
     if(window.pageYOffset>0&&document.body.clientWidth>800){
-        document.getElementById('up').style.display='blocks';
+        document.getElementById('up').style.display='block';//alert('j+');
     }else{
-        document.getElementById('up').style.display='none';
+        document.getElementById('up').style.display='none';//alert('jf');
     }
 };
 

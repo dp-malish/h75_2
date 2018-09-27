@@ -1,15 +1,12 @@
 <div id="m_col" class="rel"><!--Пр кол-->
     <div class="r_col">
+        <?=$Opt::$r_content_up.$Opt::$r_content?>
 
-
-
-
-        Правая
         <div class="cl"></div>
     </div><!--Центр кол-->
 
     <div id="c_col" class="rel">
-        <main>
+        <main><?=$Opt::$main_content?>
             <p>Исполь зование материалов сайта без
                 разрешения правообладателя запрещено</p>
             <p>Использование материалов сайта без
