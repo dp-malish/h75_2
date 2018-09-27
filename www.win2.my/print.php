@@ -1,19 +1,16 @@
 <?php
 
 $txt='';
-$x=3614.47;
+$x=3000.47;
 
 
 $kop=number_format($x- floor($x),2);
 $kop=mb_strcut($kop,2);
 $x=intval($x);
 
-
 if($x>=1000 && $x<2000){$txt.='одна тисяча ';$x-=1000;}
 elseif($x>=2000 && $x<3000){$txt.='дві тисячі ';$x-=2000;}
 elseif($x>=3000 && $x<4000){$txt.='три тисячі ';$x-=3000;}
-
-
 
 if($x>=900 && $x<1000){$txt.='дев\'ятсот ';$x-=900;}
 elseif($x>=800 && $x<900){$txt.='вісімсот ';$x-=800;}
@@ -34,27 +31,29 @@ elseif($x>=40 && $x<50){$txt.='сорок ';$x-=40;}
 elseif($x>=30 && $x<40){$txt.='тридцять ';$x-=30;}
 elseif($x>=20 && $x<30){$txt.='двадцять ';$x-=20;}
 
+$grn_end=[1=>'гривня','2'=>'гривні',5=>'гривень'];
+
 if($x>=1 && $x<20){
-    if($x==1){$txt.='один ';}
-    elseif($x==2){$txt.='два ';}
-    elseif($x==3){$txt.='три ';}
-    elseif($x==4){$txt.='чотири ';}
-    elseif($x==5){$txt.='п\'ять ';}
-    elseif($x==6){$txt.='шість ';}
-    elseif($x==7){$txt.='сім ';}
-    elseif($x==8){$txt.='вісім ';}
-    elseif($x==9){$txt.='дев\'ять ';}
-    elseif($x==10){$txt.='десять ';}
-    elseif($x==11){$txt.='одинадцять ';}
-    elseif($x==12){$txt.='дванадцять ';}
-    elseif($x==13){$txt.='тринадцять ';}
-    elseif($x==14){$txt.='чотирнадцять ';}
-    elseif($x==15){$txt.='п\'тнадцять ';}
-    elseif($x==16){$txt.='шістнадцять ';}
-    elseif($x==17){$txt.='сімнадцять ';}
-    elseif($x==18){$txt.='вісімнадцять ';}
-    elseif($x==19){$txt.='дев\'ятнадцять ';}
-}
+    if($x==1){$txt.='одна '.$grn_end[1];}
+    elseif($x==2){$txt.='дві '.$grn_end[2];}
+    elseif($x==3){$txt.='три '.$grn_end[2];}
+    elseif($x==4){$txt.='чотири '.$grn_end[2];}
+    elseif($x==5){$txt.='п\'ять '.$grn_end[5];}
+    elseif($x==6){$txt.='шість '.$grn_end[5];}
+    elseif($x==7){$txt.='сім '.$grn_end[5];}
+    elseif($x==8){$txt.='вісім '.$grn_end[5];}
+    elseif($x==9){$txt.='дев\'ять '.$grn_end[5];}
+    elseif($x==10){$txt.='десять '.$grn_end[5];}
+    elseif($x==11){$txt.='одинадцять '.$grn_end[5];}
+    elseif($x==12){$txt.='дванадцять '.$grn_end[5];}
+    elseif($x==13){$txt.='тринадцять '.$grn_end[5];}
+    elseif($x==14){$txt.='чотирнадцять '.$grn_end[5];}
+    elseif($x==15){$txt.='п\'тнадцять '.$grn_end[5];}
+    elseif($x==16){$txt.='шістнадцять '.$grn_end[5];}
+    elseif($x==17){$txt.='сімнадцять '.$grn_end[5];}
+    elseif($x==18){$txt.='вісімнадцять '.$grn_end[5];}
+    elseif($x==19){$txt.='дев\'ятнадцять '.$grn_end[5];}
+}else{$txt.=$grn_end[5];}
 
 
 $first = mb_substr($txt,0,1, 'UTF-8');
@@ -62,4 +61,4 @@ $first = mb_strtoupper($first, 'UTF-8');
 $txt=mb_strcut($txt,2);
 $txt=$first.$txt;
 
-echo $txt.'гривень '.$kop.' коп.';
+echo $txt.' '.$kop.' коп.';

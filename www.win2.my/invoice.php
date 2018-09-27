@@ -12,16 +12,6 @@ $Opt=new \lib\Def\Opt('win');//Def opt
 
 //define('FPDF_FONTPATH','../fpdf181/font/');
 
-require( '../fpdf181/fpdf.php' );
-
-$pdf = new FPDF();
-// добавляем шрифт ариал
-$pdf->AddFont('Arial','','arial.php');
-// устанавливаем шрифт Ариал
-//$pdf->SetFont('Arial');
-$pdf->SetFont('Arial','',12);
-$pdf->AddPage();
-
 $doc_num=7;
 $doc_num_date='31 серпня 2018 р.';
 
@@ -34,6 +24,29 @@ $kontr_agent='Firma';
 $kontr_agent_bank='П/р 978987798798 $kontr_agent_bank';
 $kontr_agent_adress='Mariupol';
 $kontr_agent_inn='888';
+
+/**
+ * @$perechen ['Виїзд до обладнення','2','100']
+ * наименование работ / кол-во / цена за штуку
+ */
+$perechen=[
+    ['Виїзд до обладнення','2','100.33'],
+    ['Виїзд до обладнення2','1','1200']
+];
+
+
+
+require( '../fpdf181/fpdf.php' );
+
+$pdf = new FPDF();
+// добавляем шрифт ариал
+$pdf->AddFont('Arial','','arial.php');
+// устанавливаем шрифт Ариал
+//$pdf->SetFont('Arial');
+$pdf->SetFont('Arial','',12);
+$pdf->AddPage();
+
+
 
 $pdf->SetLineWidth(0.5);
 $pdf->SetFontSize(16);
@@ -225,13 +238,7 @@ $sum_total=0;
 
 $pdf->SetLineWidth(0.4);
 $pdf->SetFont('Arial','',10);
-/**
- * @$perechen ['Виїзд до обладнення','2','100']
- */
-$perechen=[
-    ['Виїзд до обладнення','2','100.33'],
-    ['Виїзд до обладнення2','1','1200']
-];
+
 for($i=0; $i<count($perechen); $i++)
 {
     $y+=5;
@@ -282,7 +289,7 @@ $pdf->Cell(190,5,$txt,0,1,'L');
 
 $y+=5;
 $pdf->SetXY(10,$y);
-$txt='Всього найменувань '.$kol_vo.', на суму '.number_format($sum_total, 2, ',', ' ').' грн.';
+$txt=lib\Printer\FloatToStr::grn($sum_total,true);
 $txt=iconv( 'utf-8','windows-1251',$txt);
 $pdf->Cell(190,5,$txt,0,1,'L');
 

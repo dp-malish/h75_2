@@ -7,23 +7,29 @@
  */
 
 
-$er='[{"manufacturer_id":"1","image":null,"name":"Asus","sort_order":"0"},{"manufacturer_id":"2","image":null,"name":"Dell","sort_order":"0"}]';
+Error_Reporting(E_ALL & ~E_NOTICE);ini_set('display_errors',1);
+set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register();
+$Opt=new \lib\Def\Opt('win');//
 
 
-$dfg=json_decode($er,true);
+/*$pdf=new lib\printer\pdf\White_Reporting\Invoice();
 
-var_dump($dfg);
+$pdf->getPdf();*/
 
-echo $dfg[0]["name"].'<br>'.'<br>'.'<br>'.'<br>'.'<br>';
+$spd='Фізична особа-підприємець Баранов Олександр Євгенович';
+$spd_bank='П/р 978987798798';
+$spd_adress='Mariupol';
+$spd_inn='777';
 
-foreach($dfg AS $v){
-    echo $v['manufacturer_id'].'  '.mb_strtolower($v['name'],'UTF-8').'<br>';
-
-
-
-}
-
-print_r($dfg);
-
+$kontr_agent='Firma';
+$kontr_agent_bank='П/р 978987798798 $kontr_agent_bank';
+$kontr_agent_adress='Mariupol';
+$kontr_agent_inn='888';
 
 
+$perechen=[
+    ['Виїзд до обладнення','2','100.33'],
+    ['Виїзд до обладнення2','1','1200']
+];
+
+lib\printer\pdf\White_Reporting\Invoice::getPdf(7,'31 серпня 2018 р.',$spd,$spd_bank,$spd_adress,$spd_inn,$kontr_agent);
