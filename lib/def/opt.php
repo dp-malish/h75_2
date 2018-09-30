@@ -26,11 +26,11 @@ class Opt{
 
 	static $live_user=0;
 
+	static $setting='set';
+
 	function __construct($dir_name_site=''){
         self::$protocol=((!empty($_SERVER['HTTPS'])&&$_SERVER['HTTPS']!='off')||$_SERVER['SERVER_PORT']==443)?"https://":"http://";
         self::$site=$_SERVER['SERVER_NAME'];
         self::$dir_name_site=$dir_name_site;
     }
-
-
 }

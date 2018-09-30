@@ -10,7 +10,7 @@
     background-color:#FC761E;
     border-radius:0 0 10px 0
 }
-@media screen and (max-width:800px){.burger{display:block}}
+@media screen and (max-width:860px){.burger{display:block}}
 .burger>div:first-child{
     background-color:#FC761E;
     position:absolute;
@@ -91,7 +91,7 @@
 #main_menu_pc{
     min-height:1px;
 }
-@media screen and (max-width:800px){
+@media screen and (max-width:860px){
     #main_menu_pc{display:none;}
 }
 .top_menu_pc{
@@ -111,7 +111,7 @@
     display: inline-block;
     position: relative;
 }
-@media screen and (max-width:895px){
+@media screen and (max-width:1000px){
     .top_menu_pc>li:first-child{
         display:none
     }

@@ -1,19 +1,61 @@
 <?php
+
+/**
+ * 0 - без входа
+ * 1 - я
+ * 2 - директор
+ * 3 - бухгалтер
+ * 4 - менеджер
+ * 5 - продавец
+ * 6 - клиент
+ */
+\lib\Def\Opt::$live_user=5;
+$menu=[
+
+    'burger'=>[
+        ['link'=>'/сервис','title'=>'Сервис','def'=>true,'hiden'=>false,'role'=>[1,6]],
+        ['link'=>'/ремонт','title'=>'Ремонт','def'=>true,'hiden'=>false,'role'=>[1,2,3,4,5,6]],
+        ['link'=>'/сайты','title'=>'Сайты','def'=>true,'hiden'=>false,'role'=>[1,6]],
+        ['link'=>'/магазин/','title'=>'Магазин','def'=>true,'hiden'=>false,'role'=>[1,2,3,4,5,6]],
+        ['link'=>'/контакты','title'=>'Контакты','def'=>true,'hiden'=>false,'role'=>[4,5,6]],
+
+        ['link'=>'/сделай-сам','title'=>'Сделай сам','def'=>true,'hiden'=>false,'role'=>[1,6]],
+
+        ['link'=>'директор','title'=>'Директор','def'=>true,'hiden'=>true,'role'=>[1,2]],
+        ['link'=>'бухгалтер','title'=>'Бухгалтер','def'=>true,'hiden'=>true,'role'=>[1,3]],
+        ['link'=>'менеджер','title'=>'Менеджер','def'=>true,'hiden'=>true,'role'=>[1,4]],
+        ['link'=>'продавец','title'=>'Продавец','def'=>true,'hiden'=>true,'role'=>[1,5]]
+    ],
+
+    'main_menu'=>[
+        //['link'=>'/личный-кабинет','title'=>'Личный кабинет','def'=>true,'hiden'=>false,'role'=>[1,2,3,4,5,6]],
+        ['link'=>'директор','title'=>'Директор','def'=>true,'hiden'=>true,'role'=>[1,2]],
+        ['link'=>'бухгалтер','title'=>'Бухгалтер','def'=>true,'hiden'=>true,'role'=>[1,3]],
+        ['link'=>'менеджер','title'=>'Менеджер','def'=>true,'hiden'=>true,'role'=>[1,4]],
+        ['link'=>'продавец','title'=>'Продавец','def'=>true,'hiden'=>true,'role'=>[1,5]]
+    ]
+
+
+];
+
 $burger='<div class="main_menu rel">
     <div id="burger" class="burger rel">
         <div>
             <div class="burger_line"></div><div class="burger_line"></div><div class="burger_line"></div>
         </div>
         <div id="burger_menu" class="burger_canvas">
-            <nav>
-                <ul class="top_menu_m">
-                    <li><a href="#">Ремонт</a></li>
-                    <li><a href="#">Abstract</a></li>
-                    <li><a href="#">Educated</a></li>
-                    <li><a href="#">Decorum</a></li>
-                    <li><a href="#">Tenuous</a></li>
-                </ul>
-            </nav>
+            <nav><ul class="top_menu_m">';
+if(\lib\Def\Opt::$live_user==0){
+    foreach($menu['burger'] as $v){if($v['def'])$burger.='<li><a href="'.$v['link'].'">'.$v['title'].'</a></li>';}
+}else{
+    foreach($menu['burger'] as $v){
+        foreach($v['role'] as $role){
+            if($role==\lib\Def\Opt::$live_user)
+                $burger.='<li><a href="/'.($v['hiden']?\lib\Def\Opt::$setting.'/':'').$v['link'].'">'.$v['title'].'</a></li>';
+        }
+    }
+}
+$burger.='</ul></nav>
         </div>
     </div>
     <div id="main_menu_pc">
@@ -21,9 +63,9 @@ $burger='<div class="main_menu rel">
             <ul class="top_menu_pc">
                 <li><a href="/">Главная</a></li>
 
-                <li><a href="" class="top_menu_pc_down">Программы</a>
+                <li><a href="сервис" class="top_menu_pc_down">Сервис</a>
                     <ul class="top_menu_pc_submenu">
-                        <li><a href="">Category</a></li>
+                        <li><a href="">Чистка</a></li>
                         <li><a href="">Author</a></li>
                         <li><a href="">Archive</a></li>
                         <li><a href="">Tags</a></li>
@@ -48,10 +90,21 @@ $burger='<div class="main_menu rel">
                     </ul>
                 </li>
                 <li><a href="">Магазин</a></li>
-                <li><a href="">Контакты</a></li>
-            </ul>
-        </nav>
+                <li><a href="">Контакты</a></li>';
 
+
+if(\lib\Def\Opt::$live_user!=0){
+    $burger.='<li><a href="/личный-кабинет" class="top_menu_pc_down">Кабинет</a><ul class="top_menu_pc_submenu">';
+    foreach($menu['main_menu'] as $v){
+        foreach($v['role'] as $role){
+            if($role==\lib\Def\Opt::$live_user)
+                $burger.='<li><a href="/'.($v['hiden']?\lib\Def\Opt::$setting.'/':'').$v['link'].'">'.$v['title'].'</a></li>';
+        }
+    }
+    $burger.='</ul></li>';
+}
+            $burger.='</ul>
+        </nav>
     </div>
     <div class="cl"></div>
 </div>';

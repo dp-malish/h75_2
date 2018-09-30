@@ -13,11 +13,11 @@ Cache_File::$cash=new Cache_File(['sota'],true);
 
 if($_SERVER['REQUEST_URI']!='/'){
     if(Route::requestURI(3)){
-        $setAdminCook='sota'.Data::DatePass();$set='set';
+        $setAdminCook='sota'.Data::DatePass();
         switch(Route::$uri_parts[0]){
             case $setAdminCook:
                 $AdminCook=new \lib\user\User();$AdminCook->setCookieAdmin();Route::$index=1;break;
-            //case $set:include'../modul/win/admin/main.php';break;
+            case $Opt::$setting:include'../modul/win/admin/main.php';break;
 
             //case'bios-laptop':new \incl\win\Bios\Bios_laptop();break;
 
