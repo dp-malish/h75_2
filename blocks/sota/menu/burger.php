@@ -9,7 +9,7 @@
  * 5 - продавец
  * 6 - клиент
  */
-\lib\Def\Opt::$live_user=5;
+\lib\Def\Opt::$live_user=1;
 $menu=[
 
     'burger'=>[
@@ -21,18 +21,18 @@ $menu=[
 
         ['link'=>'/сделай-сам','title'=>'Сделай сам','def'=>true,'hiden'=>false,'role'=>[1,6]],
 
-        ['link'=>'директор','title'=>'Директор','def'=>true,'hiden'=>true,'role'=>[1,2]],
-        ['link'=>'бухгалтер','title'=>'Бухгалтер','def'=>true,'hiden'=>true,'role'=>[1,3]],
-        ['link'=>'менеджер','title'=>'Менеджер','def'=>true,'hiden'=>true,'role'=>[1,4]],
-        ['link'=>'продавец','title'=>'Продавец','def'=>true,'hiden'=>true,'role'=>[1,5]]
+        ['link'=>'директор','title'=>'Директор','def'=>false,'hiden'=>true,'role'=>[1,2]],
+        ['link'=>'бухгалтер','title'=>'Бухгалтер','def'=>false,'hiden'=>true,'role'=>[1,3]],
+        ['link'=>'менеджер','title'=>'Менеджер','def'=>false,'hiden'=>true,'role'=>[1,4]],
+        ['link'=>'продавец','title'=>'Продавец','def'=>false,'hiden'=>true,'role'=>[1,5]]
     ],
 
     'main_menu'=>[
         //['link'=>'/личный-кабинет','title'=>'Личный кабинет','def'=>true,'hiden'=>false,'role'=>[1,2,3,4,5,6]],
-        ['link'=>'директор','title'=>'Директор','def'=>true,'hiden'=>true,'role'=>[1,2]],
-        ['link'=>'бухгалтер','title'=>'Бухгалтер','def'=>true,'hiden'=>true,'role'=>[1,3]],
-        ['link'=>'менеджер','title'=>'Менеджер','def'=>true,'hiden'=>true,'role'=>[1,4]],
-        ['link'=>'продавец','title'=>'Продавец','def'=>true,'hiden'=>true,'role'=>[1,5]]
+        ['link'=>'директор','title'=>'Директор','def'=>false,'hiden'=>true,'role'=>[1,2]],
+        ['link'=>'бухгалтер','title'=>'Бухгалтер','def'=>false,'hiden'=>true,'role'=>[1,3]],
+        ['link'=>'менеджер','title'=>'Менеджер','def'=>false,'hiden'=>true,'role'=>[1,4]],
+        ['link'=>'продавец','title'=>'Продавец','def'=>false,'hiden'=>true,'role'=>[1,5]]
     ]
 
 
