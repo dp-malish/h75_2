@@ -10,6 +10,15 @@ $Opt=new Opt('sota');//Def opt
 
 Cache_File::$cash=new Cache_File(['sota'],true);
 
+$user=new \lib\user\UserRole(['sota'],true);
+
+$user->getRoleUser();
+
+//$Opt::$live_user=1;
+
+
+$Opt::$r_content=$Opt::$live_user.' ******54645';
+
 
 if($_SERVER['REQUEST_URI']!='/'){
     if(Route::requestURI(3)){
@@ -23,7 +32,7 @@ if($_SERVER['REQUEST_URI']!='/'){
 
 
 
-            default:new \incl\win\Def\DefContent();
+            //default:new \incl\win\Def\DefContent();
         }
     }
 }else{Route::$index=1;}if(Route::$module404){Route::modul404();}

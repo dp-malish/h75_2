@@ -11,6 +11,7 @@ class Optsql{
             case 'vt2.my':$this->db_con=['root','root','vt'];break;
             case 'win2.my':$this->db_con=['root','root','winteh'];break;
             case 'stroy.my':$this->db_con=['root','root','stroy'];break;
+            case 'sota.my':$this->db_con=['root','root','sota'];break;
             default:Route::location();
             }
         }else{
@@ -18,6 +19,7 @@ class Optsql{
                 case 'vt2.my':$this->db_con=['root','root','vt_img'];break;
                 case 'win2.my':$this->db_con=['root','root','winteh_img'];break;
                 case 'stroy.my':$this->db_con=['root','root','stroy_img'];break;
+                case 'sota.my':$this->db_con=['root','root','sota_img'];break;
                 default:Route::location();
             }
         }

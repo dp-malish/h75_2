@@ -8,8 +8,16 @@
  * 5 - продавец
  * 6 - клиент
  * 7 - SU
+ * INSERT INTO `user_group` (`user_group_id`, `name`, `permission`) VALUES
+(1, 'Admin', NULL),
+(2, 'Director', NULL),
+(3, 'Accountant', NULL),
+(4, 'Manager', NULL),
+(5, 'Seller', NULL),
+(6, 'Client', NULL),
+(7, 'SU', NULL);
  */
-\lib\Def\Opt::$live_user=1;
+//\lib\Def\Opt::$live_user=1;
 $menu=[
 
     'burger'=>[
@@ -28,7 +36,8 @@ $menu=[
     ],
 
     'main_menu'=>[
-        //['link'=>'/личный-кабинет','title'=>'Личный кабинет','def'=>true,'hiden'=>false,'role'=>[1,2,3,4,5,6]],
+        //['link'=>'/личный-кабинет','title'=>'Вход','def'=>true,'hiden'=>false,'role'=>[0,1]],
+        ['link'=>'/личный-кабинет','title'=>'Личный кабинет','def'=>false,'hiden'=>false,'role'=>[1,2,3,4,5,6]],
         ['link'=>'директор','title'=>'Директор','def'=>false,'hiden'=>true,'role'=>[1,2,7]],
         ['link'=>'бухгалтер','title'=>'Бухгалтер','def'=>false,'hiden'=>true,'role'=>[1,3,7]],
         ['link'=>'менеджер','title'=>'Менеджер','def'=>false,'hiden'=>true,'role'=>[1,4,7]],
@@ -50,7 +59,7 @@ if(\lib\Def\Opt::$live_user==0){
 }else{
     foreach($menu['burger'] as $v){
         foreach($v['role'] as $role){
-            if($role==\lib\Def\Opt::$live_user)
+            if($role===\lib\Def\Opt::$live_user)
                 $burger.='<li><a href="/'.($v['hiden']?\lib\Def\Opt::$setting.'/':'').$v['link'].'">'.$v['title'].'</a></li>';
         }
     }
@@ -102,7 +111,7 @@ if(\lib\Def\Opt::$live_user!=0){
         }
     }
     $burger.='</ul></li>';
-}
+}else $burger.='<li><a href="/вход">Вход</a></li>';
             $burger.='</ul>
         </nav>
     </div>
