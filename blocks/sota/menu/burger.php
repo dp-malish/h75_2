@@ -111,9 +111,18 @@ if(\lib\Def\Opt::$live_user!=0){
         }
     }
     $burger.='</ul></li>';
-}else $burger.='<li><a href="/вход">Вход</a></li>';
+}else $burger.='<li><a  onclick="modalloadForm(asxc,input);return false;">Вход</a></li>';
             $burger.='</ul>
         </nav>
     </div>
     <div class="cl"></div>
-</div>';
+</div>
+<script type="application/javascript">
+ var asxc="<p>gfcbjhklm;,l;mkjyvgv hj</p>";
+ var input = document.createElement("input");
+input.type = "text";
+input.className = "css-class-name";
+ 
+</script>
+
+';

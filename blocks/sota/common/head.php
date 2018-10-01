@@ -22,7 +22,7 @@
 
 
 
-    <!--<script async src="/js/common.php?v=2"></script>-->
+    <script async src="/js/common_sota_v1_0.js"></script>
 
 
 </head>
