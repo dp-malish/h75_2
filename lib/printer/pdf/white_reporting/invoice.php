@@ -30,7 +30,7 @@ $kontr_agent_inn='888';
 
 $perechen=[['Виїзд до обладнення','2','100.33'],['Виїзд до обладнення2','1','1200']];*/
 
-static function getPdf($doc_num,$doc_num_date,$spd,$spd_bank,$spd_adress,$spd_inn,$kontr_agent){
+static function getPdf($doc_num,$doc_num_date,$spd,$spd_bank,$spd_adress,$spd_inn,$kontr_agent,$kontr_agent_bank,$kontr_agent_adress,$kontr_agent_inn,$perechen){
     require( '../fpdf181/fpdf.php' );
 
     $pdf = new \FPDF();
@@ -288,7 +288,23 @@ static function getPdf($doc_num,$doc_num_date,$spd,$spd_bank,$spd_adress,$spd_in
     $txt=Printer\FloatToStr::grn($sum_total,true);
     $txt=iconv( 'utf-8','windows-1251',$txt);
     $pdf->Cell(190,5,$txt,0,1,'L');
+//***********************
+//***********************
+//***********************
+//***********************
+    $y+=8;
+    $pdf->SetXY(90,$y);
 
+    $pdf->SetLineWidth(0.5);
+    $pdf->SetFont('Arial','',10);
+    $txt=iconv( 'utf-8','windows-1251','Виписав:');
+    $pdf->Cell(110,5,$txt,'B',1,'L');
+
+    $y+=5;
+    $pdf->SetXY(90,$y);
+    $pdf->SetFont('Arial','',6);
+    $txt=iconv( 'utf-8','windows-1251','(Ф.І.О. Підпис)');
+    $pdf->Cell(120,4,$txt,0,1,'C');
 
 
     $pdf->Output();
