@@ -111,18 +111,67 @@ if(\lib\Def\Opt::$live_user!=0){
         }
     }
     $burger.='</ul></li>';
-}else $burger.='<li><a  onclick="modalloadForm(asxc,input);return false;">Вход</a></li>';
+}else $burger.='<li><a  onclick="modalloadForm(null,formLogin);return false;">Вход</a></li>';
             $burger.='</ul>
         </nav>
     </div>
     <div class="cl"></div>
 </div>
 <script type="application/javascript">
- var asxc="<p>gfcbjhklm;,l;mkjyvgv hj</p>";
- var input = document.createElement("input");
-input.type = "text";
-input.className = "css-class-name";
  
+var formLogin=document.createElement("form");
+formLogin.id = "formLoginUser";
+formLogin.className = "form";
+/*
+formLogin.addEventListener("click", function(event){
+    event.preventDefault();
+     alert(56);
+});
+*/
+
+formLogin.innerHTML="<h4>Вход</h4>";
+
+var mailLogin = document.createElement("input");
+mailLogin.id="btnUserEmail";
+mailLogin.type = "email";
+mailLogin.size = "95";
+mailLogin.title = "Email для входа";
+mailLogin.placeholder = "login@gmail.com";
+mailLogin.setAttribute("required","");
+formLogin.appendChild(mailLogin);
+
+mailLogin = document.createElement("input");
+mailLogin.id="btnUserPass";
+mailLogin.type = "password";
+mailLogin.size = "40";
+mailLogin.title = "Пароль для входа";
+mailLogin.placeholder = "Пароль для входа";
+mailLogin.setAttribute("required","");
+formLogin.appendChild(mailLogin);
+
+mailLogin = document.createElement("input");
+mailLogin.id="btnUserLogin";
+mailLogin.type = "submit";
+mailLogin.value = "Войти";
+
+//mailLogin.addEventListener("click",userLogin);
+formLogin.appendChild(mailLogin);
+
+function userLogin(){
+  //document.getElementById("btnUserEmail").disabled=true;
+  //document.getElementById("btnUserPass").disabled=true;
+  //document.getElementById("btnUserLogin").disabled=true;
+  alert("regreg111");
+/*document.getElementById("formLoginUser").addEventListener("click", function(event){
+    event.preventDefault()
+});*/
+ alert("regreg");
+  
+
+  //alert(document.getElementById("btnUserEmail").value);
+}
+
+
 </script>
 
 ';
