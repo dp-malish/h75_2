@@ -122,13 +122,6 @@ if(\lib\Def\Opt::$live_user!=0){
 var formLogin=document.createElement("form");
 formLogin.id = "formLoginUser";
 formLogin.className = "form";
-/*
-formLogin.addEventListener("click", function(event){
-    event.preventDefault();
-     alert(56);
-});
-*/
-
 formLogin.innerHTML="<h4>Вход</h4>";
 
 var mailLogin = document.createElement("input");
@@ -153,24 +146,30 @@ mailLogin = document.createElement("input");
 mailLogin.id="btnUserLogin";
 mailLogin.type = "submit";
 mailLogin.value = "Войти";
-
-//mailLogin.addEventListener("click",userLogin);
+mailLogin.addEventListener("click",userLogin);
 formLogin.appendChild(mailLogin);
 
 function userLogin(){
-  //document.getElementById("btnUserEmail").disabled=true;
-  //document.getElementById("btnUserPass").disabled=true;
-  //document.getElementById("btnUserLogin").disabled=true;
-  alert("regreg111");
-/*document.getElementById("formLoginUser").addEventListener("click", function(event){
-    event.preventDefault()
-});*/
- alert("regreg");
   
 
-  //alert(document.getElementById("btnUserEmail").value);
+document.getElementById("formLoginUser").addEventListener("click", function(event){
+    event.preventDefault();
+});
+if(document.getElementById("btnUserEmail").value==""){
+    document.getElementById("btnUserEmail").focus();
+}else if(document.getElementById("btnUserPass").value==""){
+    document.getElementById("btnUserPass").focus();
+}else{
+  document.getElementById("btnUserEmail").disabled=true;
+  document.getElementById("btnUserPass").disabled=true;
+  document.getElementById("btnUserLogin").disabled=true;
+  //urlparts, callback, json, asinc, url
+  ajaxPostSend("login=1&mail="+document.getElementById("btnUserEmail").value+"&pass"+document.getElementById("btnUserPass").value,callbackUserLogin,true,true,"/ajax/site/login.php");
 }
-
+}
+function callbackUserLogin(arr) {
+  alert(arr.answer);
+}
 
 </script>
 
