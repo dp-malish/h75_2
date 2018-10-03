@@ -160,11 +160,14 @@ if(document.getElementById("btnUserEmail").value==""){
 }else if(document.getElementById("btnUserPass").value==""){
     document.getElementById("btnUserPass").focus();
 }else{
-  document.getElementById("btnUserEmail").disabled=true;
+  /*document.getElementById("btnUserEmail").disabled=true;
   document.getElementById("btnUserPass").disabled=true;
-  document.getElementById("btnUserLogin").disabled=true;
+  document.getElementById("btnUserLogin").disabled=true;*/
   //urlparts, callback, json, asinc, url
-  ajaxPostSend("login=1&mail="+document.getElementById("btnUserEmail").value+"&pass"+document.getElementById("btnUserPass").value,callbackUserLogin,true,true,"/ajax/site/login.php");
+  
+  alert(document.getElementById("btnUserEmail").value);
+  
+  ajaxPostSend("login=1&mail="+document.getElementById("btnUserEmail").value+"&pass="+document.getElementById("btnUserPass").value,callbackUserLogin,true,true,"/ajax/site/login.php");
 }
 }
 function callbackUserLogin(arr) {

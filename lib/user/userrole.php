@@ -8,9 +8,10 @@
  *
  */
 
-namespace lib\user;
+namespace lib\User;
 
 use lib\Def as Def;
+use lib\Post\Post;
 
 class UserRole extends Def\Cache_Arr{
 
@@ -60,17 +61,38 @@ class UserRole extends Def\Cache_Arr{
 
 
 
+    //*******************************
+    //*******************************
 
 
 
 
 
 
+    public $temp=1;
+
+
+    public function loginUserWithRole($post_mail,$post_pass){//post массив переменные
+
+        if(Post::issetPostKey([$post_mail,$post_pass])){
+            $post_mail=Def\Validator::auditMail($_POST[$post_mail]);
+            if($post_mail){
+                $post_pass=Def\Validator::html_cod($_POST[$post_pass]);
+                if($post_pass){
+
+                    //поиск в БД
 
 
 
-    public function temp_fun(){
+                }else Def\Validator::$ErrorForm[]='Запрещённые символы в поле - пароль...';
+            }
+        }else Def\Validator::$ErrorForm[]='Бредовый запрос...';
+
         //берём массив ролей пользователей
-        return $this->user_role_arr;
+        $this->temp=$this->temp.' '.$post_mail.' '.$post_pass;
+
+
+
+        return(empty(Def\Validator::$ErrorForm)?true:false);
     }
 }

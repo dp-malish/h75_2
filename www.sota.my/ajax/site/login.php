@@ -5,9 +5,11 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../../../');spl_autoload_reg
 
 if(Post::issetPostArr()){
     if(!empty($_POST['login'])){
-// if(Feedback::feedback()){
-            echo json_encode(['err'=>false,'answer'=>'Спасибо! Ваше сообщение отправлено...']);
-           //}else{Post::answerErrJson();}
+
+        $user=new \lib\User\UserRole(['../../../cache_all/sota'],false);
+        if($user->loginUserWithRole('mail','pass')){
+            echo json_encode(['err'=>false,'answer'=>$user->temp.' Спасибо! Ваше сообщение отправлено 2...']);
+        }else{Post::answerErrJson();}
     }else echo $_SERVER['SERVER_NAME'];
     //-------------------------------------------------------------------
 }else echo $_SERVER['SERVER_NAME'];
