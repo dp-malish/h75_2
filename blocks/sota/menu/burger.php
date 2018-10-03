@@ -111,7 +111,7 @@ if(\lib\Def\Opt::$live_user!=0){
         }
     }
     $burger.='</ul></li>';
-}else $burger.='<li><a  onclick="modalloadForm(null,formLogin);return false;">Вход</a></li>';
+}else $burger.='<li id="login_btn"><a  onclick="modalloadForm(null,formLogin);return false;">Вход</a></li>';
             $burger.='</ul>
         </nav>
     </div>
@@ -151,29 +151,26 @@ formLogin.appendChild(mailLogin);
 
 function userLogin(){
   
+document.getElementById("formLoginUser").addEventListener("click", function(event){event.preventDefault();});
 
-document.getElementById("formLoginUser").addEventListener("click", function(event){
-    event.preventDefault();
-});
-if(document.getElementById("btnUserEmail").value==""){
-    document.getElementById("btnUserEmail").focus();
-}else if(document.getElementById("btnUserPass").value==""){
-    document.getElementById("btnUserPass").focus();
+if(document.getElementById("btnUserEmail").value==""){document.getElementById("btnUserEmail").focus();
+}else if(document.getElementById("btnUserPass").value==""){document.getElementById("btnUserPass").focus();
 }else{
-  /*document.getElementById("btnUserEmail").disabled=true;
-  document.getElementById("btnUserPass").disabled=true;
-  document.getElementById("btnUserLogin").disabled=true;*/
-  //urlparts, callback, json, asinc, url
-  
-  alert(document.getElementById("btnUserEmail").value);
+  document.getElementById("btnUserLogin").disabled=true;
   
   ajaxPostSend("login=1&mail="+document.getElementById("btnUserEmail").value+"&pass="+document.getElementById("btnUserPass").value,callbackUserLogin,true,true,"/ajax/site/login.php");
+  
+  document.getElementById("btnUserLogin").disabled=false;
 }
 }
-function callbackUserLogin(arr) {
-  alert(arr.answer);
+function callbackUserLogin(arr){
+  //alert(arr.answer);
+  
+  if(arr.answer==1){
+      modalloadclose();
+      document.getElementById("login_btn").remove();
+      
+  }else modalloadFormAnswer("<p>"+arr.answer+"</p>");
+  
 }
-
-</script>
-
-';
+</script>';

@@ -15,6 +15,8 @@ use lib\Post\Post;
 
 class UserRole extends Def\Cache_Arr{
 
+    public $answer;
+
     private $user_role_arr;//Массив ролей пользователей
 
     private $cookie_role='cru_int';//Имя куки роли цифра
@@ -68,10 +70,6 @@ class UserRole extends Def\Cache_Arr{
 
 
 
-
-    public $temp=1;
-
-
     public function loginUserWithRole($post_mail,$post_pass){//post массив переменные
 
         if(Post::issetPostKey([$post_mail,$post_pass])){
@@ -81,15 +79,18 @@ class UserRole extends Def\Cache_Arr{
                 if($post_pass){
 
                     //поиск в БД
+                    $DB=new Def\SQLi();
+                    $res=$DB->strSQL('SELECT user_id,salt,password FROM user WHERE email='.$DB->realEscapeStr($post_mail));
+                    if($res['password']==$post_pass){
+                        $this->answer=1;
+
+                    }else $this->answer='Неверное имя или пароль...';
 
 
 
                 }else Def\Validator::$ErrorForm[]='Запрещённые символы в поле - пароль...';
             }
         }else Def\Validator::$ErrorForm[]='Бредовый запрос...';
-
-        //берём массив ролей пользователей
-        $this->temp=$this->temp.' '.$post_mail.' '.$post_pass;
 
 
 

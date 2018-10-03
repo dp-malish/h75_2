@@ -8,7 +8,7 @@ if(Post::issetPostArr()){
 
         $user=new \lib\User\UserRole(['../../../cache_all/sota'],false);
         if($user->loginUserWithRole('mail','pass')){
-            echo json_encode(['err'=>false,'answer'=>$user->temp.' Спасибо! Ваше сообщение отправлено 2...']);
+            echo json_encode(['err'=>false,'answer'=>$user->answer]);
         }else{Post::answerErrJson();}
     }else echo $_SERVER['SERVER_NAME'];
     //-------------------------------------------------------------------
