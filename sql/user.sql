@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS user(
   `email` VARCHAR(96) NULL,
   `tel` INT NULL,
   `tel_2` INT NULL,
-  `user_group_user_group_id` INT NOT NULL,
+  user_group_id INT NOT NULL,
   `username` VARCHAR(20) NULL,
   `password` VARCHAR(40) NULL,
   `salt` VARCHAR(9) NULL,

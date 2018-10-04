@@ -80,9 +80,12 @@ class UserRole extends Def\Cache_Arr{
 
                     //поиск в БД
                     $DB=new Def\SQLi();
-                    $res=$DB->strSQL('SELECT user_id,salt,password FROM user WHERE email='.$DB->realEscapeStr($post_mail));
+                    $res=$DB->strSQL('SELECT user_id,user_group_id,salt,password FROM user WHERE email='.$DB->realEscapeStr($post_mail));
                     if($res['password']==$post_pass){
                         $this->answer=1;
+                        Def\Cookie::setCookie($this->cookie_role,$res['user_group_id'],27000000);
+
+
 
                     }else $this->answer='Неверное имя или пароль...';
 
