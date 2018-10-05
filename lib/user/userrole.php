@@ -19,16 +19,16 @@ class UserRole extends Def\Cache_Arr{
 
     private $user_role_arr;//Массив ролей пользователей
 
-    private $cookie_role='cru_int';//Имя куки роли цифра
-    private $cookie_user_id='cui_int';//Имя куки № пользователя цифра
-    private $cookie_user_pass='cup_str';//Имя куки пароль пользователя str
-    private $cookie_user_ses='cus_str';//Имя куки сесии пльзователя
+    static $cookie_role='cru_int';//Имя куки роли цифра
+    static $cookie_user_id='cui_int';//Имя куки № пользователя цифра
+    static $cookie_user_pass='cup_str';//Имя куки пароль пользователя str
+    static $cookie_user_ses='cus_str';//Имя куки сесии пльзователя
 
 
 
 
 
-    public function __construct($dir=[],$add=false){
+    function __construct($dir=[],$add=false){
         parent::__construct($dir, $add);
         //Массив ролей пользователей берём
         $this->user_role_arr=$this->getCacheAssocArr('user_role', 'user_group');
@@ -36,14 +36,14 @@ class UserRole extends Def\Cache_Arr{
 
 
 
-    public function getRoleUser(){//Взять роль юзера из куки
-        $role=Def\Validator::issetCookie($this->cookie_role);
+    function getRoleUser(){//Взять роль юзера из куки
+        $role=Def\Validator::issetCookie(UserRole::$cookie_role);
         if($role){
-            $cookie_user_id=Def\Validator::issetCookie($this->cookie_user_id);
+            $cookie_user_id=Def\Validator::issetCookie(UserRole::$cookie_user_id);
             if($cookie_user_id){
-                $cookie_user_pass=Def\Validator::issetCookie($this->cookie_user_pass);
+                $cookie_user_pass=Def\Validator::issetCookie(UserRole::$cookie_user_pass);
                 if($cookie_user_pass){
-                    $cookie_user_ses=Def\Validator::issetCookie($this->cookie_user_ses);
+                    $cookie_user_ses=Def\Validator::issetCookie(UserRole::$cookie_user_ses);
                     if($cookie_user_ses){
                         $ses=$this->md5UserSesCookie($role,$cookie_user_id,$cookie_user_pass);
                         if($ses==$cookie_user_ses){Def\Opt::$live_user=$role;}else Def\Opt::$live_user=0;
@@ -64,12 +64,7 @@ class UserRole extends Def\Cache_Arr{
     }
     //*******************************
     //*******************************
-
-
-
-
-
-    public function loginUserWithRole($post_mail,$post_pass){//post массив переменные
+    function loginUserWithRole($post_mail,$post_pass){//post массив переменные
 
         if(Post::issetPostKey([$post_mail,$post_pass])){
             $post_mail=Def\Validator::auditMail($_POST[$post_mail]);
@@ -81,16 +76,12 @@ class UserRole extends Def\Cache_Arr{
                     $DB=new Def\SQLi();
                     $res=$DB->strSQL('SELECT user_id,user_group_id,salt,password FROM user WHERE email='.$DB->realEscapeStr($post_mail));
                     if($res['password']==$post_pass){
-
-                        //temp
-                        $this->answer=1;
-
-
-                        Def\Cookie::setCookie($this->cookie_role,$res['user_group_id'],27000000);
-                        Def\Cookie::setCookie($this->cookie_user_id,$res['user_id'],27000000);
+                        $this->answer=1;//для ява скрипта
+                        Def\Cookie::setCookie(UserRole::$cookie_role,$res['user_group_id'],27000000);
+                        Def\Cookie::setCookie(UserRole::$cookie_user_id,$res['user_id'],27000000);
                         $pass=$this->md5UserPassCookie($res['user_id'],$res['user_group_id'],$res['salt'],$res['password']);
-                        Def\Cookie::setCookie($this->cookie_user_pass,$pass,27000000);
-                        Def\Cookie::setCookie($this->cookie_user_ses,$this->md5UserSesCookie($res['user_group_id'],$res['user_id'],$pass),27000000);
+                        Def\Cookie::setCookie(UserRole::$cookie_user_pass,$pass,27000000);
+                        Def\Cookie::setCookie(UserRole::$cookie_user_ses,$this->md5UserSesCookie($res['user_group_id'],$res['user_id'],$pass),27000000);
                         Def\Opt::$live_user=$res['user_group_id'];
 
                     }else $this->answer='Неверное имя или пароль...';
@@ -98,5 +89,12 @@ class UserRole extends Def\Cache_Arr{
             }
         }else Def\Validator::$ErrorForm[]='Бредовый запрос...';
         return(empty(Def\Validator::$ErrorForm)?true:false);
+    }
+    static function exitUser(){
+        Def\Cookie::setCookie(UserRole::$cookie_role,'',0);
+        Def\Cookie::setCookie(UserRole::$cookie_user_id,'',0);
+        Def\Cookie::setCookie(UserRole::$cookie_user_pass,'',0);
+        Def\Cookie::setCookie(UserRole::$cookie_user_ses,'',0);
+        Def\Route::location();
     }
 }

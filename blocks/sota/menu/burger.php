@@ -21,13 +21,13 @@
 $menu=[
 
     'burger'=>[
-        ['link'=>'/сервис','title'=>'Сервис','def'=>true,'hiden'=>false,'role'=>[1,6,7]],
-        ['link'=>'/ремонт','title'=>'Ремонт','def'=>true,'hiden'=>false,'role'=>[1,2,3,4,5,6,7]],
-        ['link'=>'/сайты','title'=>'Сайты','def'=>true,'hiden'=>false,'role'=>[1,6,7]],
-        ['link'=>'/магазин/','title'=>'Магазин','def'=>true,'hiden'=>false,'role'=>[1,2,3,4,5,6,7]],
-        ['link'=>'/контакты','title'=>'Контакты','def'=>true,'hiden'=>false,'role'=>[4,5,6]],
+        ['link'=>'сервис','title'=>'Сервис','def'=>true,'hiden'=>false,'role'=>[1,6,7]],
+        ['link'=>'ремонт','title'=>'Ремонт','def'=>true,'hiden'=>false,'role'=>[1,2,3,4,5,6,7]],
+        ['link'=>'сайты','title'=>'Сайты','def'=>true,'hiden'=>false,'role'=>[1,6,7]],
+        ['link'=>'магазин','title'=>'Магазин','def'=>true,'hiden'=>false,'role'=>[1,2,3,4,5,6,7]],
+        ['link'=>'контакты','title'=>'Контакты','def'=>true,'hiden'=>false,'role'=>[4,5,6]],
 
-        ['link'=>'/сделай-сам','title'=>'Сделай сам','def'=>true,'hiden'=>false,'role'=>[1,6,7]],
+        ['link'=>'сделай-сам','title'=>'Сделай сам','def'=>true,'hiden'=>false,'role'=>[1,6,7]],
 
         ['link'=>'директор','title'=>'Директор','def'=>false,'hiden'=>true,'role'=>[1,2,7]],
         ['link'=>'бухгалтер','title'=>'Бухгалтер','def'=>false,'hiden'=>true,'role'=>[1,3,7]],
@@ -36,12 +36,14 @@ $menu=[
     ],
 
     'main_menu'=>[
-        //['link'=>'/личный-кабинет','title'=>'Вход','def'=>true,'hiden'=>false,'role'=>[0,1]],
-        ['link'=>'/личный-кабинет','title'=>'Личный кабинет','def'=>false,'hiden'=>false,'role'=>[1,2,3,4,5,6]],
+        ['link'=>'заказы','title'=>'Заказы','def'=>false,'hiden'=>false,'role'=>[1,2,3,4,5,6,7]],
         ['link'=>'директор','title'=>'Директор','def'=>false,'hiden'=>true,'role'=>[1,2,7]],
         ['link'=>'бухгалтер','title'=>'Бухгалтер','def'=>false,'hiden'=>true,'role'=>[1,3,7]],
         ['link'=>'менеджер','title'=>'Менеджер','def'=>false,'hiden'=>true,'role'=>[1,4,7]],
-        ['link'=>'продавец','title'=>'Продавец','def'=>false,'hiden'=>true,'role'=>[1,5,7]]
+        ['link'=>'продавец','title'=>'Продавец','def'=>false,'hiden'=>true,'role'=>[1,5,7]],
+
+
+        ['link'=>'exit','title'=>'Выход','def'=>false,'hiden'=>false,'role'=>[1,2,3,4,5,6,7]]
     ]
 
 
@@ -49,18 +51,16 @@ $menu=[
 
 $burger='<div class="main_menu rel">
     <div id="burger" class="burger rel">
-        <div>
-            <div class="burger_line"></div><div class="burger_line"></div><div class="burger_line"></div>
-        </div>
+        <div><div class="burger_line"></div><div class="burger_line"></div><div class="burger_line"></div></div>
         <div id="burger_menu" class="burger_canvas">
             <nav><ul class="top_menu_m">';
 if(\lib\Def\Opt::$live_user==0){
-    foreach($menu['burger'] as $v){if($v['def'])$burger.='<li><a href="'.$v['link'].'">'.$v['title'].'</a></li>';}
+    foreach($menu['burger'] as $v){if($v['def'])$burger.='<li><a href="/'.$v['link'].'">'.$v['title'].'</a></li>';}
 }else{
     foreach($menu['burger'] as $v){
         foreach($v['role'] as $role){
-            if($role===\lib\Def\Opt::$live_user)
-                $burger.='<li><a href="/'.($v['hiden']?\lib\Def\Opt::$setting.'/':'/').$v['link'].'">'.$v['title'].'</a></li>';
+            if($role==\lib\Def\Opt::$live_user)
+                $burger.='<li><a href="/'.($v['hiden']?\lib\Def\Opt::$setting.'/':'').$v['link'].'">'.$v['title'].'</a></li>';
         }
     }
 }
@@ -103,21 +103,22 @@ $burger.='</ul></nav>
 
 
 if(\lib\Def\Opt::$live_user!=0){
-    $burger.='<li><a href="/личный-кабинет" class="top_menu_pc_down">Кабинет</a><ul class="top_menu_pc_submenu">';
+    $burger.='<li><a href="/cabinet/" class="top_menu_pc_down">Кабинет</a><ul class="top_menu_pc_submenu">';
     foreach($menu['main_menu'] as $v){
         foreach($v['role'] as $role){
-            if($role==\lib\Def\Opt::$live_user)
-                $burger.='<li><a href="/'.($v['hiden']?\lib\Def\Opt::$setting.'/':'').$v['link'].'">'.$v['title'].'</a></li>';
+            if($role==\lib\Def\Opt::$live_user){
+                if(\lib\Def\Opt::$loginAdmin){
+                    $burger.='<li><a href="/'.($v['hiden']?\lib\Def\Opt::$setting.'/':'cabinet/').$v['link'].'">'.$v['title'].'</a></li>';
+                }else{if(!$v['hiden'])$burger.='<li><a href="/cabinet/'.$v['link'].'">'.$v['title'].'</a></li>';}
+            }
         }
     }
     $burger.='</ul></li>';
 }else $burger.='<li id="login_btn"><a  onclick="modalloadForm(null,formLogin);return false;">Вход</a></li>';
             $burger.='</ul>
         </nav>
-    </div>
-    <div class="cl"></div>
-</div>
-<script type="application/javascript">
+    </div><div class="cl"></div>
+</div><script type="application/javascript">
  
 var formLogin=document.createElement("form");
 formLogin.id = "formLoginUser";

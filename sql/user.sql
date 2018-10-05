@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS user(
   `salt` VARCHAR(9) NULL,
   `firstname` VARCHAR(32) NULL,
   `lastname` VARCHAR(32) NULL,
+  patronymic VARCHAR(32) NULL,
   `image` VARCHAR(255) NULL,
   `code` VARCHAR(40) NULL,
   `ip` VARCHAR(40) NULL,

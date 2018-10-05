@@ -2,7 +2,7 @@
 /**
  * User->Admin общие настройки для всех сайтов
  */
-namespace lib\user;
+namespace lib\User;
 use lib\Def as Def;
 
 class Admin extends User{
