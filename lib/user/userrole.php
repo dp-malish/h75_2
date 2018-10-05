@@ -45,8 +45,7 @@ class UserRole extends Def\Cache_Arr{
                 if($cookie_user_pass){
                     $cookie_user_ses=Def\Validator::issetCookie($this->cookie_user_ses);
                     if($cookie_user_ses){
-                        $ip=Def\Validator::getIp();
-                        $ses=$this->md5UserSesCookie($role,$cookie_user_id,$cookie_user_pass,$ip);
+                        $ses=$this->md5UserSesCookie($role,$cookie_user_id,$cookie_user_pass);
                         if($ses==$cookie_user_ses){Def\Opt::$live_user=$role;}else Def\Opt::$live_user=0;
                     }else Def\Opt::$live_user=0;
                 }else Def\Opt::$live_user=0;
@@ -57,12 +56,12 @@ class UserRole extends Def\Cache_Arr{
 
     //*******************************
     //*******************************
-    private function md5UserSesCookie($role,$cookie_user_id,$cookie_user_pass,$ip){
-        return md5(md5($role.$cookie_user_id.Def\Opt::COOKIE_SALT.$ip).$cookie_user_pass);
+    private function md5UserSesCookie($role,$cookie_user_id,$cookie_user_pass){
+        return md5(md5($role.$cookie_user_id.Def\Opt::COOKIE_SALT.Def\Validator::getIp()).$cookie_user_pass);
     }
-
-
-
+    private function md5UserPassCookie($id_user,$role_user,$salt_user,$pass_user){
+        return md5(md5($id_user.$role_user.$salt_user).Def\Opt::COOKIE_SALT.Def\Validator::getIp().$pass_user);
+    }
     //*******************************
     //*******************************
 
@@ -82,21 +81,22 @@ class UserRole extends Def\Cache_Arr{
                     $DB=new Def\SQLi();
                     $res=$DB->strSQL('SELECT user_id,user_group_id,salt,password FROM user WHERE email='.$DB->realEscapeStr($post_mail));
                     if($res['password']==$post_pass){
+
+                        //temp
                         $this->answer=1;
+
+
                         Def\Cookie::setCookie($this->cookie_role,$res['user_group_id'],27000000);
-
-
+                        Def\Cookie::setCookie($this->cookie_user_id,$res['user_id'],27000000);
+                        $pass=$this->md5UserPassCookie($res['user_id'],$res['user_group_id'],$res['salt'],$res['password']);
+                        Def\Cookie::setCookie($this->cookie_user_pass,$pass,27000000);
+                        Def\Cookie::setCookie($this->cookie_user_ses,$this->md5UserSesCookie($res['user_group_id'],$res['user_id'],$pass),27000000);
+                        Def\Opt::$live_user=$res['user_group_id'];
 
                     }else $this->answer='Неверное имя или пароль...';
-
-
-
                 }else Def\Validator::$ErrorForm[]='Запрещённые символы в поле - пароль...';
             }
         }else Def\Validator::$ErrorForm[]='Бредовый запрос...';
-
-
-
         return(empty(Def\Validator::$ErrorForm)?true:false);
     }
 }

@@ -60,7 +60,7 @@ if(\lib\Def\Opt::$live_user==0){
     foreach($menu['burger'] as $v){
         foreach($v['role'] as $role){
             if($role===\lib\Def\Opt::$live_user)
-                $burger.='<li><a href="/'.($v['hiden']?\lib\Def\Opt::$setting.'/':'').$v['link'].'">'.$v['title'].'</a></li>';
+                $burger.='<li><a href="/'.($v['hiden']?\lib\Def\Opt::$setting.'/':'/').$v['link'].'">'.$v['title'].'</a></li>';
         }
     }
 }

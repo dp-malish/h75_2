@@ -14,8 +14,6 @@ $user=new \lib\user\UserRole(['sota'],true);
 
 $user->getRoleUser();
 
-//$Opt::$live_user=1;
-
 
 $Opt::$r_content=$Opt::$live_user.' ******54645';
 
