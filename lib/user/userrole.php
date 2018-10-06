@@ -17,7 +17,7 @@ class UserRole extends Def\Cache_Arr{
 
     public $answer;
 
-    private $user_role_arr;//Массив ролей пользователей
+    static $user_role_arr;//Массив ролей пользователей
 
     static $cookie_role='cru_int';//Имя куки роли цифра
     static $cookie_user_id='cui_int';//Имя куки № пользователя цифра
@@ -31,7 +31,7 @@ class UserRole extends Def\Cache_Arr{
     function __construct($dir=[],$add=false){
         parent::__construct($dir, $add);
         //Массив ролей пользователей берём
-        $this->user_role_arr=$this->getCacheAssocArr('user_role', 'user_group');
+        UserRole::$user_role_arr=$this->getCacheAssocArr('user_role', 'user_group');
     }
 
 
