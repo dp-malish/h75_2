@@ -8,6 +8,8 @@ if(Opt::$live_user==0){Route::$module404=true;}else{
 
         case'exit':User\UserRole::exitUser();break;
 
+        case'менеджер': Opt::$l_content_up.=\blocks\sota\Menu\L_menu::getMenu(3);break;
+
 
 
 
@@ -15,7 +17,4 @@ if(Opt::$live_user==0){Route::$module404=true;}else{
         default:Route::$module404=true;
 
     }
-
-    Opt::$l_content_up.='<br>'.Opt::$live_user.'cabinet<br>';
-
 }

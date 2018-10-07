@@ -31,16 +31,16 @@ $menu=[
 
         ['link'=>'директор','title'=>'Директор','def'=>false,'hiden'=>true,'role'=>[1,2,7]],
         ['link'=>'бухгалтер','title'=>'Бухгалтер','def'=>false,'hiden'=>true,'role'=>[1,3,7]],
-        ['link'=>'менеджер','title'=>'Менеджер','def'=>false,'hiden'=>true,'role'=>[1,4,7]],
-        ['link'=>'продавец','title'=>'Продавец','def'=>false,'hiden'=>true,'role'=>[1,5,7]]
+        ['link'=>'менеджер','title'=>'Менеджер','def'=>false,'hiden'=>false,'role'=>[1,4,7]],
+        ['link'=>'продавец','title'=>'Продавец','def'=>false,'hiden'=>false,'role'=>[1,5,7]]
     ],
 
     'main_menu'=>[
         ['link'=>'заказы','title'=>'Заказы','def'=>false,'hiden'=>false,'role'=>[1,2,3,4,5,6,7]],
         ['link'=>'директор','title'=>'Директор','def'=>false,'hiden'=>true,'role'=>[1,2,7]],
         ['link'=>'бухгалтер','title'=>'Бухгалтер','def'=>false,'hiden'=>true,'role'=>[1,3,7]],
-        ['link'=>'менеджер','title'=>'Менеджер','def'=>false,'hiden'=>true,'role'=>[1,4,7]],
-        ['link'=>'продавец','title'=>'Продавец','def'=>false,'hiden'=>true,'role'=>[1,5,7]],
+        ['link'=>'менеджер','title'=>'Менеджер','def'=>false,'hiden'=>false,'role'=>[1,4,7]],
+        ['link'=>'продавец','title'=>'Продавец','def'=>false,'hiden'=>false,'role'=>[1,5,7]],
 
 
         ['link'=>'exit','title'=>'Выход','def'=>false,'hiden'=>false,'role'=>[1,2,3,4,5,6,7]]
