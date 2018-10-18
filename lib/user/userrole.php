@@ -16,6 +16,7 @@ use lib\Post\Post;
 class UserRole extends Def\Cache_Arr{
 
     public $answer;
+    public $answer_arr=[];
 
     static $user_role_arr;//Массив ролей пользователей
 
@@ -97,4 +98,14 @@ class UserRole extends Def\Cache_Arr{
         Def\Cookie::setCookie(UserRole::$cookie_user_ses,'',0);
         Def\Route::location();
     }
+
+    //*******************************
+    //*******************************
+    function getUserInfo($id){
+        $DB=new Def\SQLi();
+        $this->answer_arr=$DB->strSQL('SELECT * FROM user WHERE user_id='.$DB->realEscapeStr($id));
+        if(!$this->answer_arr)Def\Validator::$ErrorForm[]='User bad';
+        return(empty(Def\Validator::$ErrorForm)?true:false);
+    }
+
 }

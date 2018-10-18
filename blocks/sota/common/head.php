@@ -25,5 +25,7 @@
 
     <script async src="/js/common_sota_v1_0.js"></script>
 
+    <?=$Opt::$jscript?>
+
 
 </head>

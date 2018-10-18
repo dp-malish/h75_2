@@ -37,6 +37,9 @@ class Manager{
     }
 
     private function clientMap(){
+
+        Def\Opt::$jscript='<script async src="/js/user_role.js"></script>';
+
         $DB=new Def\SQLi();
         $res=$DB->arrSQL('SELECT user_id,email,tel,tel_2,user_group_id,firstname,lastname,patronymic FROM user /*WHERE user_group_id=6*/ ORDER BY user_id DESC');
 
@@ -46,9 +49,10 @@ class Manager{
         foreach($res as $k=>$v){
 
             $text.='<div class="dwfse fon_c five">';
-            $text.='<div class="field_table field_fio ac">'.$v['lastname'].'<br>'.$v['firstname'].'<br>'.$v['patronymic'].'</div>';
 
-            $text.='<div class="field_table field_contact ac">'.$v['tel'].'<br>'.$v['tel_2'].'<br>'.$v['email'].'</div>';
+            $text.='<div class="field_fio ac link" onclick="getUserInfo('.$v['user_id'].')">'.$v['lastname'].'<br>'.$v['firstname'].'<br>'.$v['patronymic'].'</div>';
+
+            $text.='<div class="field_contact ac">'.$v['tel'].'<br>'.$v['tel_2'].'<br>'.$v['email'].'</div>';
 
 
             $text.='</div>';
