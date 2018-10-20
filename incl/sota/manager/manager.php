@@ -45,7 +45,7 @@ class Manager{
 
         $text='<div class="fon five_">';
 
-        $text.='<div class="dwfse fon_c five"><div>Ф.И.О.</div><div>Контакты</div></div>';
+        $text.='<div class="dwfse fon_c five"><div class="link" onclick="addUserInfoNew()">ФИО +</div><div>Контакты</div></div>';
         foreach($res as $k=>$v){
 
             $text.='<div class="dwfse fon_c five">';

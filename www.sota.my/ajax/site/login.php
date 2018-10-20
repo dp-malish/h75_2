@@ -22,14 +22,16 @@ if(Post::issetPostArr()){
                         echo json_encode([
                             'err'=>false,
                             'id'=>$user->answer_arr['user_id'],
-                            'fio'=>$user->answer_arr['lastname'].'<br>'.$user->answer_arr['firstname'].'<br>'.$user->answer_arr['patronymic'],
+                            'f'=>$user->answer_arr['lastname'],
+                            'i'=>$user->answer_arr['firstname'],
+                            'o'=>$user->answer_arr['patronymic'],
+
                             'tel'=>$user->answer_arr['tel'],
                             'tel2'=>$user->answer_arr['tel2'],
                             'mail'=>$user->answer_arr['email'],
                             'role'=>UserRole::$user_role_arr[($user->answer_arr['user_group_id']-1)]['name'],
 
-                            'data'=>$user->answer_arr['date_added'],
-
+                            'data'=>$user->answer_arr['date_added']
 
                         ]);
                     }
