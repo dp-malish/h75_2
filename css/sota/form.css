@@ -48,7 +48,7 @@
 }
 
 
-.form input[type="submit"],.form .formbtn{
+.form input[type="submit"],.form .formbtn,input[type="button"]{
   padding:1.5%;
   border-radius:3px;
   border: 1px solid rgba(0,0,0,.1);
@@ -58,11 +58,11 @@
   font-size:115%;
   cursor: pointer;
 }
-.form input[type="submit"]:hover,.form .formbtn:hover{
+.form input[type="submit"]:hover,.form .formbtn:hover,input[type="button"]:hover{
   background:linear-gradient(to top, #FF8E00, #ffe100);
   border:#003559 1px solid;
 }
-.form input[type="submit"]:focus,.form .formbtn:focus{
+.form input[type="submit"]:focus,.form .formbtn:focus,input[type="button"]:focus{
   box-shadow: 0 1px 1px #fff, inset 0 1px 2px rgba(0,0,0,.8), inset 0 -1px 0 rgba(0,0,0,.05);
 }
 .form input[type="file"]{

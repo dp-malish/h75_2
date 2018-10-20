@@ -6,20 +6,14 @@ function addUserInfoNew() {
     GetUserInfoView.tel=null;
     GetUserInfoView.tel2=null;
     GetUserInfoView.mail=null;
-
+    GetUserInfoView.role=null;
+    GetUserInfoView.data=null;
     GetUserInfoView();
 }
 
-
-function getUserInfo(id){
-
-    modalload(loaderImg);
-
+function getUserInfo(id){modalload(loaderImg);
     ajaxPostSend("info_user=1&id="+id,callbackGetUserInfo,true,true,"/ajax/site/login.php");
-
 }
-
-
 
 function callbackGetUserInfo(arr){
     modalloadclose();
@@ -30,7 +24,8 @@ function callbackGetUserInfo(arr){
     GetUserInfoView.tel=arr.tel;
     GetUserInfoView.tel2=arr.tel2;
     GetUserInfoView.mail=arr.mail;
-
+    GetUserInfoView.role=arr.role;
+    GetUserInfoView.data=arr.data;
     GetUserInfoView();
 }
 
@@ -123,7 +118,15 @@ function GetUserInfoView() {
     d_tel.appendChild(d_left);
     d_right=document.createElement("div");
     d_right.setAttribute("class","al ff fr link");
-    //d_right.innerHTML=arr.tel+" <span class='link'>&#9997;</span>";
+    if(GetUserInfoView.tel != null){d_right.innerHTML=GetUserInfoView.tel;}
+    else{d_right.innerHTML="<span>&#9997;</span>";}
+    d_right.onclick=function(){
+        var x=prompt("Указать фамилию",(GetUserInfoView.tel!=null?GetUserInfoView.tel:""));
+        if(x!==null){
+            if(x!=""){this.innerHTML=x;GetUserInfoView.tel=x;
+            }else{this.innerHTML="<span>&#9997;</span>";GetUserInfoView.tel=null;}
+        }
+    };
     d_tel.appendChild(d_right);
     cl=document.createElement("div");
     cl.setAttribute("class","cl");
@@ -141,14 +144,20 @@ function GetUserInfoView() {
     d_left.innerHTML="Телефон";
     d_tel2.appendChild(d_left);
     d_right=document.createElement("div");
-    d_right.setAttribute("class","al ff fr");
-    //d_right.innerHTML=arr.tel2;
+    d_right.setAttribute("class","al ff fr link");
+    if(GetUserInfoView.tel2 != null){d_right.innerHTML=GetUserInfoView.tel2;}
+    else{d_right.innerHTML="<span>&#9997;</span>";}
+    d_right.onclick=function(){
+        var x=prompt("Указать фамилию",(GetUserInfoView.tel2!=null?GetUserInfoView.tel2:""));
+        if(x!==null){
+            if(x!=""){this.innerHTML=x;GetUserInfoView.tel2=x;
+            }else{this.innerHTML="<span>&#9997;</span>";GetUserInfoView.tel2=null;}
+        }
+    };
     d_tel2.appendChild(d_right);
     cl=document.createElement("div");
     cl.setAttribute("class","cl");
     d_tel2.appendChild(cl);
-
-    //крайняя див который всё содержит
     canvas.appendChild(d_tel2);
 
 
@@ -161,14 +170,20 @@ function GetUserInfoView() {
     d_left.innerHTML="Email";
     d_email.appendChild(d_left);
     d_right=document.createElement("div");
-    d_right.setAttribute("class","al ff fr");
-    //d_right.innerHTML=arr.mail;
+    d_right.setAttribute("class","al ff fr link");
+    if(GetUserInfoView.mail!=null){d_right.innerHTML=GetUserInfoView.mail;}
+    else{d_right.innerHTML="<span>&#9997;</span>";}
+    d_right.onclick=function(){
+        var x=prompt("Указать фамилию",(GetUserInfoView.mail!=null?GetUserInfoView.mail:""));
+        if(x!==null){
+            if(x!=""){this.innerHTML=x;GetUserInfoView.mail=x;
+            }else{this.innerHTML="<span>&#9997;</span>";GetUserInfoView.mail=null;}
+        }
+    };
     d_email.appendChild(d_right);
     cl=document.createElement("div");
     cl.setAttribute("class","cl");
     d_email.appendChild(cl);
-
-    //крайняя див который всё содержит
     canvas.appendChild(d_email);
 
 
@@ -182,13 +197,13 @@ function GetUserInfoView() {
     d_role.appendChild(d_left);
     d_right=document.createElement("div");
     d_right.setAttribute("class","al ff fr");
-    //d_right.innerHTML=arr.role;
+    d_right.innerHTML=GetUserInfoView.role;
+    if(GetUserInfoView.role!=null){d_right.innerHTML=GetUserInfoView.role;}
+    else{d_right.innerHTML="";}
     d_role.appendChild(d_right);
     cl=document.createElement("div");
     cl.setAttribute("class","cl");
     d_role.appendChild(cl);
-
-    //крайняя див который всё содержит
     canvas.appendChild(d_role);
 
 
@@ -202,18 +217,26 @@ function GetUserInfoView() {
     d_reg.appendChild(d_left);
     d_right=document.createElement("div");
     d_right.setAttribute("class","al ff fr");
-    //d_right.innerHTML=arr.data;
+    if(GetUserInfoView.data!=null){d_right.innerHTML=GetUserInfoView.data;}
+    else{d_right.innerHTML="";}
     d_reg.appendChild(d_right);
     cl=document.createElement("div");
     cl.setAttribute("class","cl");
     d_reg.appendChild(cl);
-
-    //крайняя див который всё содержит
     canvas.appendChild(d_reg);
 
+    //кнопка сохранить
+    d_btn=document.createElement("div");
+    d_btn.setAttribute("class","five ac hide");
 
-    //"<p>"+arr.id+"   "+arr.mail+"</p>"
+    var btn=document.createElement("input");
+
+    btn.setAttribute("type","button");
+    btn.setAttribute("value","Сохранить изменения");
+
+
+    d_btn.appendChild(btn);
+    canvas.appendChild(d_btn);
+
     modalloadForm(null,canvas);
-
-    //alert(callbackGetUserInfo.id)
 }
