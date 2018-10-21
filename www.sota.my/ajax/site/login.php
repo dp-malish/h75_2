@@ -12,7 +12,9 @@ if(Post::issetPostArr()){
         if($user->loginUserWithRole('mail','pass')){
             echo json_encode(['err'=>false,'answer'=>$user->answer]);
         }else{Post::answerErrJson();}
-    }elseif(!empty($_POST['info_user'])){//вся инфа про извера
+    }
+
+    elseif(!empty($_POST['info_user'])){//вся инфа про извера
         $user->getRoleUser();
         if(Def\Opt::$live_user!=0 && Def\Opt::$live_user!=6){
             if(!empty($_POST['id'])){
@@ -31,6 +33,9 @@ if(Post::issetPostArr()){
                             'mail'=>$user->answer_arr['email'],
                             'role'=>UserRole::$user_role_arr[($user->answer_arr['user_group_id']-1)]['name'],
 
+                            'level'=>$user->answer_arr['level_star_client'],
+                            'note'=>$user->answer_arr['note'],
+
                             'data'=>$user->answer_arr['date_added']
 
                         ]);
@@ -38,6 +43,43 @@ if(Post::issetPostArr()){
                 }else{Def\Validator::$ErrorForm[]='0x0000001';Post::answerErrJson();}
             }else{Def\Validator::$ErrorForm[]='0x0000002';Post::answerErrJson();}
         }else{Def\Validator::$ErrorForm[]='Вход не выполнен!';Post::answerErrJson();}
-    }else echo $_SERVER['SERVER_NAME'];
+    }
+
+    elseif(!empty($_POST['add_update'])){//добавить обновить клиента
+        $user->getRoleUser();
+        if(Def\Opt::$live_user!=0 && Def\Opt::$live_user!=6){
+            if(!empty($_POST['id'])){
+                $id=Def\Validator::html_cod($_POST['id']);
+                if(Def\Validator::paternInt($id)){
+                    if($user->addUserInfo()){
+                        echo json_encode([
+                            'err'=>false,
+                            'answer'=>$user->answer,
+                            /*'id'=>$user->answer_arr['user_id'],
+                            'f'=>$user->answer_arr['lastname'],
+                            'i'=>$user->answer_arr['firstname'],
+                            'o'=>$user->answer_arr['patronymic'],
+
+                            'tel'=>$user->answer_arr['tel'],
+                            'tel2'=>$user->answer_arr['tel2'],
+                            'mail'=>$user->answer_arr['email'],
+                            'role'=>UserRole::$user_role_arr[($user->answer_arr['user_group_id']-1)]['name'],
+
+                            'level'=>$user->answer_arr['level_star_client'],
+                            'note'=>$user->answer_arr['note'],*/
+
+                            'data'=>$user->answer_arr['date_added']
+
+                        ]);
+                    }
+                }else{Def\Validator::$ErrorForm[]='0x0000001';Post::answerErrJson();}
+            }else{Def\Validator::$ErrorForm[]='0x0000002';Post::answerErrJson();}
+        }else{Def\Validator::$ErrorForm[]='Вход не выполнен!';Post::answerErrJson();}
+    }
+
+
+
+
+    else echo $_SERVER['SERVER_NAME'];
     //-------------------------------------------------------------------
 }else echo $_SERVER['SERVER_NAME'];

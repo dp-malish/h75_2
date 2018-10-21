@@ -107,5 +107,17 @@ class UserRole extends Def\Cache_Arr{
         if(!$this->answer_arr)Def\Validator::$ErrorForm[]='User bad';
         return(empty(Def\Validator::$ErrorForm)?true:false);
     }
+    //*******************************
+    //*******************************
+    function addUserInfo(){
+
+        $this->answer='add';
+        return(empty(Def\Validator::$ErrorForm)?true:false);
+    }
+    function updateUserInfo(){
+
+        $this->answer='update';
+        return(empty(Def\Validator::$ErrorForm)?true:false);
+    }
 
 }

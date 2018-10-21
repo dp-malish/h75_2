@@ -18,6 +18,9 @@ CREATE TABLE IF NOT EXISTS sota.user(
   city VARCHAR(40) NULL,
   new_mail INT NULL,
 
+  level_star_client SMALLINT DEFAULT 3,
+  note VARCHAR(255) NULL,
+
   `date_added` DATETIME DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`user_id`),
   UNIQUE INDEX `tel` (`tel` ASC),
