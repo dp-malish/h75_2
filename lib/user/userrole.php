@@ -109,12 +109,20 @@ class UserRole extends Def\Cache_Arr{
     }
     //*******************************
     //*******************************
-    function addUserInfo(){
+    /**
+     * @return bool
+     * Добавить нового пользователя
+     */
+    function addUserInfo($f,$i,$o,$tel,$tel2,$mail,$level,$note){
 
         $this->answer='add';
         return(empty(Def\Validator::$ErrorForm)?true:false);
     }
-    function updateUserInfo(){
+    /**
+     * @return bool
+     *  Обновить инфу про пользователя(клиента)
+     */
+    function updateUserInfo($id,$f,$i,$o,$tel,$tel2,$mail,$level,$note){
 
         $this->answer='update';
         return(empty(Def\Validator::$ErrorForm)?true:false);

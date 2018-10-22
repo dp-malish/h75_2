@@ -302,8 +302,8 @@ function GetUserInfoView() {
                 "&tel="+GetUserInfoView.tel+
                 "&tel2="+GetUserInfoView.tel2+
                 "&mail="+GetUserInfoView.mail+
-                "&mail="+GetUserInfoView.level+
-                "&mail="+GetUserInfoView.note
+                "&level="+GetUserInfoView.level+
+                "&note="+GetUserInfoView.note
                 ,callbackAddUserInfoNew,true,true,"/ajax/site/login.php");
         }
     };

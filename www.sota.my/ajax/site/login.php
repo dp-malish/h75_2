@@ -45,40 +45,35 @@ if(Post::issetPostArr()){
         }else{Def\Validator::$ErrorForm[]='Вход не выполнен!';Post::answerErrJson();}
     }
 
-    elseif(!empty($_POST['add_update'])){//добавить обновить клиента
+    elseif(!empty($_POST['add_update'])) {//добавить обновить клиента
         $user->getRoleUser();
-        if(Def\Opt::$live_user!=0 && Def\Opt::$live_user!=6){
-            if(!empty($_POST['id'])){
-                $id=Def\Validator::html_cod($_POST['id']);
-                if(Def\Validator::paternInt($id)){
-                    if($user->addUserInfo()){
-                        echo json_encode([
-                            'err'=>false,
-                            'answer'=>$user->answer,
-                            /*'id'=>$user->answer_arr['user_id'],
-                            'f'=>$user->answer_arr['lastname'],
-                            'i'=>$user->answer_arr['firstname'],
-                            'o'=>$user->answer_arr['patronymic'],
+        if(Def\Opt::$live_user !=0 && Def\Opt::$live_user != 6){
+            if(Post::issetPostKey(['id','f','i','o','tel','tel2','mail','level','note'])){
+                $id = Def\Validator::html_cod($_POST['id']);
+                $f = Def\Validator::html_cod($_POST['f']);
+                $i = Def\Validator::html_cod($_POST['i']);
+                $o = Def\Validator::html_cod($_POST['o']);
+                $tel = Def\Validator::html_cod($_POST['tel']);
+                $tel2 = Def\Validator::html_cod($_POST['tel2']);
 
-                            'tel'=>$user->answer_arr['tel'],
-                            'tel2'=>$user->answer_arr['tel2'],
-                            'mail'=>$user->answer_arr['email'],
-                            'role'=>UserRole::$user_role_arr[($user->answer_arr['user_group_id']-1)]['name'],
+                $mail = Def\Validator::html_cod($_POST['mail']);
+                $level = Def\Validator::html_cod($_POST['level']);
 
-                            'level'=>$user->answer_arr['level_star_client'],
-                            'note'=>$user->answer_arr['note'],*/
+                $note = Def\Validator::html_cod($_POST['note']);
 
-                            'data'=>$user->answer_arr['date_added']
-
-                        ]);
-                    }
-                }else{Def\Validator::$ErrorForm[]='0x0000001';Post::answerErrJson();}
-            }else{Def\Validator::$ErrorForm[]='0x0000002';Post::answerErrJson();}
+                if(Def\Validator::paternInt($id)){//если есть id то update инфу
+                    if($user->updateUserInfo($id,$f,$i,$o,$tel,$tel2,$mail,$level,$note)){
+                        echo json_encode(['err'=>false,'answer'=>$user->answer.$id]);
+                    }else{Post::answerErrJson();}
+                }else{//если нет id то добавить нового клиента
+                    if($user->addUserInfo($f,$i,$o,$tel,$tel2,$mail,$level,$note)){
+                        echo json_encode(['err'=>false,'answer'=>$user->answer.$id]);
+                    }else{Post::answerErrJson();}
+                }
+            }else{Def\Validator::$ErrorForm[]='0x0000001';Post::answerErrJson();}
         }else{Def\Validator::$ErrorForm[]='Вход не выполнен!';Post::answerErrJson();}
+
     }
-
-
-
 
     else echo $_SERVER['SERVER_NAME'];
     //-------------------------------------------------------------------
