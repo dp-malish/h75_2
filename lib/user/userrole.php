@@ -41,6 +41,7 @@ class UserRole extends Def\Cache_Arr{
         $role=Def\Validator::issetCookie(UserRole::$cookie_role);
         if($role){
             $cookie_user_id=Def\Validator::issetCookie(UserRole::$cookie_user_id);
+            Def\Opt::$live_user_id=$cookie_user_id;
             if($cookie_user_id){
                 $cookie_user_pass=Def\Validator::issetCookie(UserRole::$cookie_user_pass);
                 if($cookie_user_pass){
@@ -112,10 +113,58 @@ class UserRole extends Def\Cache_Arr{
     /**
      * @return bool
      * Добавить нового пользователя
+     * $user->getRoleUser();
      */
-    function addUserInfo($f,$i,$o,$tel,$tel2,$mail,$level,$note){
+    function addUserInfo($f,$i,$o,$tel,$tel2,$mail,$note,$user_group_id=6,$username=null,$password=null,$city=null,$new_mail=null){
+
+        //email
+        //tel
+        //tel2
+        //user_group_id def=6
+        //username  def null
+        //password  def null
+        //salt  def null !!!!!!!!!!!!!!!!!!!!!!!!! if pass есть
+
+        //firstname
+        //lastname
+        //patronymic
+        //image-------------------------
+        //code----------------------------
+
+        //ip !!!!!!!!!!!!!!!!!!+++++++++++
+
+        //status DEFAULT 1------------------------
+
+        //user_id_referral !!!!!!!!!!!!!!!!!!!!!!
+
+        //city
+        //new_mail
+
+        //level_star_client-----------------
+        //note
+        //date_added -----------------
 
         $this->answer='add';
+
+        $f=Def\Validator::auditText($f,'Фамилия',32);
+        $i=Def\Validator::auditText($i,'Имя',32);
+        $o=Def\Validator::auditText($o,'Отчество',32);
+        if(!Def\Validator::paternInt($tel)){Def\Validator::$ErrorForm[]='Графа телефон - должна состоять из цифр';}
+        if(!Def\Validator::paternInt($tel2)){Def\Validator::$ErrorForm[]='Графа телефон 2 - должна состоять из цифр';}
+        $mail=Def\Validator::auditMail($mail);
+        //if(!Def\Validator::paternInt($level)){Def\Validator::$ErrorForm[]='Графа отношение - должна состоять из цифр от 1 до 5';}
+        $note=Def\Validator::auditText($note,'Примечание',255);
+
+        $ip=Def\Validator::getIp();
+
+        /**
+         *
+         * if(Def\Opt::$live_user_id=0)
+        $id_ref=Def\Opt::$live_user_id;
+
+        **/
+
+
         return(empty(Def\Validator::$ErrorForm)?true:false);
     }
     /**

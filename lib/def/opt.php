@@ -25,6 +25,7 @@ class Opt{
 	static $r_content='';
 
 	static $live_user=0;
+	static $live_user_id=0;
 	static $loginAdmin=0;
 
 	static $setting='set';

@@ -66,7 +66,7 @@ if(Post::issetPostArr()){
                         echo json_encode(['err'=>false,'answer'=>$user->answer.$id]);
                     }else{Post::answerErrJson();}
                 }else{//если нет id то добавить нового клиента
-                    if($user->addUserInfo($f,$i,$o,$tel,$tel2,$mail,$level,$note)){
+                    if($user->addUserInfo($f,$i,$o,$tel,$tel2,$mail,$note)){
                         echo json_encode(['err'=>false,'answer'=>$user->answer.$id]);
                     }else{Post::answerErrJson();}
                 }

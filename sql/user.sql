@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS sota.user(
   `user_id` INT(11) NOT NULL AUTO_INCREMENT,
-  `email` VARCHAR(96) NULL,
+  `email` VARCHAR(130) NULL,
   `tel` BIGINT NULL,
   `tel_2` BIGINT NULL,
   user_group_id INT NOT NULL,
