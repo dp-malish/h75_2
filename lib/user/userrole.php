@@ -116,36 +116,31 @@ class UserRole extends Def\Cache_Arr{
      * $user->getRoleUser();
      */
     function addUserInfo($f,$i,$o,$tel,$tel2,$mail,$note,$user_group_id=6,$username=null,$password=null,$city=null,$new_mail=null){
+        $temp=true;if($temp){
+            //email //tel //tel2
+            //user_group_id def=6
+            //username  def null
 
-        //email
-        //tel
-        //tel2
-        //user_group_id def=6
-        //username  def null
-        //password  def null
-        //salt  def null !!!!!!!!!!!!!!!!!!!!!!!!! if pass есть
+            //password  def null
+            //salt  def null !!!!!!!!!!!!!!!!!!!!!!!!! if pass есть
 
-        //firstname
-        //lastname
-        //patronymic
-        //image-------------------------
-        //code----------------------------
+            //firstname //lastname //patronymic
+            //image-------------------------//code----------------------------
 
-        //ip !!!!!!!!!!!!!!!!!!+++++++++++
+            //ip !!!!!!!!!!!!!!!!!!+++++++++++
 
-        //status DEFAULT 1------------------------
+            //status DEFAULT 1------------------------
 
-        //user_id_referral !!!!!!!!!!!!!!!!!!!!!!
+            //user_id_referral !!!!!!!!!!!!!!!!!!!!!!
 
-        //city
-        //new_mail
+            //city
+            //new_mail
 
-        //level_star_client-----------------
-        //note
-        //date_added -----------------
-
-        $this->answer='add';
-
+            //level_star_client-----------------
+            //note
+            //date_added -----------------
+            $this->answer = 'add';
+        }
         $f=Def\Validator::auditText($f,'Фамилия',32);
         $i=Def\Validator::auditText($i,'Имя',32);
         $o=Def\Validator::auditText($o,'Отчество',32);
@@ -157,12 +152,18 @@ class UserRole extends Def\Cache_Arr{
 
         $ip=Def\Validator::getIp();
 
-        /**
-         *
-         * if(Def\Opt::$live_user_id=0)
-        $id_ref=Def\Opt::$live_user_id;
+        $this->getRoleUser();
+        $id_ref=(Def\Opt::$live_user_id==0?0:Def\Opt::$live_user_id);
 
-        **/
+        if(!is_null($password))$salt=substr(uniqid(), -8,7).random_int(10,99);
+
+        //Проверить ошибки
+        //$user_group_id ,$username ,$password      проверять!!!!!!!!!!!!!
+
+
+        $sql='INSERT INTO (email,tel,tel_2,user_group_id,username,password,salt,
+firstname,lastname,patronymic,ip,user_id_referral,city,new_mail,note)VALUES('.$mail.','.$tel.','.$tel2.','.$user_group_id.','.$username.','.')';
+
 
 
         return(empty(Def\Validator::$ErrorForm)?true:false);

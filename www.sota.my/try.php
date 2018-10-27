@@ -57,7 +57,7 @@ foreach($menu as $k=>$v){
 
 
 }
-
+echo '<br><br><br><br>';
     //echo $k.'  '.$v;
 print_r($menu);
 
@@ -65,3 +65,6 @@ echo '<br><br><br><br>';
 
 print_r($menu['burger']);
 //foreach($menu['burger'] as $item){ //$burger.='<li>'.$item['title'].'</li>';}
+echo '<br><br><br><br>';
+$rnd=random_int(10,99);
+echo substr(uniqid(), -8,7).random_int(10,99).'----'.uniqid ();
