@@ -141,30 +141,41 @@ class UserRole extends Def\Cache_Arr{
             //date_added -----------------
             $this->answer = 'add';
         }
-        $f=Def\Validator::auditText($f,'Фамилия',32);
-        $i=Def\Validator::auditText($i,'Имя',32);
-        $o=Def\Validator::auditText($o,'Отчество',32);
-        if(!Def\Validator::paternInt($tel)){Def\Validator::$ErrorForm[]='Графа телефон - должна состоять из цифр';}
+        if($f!='null'||$f!='')$f=Def\Validator::auditText($f,'Фамилия',32);else $f=null;
+        if($i!='')$i=Def\Validator::auditText($i,'Имя',32);
+        if($o!='')$o=Def\Validator::auditText($o,'Отчество',32);
+        /*if($tel!=''){
+            if(!Def\Validator::paternInt($tel)){
+                Def\Validator::$ErrorForm[]='Графа телефон - должна состоять из цифр';}
+        }
+
+
+
         if(!Def\Validator::paternInt($tel2)){Def\Validator::$ErrorForm[]='Графа телефон 2 - должна состоять из цифр';}
         $mail=Def\Validator::auditMail($mail);
         //if(!Def\Validator::paternInt($level)){Def\Validator::$ErrorForm[]='Графа отношение - должна состоять из цифр от 1 до 5';}
-        $note=Def\Validator::auditText($note,'Примечание',255);
+        $note=Def\Validator::auditText($note,'Примечание',255);*/
 
         $ip=Def\Validator::getIp();
 
-        $this->getRoleUser();
-        $id_ref=(Def\Opt::$live_user_id==0?0:Def\Opt::$live_user_id);
+        $this->getRoleUser();$id_ref=(Def\Opt::$live_user_id==0?0:Def\Opt::$live_user_id);
 
-        if(!is_null($password))$salt=substr(uniqid(), -8,7).random_int(10,99);
+        if(!is_null($password))$salt=substr(uniqid(),-8,7).random_int(10,99);
+        else $salt=null;
 
         //Проверить ошибки
         //$user_group_id ,$username ,$password      проверять!!!!!!!!!!!!!
 
+        $sql='INSERT INTO user(email,tel,tel_2,user_group_id,username,password,salt,
+firstname,lastname,patronymic,ip,user_id_referral,city,new_mail,note)VALUES(?,?,?,?,?,?,
+?,?,?,?,?,?,
+?,?,?)';
+        $DB=new Def\SQLi();
+        $sql=$DB->realEscape($sql,[$mail,$tel,$tel2,$user_group_id,$username,$password,$salt,$f,$i,$o,$ip,$id_ref,$city,$new_mail,$note]);
 
-        $sql='INSERT INTO (email,tel,tel_2,user_group_id,username,password,salt,
-firstname,lastname,patronymic,ip,user_id_referral,city,new_mail,note)VALUES('.$mail.','.$tel.','.$tel2.','.$user_group_id.','.$username.','.')';
+        $DB->boolSQL($sql);
 
-
+        $this->answer.=' --- '.$f.' --- '.$sql;
 
         return(empty(Def\Validator::$ErrorForm)?true:false);
     }
