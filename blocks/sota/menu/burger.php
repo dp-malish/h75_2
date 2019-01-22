@@ -55,12 +55,18 @@ $burger='<div class="main_menu rel">
         <div id="burger_menu" class="burger_canvas">
             <nav><ul class="top_menu_m">';
 if(\lib\Def\Opt::$live_user==0){
-    foreach($menu['burger'] as $v){if($v['def'])$burger.='<li><a href="/'.$v['link'].'">'.$v['title'].'</a></li>';}
+    foreach($menu['burger'] as $v){
+        if($v['def'])$burger.='<li><a href="/'.$v['link'].'">'.$v['title'].'</a></li>';
+    }
 }else{
     foreach($menu['burger'] as $v){
+        if($v['def']){
+            if($v['def'])$burger.='<li><a href="/'.$v['link'].'">'.$v['title'].'</a></li>';
+        }else{
         foreach($v['role'] as $role){
             if($role==\lib\Def\Opt::$live_user)
-                $burger.='<li><a href="/'.($v['hiden']?\lib\Def\Opt::$setting.'/':'').$v['link'].'">'.$v['title'].'</a></li>';
+                $burger.='<li><a href="/'.($v['hiden']?\lib\Def\Opt::$setting.'/':'cabinet/').$v['link'].'">'.$v['title'].'</a></li>';
+        }
         }
     }
 }

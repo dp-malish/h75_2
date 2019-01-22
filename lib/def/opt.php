@@ -28,7 +28,7 @@ class Opt{
 	static $live_user_id=0;
 	static $loginAdmin=0;
 
-	static $setting='set';
+	static $setting='set';//страница SU
 
 	function __construct($dir_name_site=''){
         self::$protocol=((!empty($_SERVER['HTTPS'])&&$_SERVER['HTTPS']!='off')||$_SERVER['SERVER_PORT']==443)?"https://":"http://";
