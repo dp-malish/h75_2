@@ -315,6 +315,7 @@ function GetUserInfoView() {
 }
 
 function callbackAddUserInfoNew(arr){
-    alert(arr.answer);
+    //alert(arr.answer);
+    modalloadFormAnswer("<p>"+arr.answer+"</p>");
 
 }
