@@ -16,9 +16,9 @@ CREATE TABLE IF NOT EXISTS sota.user(
   `status` TINYINT(1) DEFAULT 1,
   user_id_referral INT(11) NULL,
   city VARCHAR(40) NULL,
-  new_mail INT NULL,
+  new_mail INT NULL,/*новая почта*/
 
-  level_star_client SMALLINT DEFAULT 3,
+  level_star_client SMALLINT DEFAULT 3,/*отношение клиента*/
   note VARCHAR(255) NULL,
 
   `date_added` DATETIME DEFAULT CURRENT_TIMESTAMP,

@@ -116,7 +116,8 @@ class UserRole extends Def\Cache_Arr{
      * $user->getRoleUser();
      */
     function addUserInfo($f,$i,$o,$tel,$tel2,$mail,$note,$user_group_id=6,$username=null,$password=null,$city=null,$new_mail=null){
-        $temp=true;if($temp){
+        $temp=true;
+        if($temp){
             //email //tel //tel2
             //user_group_id def=6
             //username  def null
@@ -141,17 +142,17 @@ class UserRole extends Def\Cache_Arr{
             //date_added -----------------
             $this->answer = 'add';
         }
-        if($f!='null'||$f!='')$f=Def\Validator::auditText($f,'Фамилия',32);else $f=null;
-        if($i!='')$i=Def\Validator::auditText($i,'Имя',32);
+        if($f!='')$f=Def\Validator::auditText($f,'Фамилия',32);
+        $i=Def\Validator::auditText($i,'Имя',32);
         if($o!='')$o=Def\Validator::auditText($o,'Отчество',32);
-        /*if($tel!=''){
-            if(!Def\Validator::paternInt($tel)){
-                Def\Validator::$ErrorForm[]='Графа телефон - должна состоять из цифр';}
-        }
+
+
+        if(!Def\Validator::paternInt($tel)){Def\Validator::$ErrorForm[]='Графа телефон - должна состоять из цифр';}
+        /*if($tel2!=''){
 
 
 
-        if(!Def\Validator::paternInt($tel2)){Def\Validator::$ErrorForm[]='Графа телефон 2 - должна состоять из цифр';}
+        if(!Def\Validator::paternInt($tel2)){Def\Validator::$ErrorForm[]='Графа телефон 2 - должна состоять из цифр';}}
         $mail=Def\Validator::auditMail($mail);
         //if(!Def\Validator::paternInt($level)){Def\Validator::$ErrorForm[]='Графа отношение - должна состоять из цифр от 1 до 5';}
         $note=Def\Validator::auditText($note,'Примечание',255);*/
@@ -173,7 +174,7 @@ firstname,lastname,patronymic,ip,user_id_referral,city,new_mail,note)VALUES(?,?,
         $DB=new Def\SQLi();
         $sql=$DB->realEscape($sql,[$mail,$tel,$tel2,$user_group_id,$username,$password,$salt,$f,$i,$o,$ip,$id_ref,$city,$new_mail,$note]);
 
-        $DB->boolSQL($sql);
+        //$DB->boolSQL($sql);
 
         $this->answer.=' --- '.$f.' --- '.$sql;
 

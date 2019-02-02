@@ -50,16 +50,27 @@ if(Post::issetPostArr()){
         if(Def\Opt::$live_user !=0 && Def\Opt::$live_user != 6){
             if(Post::issetPostKey(['id','f','i','o','tel','tel2','mail','level','note'])){
                 $id = Def\Validator::html_cod($_POST['id']);
-                $f = Def\Validator::html_cod($_POST['f']);
-                $i = Def\Validator::html_cod($_POST['i']);
-                $o = Def\Validator::html_cod($_POST['o']);
+
+                $mail=Def\Validator::html_cod($_POST['mail']);
+                if($mail=='null')$mail='';
+
                 $tel = Def\Validator::html_cod($_POST['tel']);
+                if($tel=='null')$tel='';
                 $tel2 = Def\Validator::html_cod($_POST['tel2']);
+                if($tel2=='null')$tel2='';
 
-                $mail = Def\Validator::html_cod($_POST['mail']);
+                $f = Def\Validator::html_cod($_POST['f']);
+                if($f=='null')$f='';
+                $i = Def\Validator::html_cod($_POST['i']);
+                if($i=='null')$i='';
+                $o = Def\Validator::html_cod($_POST['o']);
+                if($o=='null')$o='';
+
                 $level = Def\Validator::html_cod($_POST['level']);
+                if($level=='null')$level='';
 
-                $note = Def\Validator::html_cod($_POST['note']);
+                $note=Def\Validator::html_cod($_POST['note']);
+                if($note=='null')$note='';
 
                 if(Def\Validator::paternInt($id)){//если есть id то update инфу
                     if($user->updateUserInfo($id,$f,$i,$o,$tel,$tel2,$mail,$level,$note)){
@@ -67,7 +78,7 @@ if(Post::issetPostArr()){
                     }else{Post::answerErrJson();}
                 }else{//если нет id то добавить нового клиента
                     if($user->addUserInfo($f,$i,$o,$tel,$tel2,$mail,$note)){
-                        echo json_encode(['err'=>false,'answer'=>$user->answer.$id]);
+                        echo json_encode(['err'=>false,'answer'=>$user->answer]);
                     }else{Post::answerErrJson();}
                 }
             }else{Def\Validator::$ErrorForm[]='0x0000001';Post::answerErrJson();}

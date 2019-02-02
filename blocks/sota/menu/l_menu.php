@@ -25,7 +25,7 @@ class L_menu{
    static $l_menu_arr=[
 
 'Manager'=>[
-['link'=>'карта-клиента','title'=>'Карта киента','hiden'=>false,'role'=>[1,2,4,5,7]],
+['link'=>'карта-клиента','title'=>'Карта клиента','hiden'=>false,'role'=>[1,2,4,5,7]],
 ['link'=>'сервис','title'=>'Сервис','hiden'=>false,'role'=>[1,2,3,4,5,7]],
 
 ],

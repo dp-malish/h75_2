@@ -150,7 +150,7 @@ function GetUserInfoView() {
 
     d_left=document.createElement("div");
     d_left.setAttribute("class","ar ff fl");
-    d_left.innerHTML="Телефон";
+    d_left.innerHTML="Телефон 2";
     d_tel2.appendChild(d_left);
     d_right=document.createElement("div");
     d_right.setAttribute("class","al ff fr link");
@@ -315,7 +315,7 @@ function GetUserInfoView() {
 }
 
 function callbackAddUserInfoNew(arr){
-    //alert(arr.answer);
-    modalloadFormAnswer("<p>"+arr.answer+"</p>");
+    alert(arr.answer);
+    //modalloadFormAnswer("<p>"+arr.answer+"</p>");
 
 }
