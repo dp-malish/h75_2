@@ -16,7 +16,7 @@ function addUserInfoNew() {
 }
 
 function getUserInfo(id){modalload(loaderImg);
-    ajaxPostSend("info_user=1&id="+id,callbackGetUserInfo,true,true,"/ajax/site/login.php");
+    ajaxPostSend("info_user=1&id="+id,callbackGetUserInfo,true,true,"/ajax/site/aj_login.php");
 }
 
 function callbackGetUserInfo(arr){
@@ -304,7 +304,7 @@ function GetUserInfoView() {
                 "&mail="+GetUserInfoView.mail+
                 "&level="+GetUserInfoView.level+
                 "&note="+GetUserInfoView.note
-                ,callbackAddUserInfoNew,true,true,"/ajax/site/login.php");
+                ,callbackAddUserInfoNew,true,true,"/ajax/site/aj_login.php");
         }
     };
 

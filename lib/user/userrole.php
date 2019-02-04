@@ -148,14 +148,13 @@ class UserRole extends Def\Cache_Arr{
 
 
         if(!Def\Validator::paternInt($tel)){Def\Validator::$ErrorForm[]='Графа телефон - должна состоять из цифр';}
-        /*if($tel2!=''){
-
-
-
+        if($tel2!=''){
         if(!Def\Validator::paternInt($tel2)){Def\Validator::$ErrorForm[]='Графа телефон 2 - должна состоять из цифр';}}
-        $mail=Def\Validator::auditMail($mail);
-        //if(!Def\Validator::paternInt($level)){Def\Validator::$ErrorForm[]='Графа отношение - должна состоять из цифр от 1 до 5';}
-        $note=Def\Validator::auditText($note,'Примечание',255);*/
+
+
+        if($mail!='')$mail=Def\Validator::auditMail($mail);
+
+        if($note!='')$note=Def\Validator::auditText($note,'Примечание',255);
 
         $ip=Def\Validator::getIp();
 
@@ -166,6 +165,10 @@ class UserRole extends Def\Cache_Arr{
 
         //Проверить ошибки
         //$user_group_id ,$username ,$password      проверять!!!!!!!!!!!!!
+
+
+
+
 
         $sql='INSERT INTO user(email,tel,tel_2,user_group_id,username,password,salt,
 firstname,lastname,patronymic,ip,user_id_referral,city,new_mail,note)VALUES(?,?,?,?,?,?,
@@ -185,7 +188,7 @@ firstname,lastname,patronymic,ip,user_id_referral,city,new_mail,note)VALUES(?,?,
      *  Обновить инфу про пользователя(клиента)
      */
     function updateUserInfo($id,$f,$i,$o,$tel,$tel2,$mail,$level,$note){
-
+//if(!Def\Validator::paternInt($level)){Def\Validator::$ErrorForm[]='Графа отношение - должна состоять из цифр от 1 до 5';}
         $this->answer='update';
         return(empty(Def\Validator::$ErrorForm)?true:false);
     }
