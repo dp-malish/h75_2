@@ -1,0 +1,1 @@
+<div id="wrap" class="maxw rel"><div id="l_col" class="rel"><?=\lib\Def\Opt::$l_content_up.$lm.\lib\Def\Opt::$l_content;?><div class="cl"></div></div>

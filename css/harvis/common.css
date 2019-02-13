@@ -1,0 +1,30 @@
+h1,h2,h3,h4{text-align:center;margin:5px auto}
+p,ol,ul,ul li{margin:5px}
+ul{list-style:none}
+
+
+.fon,.fon_c{margin:0 0 7px}
+@media screen and (max-width: 920px){.fon,.fon_c{margin:0 0 7px}}
+#l_col .fon,#l_col .fon_c,#r_col .fon,#r_col .fon_c{margin:0 0 7px}
+
+@media screen and (max-width:800px){
+    .hfc,.hsc{display:none}
+}
+
+.gallery{width:240px}
+@media screen and (min-width:1000px){.gallery{width:280px}}
+.price{font-size:110%;font-weight:700;padding:6px}
+
+.colorbox{cursor: url(../img/site/colorbox/zoomin.cur),pointer !important;}
+
+.tel{text-align:center}
+.telkiev::before{content: url(../img/site/pic.php?i=kievstar&ep=0)}
+.vodafon::before{content: url(../img/site/pic.php?i=vodafon&ep=0)}
+
+/*кнопки share*/
+#share .rel{margin:15px 3px}
+#informer{margin:6px 0;display:block}
+
+.nav_link a{margin:0 3px;display:inline-block}
+@media screen and (min-width:240px) and (max-width:780px){.nav_link a{margin:25px 24px}}
+

@@ -1,0 +1,4 @@
+<!doctype html><html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="author" content="Александр Баранов">
+    <meta name="copyright" lang="ru" content="Harvis"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index,follow"><link rel="shortcut icon" href="/img/site/ico.png" type="image/png"><meta name="google-site-verification" content="L89qMymRCPEmAIBk6gqJ9qgmOJtbvjSZZC_7JEWyfwE">
+<link rel="stylesheet" type="text/css" href="/css.php"><script async src="/js/common.php?v=1"></script>
+<script async src="/js/slider.php?v=1"></script><script async src="/js/scroll.php?v=1"></script><?=\lib\Def\Opt::$jscript.\lib\Def\Opt::$css.'<meta name="description" content="'.\lib\Def\Opt::$description.'"><meta name="keywords" content="'.\lib\Def\Opt::$keywords.'"><title>'.\lib\Def\Opt::$title.'</title>';?></head>

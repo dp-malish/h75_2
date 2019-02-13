@@ -1,0 +1,1 @@
+<!--Кол--><div id="m_col" class="rel"><?=\lib\Def\Opt::$main_content_up?><main><?=\lib\Def\Opt::$main_content?></main><div class="cl"></div></div><!--К кол--><div class="cl"></div></div>

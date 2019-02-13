@@ -4,6 +4,7 @@ class Validator{
 	static $ErrorForm=[];static $captcha=null;
 
 	static function html_cod($s){return trim(htmlspecialchars($s,ENT_QUOTES));}
+	static function html_decod($s){return htmlspecialchars_decode($s,ENT_QUOTES);}
 	static function issetCookie($str){return(isset($_COOKIE[$str]))?self::html_cod($_COOKIE[$str]):false;}
 	static function getIp(){return self::html_cod($_SERVER['REMOTE_ADDR']);}
 	//**************************

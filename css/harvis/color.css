@@ -1,0 +1,17 @@
+h1,h2,h3,h4,.tegh{color:#b2251a}
+
+A:link,.link{color:#5c3317;text-decoration:underline}
+A:active{color:#5c3317}
+A:visited{color:#520c0e}
+A:hover,.link:hover{color:#B2251F;text-decoration:blink}
+
+body{
+	background:#fafafa url("../img/site/pic.php?i=background")no-repeat fixed left bottom;
+	background-size:cover
+}
+.fon_c,.fon_c0{/*общий фон обводки*/
+	background:#FEFEE4;
+	background:rgba(254,255,244,0.92)
+}
+.border,.fon_c{border:#aa5901 1px solid}
+.price{background-color:#FECD82}
