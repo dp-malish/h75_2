@@ -2,19 +2,12 @@
 namespace lib\Def;
 
 //Error_Reporting(E_ALL & ~E_NOTICE);ini_set('display_errors',1);
-
-
 set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register();
-//set_include_path(get_include_path().PATH_SEPARATOR.'../lib'.PATH_SEPARATOR.'../include/harvis'.PATH_SEPARATOR.'../lib/admin');
-/*spl_autoload_extensions("_class.php");
-spl_autoload_register();*/
 
+$Opt=new Opt('harvis');//Def opt
 Cache_File::$cash=new Cache_File(['harvis'],true);
 
-//$Cash=new Cache_File('../cache_all/harvis/');//$bot=new UserAgent();
-
 $AdminCook=new \lib\user\User();
-
 
 if($_SERVER['REQUEST_URI']!='/'){
     if(Route::requestURI(4)){
@@ -23,9 +16,7 @@ if($_SERVER['REQUEST_URI']!='/'){
             switch(Route::$uri_parts[0]){
                 case 'katrin'.Data::DatePass():$AdminCook->setCookieAdmin();Route::$index=1;break;
                 case Opt::$setting:include'../modul/harvis/admin/main.php';break;
-
-                case'статьи':include'../modul/harvis/article.php';break;
-
+                case'статьи':new \incl\harvis\topMenu\Article();break;
                 default:new \incl\harvis\Def\DefContent();
             }
         }if(isset($uri_parts0_id[0]) && isset($uri_parts0_id[1])){
@@ -37,14 +28,4 @@ if($_SERVER['REQUEST_URI']!='/'){
     }
 }else{Route::$index=1;}if(Route::$module404){Route::modul404();}
 if(Route::$index){include'../modul/harvis/main.php';}
-
-require'../blocks/harvis/common/block/slider.php';
-require'../blocks/harvis/menu/lmenu.php';
-
-require'../blocks/harvis/common/head_com.php';
-require'../blocks/harvis/common/befor_header.php';
-require'../blocks/harvis/common/header.php'
-;require'../blocks/harvis/common/after_header.php';
-require'../blocks/harvis/common/left_column.php';
-require'../blocks/harvis/common/body_one.php';
-require'../blocks/harvis/common/foot.php';
+require'../blocks/harvis/common/block/slider.php';require'../blocks/harvis/menu/lmenu.php';require'../blocks/harvis/common/head_com.php';require'../blocks/harvis/common/befor_header.php';require'../blocks/harvis/common/header.php';require'../blocks/harvis/common/after_header.php';require'../blocks/harvis/common/left_column.php';require'../blocks/harvis/common/body_one.php';require'../blocks/harvis/common/foot.php';

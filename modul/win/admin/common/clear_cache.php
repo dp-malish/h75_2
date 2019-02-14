@@ -1,6 +1,12 @@
 <?php
 namespace lib\Def;
-if(isset($_GET['clearcss'])){$clearcss=' ('.Cache_File::$cash->clearGroupFile('css/','tmp').')';
+
+$clearcss='';
+$clear_arr_db='';
+$clearindex='';
+
+if(isset($_GET['clearcss'])){
+    $clearcss=' ('.Cache_File::$cash->clearGroupFile('css/','tmp').')';
 }elseif(isset($_GET['clear_arr_db'])){
     $clear_arr_db=' ('.Cache_File::$cash->clearGroupFile('arr/','').')';
 }elseif(isset($_GET['clearindex'])){
