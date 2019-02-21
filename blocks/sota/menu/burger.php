@@ -80,6 +80,7 @@ $burger.='</ul></nav>
 
                 <li><a href="сервис" class="top_menu_pc_down">Сервис</a>
                     <ul class="top_menu_pc_submenu">
+                        <li><a href="">Сборка компьютера</a></li>
                         <li><a href="">Чистка</a></li>
                         <li><a href="">Author</a></li>
                         <li><a href="">Archive</a></li>
