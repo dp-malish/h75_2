@@ -26,7 +26,7 @@ class Opt{
 
 	static $live_user=0;
 	static $live_user_id=0;
-	static $loginAdmin=0;
+	static $loginAdmin=0;//Куки админа есть или нет
 
 	static $setting='set';//страница SU
 

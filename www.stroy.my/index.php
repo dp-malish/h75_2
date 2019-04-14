@@ -3,36 +3,27 @@ namespace lib\Def;
 Error_Reporting(E_ALL & ~E_NOTICE);ini_set('display_errors',1);
 set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register();
 
-
 $Opt=new Opt('stroy');//Def opt
-$Cash=new Cache_File(['stroy'],true);
-
+Cache_File::$cash=new Cache_File(['stroy'],true);
 
 //$bot=new UserAgent();
 //if(!$bot->isBot()){include'../blocks/taimod/rek/google.php';}
 
-$set='set';$setAdminCook='stroy'.Data::DatePass();
+$AdminCook=new \lib\user\User();
+$Opt::$loginAdmin=$AdminCook->loginAdmin();
 
-if($_SERVER['REQUEST_URI']!='/'){$uri=htmlspecialchars($_SERVER['REQUEST_URI'],ENT_QUOTES);
-    try{$uri=urldecode($uri);
-        $url_path=parse_url($uri,PHP_URL_PATH);$uri_parts=explode('/',trim($url_path,'/'));$count_uri_parts=count($uri_parts);
-        if($count_uri_parts>4){throw new Exception();}else{
-            switch($uri_parts[0]){
-                case $setAdminCook:
-                  $setAdminCook=new \lib\User\User();$setAdminCook->setCookieAdmin();
-                  $index=1;break;
-                case $set:include'../modul/stroy/admin/main.php';break;
-                case 'контакты':include'../modul/stroy/contacts.php';break;
-                default:include '../modul/stroy/main.php';
-            }
+if($_SERVER['REQUEST_URI']!='/'){
+    if(Route::requestURI(2)) {
+        switch (Route::$uri_parts[0]){
+             case 'stroy'.Data::DatePass():$AdminCook->setCookieAdmin();Route::$index=1;break;
+             case $Opt::$setting:
+                include '../modul/stroy/admin/main.php';break;
+             case 'контакты':include '../modul/stroy/contacts.php';break;
+             default:new \incl\stroy\Def\DefContent();
         }
-    }catch(Exception $e){$module='404';}
-}else{$index=1;}
-
-if($module=='404'){Route::modul404();}
-if($index){include '../modul/stroy/index.php';}
-
-
+    }
+}else{Route::$index=1;}if(Route::$module404){Route::modul404();}
+if(Route::$index){include '../modul/stroy/index.php';}
 
 require'../blocks/stroy/menu/l_menu.php';
 
@@ -40,6 +31,4 @@ require'../blocks/stroy/menu/r_menu.php';
 require'../blocks/stroy/common/head.php';
 require'../blocks/stroy/common/header.php';
 require'../blocks/stroy/menu/burger.php';
-require'../blocks/stroy/common/l_col.php';
-require'../blocks/stroy/common/body.php';
-require'../blocks/stroy/common/footer.php';
+require'../blocks/stroy/common/l_col.php';require'../blocks/stroy/common/body.php';require'../blocks/stroy/common/footer.php';
