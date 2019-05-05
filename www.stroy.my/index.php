@@ -16,8 +16,7 @@ if($_SERVER['REQUEST_URI']!='/'){
     if(Route::requestURI(2)) {
         switch (Route::$uri_parts[0]){
              case 'stroy'.Data::DatePass():$AdminCook->setCookieAdmin();Route::$index=1;break;
-             case $Opt::$setting:
-                include '../modul/stroy/admin/main.php';break;
+             case $Opt::$setting:include '../modul/stroy/admin/main.php';break;
              case 'контакты':include '../modul/stroy/contacts.php';break;
              default:new \incl\stroy\Def\DefContent();
         }
