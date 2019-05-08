@@ -15,18 +15,18 @@ $Opt::$loginAdmin=$AdminCook->loginAdmin();
 if($_SERVER['REQUEST_URI']!='/'){
     if(Route::requestURI(2)) {
         switch (Route::$uri_parts[0]){
-             case 'stroy'.Data::DatePass():$AdminCook->setCookieAdmin();Route::$index=1;break;
-             case $Opt::$setting:include '../modul/stroy/admin/main.php';break;
-             case 'контакты':include '../modul/stroy/contacts.php';break;
-             default:new \incl\stroy\Def\DefContent();
+            case 'stroy'.Data::DatePass():$AdminCook->setCookieAdmin();Route::$index=1;break;
+            case $Opt::$setting:include '../modul/stroy/admin/main.php';break;
+            case 'контакты':include '../modul/stroy/contacts.php';break;
+
+            case 'ремонт-кровли':new \incl\stroy\Geography\Roof();break;
+
+            default:new \incl\stroy\Def\DefContent();
         }
     }
-}else{Route::$index=1;}if(Route::$module404){Route::modul404();}
+}else{Route::$index=1;}if(Route::$module404){Route::modul404();new \incl\stroy\Menu\DefMenu();}
 if(Route::$index){include '../modul/stroy/index.php';new \incl\stroy\Menu\DefMenu();}
 
-require'../blocks/stroy/menu/l_menu.php';
-
-require'../blocks/stroy/menu/r_menu.php';
 require'../blocks/stroy/common/head.php';
 require'../blocks/stroy/common/header.php';
 require'../blocks/stroy/menu/burger.php';

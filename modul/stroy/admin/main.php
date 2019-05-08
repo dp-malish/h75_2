@@ -5,7 +5,7 @@ use \lib\User as User;
 $login='stroy';
 $pass='123';
 
-
+//new \incl\stroy\Menu\DefMenu();
 $user=new User\Admin();
 if(!$user->loginAdmin()){Route::$module404=true;}else{
     if(!isset($_COOKIE[$user->admin_form_login_cookie])){//если нет куков формы админа
