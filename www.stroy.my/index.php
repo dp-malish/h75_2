@@ -22,7 +22,7 @@ if($_SERVER['REQUEST_URI']!='/'){
         }
     }
 }else{Route::$index=1;}if(Route::$module404){Route::modul404();}
-if(Route::$index){include '../modul/stroy/index.php';}
+if(Route::$index){include '../modul/stroy/index.php';new \incl\stroy\Menu\DefMenu();}
 
 require'../blocks/stroy/menu/l_menu.php';
 
