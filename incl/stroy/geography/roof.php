@@ -12,7 +12,7 @@ use lib\Def as Def;
 class Roof{
 
     private $msg=3;
-    private $table_name='article';
+    private $table_name='def_content';
 
     private $title='Статьи Харвис';
     private $description='Статьи Харвис. ';
