@@ -11,33 +11,38 @@ use lib\Def as Def;
 
 class Roof{
 
-    private $msg=3;
     private $table_name='def_content';
 
-    private $title='Статьи Харвис';
-    private $description='Статьи Харвис. ';
-    private $keywords='Харвис';
+    private $title='Ремонт кровли - География работ';
+    private $description='';
+
+    private $menu=4;
+
 
 
     function __construct(){
         if(!isset(Def\Route::$uri_parts[1])){
             $this->viewList();
-        }elseif(isset(Def\Route::$uri_parts[1]) && !isset(Def\Route::$uri_parts[2])){
-            if(Def\Validator::paternStrLink(Def\Route::$uri_parts[1])){
-                if(Def\Validator::paternInt(Def\Route::$uri_parts[1])){//если цифра
-                    if(Def\Route::$uri_parts[1]==1){
-                        Def\Route::location301('/'.Def\Route::$uri_parts[0].'/');
-                    }else $this->viewList(Def\Route::$uri_parts[1]);
-                }else{//если текст
-                    $this->viewText();}
-            }else Def\Route::$module404=true;
         }else Def\Route::$module404=true;
     }
 
-    private function viewList($start=1){
-        Def\Str_navigation::navigation(Def\Route::$uri_parts[0],$this->table_name,$start,$this->msg,true);
-        Def\Opt::$main_content.='<section><h2>Статьи</h2>'.Def\Str_navigation::$navigation.'<div class="cl"></div>'.$this->viewListContent($start).'<div class="cl"></div>'.Def\Str_navigation::$navigation.'</section>';
+    private function viewList(){
+        Def\Opt::$main_content.='<section><h2>'.$this->title.'</h2><div class="cl"></div>'.$this->viewListContent().'<div class="cl"></div></section>';
     }
 
+    private function viewListContent(){
+        $res=Def\SQListatic::arrSQL_('SELECT link,title,caption FROM '.$this->table_name.' WHERE menu='.$this->menu);
+        if($res){
+            $content='';
+            foreach($res as $k=>$v){
+                $this->description.=$v['title'].', ';//добавить все
+                $content.='<div class="fon_c"><a href="/'.$v['link'].'"><h4 class="ac">'.$v['caption'].'</h4></a><div class="cl"></div></div>';
+            }
 
+            Def\Opt::$title=$this->title;
+            Def\Opt::$description=$this->description.='подробнее...';
+            new \incl\stroy\Menu\DefMenu($res['menu']);
+            return $content;
+        }else Def\Route::$module404=true;
+    }
 }
