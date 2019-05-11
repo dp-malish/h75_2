@@ -22,10 +22,10 @@ if(\lib\Post\Post::issetPostArr()){
         else{if(count(Validator::$ErrorForm)>0)Opt::$main_content.=Validator::$ErrorForm[0];else Opt::$main_content.='Неизвестная ошибка...';}
     }
 }
-if($uri_parts[1]=='картинки'){
-    Opt::$main_content.='<div class="fon_c"><h3>Добавить рисунок</h3>'.$Cash->SendHTML('../model/admin/AddImg.php').'</div>';
-}elseif($uri_parts[1]=='картинки-пакетно'){
-    Opt::$main_content.='<div class="fon_c"><h3>Добавить рисуноки (пакетно)</h3>'.$Cash->SendHTML('../model/admin/AddImgExt.php').'</div>';
-}elseif($uri_parts[1]=='картинки-изменить'){
-    Opt::$main_content.='<div class="fon_c"><h3>Изменить рисунок</h3>'.$Cash->SendHTML('../model/admin/UpdImg.php').'</div>';
+if(Route::$uri_parts[1]=='картинки'){
+    Opt::$main_content.='<div class="fon_c"><h3>Добавить рисунок</h3>'.Cache_File::$cash->SendHTML('../model/admin/AddImg.php').'</div>';
+}elseif(Route::$uri_parts[1]=='картинки-пакетно'){
+    Opt::$main_content.='<div class="fon_c"><h3>Добавить рисуноки (пакетно)</h3>'.Cache_File::$cash->SendHTML('../model/admin/AddImgExt.php').'</div>';
+}elseif(Route::$uri_parts[1]=='картинки-изменить'){
+    Opt::$main_content.='<div class="fon_c"><h3>Изменить рисунок</h3>'.Cache_File::$cash->SendHTML('../model/admin/UpdImg.php').'</div>';
 }

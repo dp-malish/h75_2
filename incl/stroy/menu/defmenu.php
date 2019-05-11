@@ -87,16 +87,21 @@ class DefMenu extends Def\Opt{
     function __construct($index_menu=0,$heading=NULL,$category=NULL){
         switch($index_menu){
             case 0:$this->menu_0_def_menu();break;//меню по умолчанию
-            case 1||2:$this->menu_0_def_menu();break;//верхнее меню (о-нас) и левое меню капитальный-ремонт-квартир
+            case 1:$this->menu_0_def_menu();break;//верхнее меню (о-нас)
+            case 2:$this->menu_0_def_menu();break;//левое меню капитальный-ремонт-квартир
             case 3:$this->menu_0_def_menu();break;//правое меню (иконки работ)
-            case 4:$this->menu_4_work_town();break;//левое меню (города)
+            case 4:$this->menu_0_def_menu();break;//левое меню (города)
+
+            case 1000:$this->menu_admin();break;//меню администратора
         }
     }
     private function menu_0_def_menu(){//меню по умолчанию
         Def\Opt::$l_content.=$this->l_menu_def.$this->l_menu_town;
         Def\Opt::$r_content.=$this->r_menu_def;
     }
-    private function menu_4_work_town(){//левое меню (города)
 
+
+    private function menu_admin(){//меню администратора
+        Def\Opt::$r_content.=$this->r_menu_def;
     }
 }

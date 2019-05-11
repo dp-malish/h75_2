@@ -7,16 +7,16 @@ try{if(Route::$count_uri_parts>3){throw new Exception();}else{
     require'../modul/'.Opt::$dir_name_site.'/admin/common/clear_cache.php';
     require'../modul/'.Opt::$dir_name_site.'/admin/common/sitemap.php';
 
-    if(!isset($uri_parts[1])){
+    if(!isset(Route::$uri_parts[1])){
       $DB=new SQLi();
-      /*$res=$DB->arrSQL('SELECT id,data FROM feedback WHERE readed IS NULL');
+      $res=$DB->arrSQL('SELECT id,data FROM feedback WHERE readed IS NULL');
       Opt::$main_content.='<div class="fon_c">';
       if($res){
         Opt::$main_content.='<ul class="nav_link">';
-        foreach($res as $k=>$v){Opt::$main_content.='<li><a href="/'.$uri_parts[0].'/сообщение/'.$v['id'].'">Вам прислали сообщение в '.Data::IntToStrDateTime($v['data']).'</a></li>';}
+        foreach($res as $k=>$v){Opt::$main_content.='<li><a href="/'.Route::$uri_parts[0].'/сообщение/'.$v['id'].'">Вам прислали сообщение в '.Data::IntToStrDateTime($v['data']).'</a></li>';}
         Opt::$main_content.='</ul>';
       }else Opt::$main_content.='<p>Уведомлений нет...</p>';
-      Opt::$main_content.='</div>';*/
+      Opt::$main_content.='</div>';
 
       Opt::$main_content.='<div class="fon_c"><h3>Настройки</h3>
 <!--<ul>
