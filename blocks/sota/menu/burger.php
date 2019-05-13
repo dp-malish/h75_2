@@ -166,7 +166,8 @@ if(document.getElementById("btnUserEmail").value==""){document.getElementById("b
 }else{
   document.getElementById("btnUserLogin").disabled=true;
   
-  ajaxPostSend("login=1&mail="+document.getElementById("btnUserEmail").value+"&pass="+document.getElementById("btnUserPass").value,callbackUserLogin,true,true,aj_login.phpaj_login.phpocument.getElementById("btnUserLogin").disabled=false;
+  ajaxPostSend("login=1&mail="+document.getElementById("btnUserEmail").value+"&pass="+document.getElementById("btnUserPass").value,callbackUserLogin,true,true,"/ajax/site/aj_login.php");
+  document.getElementById("btnUserLogin").disabled=false;
 }
 }
 function callbackUserLogin(arr){

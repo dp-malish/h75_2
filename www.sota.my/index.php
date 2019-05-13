@@ -30,7 +30,7 @@ if($_SERVER['REQUEST_URI']!='/'){
 
 
 
-            //default:new \incl\win\Def\DefContent();
+            default:new \incl\stroy\shop\DefContent();
         }
     }
 }else{Route::$index=1;}if(Route::$module404){Route::modul404();}

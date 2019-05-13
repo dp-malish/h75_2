@@ -7,7 +7,7 @@ SET time_zone = "+00:00";
 --
 DROP TABLE m1_manufacturer;
 
-CREATE TABLE IF NOT EXISTS `m1_manufacturer` (
+CREATE TABLE IF NOT EXISTS `manufacturer` (
   `manufacturer_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS `m1_manufacturer` (
 -- Дамп данных таблицы `m1_manufacturer`
 --
 
-INSERT INTO `m1_manufacturer` (`manufacturer_id`, `name`, `image`, `sort_order`) VALUES
+INSERT INTO `manufacturer` (`manufacturer_id`, `name`, `image`, `sort_order`) VALUES
   (2, 'Grand Premium', '', 0),
   (1, 'No name', 'catalog/demo/manufacturer/sony.png', 0);
 COMMIT;
@@ -27,7 +27,7 @@ COMMIT;
 
 
 
-DROP TABLE m1_manufacturer_description;
+DROP TABLE manufacturer_description;
 
 CREATE TABLE IF NOT EXISTS `m1_manufacturer_description` (
   `manufacturer_id` int(11) NOT NULL,

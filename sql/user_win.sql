@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS user_win(
+CREATE TABLE IF NOT EXISTS user(
   `user_id` INT(11) NOT NULL AUTO_INCREMENT,
   `email` VARCHAR(130) NULL,
   `tel` BIGINT NULL,
@@ -30,3 +30,4 @@ CREATE TABLE IF NOT EXISTS user_win(
   DEFAULT CHARACTER SET = utf8;
 
 /*DROP TABLE sota.user;*/
+--desc dict
