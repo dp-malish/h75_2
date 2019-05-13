@@ -17,8 +17,12 @@ spl_autoload_register();
 echo 'f*******/*/*/*';
 
 //echo Data::IntToStrMap(1156789789);
-echo Data::IntToStrMap(1156789789);
+echo Data::IntToStrMap(1596989789);
+echo '<br>';
+echo '<br>';
+echo Data::StrDateTimeToInt("2019-05-13 20:45:59");
 
+echo '<br>';
 echo '<br>';
 
 $xxx= new Tryclass();
@@ -26,27 +30,3 @@ $xxx= new Tryclass();
 echo $xxx->Starter();
 
 echo '<br>555';
-
-$yyy=new \lib\Sitemap\Sitemap();
-
-echo $yyy->Starter().'__________<br><br><br>';
-
-$zx=new \vendor\My\Lib1\MyLib1();
-
-echo $zx->Dfg();
-
-//*******************************
-//exteds
-
-$papa=new \vendor\My\Lib1\MyLib2();
-
-echo $papa->Dfg().'<br>'.$papa->Papa().'<br>';
-//*******************************
-
-
-$son=new \lib\Childe\Son();
-
-echo $son->Papa();
-
-echo $son->Starter();
-
