@@ -1,7 +1,7 @@
 <?php
 /**Def статью показать*/
 
-namespace incl\stroy\Def;
+namespace incl\sota\Def;
 use lib\Def as Def;
 
 class DefContent extends ViewArticle{

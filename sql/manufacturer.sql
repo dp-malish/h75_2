@@ -5,13 +5,13 @@ SET time_zone = "+00:00";
 --
 -- Структура таблицы `m1_manufacturer`
 --
-DROP TABLE m1_manufacturer;
+DROP TABLE manufacturer;
 
 CREATE TABLE IF NOT EXISTS `manufacturer` (
   `manufacturer_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
-  `sort_order` int(3) NOT NULL,
+  `sort_order` int(3) NULL,
   PRIMARY KEY (`manufacturer_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
@@ -19,9 +19,11 @@ CREATE TABLE IF NOT EXISTS `manufacturer` (
 -- Дамп данных таблицы `m1_manufacturer`
 --
 
-INSERT INTO `manufacturer` (`manufacturer_id`, `name`, `image`, `sort_order`) VALUES
-  (2, 'Grand Premium', '', 0),
-  (1, 'No name', 'catalog/demo/manufacturer/sony.png', 0);
+INSERT INTO `manufacturer` (`manufacturer_id`, `name`, `image`) VALUES
+  (1, 'No name', 'catalog/demo/manufacturer/sony.png'),
+  (2, 'Grand Premium', ''),
+  (3, 'Hoco', '')
+  ;
 COMMIT;
 
 

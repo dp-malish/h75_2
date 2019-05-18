@@ -1,7 +1,7 @@
 <?php
 /**Вывести статью одиночную*/
 
-namespace incl\stroy\Def;
+namespace incl\sota\Def;
 use lib\Def as Def;
 
 class ViewArticle{

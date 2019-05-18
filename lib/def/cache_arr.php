@@ -47,4 +47,18 @@ class Cache_Arr extends Cache_File{
             $this->SetCacheFileArr($cache_file_arr,$f);
         }return $f;
     }
+    /**
+     * @param $cache_file_arr Array
+     * @param $DBTable string
+     * @return Array типа $f[1]["name"]
+     */
+    function getCacheAssocArrID($cache_file_arr,$DBTable,$fieldName='id'){
+        $f=$this->IsSetCacheFileArr($cache_file_arr);
+        if(!$f){
+            $f=SQListatic::arrSQL_('SELECT * FROM '.$DBTable);
+            //Пересортировать массив, чтоб вынести Id для поиска
+
+            $this->SetCacheFileArr($cache_file_arr,$f);
+        }return $f;
+    }
 }

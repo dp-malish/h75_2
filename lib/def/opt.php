@@ -4,6 +4,8 @@ class Opt{
 	const SOLT="is_solt";
 	const COOKIE_SALT="tryam";
 
+	static $lang='ru';
+
 	static $protocol='https://';
 	static $site='';
 	static $dir_name_site='';

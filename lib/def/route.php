@@ -39,4 +39,14 @@ class Route{
             }else return true;
         }catch(Exception $e){self::$module404=true;return false;}
     }
+    //***************************
+    /**
+    * @param $text - текст;
+    * @param $separator - разделитель (типа - запятая в кавычках);
+    * @param $limit - на сколько частй делить;
+    * param answer - ответ в виде массива
+    */
+    static function textSeparator($text,$separator,$limit=2){
+        return explode($separator,$text,$limit);
+    }
 }

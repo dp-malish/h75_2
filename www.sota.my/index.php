@@ -28,9 +28,7 @@ if($_SERVER['REQUEST_URI']!='/'){
 
             //case'bios-laptop':new \incl\win\Bios\Bios_laptop();break;
 
-
-
-            default:new \incl\stroy\shop\DefContent();
+            default:new \incl\sota\shop\DefShop();
         }
     }
 }else{Route::$index=1;}if(Route::$module404){Route::modul404();}

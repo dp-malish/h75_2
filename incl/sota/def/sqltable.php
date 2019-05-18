@@ -1,5 +1,5 @@
 <?php
-namespace incl\stroy\Def;
+namespace incl\sota\Def;
 class SqlTable extends \lib\Img\SqlTableDef{
     const IMG=[
       ['default_img','Общие','/img/site/pic.php?id=']

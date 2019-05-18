@@ -1,6 +1,6 @@
 <?php
 /**Вывести список статей в рубрике*/
-namespace incl\stroy\Def;
+namespace incl\sota\Def;
 use lib\Def as Def;
 
 class ViewList extends ViewArticle{
