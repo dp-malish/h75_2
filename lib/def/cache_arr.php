@@ -61,7 +61,7 @@ class Cache_Arr extends Cache_File{
                 //$f[]=[$v[$fieldName]=>$v];
                 $id=$v[$fieldName];
                 unset($v[$fieldName]);
-                $f[$id]=[$id=>$v];
+                $f[$id]=$v;
             }
 
 

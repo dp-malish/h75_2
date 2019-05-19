@@ -39,7 +39,7 @@ class DefShop extends DefCont\DefContent{
 
       print_r($this->manufacturer);
 
-      Def\Opt::$r_content=''.$this->manufacturer[1][1]["name"];
+      Def\Opt::$r_content=''.$this->manufacturer[3]["name"];
       //берём массив производителей
       //$this->manuf_laptop_arr=$cache_arr->getCacheAssocArr('manufacturer_laptop','manufacturer WHERE laptop IS TRUE');
   }
