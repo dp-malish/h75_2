@@ -17,7 +17,7 @@ class DefShop extends DefCont\DefContent{
         $this->cache_arr=new Def\Cache_Arr(['sota'],true);
 
         //берём или создаём массив производителей
-        $this->manufacturer=$this->cache_arr->getCacheAssocArr('manufacturer','manufacturer');
+        $this->manufacturer=$this->cache_arr->getCacheAssocArrID('manufacturer','manufacturer','manufacturer_id');
 
 
         $singleRequestURI=Def\Route::textSeparator(Def\Route::$uri_parts[0],'-');
@@ -36,7 +36,10 @@ class DefShop extends DefCont\DefContent{
 
 
   private function ruProductShow(){
-     Def\Opt::$r_content=''.$this->manufacturer[1]["name"];
+
+      print_r($this->manufacturer);
+
+      Def\Opt::$r_content=''.$this->manufacturer[1][1]["name"];
       //берём массив производителей
       //$this->manuf_laptop_arr=$cache_arr->getCacheAssocArr('manufacturer_laptop','manufacturer WHERE laptop IS TRUE');
   }

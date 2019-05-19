@@ -1,1 +1,1 @@
-[{"manufacturer_id":"1","name":"No name","image":"catalog\/demo\/manufacturer\/sony.png","sort_order":null},{"manufacturer_id":"2","name":"Grand Premium","image":"","sort_order":null},{"manufacturer_id":"3","name":"Hoco","image":"","sort_order":null}]
+{"1":{"1":{"name":"No name","image":"catalog\/demo\/manufacturer\/sony.png","sort_order":null}},"2":{"2":{"name":"Grand Premium","image":"","sort_order":null}},"3":{"3":{"name":"Hoco","image":"","sort_order":null}}}
