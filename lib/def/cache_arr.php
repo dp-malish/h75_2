@@ -58,27 +58,12 @@ class Cache_Arr extends Cache_File{
             $temp_arr=SQListatic::arrSQL_('SELECT * FROM '.$DBTable);
             //Пересортировать массив, чтоб вынести Id для поиска
             foreach($temp_arr AS $v){
-                //$f[]=[$v[$fieldName]=>$v];
                 $id=$v[$fieldName];
                 unset($v[$fieldName]);
                 $f[$id]=$v;
             }
-
-
-
             $this->SetCacheFileArr($cache_file_arr,$f);
         }
-        /*$i=0;
-        foreach ($f as $k=>$v){
-
-            $x[]=$v[$i];$i++;
-        }*/
-
-        /*for($i=0; $i<count($f); $i++){
-            $x[]=$f[$i];
-        }*/
-
-
         return $f;
     }
 }

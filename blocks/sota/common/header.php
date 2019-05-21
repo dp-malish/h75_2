@@ -3,7 +3,7 @@
         <div class="headertop rel" id="getsizehed">
             <div id="headcontact" class="maxw five_ headerimg">
                 <div id="logo"><a href="/"><img src="/img/site/dbpic.php?i=logo&ep=1"></a></div>
-                <div id="logoname" class="h_field ac"><h1>Сервисный центр «Cота плюс»</h1></div>
+                <div id="logoname" class="h_field ac"><h1 class="monofont">Сервисный центр «Cота плюс»</h1></div>
                 <div id="topcontact" class="h_field">
                     <div class="dwf">
                         <div id="clock">

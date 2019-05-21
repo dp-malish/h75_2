@@ -46,7 +46,7 @@ class Route{
     * @param $limit - на сколько частй делить;
     * param answer - ответ в виде массива
     */
-    static function textSeparator($text,$separator,$limit=2){
-        return explode($separator,$text,$limit);
+    static function textSeparator($text,$separator,$limit=0){
+        return($limit!=0?explode($separator,$text,$limit):explode($separator,$text));
     }
 }

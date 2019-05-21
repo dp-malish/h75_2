@@ -1,4 +1,5 @@
-h1,h2,h3,h4{margin:4px 7px 4px;font-family:"Monotype Corsiva"}
+h1,h2,h3,h4{margin:4px 7px 4px;}
+h1.monofont,h2.monofont,h3.monofont,h4.monofont{margin:4px 7px 4px;font-family:"Monotype Corsiva"}
 h1{font-size:35px}
 h2{font-size:30px}
 h3{font-size:25px}

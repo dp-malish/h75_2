@@ -34,19 +34,18 @@ CREATE TABLE IF NOT EXISTS nomenclature (
   category TINYINT NULL COMMENT 'Категория TINYINT',
 
   link varchar(255) NOT NULL,
-  title varchar(255) NOT NULL,
-  meta_d varchar(255) NOT NULL,
-  caption varchar(255) NOT NULL,
-  short_text text,
+
+
 
   `model` varchar(255) NULL COMMENT 'Модель',
   `model_short` varchar(64) NULL COMMENT 'Модель коротко',
 
   `sku` varchar(64) NULL COMMENT 'идентификатор товарной позиции - номенклатурная позиция',
-  `upc` varchar(12) NULL COMMENT 'универсальный код товара',
+  /*`upc` varchar(12) NULL COMMENT 'универсальный код товара',*/
   `ean` varchar(14) NULL COMMENT 'универсальный код товара Европа',
-  `isbn` varchar(17) NULL COMMENT 'универсальный код товара кодирования книг',
   `mpn` varchar(64) NULL COMMENT 'Manufacturer Part Number штрихкоды',
+
+  short_text text,
 
   `location` int (11) NULL COMMENT 'место нахождения - склад',
 

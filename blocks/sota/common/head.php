@@ -24,7 +24,7 @@
 
     <script async src="/js/common_sota_v1_0.js"></script>
 
-    <?=$Opt::$jscript?>
+    <?=$Opt::$jscript.$Opt::$css.'<meta name="description" content="'.$Opt::$description.'"><title>'.$Opt::$title.'</title>';?>
 
 
 </head>
