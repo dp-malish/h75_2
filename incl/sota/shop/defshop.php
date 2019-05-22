@@ -60,7 +60,8 @@ class DefShop extends DefCont\DefContent{
               foreach($img as $v){
                   $temp_img.='<p>'.$v.' ++++'.($v+777).'</p>';
               }
-              $img=$temp_img;
+
+              $img=$img[0].' ============  '.  $temp_img;
 
 
           }else{
