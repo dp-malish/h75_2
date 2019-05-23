@@ -40,7 +40,7 @@ class DefShop extends DefCont\DefContent{
 
       $DB=new Def\SQLi();
 
-      $sql='SELECT heading,category,link,model,model_short,    image FROM nomenclature'.' WHERE nomenclature_id='.$DB->realEscapeStr($id);
+      $sql='SELECT heading,category,link,model,model_short,    image,manufacturer_id,short_text FROM nomenclature'.' WHERE nomenclature_id='.$DB->realEscapeStr($id);
 
       $res=$DB->strSQL($sql);
 
@@ -73,12 +73,16 @@ class DefShop extends DefCont\DefContent{
           /*if($res['img']!=''){$img='<img class="fl five img_link" src="'.SqlTable::getImgDirTable($table_name_img).$res['img'].'" alt="'.$res['img_alt'].'" title="'.$res['img_title'].'">';}else{$img='';}*/
 
 
+//Заглавие
+          Def\Opt::$main_content.='<div class="fon_c"><h3 class="ar">'.$res['model'].$res['model_short'].'</h3><div class="cl"></div>';
+//Картинки
+          Def\Opt::$main_content.=$img;
+//.Производитель
+          Def\Opt::$main_content.='<br>'.$this->manufacturer[$res['manufacturer_id']]['name'];
 
-          Def\Opt::$main_content.='<section><div class="fon_c"><article><h3 class="ar">'.$res['model'].$res['model_short'].'</h3><div class="cl"></div>'.$img.
+          Def\Opt::$main_content.=Def\Validator::html_decod($res['short_text']);
 
-              Def\Validator::html_decod($res['image']).
-
-              '<p>'.'</p></article><div class="cl"></div></div></section>';
+          Def\Opt::$main_content.='<div class="cl"></div></div>';
 
 
 
@@ -87,7 +91,7 @@ class DefShop extends DefCont\DefContent{
 
       //print_r($this->manufacturer);
 
-      Def\Opt::$r_content=''.$this->manufacturer[3]["name"];
+      Def\Opt::$r_content=''.$this->manufacturer[2]["name"];
       //берём массив производителей
       //$this->manuf_laptop_arr=$cache_arr->getCacheAssocArr('manufacturer_laptop','manufacturer WHERE laptop IS TRUE');
   }

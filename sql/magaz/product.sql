@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS nomenclature (
   `ean` varchar(14) NULL COMMENT 'универсальный код товара Европа',
   `mpn` varchar(64) NULL COMMENT 'Manufacturer Part Number штрихкоды',
 
-  short_text text,
+
 
   `location` int (11) NULL COMMENT 'место нахождения - склад',
 
@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS nomenclature (
 
   `image` varchar(255) NULL,
   `manufacturer_id` int(11) NOT NULL DEFAULT '1' COMMENT 'Производитель',
-
+  short_text text,
   /*`price` decimal(15,2) NOT NULL DEFAULT '0.00',Цена*/
   markup smallint NULL COMMENT 'Наценка в %',
 
