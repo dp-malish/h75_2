@@ -8,25 +8,20 @@ heading_name varchar(255) NULL COMMENT 'Название заголовка пе
 PRIMARY KEY (id)
 )ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-CREATE TABLE IF NOT EXISTS `manufacturer` (
-  `manufacturer_id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(64) NOT NULL,
-  `image` varchar(255) DEFAULT NULL,
-  `sort_order` int(3) NULL,
-  PRIMARY KEY (`manufacturer_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
---характеристики
 
-CREATE TABLE IF NOT EXISTS specifications_name(
+
+
+/*location Склад*/
+
+CREATE TABLE IF NOT EXISTS location(
 id int(11) NOT NULL AUTO_INCREMENT,
-specifications_name varchar(255) NULL COMMENT 'Имя характеристики',
+location_name varchar(255) NULL COMMENT 'Название Склада',
 PRIMARY KEY (id)
 )ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-
---номенклатура
+/*номенклатура*/
 
 CREATE TABLE IF NOT EXISTS nomenclature (
   nomenclature_id int(11) NOT NULL AUTO_INCREMENT,
@@ -73,17 +68,40 @@ CREATE TABLE IF NOT EXISTS nomenclature (
 
 
 
---location Склад
+/*производители*/
+CREATE TABLE IF NOT EXISTS `manufacturer` (
+  `manufacturer_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(64) NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `sort_order` int(3) NULL,
+  PRIMARY KEY (`manufacturer_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-CREATE TABLE IF NOT EXISTS location(
-id int(11) NOT NULL AUTO_INCREMENT,
-location_name varchar(255) NULL COMMENT 'Название Склада',
-PRIMARY KEY (id)
-)ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
+/*option*/
 
+CREATE TABLE IF NOT EXISTS option_filter(
+  option_id int(11) NOT NULL AUTO_INCREMENT,
+  `type` varchar(32) NOT NULL,
+  `sort_order` int(3) NOT NULL,
+  PRIMARY KEY (option_id)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
---Поставщик
+/*
+INSERT INTO option_filter(`option_id`, `type`, `sort_order`) VALUES
+(1, 'radio', 1),
+(2, 'checkbox', 2),
+(4, 'text', 3),
+(5, 'select', 4),
+(6, 'textarea', 5),
+(7, 'file', 6),
+(8, 'date', 7),
+(9, 'time', 8),
+(10, 'datetime', 9),
+(11, 'select', 10),
+(12, 'date', 11);*/
+
+/*Поставщик*/
 
 CREATE TABLE IF NOT EXISTS provider(
 id int(11) NOT NULL AUTO_INCREMENT,
@@ -92,3 +110,13 @@ PRIMARY KEY (id)
 )ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 INSERT INTO provider VALUES(1,'Mobimag'),(2,'Microtron'),(3,'ItPlanet');
+
+
+/*характеристики*/
+
+CREATE TABLE IF NOT EXISTS specifications_name(
+id int(11) NOT NULL AUTO_INCREMENT,
+specifications_name varchar(255) NULL COMMENT 'Имя характеристики',
+PRIMARY KEY (id)
+)ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
