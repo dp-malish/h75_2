@@ -17,6 +17,15 @@ CREATE TABLE IF NOT EXISTS `manufacturer` (
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
+--характеристики
+
+CREATE TABLE IF NOT EXISTS specifications_name(
+id int(11) NOT NULL AUTO_INCREMENT,
+specifications_name varchar(255) NULL COMMENT 'Имя характеристики',
+PRIMARY KEY (id)
+)ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
 --номенклатура
 
 CREATE TABLE IF NOT EXISTS nomenclature (

@@ -20,7 +20,7 @@ echo 'f*******/*/*/*';
 echo Data::IntToStrMap(1596989789);
 echo '<br>';
 echo '<br>';
-echo Data::StrDateTimeToInt("2019-05-23 21:45:59");
+echo Data::StrDateTimeToInt("2019-05-25 12:45:59");
 
 echo '<br>';
 echo '<br>';
