@@ -40,7 +40,10 @@ class DefShop extends DefCont\DefContent{
 
       $DB=new Def\SQLi();
 
-      $sql='SELECT heading,category,link,model,model_short,    image,manufacturer_id,short_text FROM nomenclature'.' WHERE nomenclature_id='.$DB->realEscapeStr($id);
+      //$sql='SELECT heading,category,link,model,model_short,    image,manufacturer_id,short_text FROM nomenclature WHERE nomenclature_id='.$DB->realEscapeStr($id);
+
+
+      $sql='SELECT heading,category,link,model,model_short,    image,manufacturer_id,short_text FROM nomenclature WHERE nomenclature_id='.$DB->realEscapeStr($id);
 
       $res=$DB->strSQL($sql);
 
@@ -84,8 +87,29 @@ class DefShop extends DefCont\DefContent{
 
           Def\Opt::$main_content.='<div class="cl"></div></div>';
 
+//*******************************************************************
+//*******************************************************************
+//*******************************************************************
+          $sql='SELECT spec_name.specifications_name,nom_spec.value, nom_spec.important FROM nomenclature_specifications AS nom_spec 
+                LEFT JOIN specifications_name AS spec_name ON nom_spec.specifications_name_id=spec_name.id 
+                WHERE nom_spec.nomenclature_id='.$DB->realEscapeStr($id);
+          $res=$DB->arrSQL($sql);
+          if($res){
+              Def\Opt::$main_content.='<div class="fon_c">';
 
+              $temp_nom_spec='';
 
+              foreach($res as $v){
+                  if($v['important'])$temp_nom_spec.='<p>'.$v['specifications_name'].'  --   '.$v['value'].'</p>';
+                  Def\Opt::$main_content .= '<p>'.$v['specifications_name'].'  --   '.$v['value'].'</p>';
+              }
+              if($temp_nom_spec)Def\Opt::$main_content .='<div class="fon_c">Основные характеристики: '.$temp_nom_spec.'<div class="cl"></div></div>';
+
+              Def\Opt::$main_content.='<div class="cl"></div></div>';
+          }
+//*******************************************************************
+//*******************************************************************
+//*******************************************************************
 
       }
 

@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS heading(
 id int(11) NOT NULL AUTO_INCREMENT,
 heading_name varchar(255) NULL COMMENT 'Название заголовка перед категорией',
 PRIMARY KEY (id)
-)ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
 
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS location(
 id int(11) NOT NULL AUTO_INCREMENT,
 location_name varchar(255) NULL COMMENT 'Название Склада',
 PRIMARY KEY (id)
-)ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 /*номенклатура*/
 
@@ -51,22 +51,39 @@ CREATE TABLE IF NOT EXISTS nomenclature (
 
   markup smallint NULL COMMENT 'Наценка в %',
 
-  `weight` decimal(15,3) NOT NULL DEFAULT '0.000' COMMENT 'Вес',
-  `length` decimal(15,3) NOT NULL DEFAULT '0.000' COMMENT 'Длина',
-  `width` decimal(15,3) NOT NULL DEFAULT '0.000' COMMENT 'Ширина',
-  `height` decimal(15,3) NOT NULL DEFAULT '0.000' COMMENT 'Высота',
+  `weight` int NOT NULL DEFAULT '0' COMMENT 'Вес',
+  weigtt_units_id smallint DEFAULT '1' COMMENT 'Единицы измерения веса',/*грамм,килограмм*/
+
+
+  `length` INT NOT NULL DEFAULT '0' COMMENT 'Длина',
+  `width` INT NOT NULL DEFAULT '0' COMMENT 'Ширина',
+  `height` INT NOT NULL DEFAULT '0' COMMENT 'Высота',
+  lwh_units_id smallint DEFAULT '1' COMMENT 'Единицы измерения геометрии...',/*грамм,килограмм*/
 
 
   `sort_order` int(11) NULL,
   `status` tinyint(1) NULL COMMENT 'Показывать',
 
-  `viewed` int(5) NOT NULL DEFAULT '13' COMMENT 'Количество просмотров',
-  `date_added` datetime NOT NULL COMMENT 'Дата доавления товара',
+  `viewed` INT(5) NOT NULL DEFAULT '13' COMMENT 'Количество просмотров',
+  `date_added` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Дата доавления товара',
   PRIMARY KEY (nomenclature_id),
   KEY (heading,category)
-)ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
+/*Характеристики номенклатуры*/
 
+CREATE TABLE IF NOT EXISTS nomenclature_specifications(
+  `nomenclature_id` INT NOT NULL,
+  `specifications_name_id` INT NOT NULL,
+
+  `heading` INT NULL,
+  `category` INT NULL,
+  `value` VARCHAR(255) NULL,
+
+  `important` TINYINT NULL,
+  PRIMARY KEY (`nomenclature_id`, `specifications_name_id`),
+  INDEX (`heading` ASC, `category` ASC)
+)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 /*производители*/
 CREATE TABLE IF NOT EXISTS `manufacturer` (
@@ -75,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `manufacturer` (
   `image` varchar(255) DEFAULT NULL,
   `sort_order` int(3) NULL,
   PRIMARY KEY (`manufacturer_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
 /*option*/
@@ -85,7 +102,7 @@ CREATE TABLE IF NOT EXISTS option_filter(
   `type` varchar(32) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (option_id)
-) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 /*
 INSERT INTO option_filter(`option_id`, `type`, `sort_order`) VALUES
@@ -107,7 +124,7 @@ CREATE TABLE IF NOT EXISTS provider(
 id int(11) NOT NULL AUTO_INCREMENT,
 provider_name varchar(255) NULL COMMENT 'Название поставщика',
 PRIMARY KEY (id)
-)ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 INSERT INTO provider VALUES(1,'Mobimag'),(2,'Microtron'),(3,'ItPlanet');
 
@@ -118,5 +135,5 @@ CREATE TABLE IF NOT EXISTS specifications_name(
 id int(11) NOT NULL AUTO_INCREMENT,
 specifications_name varchar(255) NULL COMMENT 'Имя характеристики',
 PRIMARY KEY (id)
-)ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 

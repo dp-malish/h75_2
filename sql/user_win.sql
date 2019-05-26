@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS user(
   PRIMARY KEY (`user_id`),
   UNIQUE INDEX `tel` (`tel` ASC),
   UNIQUE INDEX `email` (`email` ASC))
-  ENGINE = MyISAM
+  ENGINE=InnoDB
   AUTO_INCREMENT = 1
   DEFAULT CHARACTER SET = utf8;
 
