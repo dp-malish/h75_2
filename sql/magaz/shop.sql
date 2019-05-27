@@ -118,6 +118,21 @@ INSERT INTO option_filter(`option_id`, `type`, `sort_order`) VALUES
 (11, 'select', 10),
 (12, 'date', 11);*/
 
+
+CREATE TABLE product (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  nomenclature_id int(11) NOT NULL,
+  serial_number varchar(64) NULL COMMENT 'Серийный номер',
+  provider int(4) NULL COMMENT 'Поставщик',
+  kod_tovara_postavshika int(11) NULL,
+
+
+  price_usd decimal(15,2) NOT NULL DEFAULT '0.00',
+
+  PRIMARY KEY (`id`),
+  KEY (nomenclature_id)
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
 /*Поставщик*/
 
 CREATE TABLE IF NOT EXISTS provider(
