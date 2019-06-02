@@ -3,23 +3,44 @@
     background-color: #997a7a;
 }
 .m_img_l{
-    /*margin: 5px;*/
     float:left;
     width:85px;
-
-    /*padding: 5px;*/
-
     background-color: #116060;
 }
 .m_img_l_i{
-
     margin:5px;
-
     width: 75px;
+}
+.m_img_c{
+    background-color: #7a7a99;
+    min-width:190px;
+    max-width:675px;
+    overflow:hidden;
+    min-height:1px;
+    position: relative;
+}
+.m_img_c_r{
+    float:right;
+    width: 140px;
+    background-color: #6B3708;
 
 
 }
-.m_img_c{
-    float:left;
-    background-color: #7a7a99;
+.m_img_c_m{
+    background-color: #1a7a29;
+    min-width:190px;
+    max-width:535px;
+    overflow:hidden;
+    min-height:1px;
+    position: relative;
+
+    /*display: table-cell;
+    vertical-align: middle;*/
+
+
+}
+.m_img_c_m img{
+
+
+
 }

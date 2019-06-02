@@ -60,25 +60,27 @@ class DefShop extends DefCont\DefContent{
 
           if($res['image']!=''){
 
-              $img='<div class="m_img"><div class="m_img_l">';
+              $img='<div class="m_img rel"><div class="m_img_l">';
 
               $img_arr=Def\Route::textSeparator($res['image'],',');
 
               $temp_img='';
 
               foreach($img_arr as $v){
-                  $temp_img.='<div class="m_img_l_i"><img class="" src="/img/shop/dbpic.php?id='.$v.'" alt="No image"></div>';
+                  $temp_img.='<div class="m_img_l_i"><img class="br" src="/img/shop/dbpic.php?id='.$v.'" alt="'.$res['model'].'"></div>';
               }
               $img.=$temp_img.'<div class="cl"></div></div>';
 
-              $img.='<div class="m_img_c">';
-              $img.=$img_arr[0].' ============  ';
+              $img.='<div class="m_img_c rel"><div class="m_img_c_r">Сюда писать цену и т.д.</div>';
+              $img.='<div class="m_img_c_m ac rel">
+                        <img class="br" src="/img/shop/dbpic.php?id='.$img_arr[0].'" alt="'.$res['model'].'">
+                    </div>';
               $img.='</div>';
 
               $img.='<div class="cl"></div></div>';
 
           }else{
-              $img='<img class="fl five img_link" src="/img/shop/dbpic.php?i=no_image&ep=1" alt="No image">';
+              $img='<img class="fl five br" src="/img/shop/dbpic.php?i=no_image&ep=1" alt="No image">';
           }
 
 
