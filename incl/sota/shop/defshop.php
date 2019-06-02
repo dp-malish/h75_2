@@ -38,6 +38,9 @@ class DefShop extends DefCont\DefContent{
 
   private function ruProductShow($id,$link){
 
+      Def\Opt::$css='<link rel="stylesheet" type="text/css" href="/shop.css">
+';
+
       $DB=new Def\SQLi();
 
       //$sql='SELECT heading,category,link,model,model_short,    image,manufacturer_id,short_text FROM nomenclature WHERE nomenclature_id='.$DB->realEscapeStr($id);
