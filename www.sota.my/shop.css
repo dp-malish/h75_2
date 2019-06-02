@@ -1,3 +1,25 @@
 .m_img{
-    margin: 5px;
+    margin: 5px 0;
+    background-color: #997a7a;
+}
+.m_img_l{
+    /*margin: 5px;*/
+    float:left;
+    width:85px;
+
+    /*padding: 5px;*/
+
+    background-color: #116060;
+}
+.m_img_l_i{
+
+    margin:5px;
+
+    width: 75px;
+
+
+}
+.m_img_c{
+    float:left;
+    background-color: #7a7a99;
 }

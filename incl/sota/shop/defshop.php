@@ -59,16 +59,23 @@ class DefShop extends DefCont\DefContent{
 
 
           if($res['image']!=''){
-              $img=Def\Route::textSeparator($res['image'],',');
+
+              $img='<div class="m_img"><div class="m_img_l">';
+
+              $img_arr=Def\Route::textSeparator($res['image'],',');
 
               $temp_img='';
 
-              foreach($img as $v){
-                  $temp_img.='<p>'.$v.' ++++'.($v+777).'</p>';
+              foreach($img_arr as $v){
+                  $temp_img.='<div class="m_img_l_i"><img class="" src="/img/shop/dbpic.php?id='.$v.'" alt="No image"></div>';
               }
+              $img.=$temp_img.'<div class="cl"></div></div>';
 
-              $img=$img[0].' ============  '.  $temp_img;
+              $img.='<div class="m_img_c">';
+              $img.=$img_arr[0].' ============  ';
+              $img.='</div>';
 
+              $img.='<div class="cl"></div></div>';
 
           }else{
               $img='<img class="fl five img_link" src="/img/shop/dbpic.php?i=no_image&ep=1" alt="No image">';
