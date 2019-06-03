@@ -128,6 +128,9 @@ CREATE TABLE product (
 
 
   price_usd decimal(15,2) NOT NULL DEFAULT '0.00',
+  price_uah decimal(15,2) NOT NULL DEFAULT '0.00',
+
+  price_usd_sell decimal(15,2) NULL,
 
   PRIMARY KEY (`id`),
   KEY (nomenclature_id)
