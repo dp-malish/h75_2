@@ -48,7 +48,13 @@ class DefShop extends DefCont\DefContent{
 LEFT JOIN product ON product_2.product_id=product.product_id
 left join manufacturer ON product.manufacturer_id=manufacturer.manufacturer_id  where product_2.price_usd_sell is null GROUP BY product_2.product_id;*/
 
-      $sql='SELECT product.nomenclature_id heading,category,link,model,model_short,    image,manufacturer_id,short_text FROM nomenclature WHERE nomenclature_id='.$DB->realEscapeStr($id);
+      $sql='SELECT n.nomenclature_id,n.heading,n.category,n.link,n.model,n.model_short,    n.image,n.manufacturer_id,n.short_text,
+
+       MAX(p.price_usd) AS price
+
+FROM nomenclature AS n
+       RIGHT JOIN product AS p ON n.nomenclature_id=p.nomenclature_id
+WHERE n.nomenclature_id='.$DB->realEscapeStr($id).' AND p.price_usd_sell IS NULL;';
 
       $res=$DB->strSQL($sql);
 
@@ -76,7 +82,7 @@ left join manufacturer ON product.manufacturer_id=manufacturer.manufacturer_id  
 
 
 
-              $img.='<div class="m_img_c rel"><div class="m_img_c_r">Сюда писать цену и т.д.</div>';
+              $img.='<div class="m_img_c rel"><div class="m_img_c_r">'.$res['price'].'Сюда писать цену и т.д.</div>';
               $img.='<div class="m_img_c_m ac rel five_">
                         <img class="br" src="/img/shop/dbpic.php?id='.$img_arr[0].'" alt="'.$res['model'].'">
                     </div>';
