@@ -1,6 +1,6 @@
 .m_img{
     margin: 5px 0;
-    background-color: #997a7a;
+    background-color: #EFEFEF;
 }
 .m_img_l{
     float:left;
@@ -12,7 +12,7 @@
     width: 75px;
 }
 .m_img_c{
-    background-color: #7a7a99;
+    /*background-color: #7a7a99;*/
     min-width:190px;
     max-width:675px;
     overflow:hidden;
@@ -22,12 +22,12 @@
 .m_img_c_r{
     float:right;
     width: 140px;
-    background-color: #6B3708;
+    /*background-color: #6B3708;*/
 
 
 }
 .m_img_c_m{
-    background-color: #1a7a29;
+    /*background-color: #1a7a29;*/
     min-width:190px;
     max-width:535px;
     overflow:hidden;
@@ -39,8 +39,25 @@
 
 
 }
-.m_img_c_m img{
 
+.m_price_old,.m_price{
+    margin:3px;
 
+    border-radius:3px;
+    text-align:center;
+    font-size:130%;
+}
+.m_price_old{
+
+    text-decoration:line-through;
+
+}
+
+.m_price{
+    padding: 5px;
+    border:solid 1px #FFC310;
+
+    background-color:#FFF8E5;
+    font-size:150%;
 
 }

@@ -82,7 +82,14 @@ WHERE n.nomenclature_id='.$DB->realEscapeStr($id).' AND p.price_usd_sell IS NULL
 
 
 
-              $img.='<div class="m_img_c rel"><div class="m_img_c_r">'.$res['price'].'Сюда писать цену и т.д.</div>';
+              $img.='<div class="m_img_c rel"><div class="m_img_c_r">
+<div class="m_price_old">'.$res['price'].'$</div>
+<div class="m_price">'.$res['price'].'$</div>
+
+
+'.$res['price'].'
+
+Сюда писать цену и т.д.</div>';
               $img.='<div class="m_img_c_m ac rel five_">
                         <img class="br" src="/img/shop/dbpic.php?id='.$img_arr[0].'" alt="'.$res['model'].'">
                     </div>';
