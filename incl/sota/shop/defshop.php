@@ -43,10 +43,8 @@ class DefShop extends DefCont\DefContent{
 
       $DB=new Def\SQLi();
 
-      //$sql='SELECT heading,category,link,model,model_short,    image,manufacturer_id,short_text FROM nomenclature WHERE nomenclature_id='.$DB->realEscapeStr($id);
-     /* SELECT product_2.product_id as qwert,product.model,max(product_2.price_usd),manufacturer.name,count(product_2.product_id)  FROM product_2
-LEFT JOIN product ON product_2.product_id=product.product_id
-left join manufacturer ON product.manufacturer_id=manufacturer.manufacturer_id  where product_2.price_usd_sell is null GROUP BY product_2.product_id;*/
+      $id_DB=$DB->realEscapeStr($id);
+
 
       $sql='SELECT n.nomenclature_id,n.heading,n.category,n.link,n.model,n.model_short,    n.image,n.manufacturer_id,n.short_text,
 
@@ -54,21 +52,26 @@ left join manufacturer ON product.manufacturer_id=manufacturer.manufacturer_id  
 
 FROM nomenclature AS n
        RIGHT JOIN product AS p ON n.nomenclature_id=p.nomenclature_id
-WHERE n.nomenclature_id='.$DB->realEscapeStr($id).' AND p.price_usd_sell IS NULL;';
+WHERE n.nomenclature_id='.$id_DB.' AND p.price_usd_sell IS NULL;';
 
       $res=$DB->strSQL($sql);
 
       if($res['link']==$link){
-          if($res['model_short']!='')$res['model_short']=' ('.$res['model_short'].')';
+          $model_short=($res['model_short']!=''?' ('.$res['model_short'].')':'');
 
-          Def\Opt::$title='Купить '.$res['model'].$res['model_short'].' в Мариуполе и Украине. Лучшая цена $, доставка ✈, гарантия ☑. Характеристики '.$res['model'].$res['model_short'].'.';
+          Def\Opt::$title='Купить '.$res['model'].$model_short.' в Мариуполе и Украине. Лучшая цена $, доставка ✈, гарантия ☑. Характеристики '.$res['model'].$model_short.'.';
 
-          Def\Opt::$description='Купить '.$res['model'].$res['model_short'].'. Низкие цены на продукцию со склада в Мариуполе. Заказывай на сайте ⭐ забирай сегодня! ☑ Оперативная доставка ✈ по всей территории Украины';
+          Def\Opt::$description='Купить '.$res['model'].$model_short.'. Низкие цены на продукцию со склада в Мариуполе. Заказывай на сайте ⭐ забирай сегодня! ☑ Оперативная доставка ✈ по всей территории Украины';
 
+
+
+
+//*********************************************************
+          $l_img_col='';
 
           if($res['image']!=''){
-
-              $img='<div class="m_img rel"><div class="m_img_l">';
+//*************
+              $l_img_col.='<div class="m_img_l">';
 
               $img_arr=Def\Route::textSeparator($res['image'],',');
 
@@ -77,43 +80,47 @@ WHERE n.nomenclature_id='.$DB->realEscapeStr($id).' AND p.price_usd_sell IS NULL
               foreach($img_arr as $v){
                   $temp_img.='<div class="m_img_l_i"><img class="br" src="/img/shop/dbpic.php?id='.$v.'" alt="'.$res['model'].'"></div>';
               }
-              $img.=$temp_img.'<div class="cl"></div></div>';
+              $l_img_col.=$temp_img.'<div class="cl"></div></div>';
+//*************
+              $pic='<img class="br" src="/img/shop/dbpic.php?id='.$img_arr[0].'" alt="'.$res['model'].'">';
+          }else{
+              $pic='<img class="fl five br" src="/img/shop/dbpic.php?i=no_image&ep=1" alt="No image">';
+          }
 
-
-
-
-              $img.='<div class="m_img_c rel"><div class="m_img_c_r">
+          $r_img_col='<div class="m_img_c_r">
 <div class="m_price_old">'.$res['price'].'$</div>
 <div class="m_price">'.$res['price'].'$</div>
 
+<div class="m_btn_buy">Купить</div>
 
-'.$res['price'].'
+<div class="ac">Производитель: '.$this->manufacturer[$res['manufacturer_id']]['name'].'</div>
 
-Сюда писать цену и т.д.</div>';
-              $img.='<div class="m_img_c_m ac rel five_">
-                        <img class="br" src="/img/shop/dbpic.php?id='.$img_arr[0].'" alt="'.$res['model'].'">
-                    </div>';
-              $img.='</div>';
-
-              $img.='<div class="cl"></div></div>';
-
-          }else{
-              $img='<img class="fl five br" src="/img/shop/dbpic.php?i=no_image&ep=1" alt="No image">';
-          }
+</div>';
 
 
+          $img='<div class="m_img rel">'.$l_img_col.'<div class="m_img_c rel">'.$r_img_col.'<div class="m_img_c_m ac rel five_">'.$pic.'</div></div><div class="cl"></div></div>';
 
-          /*if($res['img']!=''){$img='<img class="fl five img_link" src="'.SqlTable::getImgDirTable($table_name_img).$res['img'].'" alt="'.$res['img_alt'].'" title="'.$res['img_title'].'">';}else{$img='';}*/
+//*********************************************************
 
 
 //Заглавие
-          Def\Opt::$main_content.='<div class="fon_c"><h3 class="ar">'.$res['model'].$res['model_short'].'</h3><div class="cl"></div>';
+          Def\Opt::$main_content.='<div class="fon"><h3 class="ar">'.$res['model'].$model_short.'</h3><div class="cl"></div>';
+
+          //************* Код товара *************\\
+          $kod=strlen($res['nomenclature_id']);
+          if($kod==1)$kod='0000';
+          elseif($kod==2)$kod='000';
+          elseif($kod==3)$kod='00';
+          elseif($kod==4)$kod='0';
+          Def\Opt::$main_content.='<div class="m_divisor">Код товара #'.$kod.$res['nomenclature_id'].' > Описание > Характеристики</div>';
+          //************* Код товара *************\\
 //Картинки
           Def\Opt::$main_content.=$img;
-//.Производитель
-          Def\Opt::$main_content.='<br>'.$this->manufacturer[$res['manufacturer_id']]['name'];
+//Меню товара
+          Def\Opt::$main_content.='<div class="m_divisor_b">Описание > Характеристики</div>';
 
-          Def\Opt::$main_content.=Def\Validator::html_decod($res['short_text']);
+
+          Def\Opt::$main_content.='<div class="fon_c"><div class="b m_spec">Описание товара</div><h4>'.$res['model'].'</h4>'.Def\Validator::html_decod($res['short_text']).'</div>';
 
           Def\Opt::$main_content.='<div class="cl"></div></div>';
 
@@ -122,18 +129,19 @@ WHERE n.nomenclature_id='.$DB->realEscapeStr($id).' AND p.price_usd_sell IS NULL
 //*******************************************************************
           $sql='SELECT spec_name.specifications_name,nom_spec.value, nom_spec.important FROM nomenclature_specifications AS nom_spec 
                 LEFT JOIN specifications_name AS spec_name ON nom_spec.specifications_name_id=spec_name.id 
-                WHERE nom_spec.nomenclature_id='.$DB->realEscapeStr($id);
+                WHERE nom_spec.nomenclature_id='.$id_DB;
           $res=$DB->arrSQL($sql);
           if($res){
-              Def\Opt::$main_content.='<div class="fon_c">';
+              Def\Opt::$main_content.='<div class="fon_c"><div class="b m_spec">Характеристики '.$model_short.'</div>';
 
-              $temp_nom_spec='';
+              $nom_spec='Основные характеистики:';
+              $all_spec='Все характеристики:';
 
               foreach($res as $v){
-                  if($v['important'])$temp_nom_spec.='<p>'.$v['specifications_name'].'  --   '.$v['value'].'</p>';
-                  Def\Opt::$main_content .= '<p>'.$v['specifications_name'].'  --   '.$v['value'].'</p>';
+                  if($v['important'])$nom_spec.='<p>'.$v['specifications_name'].'  --   '.$v['value'].'</p>';
+                  else $all_spec.='<p>'.$v['specifications_name'].'  --   '.$v['value'].'</p>';
               }
-              if($temp_nom_spec)Def\Opt::$main_content .='<div class="fon_c">Основные характеристики: '.$temp_nom_spec.'<div class="cl"></div></div>';
+              if($nom_spec)Def\Opt::$main_content .=$nom_spec.$all_spec;
 
               Def\Opt::$main_content.='<div class="cl"></div></div>';
           }
