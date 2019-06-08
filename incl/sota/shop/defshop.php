@@ -38,8 +38,9 @@ class DefShop extends DefCont\DefContent{
 
   private function ruProductShow($id,$link){
 
-      Def\Opt::$css='<link rel="stylesheet" type="text/css" href="/shop.css">
-';
+      Def\Opt::$css='<link rel="stylesheet" type="text/css" href="/shop.css">';
+      Def\Opt::$css.='<link rel="stylesheet" type="text/css" href="/colorbox.css">';
+      Def\Opt::$jscript='<script async src="/js/jq.php" type="text/javascript"></script>';
 
       $DB=new Def\SQLi();
 
@@ -78,11 +79,21 @@ WHERE n.nomenclature_id='.$id_DB.' AND p.price_usd_sell IS NULL;';
               $temp_img='';
 
               foreach($img_arr as $v){
-                  $temp_img.='<div class="m_img_l_i"><img class="br" src="/img/shop/dbpic.php?id='.$v.'" alt="'.$res['model'].'"></div>';
+                  //$temp_img.='<div class="m_img_l_i"><a rel="grup_m" class="colorbox" href="/img/shop/dbpic.php?id='.$v.'"><img class="br" src="/img/shop/dbpic.php?id='.$v.'" alt="'.$res['model'].'"></a></div>';
+                  $temp_img.='<div class="m_img_l_i"><img class="br colorbox" data-some-colorbox="http://sota.my/img/shop/dbpic.php?id='.$v.'" src="/img/shop/dbpic.php?id='.$v.'" alt="'.$res['model'].'"></div>';
               }
               $l_img_col.=$temp_img.'<div class="cl"></div></div>';
 //*************
-              $pic='<img class="br" src="/img/shop/dbpic.php?id='.$img_arr[0].'" alt="'.$res['model'].'">';
+              //$pic='<a rel="grup_m" class="colorbox" href="/img/shop/dbpic.php?id='.$img_arr[0].'"><img class="br" src="/img/shop/dbpic.php?id='.$img_arr[0].'" alt="'.$res['model'].'"></a>';
+              $pic='<img id="m_main_img" class="br colorbox" src="/img/shop/dbpic.php?id='.$img_arr[0].'" alt="'.$res['model'].'" onClick="Ogon()">
+
+
+<script> function Ogon() {
+  //alert("eee");
+  //$.colorbox.remove();
+  
+  
+}</script>';
           }else{
               $pic='<img class="fl five br" src="/img/shop/dbpic.php?i=no_image&ep=1" alt="No image">';
           }
@@ -104,7 +115,7 @@ WHERE n.nomenclature_id='.$id_DB.' AND p.price_usd_sell IS NULL;';
 
 
 //Заглавие
-          Def\Opt::$main_content.='<div class="fon"><h3 class="ar">'.$res['model'].$model_short.'</h3><div class="cl"></div>';
+          Def\Opt::$main_content.='<div class="fon"><h3 class="">'.$res['model'].'<br>'.$model_short.'</h3><div class="cl"></div>';
 
           //************* Код товара *************\\
           $kod=strlen($res['nomenclature_id']);

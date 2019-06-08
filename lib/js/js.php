@@ -9,4 +9,9 @@ class Js extends Def\Gzip{
         $f=$this->SendHTML($f);
         $this->SendGzip($f);
     }
+    function SendJsArr($arr){
+        header("Content-type: text/javascript; charset=UTF-8");header('Cache-Control: public, max-age=14515200');
+        $f=$this->CashArrFile($arr);
+        $this->SendGzip($f);
+    }
 }
