@@ -46,16 +46,9 @@ class DefShop extends DefCont\DefContent{
 
       $id_DB=$DB->realEscapeStr($id);
 
-
-      $sql='SELECT n.nomenclature_id,n.heading,n.category,n.link,n.model,n.model_short,    n.image,n.manufacturer_id,n.short_text,
-
-       MAX(p.price_usd) AS price
-
-FROM nomenclature AS n
-       RIGHT JOIN product AS p ON n.nomenclature_id=p.nomenclature_id
-WHERE n.nomenclature_id='.$id_DB.' AND p.price_usd_sell IS NULL;';
-
-      $res=$DB->strSQL($sql);
+      $res=$DB->strSQL('SELECT n.nomenclature_id,n.heading,n.category,n.link,n.model,n.model_short,    n.image,n.manufacturer_id,n.short_text,       MAX(p.price_usd) AS price
+FROM nomenclature AS n RIGHT JOIN product AS p ON n.nomenclature_id=p.nomenclature_id
+WHERE n.nomenclature_id='.$id_DB.' AND p.price_usd_sell IS NULL;');
 
       if($res['link']==$link){
           $model_short=($res['model_short']!=''?' ('.$res['model_short'].')':'');
@@ -69,34 +62,18 @@ WHERE n.nomenclature_id='.$id_DB.' AND p.price_usd_sell IS NULL;';
 
 //*********************************************************
           $l_img_col='';
-
           if($res['image']!=''){
 //*************
               $l_img_col.='<div class="m_img_l">';
-
               $img_arr=Def\Route::textSeparator($res['image'],',');
-
               $temp_img='';
-
               foreach($img_arr as $v){
-                  //$temp_img.='<div class="m_img_l_i"><a rel="grup_m" class="colorbox" href="/img/shop/dbpic.php?id='.$v.'"><img class="br" src="/img/shop/dbpic.php?id='.$v.'" alt="'.$res['model'].'"></a></div>';
-                  $temp_img.='<div class="m_img_l_i"><img class="br colorbox" data-some-colorbox="http://sota.my/img/shop/dbpic.php?id='.$v.'" src="/img/shop/dbpic.php?id='.$v.'" alt="'.$res['model'].'"></div>';
+                  $temp_img.='<div class="m_img_l_i"><img class="br colorbox" data-some-colorbox="/img/shop/dbpic.php?id='.$v.'" src="/img/shop/dbpic.php?id='.$v.'" alt="'.$res['model'].'"></div>';
               }
               $l_img_col.=$temp_img.'<div class="cl"></div></div>';
 //*************
-              //$pic='<a rel="grup_m" class="colorbox" href="/img/shop/dbpic.php?id='.$img_arr[0].'"><img class="br" src="/img/shop/dbpic.php?id='.$img_arr[0].'" alt="'.$res['model'].'"></a>';
-              $pic='<img id="m_main_img" class="br colorbox" src="/img/shop/dbpic.php?id='.$img_arr[0].'" alt="'.$res['model'].'" onClick="Ogon()">
-
-
-<script> function Ogon() {
-  //alert("eee");
-  //$.colorbox.remove();
-  
-  
-}</script>';
-          }else{
-              $pic='<img class="fl five br" src="/img/shop/dbpic.php?i=no_image&ep=1" alt="No image">';
-          }
+              $pic='<img id="m_main_img" class="br colorbox" src="/img/shop/dbpic.php?id='.$img_arr[0].'" alt="'.$res['model'].'">';
+          }else{$pic='<img class="fl five br" src="/img/shop/dbpic.php?i=no_image&ep=1" alt="No image">';}
 
           $r_img_col='<div class="m_img_c_r">
 <div class="m_price_old">'.$res['price'].'$</div>
@@ -107,11 +84,44 @@ WHERE n.nomenclature_id='.$id_DB.' AND p.price_usd_sell IS NULL;';
 <div class="ac">Производитель: '.$this->manufacturer[$res['manufacturer_id']]['name'].'</div>
 
 </div>';
-
-
+          //Вывод блока картинок
           $img='<div class="m_img rel">'.$l_img_col.'<div class="m_img_c rel">'.$r_img_col.'<div class="m_img_c_m ac rel five_">'.$pic.'</div></div><div class="cl"></div></div>';
 
 //*********************************************************
+
+
+//*******************************************************************
+//*******************************************************************
+//*******************************************************************
+
+          $res_spec=$DB->arrSQL('SELECT spec_name.specifications_name,nom_spec.value, nom_spec.important FROM nomenclature_specifications AS nom_spec 
+                LEFT JOIN specifications_name AS spec_name ON nom_spec.specifications_name_id=spec_name.id 
+                WHERE nom_spec.nomenclature_id='.$id_DB);
+          if($res_spec){
+              Def\Opt::$main_content.='<div class="fon_c"><div class="b m_spec">Характеристики '.$model_short.'</div>';
+
+              $nom_spec='Основные характеистики:';
+              $all_spec='Все характеристики:';
+
+              foreach($res_spec as $v){
+                  if($v['important'])$nom_spec.='<p>'.$v['specifications_name'].'  --   '.$v['value'].'</p>';
+                  else $all_spec.='<p>'.$v['specifications_name'].'  --   '.$v['value'].'</p>';
+              }
+              if($nom_spec)Def\Opt::$main_content .=$nom_spec.$all_spec;
+
+              Def\Opt::$main_content.='<div class="cl"></div></div>';
+          }
+//*******************************************************************
+//*******************************************************************
+//*******************************************************************
+
+
+
+
+
+
+
+
 
 
 //Заглавие
@@ -135,30 +145,7 @@ WHERE n.nomenclature_id='.$id_DB.' AND p.price_usd_sell IS NULL;';
 
           Def\Opt::$main_content.='<div class="cl"></div></div>';
 
-//*******************************************************************
-//*******************************************************************
-//*******************************************************************
-          $sql='SELECT spec_name.specifications_name,nom_spec.value, nom_spec.important FROM nomenclature_specifications AS nom_spec 
-                LEFT JOIN specifications_name AS spec_name ON nom_spec.specifications_name_id=spec_name.id 
-                WHERE nom_spec.nomenclature_id='.$id_DB;
-          $res=$DB->arrSQL($sql);
-          if($res){
-              Def\Opt::$main_content.='<div class="fon_c"><div class="b m_spec">Характеристики '.$model_short.'</div>';
 
-              $nom_spec='Основные характеистики:';
-              $all_spec='Все характеристики:';
-
-              foreach($res as $v){
-                  if($v['important'])$nom_spec.='<p>'.$v['specifications_name'].'  --   '.$v['value'].'</p>';
-                  else $all_spec.='<p>'.$v['specifications_name'].'  --   '.$v['value'].'</p>';
-              }
-              if($nom_spec)Def\Opt::$main_content .=$nom_spec.$all_spec;
-
-              Def\Opt::$main_content.='<div class="cl"></div></div>';
-          }
-//*******************************************************************
-//*******************************************************************
-//*******************************************************************
 
       }
 
