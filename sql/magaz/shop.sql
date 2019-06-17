@@ -8,7 +8,7 @@ heading_name varchar(255) NULL COMMENT 'Название заголовка пе
 PRIMARY KEY (id)
 )ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-INSERT INTO heading(id,sort_order)VALUES
+INSERT INTO heading(id,heading_name)VALUES
 (1,'Аксессуары');
 
 
