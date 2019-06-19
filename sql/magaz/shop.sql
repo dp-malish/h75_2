@@ -9,7 +9,9 @@ PRIMARY KEY (id)
 )ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 INSERT INTO heading(id,heading_name)VALUES
-(1,'Аксессуары');
+(1,'Аксессуары'),
+(2,'Запчасти для планшетов'),
+(3,'Запчасти для телефонов');
 
 
 
@@ -97,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `manufacturer` (
 
 
 /*option*/
-
+/*
 CREATE TABLE IF NOT EXISTS option_filter(
   option_id int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(32) NOT NULL,
@@ -105,7 +107,7 @@ CREATE TABLE IF NOT EXISTS option_filter(
   PRIMARY KEY (option_id)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-/*
+
 INSERT INTO option_filter(`option_id`, `type`, `sort_order`) VALUES
 (1, 'radio', 1),
 (2, 'checkbox', 2),
@@ -145,7 +147,7 @@ provider_name varchar(255) NULL COMMENT 'Название поставщика',
 PRIMARY KEY (id)
 )ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-INSERT INTO provider VALUES(1,'Mobimag'),(2,'Microtron'),(3,'ItPlanet');
+INSERT INTO provider VALUES(1,'---'),(2,'AliExpress'),(3,'Mobimag'),(4,'Microtron'),(5,'ItPlanet');
 
 
 /*характеристики*/
