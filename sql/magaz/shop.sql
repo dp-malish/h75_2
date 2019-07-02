@@ -91,12 +91,19 @@ CREATE TABLE IF NOT EXISTS nomenclature_specifications(
 /*производители*/
 CREATE TABLE IF NOT EXISTS `manufacturer` (
   `manufacturer_id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(64) NOT NULL,
-  `image` varchar(255) DEFAULT NULL,
+  `name` varchar(64) NOT NULL COMMENT 'Бренд производителя',
+  `image` varchar(255) NULL,
   `sort_order` int(3) NULL,
   PRIMARY KEY (`manufacturer_id`)
 )ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
+INSERT INTO manufacturer(manufacturer_id,`name`)VALUES
+(1,'NoName'),
+(2,'Grand'),
+(3,'Hoco'),
+(4,'Profi'),
+(5,'Remax'),
+(6,'AWEI');
 
 /*option*/
 /*
@@ -147,7 +154,7 @@ provider_name varchar(255) NULL COMMENT 'Название поставщика',
 PRIMARY KEY (id)
 )ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-INSERT INTO provider VALUES(1,'---'),(2,'AliExpress'),(3,'Mobimag'),(4,'Microtron'),(5,'ItPlanet');
+INSERT INTO provider VALUES(1,'---'),(2,'AliExpress'),(3,'Mobimag'),(4,'Microtron'),(5,'ItPlanet'),(6,'FixUp');
 
 
 /*характеристики*/
@@ -158,3 +165,5 @@ specifications_name varchar(255) NULL COMMENT 'Имя характеристик
 PRIMARY KEY (id)
 )ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
+--Входное напряжение
+INSERT INTO specifications_name VALUES(1,'Входное напряжение'),(2,'Мощность'),(3,'Выходное напряжение'),(4,'Потребляемый ток'),(5,'Выходной ток'),(6,'Частота тока');
