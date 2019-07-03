@@ -46,7 +46,7 @@ class DefShop extends DefCont\DefContent{
 
       $id_DB=$DB->realEscapeStr($id);
 
-      $res=$DB->strSQL('SELECT n.nomenclature_id,n.heading,n.category,n.link,n.model,n.model_short,    n.image,n.manufacturer_id,n.short_text,       MAX(p.price_usd) AS price
+      $res=$DB->strSQL('SELECT n.nomenclature_id,n.heading,n.category,n.link,n.model,n.model_short,    n.stock_status_id,n.image,n.manufacturer_id,n.short_text,n.markup,       MAX(p.price_usd) AS price
 FROM nomenclature AS n RIGHT JOIN product AS p ON n.nomenclature_id=p.nomenclature_id
 WHERE n.nomenclature_id='.$id_DB.' AND p.price_usd_sell IS NULL;');
 
@@ -63,7 +63,6 @@ WHERE n.nomenclature_id='.$id_DB.' AND p.price_usd_sell IS NULL;');
 //*********************************************************
           $l_img_col='';
           if($res['image']!=''){
-//*************
               $l_img_col.='<div class="m_img_l">';
               $img_arr=Def\Route::textSeparator($res['image'],',');
               $temp_img='';
@@ -71,15 +70,22 @@ WHERE n.nomenclature_id='.$id_DB.' AND p.price_usd_sell IS NULL;');
                   $temp_img.='<div class="m_img_l_i"><img class="br colorbox" data-some-colorbox="/img/shop/dbpic.php?id='.$v.'" src="/img/shop/dbpic.php?id='.$v.'" alt="'.$res['model'].'"></div>';
               }
               $l_img_col.=$temp_img.'<div class="cl"></div></div>';
-//*************
               $pic='<img id="m_main_img" class="br colorbox" src="/img/shop/dbpic.php?id='.$img_arr[0].'" alt="'.$res['model'].'">';
           }else{$pic='<img class="fl five br" src="/img/shop/dbpic.php?i=no_image&ep=1" alt="No image">';}
+//*************
+          $r_img_col='<div class="m_img_c_r">';
 
-          $r_img_col='<div class="m_img_c_r">
-<div class="m_price_old">'.$res['price'].'$</div>
-<div class="m_price">'.$res['price'].'$</div>
+          if($res['stock_status_id']){
+              $r_img_col.='<div class="m_price_old">'.$res['price']*$res['markup'].'$</div>';
+              $r_img_col.='<div class="m_price">'.$res['price']*$res['stock_status_id'].'$</div>';
+          }else{
+              $r_img_col.='<div class="m_price">'.$res['price']*$res['markup'].'$</div>';
+          }
 
-<div class="m_btn_buy">Купить</div>
+
+
+
+          $r_img_col.='<div class="m_btn_buy">Купить</div>
 
 <div class="ac">Производитель: '.$this->manufacturer[$res['manufacturer_id']]['name'].'</div>
 

@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS nomenclature (
 
   `location` int (11) NULL COMMENT 'место нахождения - склад',
 
-  `stock_status_id` int(11) NULL COMMENT 'идентификатор состояния акций',
+  `stock_status_id` int(11) NULL COMMENT 'идентификатор состояния акций (наценка в %)',
 
   `image` varchar(255) NULL,
   `manufacturer_id` int(11) NOT NULL DEFAULT '1' COMMENT 'Производитель',
@@ -134,13 +134,19 @@ CREATE TABLE product (
   nomenclature_id int(11) NOT NULL,
   serial_number varchar(64) NULL COMMENT 'Серийный номер',
   provider int(4) NULL COMMENT 'Поставщик',
-  kod_tovara_postavshika int(11) NULL,
+  kod_tovara_postavshika varchar(64) NULL,
 
 
   price_usd decimal(15,2) NOT NULL DEFAULT '0.00',
   price_uah decimal(15,2) NOT NULL DEFAULT '0.00',
 
   price_usd_sell decimal(15,2) NULL,
+  price_uah_sell decimal(15,2) NOT NULL DEFAULT '0.00',
+
+  kol_vo_buy int(11) NOT NULL DEFAULT 1 COMMENT 'Кол-во закуплено',
+  kol_vo_sell int(11) NOT NULL DEFAULT 0 COMMENT 'Кол-во продано',
+  kol_vo_location int(11) As (kol_vo_buy - kol_vo_sell) COMMENT 'Кол-во на остатке (kol_vo_buy-kol_vo_sell)',
+
 
   PRIMARY KEY (`id`),
   KEY (nomenclature_id)
