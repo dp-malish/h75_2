@@ -99,23 +99,23 @@ WHERE n.nomenclature_id='.$id_DB.' AND p.price_usd_sell IS NULL;');
 //*******************************************************************
 //*******************************************************************
 //*******************************************************************
+          $b_m_spec='';
+          $b_all_spec='';
 
           $res_spec=$DB->arrSQL('SELECT spec_name.specifications_name,nom_spec.value, nom_spec.important FROM nomenclature_specifications AS nom_spec 
                 LEFT JOIN specifications_name AS spec_name ON nom_spec.specifications_name_id=spec_name.id 
                 WHERE nom_spec.nomenclature_id='.$id_DB);
           if($res_spec){
-              Def\Opt::$main_content.='<div class="fon_c"><div class="b m_spec">Характеристики '.$model_short.'</div>';
-
-              $nom_spec='Основные характеистики:';
-              $all_spec='Все характеристики:';
+              $b_m_spec.='<div class="fon_c"><div class="b m_spec">Основные характеистики '.$model_short.'</div>';
+              $b_all_spec.='<div class="fon_c"><div class="b m_spec">Все характеистики '.$model_short.'</div>';
 
               foreach($res_spec as $v){
-                  if($v['important'])$nom_spec.='<p>'.$v['specifications_name'].'  --   '.$v['value'].'</p>';
-                  else $all_spec.='<p>'.$v['specifications_name'].'  --   '.$v['value'].'</p>';
+                  if($v['important']){$b_m_spec.='<p>'.$v['specifications_name'].':    '.$v['value'].'</p>';}
+                  $b_all_spec.='<p>'.$v['specifications_name'].':     '.$v['value'].'</p>';
               }
-              if($nom_spec)Def\Opt::$main_content .=$nom_spec.$all_spec;
 
-              Def\Opt::$main_content.='<div class="cl"></div></div>';
+              $b_m_spec.='<div class="cl"></div></div>';
+              $b_all_spec.='<div class="cl"></div></div>';
           }
 //*******************************************************************
 //*******************************************************************
@@ -144,12 +144,13 @@ WHERE n.nomenclature_id='.$id_DB.' AND p.price_usd_sell IS NULL;');
 //Картинки
           Def\Opt::$main_content.=$img;
 //Меню товара
-          Def\Opt::$main_content.='<div class="m_divisor_b">Описание > Характеристики</div>';
+          //Def\Opt::$main_content.='<div class="m_divisor_b">Описание > Характеристики</div>';
 
+          Def\Opt::$main_content.=$b_m_spec;
 
-          Def\Opt::$main_content.='<div class="fon_c"><div class="b m_spec">Описание товара</div><h4>'.$res['model'].'</h4>'.Def\Validator::html_decod($res['short_text']).'</div>';
+          Def\Opt::$main_content.='<div class="fon_c"><div class="b m_spec">Описание товара</div><h4>'.$res['model'].'</h4>'.Def\Validator::html_decod($res['short_text']).'</div><div class="cl"></div></div>';
 
-          Def\Opt::$main_content.='<div class="cl"></div></div>';
+          Def\Opt::$main_content.=$b_all_spec;
 
 
 
