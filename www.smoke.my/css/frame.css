@@ -15,13 +15,16 @@ html,body{height:100%;
 	min-height:100px;
 	/*border-bottom:#353535 solid thin;*/
 }
+.topcontact{border-bottom:#353535 solid thin;}
 
 #logo{
+	margin:0 0 0 7%;
 	float:left;
-	width:13%;
+	width:15%;
 	text-align: center;
+	/*background-color: #00BC52;*/
 }
-/*@media screen and (min-width:1100px) and (max-width:1240px){
+@media screen and (min-width:1100px) and (max-width:1240px){
 	#logo{width:14%}
 }
 @media screen and (min-width:1000px) and (max-width:1099px){
@@ -38,33 +41,13 @@ html,body{height:100%;
 
 @media screen and (max-width:540px){
 	#logo{width:100%}
-}*/
+}
 
 .h_field{
-	/*min-width:240px;*/
+	/*min-width:100px;*/
 	max-width:1240px;
 	overflow:hidden
 }
-
-#logoname{
-	margin:1% 0;
-}
-@media screen and (max-width:840px){
-	#logoname{margin:0}
-}
-
-#logoname h1{
-	font-size:320%;
-	color:#FC761E;
-
-}
-@media screen and (max-width:740px){
-	#logoname h1{font-size:220%}
-}
-
-#topcontact{border-top:#353535 solid thin;}
-
-
 
 
 .clock{width:33px;min-height:inherit}
@@ -90,18 +73,39 @@ html,body{height:100%;
 }
 
 /************************************************/
-.headercen{
-	background-color:#EFEFEF;
-	border-bottom:#696969 solid thin;
+#order{
+	/*background-color:#EFEFEF;*/
+
+}
+#fast_order{
+	margin: 7px;
+	padding: 7px;
+	/*border:#27C4C9 1px solid ;*/
+	width:71%;
+	float: left;
+
+}
+.call_back{
+	margin: 13px auto 0;
+	background-color:#9BEFF3;
+	width: 170px;
+	border-radius:20px;
+	border:#27C4C9 1px solid;
+	padding:10px 24px;
+	cursor: pointer;
+	font-weight:700;
+	font-size:16px;
+	color: #ffffff;
+	box-shadow:3px 2px 3px -2px #9BEFF3;
+}
+.call_back:hover{
+	box-shadow:9px 6px 30px 5px #9BEFF3;
 }
 
-/************************************************/
-
-.headerbot{
-	min-height:30px;
-	padding:2px 0;
-	/*overflow:hidden;*/
-	background-color: #FC761E;
+#full_order{
+	width:25%;
+	float: right;
+	background-color: #72b572;
 }
 
 /**************************/
