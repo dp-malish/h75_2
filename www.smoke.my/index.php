@@ -29,6 +29,7 @@ $Opt=new Opt('smoke');//Def opt
     <link rel="stylesheet" type="text/css" href="/css/frame.css">
     <link rel="stylesheet" type="text/css" href="/css/color.css">
     <link rel="stylesheet" type="text/css" href="/css/slider.css">
+    <link rel="stylesheet" type="text/css" href="/css/dws_pic.css">
 
 
 
@@ -127,6 +128,26 @@ $Opt=new Opt('smoke');//Def opt
 </header>
 
 
+<div>
+    тут
+</div>
+
+
+<div class="maxw rel">
+
+    <div class="dws-wrapper">
+        <a href="#">
+            <img src="/img/hookah/hookah.jpg" alt="Кальян в Украине">
+            <div class="dws-text">
+                <h3>Эффект при наведении в CSS3</h3>
+                <p>При помощи CSS3 можно творить свою магию. Следи за нами и подписывайся на канал DWS TV</p>
+                <!--<a href="#">Подробнее</a>-->
+            </div>
+        </a>
+    </div>
+
+
+</div>
 
 <div class="maxw">
     ckfqlth

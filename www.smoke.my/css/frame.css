@@ -48,6 +48,7 @@ html,body{height:100%;
 
 @media screen and (max-width:540px){
 	#logo,.h_field{width:100%;margin:0}
+	#logo img{width:70%}
 }
 
 .clock{width:33px;min-height:inherit}
