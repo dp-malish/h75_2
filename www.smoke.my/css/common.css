@@ -1,4 +1,4 @@
-h1,h2,h3,h4{margin:4px 7px 4px;}
+h1,h2,h3,h4{margin:4px 7px 4px;text-align: center}
 h1.monofont,h2.monofont,h3.monofont,h4.monofont{margin:4px 7px 4px;font-family:"Monotype Corsiva"}
 h1{font-size:35px}
 h2{font-size:30px}
@@ -7,9 +7,12 @@ h4{font-size:20px}
 .colorhed,.menu_title{
     font:25px "Monotype Corsiva";
 }
-p,ol,ul,ul li{margin:5px}
+p,ol,ul,ul li{margin:10px}
 ul{list-style:none}
 
+p{
+    line-height:180%;
+}
 
 .fon,.fon_c{margin:0 0 7px}
 @media screen and (max-width: 920px){.fon,.fon_c{margin:0 0 7px}}
