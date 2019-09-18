@@ -8,7 +8,8 @@ A:visited{color:#520c0e}
 A:hover,.link:hover{color:#B2251F;text-decoration:blink}
 
 body{background-color:#EFEFEF}
-.header{background-color:#4D5055}
+.header,#headcontact{background-color:#4D5055}
+
 
 .grey{color: #969696}
 
@@ -21,5 +22,6 @@ body{background-color:#EFEFEF}
 	background-color:#4D5055;
 }
 #up{
-	background:#FC761E;
+	background:#4D5055;
+	color: #ffffdd;
 }

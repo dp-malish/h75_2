@@ -1,0 +1,105 @@
+.pulse_btn{
+    position:fixed;
+    top:70%;
+    right:0;
+    transform:translate(-50%,-50%);
+    cursor:pointer;
+    z-index: 200;
+}
+@media screen  and (max-width:840px){
+    .pulse_btn{display:none}
+}
+
+.pulse_btn>div{
+    position:relative;
+    width: 90px;
+    height: 90px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #4D5055;
+}
+.pulse_btn>div:hover {
+    background: #01c1c1;
+    transition: .7s;
+}
+
+
+/*
+.pulse_btn_bloc{
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+}*/
+.pulse_btn_phone{
+    font-size: 50px;
+    line-height: 92px;
+    animation: pulse_btn_phone .9s ease-in-out infinite;
+
+}
+
+.pulse_btn i {
+    transition: .7s ease-in-out;
+}
+.pulse_btn:hover i{
+    transition: .5s ease-in-out;
+    transform: scale(0);
+
+}
+
+
+
+@keyframes pulse_btn_phone {
+    0%, 100% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(21deg);
+    }
+}
+
+
+.pulse_btn>div:hover::before,
+.pulse_btn>div:hover::after {
+    content: '';
+    position: absolute;
+    border: 1px solid #4D5055;
+    left: -13px;
+    right: -13px;
+    top: -13px;
+    bottom: -13px;
+    border-radius:50%;
+    animation: pulse_btn_div 1.3s linear infinite;
+    opacity:0;
+}
+.pulse_btn>div:hover::after {
+    animation-delay: .4s;
+}
+@keyframes pulse_btn_div {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+.pulse_btn .pulse_btn_text{
+    position: absolute;
+    opacity:0;
+    text-transform: uppercase;
+    font-weight: 700;
+    top: 28px;
+    font-size: 15px;
+    transform: scaleX(-1);
+    transition: .5s ease-in-out;
+}
+.pulse_btn:hover .pulse_btn_text{
+    transform: scaleX(1);
+    transition: .5s ease-in-out;
+    opacity:1;
+}

@@ -33,13 +33,18 @@ $Opt=new Opt('smoke');//Def opt
     <link rel="stylesheet" type="text/css" href="/css/common.css">
 
 
+    <link rel="stylesheet" type="text/css" href="/css/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="/css/pulse_btn.css">
+
+
 
     <script async src="/js/slider.php"></script>
 
-    <!--<script async src="/js/slider.php"></script>
-    <script async src="/js/burger.php"></script>
     <script async src="/js/scroll.php"></script>
 
+
+    <!--<script async src="/js/slider.php"></script>
+    <script async src="/js/burger.php"></script>
 
 
     <script async src="/js/common_sota_v1_0.js"></script>-->
@@ -53,7 +58,7 @@ $Opt=new Opt('smoke');//Def opt
     <div class="header rel">
         <div class="headertop rel">
 
-            <div class="maxw topcontact">
+            <div id="headcontact" class="maxw topcontact">
                 <div class="h_field">
                     <div class="dwf">
                         <div id="clock">
@@ -68,14 +73,15 @@ $Opt=new Opt('smoke');//Def opt
                             <div class="fl tel mt"></div>
                             <div class="fr five_">
                                 <div class="ac mb">Наши контакты:</div>
-                                <div><span class="grey telcountry">+38</span>(068) 465-55-19</div>
-                                <div><span class="grey telcountry">+38</span>(050) 859-95-29</div>
+                                <div id="tel_k_pc_link"><a href="tel:+380684655519"><span class="grey telcountry">+38</span>(068) 465-55-19</a></div>
+                                <div id="tel_v_pc_text"><span class="grey telcountry">+38</span>(050) 859-95-29</div>
+                                <div id="tel_v_pc_link"><a href="tel:+380508599529"><span class="grey telcountry">+38</span>(050) 859-95-29</a></div>
                             </div><div class="cl"></div>
                         </div>
                         <div id="adres">
                             <div class="fl adres mt"></div>
                             <div class="fr five_">
-                                <div class="ac mb">Наш адрес:</div>
+                                <div class="ac mb">Наш склад:</div>
                                 <div class="ac">г. Мариуполь</div>
                                 <div>пр-т Строителей, 39</div>
                             </div><div class="cl"></div>
@@ -146,7 +152,6 @@ $Opt=new Opt('smoke');//Def opt
             <main><?=$Opt::$main_content?>
                 <h3>Кальян</h3>
 
-
                 <p>Для современного человека понятие <strong>кальян</strong> – прибор для курения, способный охладить и отфильтровать вдыхаемый дым. Такое устойчивое восприятие индийского изобретения довольно быстро устоялась из-за популярности кальяна сначала среди мусульман, а затем к XIX веку он покорил Европу.</p>
                 <p>Для визуального представления кальяна представьте: фильтр, похожий на шахту, на стенах которой оседают разные примеси; сосуд с различной жидкостью, которая осаждает до половины примесей, содержащихся в дыме. А уже в этот самый сосуд вставлена курительная чаша, соединённая с той самой шахтой, отвод которой погружен в воду. Ну и непосредственна вторая трубка, расположенная выше уровня для вдыхания дыма.</p>
                 <p>Кальян часто курят в дружеских компаниях и для приятного время провождения он становиться незаменимым атрибутом гостеприимных хозяев мероприятия. Mobile Smoke – это отличный вариант кальяна. Походный дизайн кальяна весьма удобен в походных условиях эксплуатации, а его невероятный яркий вкус подарят незабываемые эмоции от применения.</p>
@@ -156,7 +161,7 @@ $Opt=new Opt('smoke');//Def opt
                     <a href="#">
                         <img src="/img/hookah/hookah.jpg" alt="Кальян в Украине">
                         <div class="dws-text">
-                            <h3>Кальян в Украине</h3>
+                            <h3>Кальяны в любую точку Украины</h3>
                             <p>Наши кальяны творят свою магию. Следите за новинками и подписывайтесь на канал.</p>
 
                         </div>
@@ -222,6 +227,13 @@ $Opt=new Opt('smoke');//Def opt
 
     <div id="bf">
         <div id="up"> ^ Наверх</div>
+    </div>
+    <div class="pulse_btn">
+        <div> <!--class="pulse"-->
+            <!--<div class="pulse_btn_bloc"></div>-->
+            <div class="pulse_btn_phone"><i class="fa fa-phone" aria-hidden="true"></i></div>
+            <div class="pulse_btn_text">Кнопка связи</div>
+        </div>
     </div>
 </footer>
 
