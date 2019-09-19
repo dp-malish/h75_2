@@ -22,7 +22,7 @@ window.onscroll=function(){
             topContactScroll();
             //Add function scroll
     //при скролле показывать и прятать блок
-    if(window.pageYOffset>0&&document.body.clientWidth>800){
+    if(window.pageYOffset>0&&document.body.clientWidth>840){
         //document.getElementById('up').style.display='block';//alert('j+');
         document.getElementById('up').style.opacity=1;//alert('j+');
     }else{
