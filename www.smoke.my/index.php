@@ -37,6 +37,7 @@ $Opt=new Opt('smoke');//Def opt
     <link rel="stylesheet" type="text/css" href="/css/pulse_btn.css">
 
     <link rel="stylesheet" type="text/css" href="/css/menu_art.css">
+    <link rel="stylesheet" type="text/css" href="/css/form.css">
 
 
 
@@ -187,7 +188,7 @@ $Opt=new Opt('smoke');//Def opt
             </li>
             <li>
                 <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m2">
-                <a href="#" onclick="return false"><i class="fa fa-cogs"></i>Услуги</a>
+                <a href="#" onclick="return false"><i class="fa fa-cogs"></i>Инструкции</a>
                 <label for="sub_m2" class="toggleSubmenu"><i class="fa"></i></label>
                 <ul>
                     <li><a href="#">Услуга1</a></li>
@@ -324,5 +325,7 @@ $Opt=new Opt('smoke');//Def opt
     </div>
 </footer>
 
+<div class="form">6
+655</div>
 
 </body></html>

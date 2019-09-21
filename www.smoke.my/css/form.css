@@ -1,0 +1,17 @@
+.form{
+    z-index: 1000;
+    position: fixed;
+
+    top: 15%;
+
+
+    left:0;
+    right:0;
+    width:450px;
+    background-color: rgba(24, 33, 52, 0.7);
+    margin:0 auto;
+    text-align: center;
+    box-shadow: 0 -5px 0 #01c1c1;
+    padding-bottom: 20px;
+
+}
