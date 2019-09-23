@@ -1,3 +1,75 @@
+var my_protocol = window.location.protocol;
+var my_host = window.location.hostname;
+var referal = document.referrer;
+var uri=decodeURI(window.location.pathname);
+var adblock=false;
+//*************************ajax**************************
+function ajaxPostSend(urlparts, callback, json, asinc, url) {
+    if (asinc === undefined) {
+        asinc = true;
+    }
+    if (json === undefined) {
+        json = true;
+    }
+    if (url === undefined) {
+        url = "/ajax/site/postanswer.php";
+    }
+
+    var http = new XMLHttpRequest();
+    http.open("POST",url, true);
+    http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    if(asinc){
+        urlparts+='&catche=' + Math.random();
+    }
+    http.send(urlparts);
+    http.onreadystatechange=function() {
+        if (http.readyState == 4 && http.status == 200){
+            if(json){ajaxPostErr(http.responseText,callback)}
+            else{callback(http.responseText)}
+        }
+    }
+    http.onerror=function () {
+        alert('Извините, данные не были переданы. Проверьте подключение к интернету и обновите страницу...');
+    }
+}
+function ajaxPostErr(answer,callback){
+    var json=JSON.parse(answer);
+    if(json.err){
+
+        //alert(json.errText[0]);
+        modalloadFormAnswer("<p>"+json.errText[0]+"</p>");
+
+        /*try{if(document.getElementById("modalloadform")===null){modalloadclose();}
+        }catch(e){modalloadclose();}*/
+    }
+    else{callback(json)}
+}
+
+function ajaxPostSendFile(url,file){
+    var //file=document.getElementById("file"),
+        http=new XMLHttpRequest(),
+        form=new FormData();
+
+    var upload_file=file.files[0];
+    //form.append("table","1");
+    form.append("imgfile",upload_file);
+
+
+    http.upload.onprogress = function(event) {
+        alert( 'Загружено на сервер ' + event.loaded + ' байт из ' + event.total );
+    }
+
+    http.upload.onload = function() {
+        alert( 'Данные полностью загружены на сервер!' );
+    }
+
+    http.upload.onerror = function() {
+        alert( 'Произошла ошибка при загрузке данных на сервер!' );
+    }
+    http.open("post",url,true);
+    http.send(form);
+
+}
 
 
 
@@ -23,7 +95,7 @@ function modalloadForm(html,obj){
     document.body.appendChild(d);
 
     var canvas=document.createElement("div");
-    canvas.setAttribute("id","form-convas");
+    canvas.setAttribute("id","formLoadConvas");
     canvas.setAttribute("class","form-convas");
     d.appendChild(canvas);
 
@@ -37,6 +109,16 @@ function modalloadForm(html,obj){
     closeBtn.addEventListener("click",modalloadclose);
 }
 
+function modalloadFormAnswer(html,obj){
+    formLoadConvas.removeChild(formLoadConvas.firstChild);
+
+    if(html===undefined){html=null}
+    var d=document.createElement("div");
+    if(html!==null)d.innerHTML=html;
+    if(obj!==undefined)d.appendChild(obj);
+    formLoadConvas.insertBefore(d,formLoadConvas.firstChild);
+}
+
 function modalloadclose(){
     try{
         var e = document.getElementById("formBackShadow");
@@ -46,63 +128,5 @@ function modalloadclose(){
 }
 
 
-
-
 //*************************Модальная форма End***********************
 
-
-//temp
-//document.getElementById("pulseBtn").addEventListener("click",function (){modalload()},false);
-document.getElementById("pulseBtn").addEventListener("click",function(){
-
-    var form=document.createElement("form");
-    form.id = "formCallBack";
-    form.innerHTML="<h4>Мы Вам перезвоним</h4>";
-    form.addEventListener("click", function(event){event.preventDefault();});
-
-    var d=document.createElement("div");
-    d.setAttribute("class","form-input form-icon-men");
-    form.appendChild(d);
-    var Login = document.createElement("input");
-    Login.id="formCallBackName";
-    Login.name="username";
-    Login.type="text";
-    Login.size="13";
-    Login.title="Введите Ваше имя";
-    Login.placeholder="Ваше имя";
-    Login.setAttribute("required","");
-    d.appendChild(Login);
-
-    d=document.createElement("div");
-    d.setAttribute("class","form-input form-icon-tel");
-    form.appendChild(d);
-    var tel = document.createElement("input");
-    tel.id="formCallBackTel";
-    tel.name="tel";
-    tel.type="text";
-    tel.size="13";
-    tel.title="Введите номер телефона";
-    tel.placeholder="Номер телефона";
-    tel.setAttribute("required","");
-    d.appendChild(tel);
-
-    var submitBtn=document.createElement("input");
-    submitBtn.id="formCallBackSubmit";
-    submitBtn.name="submit";
-    submitBtn.setAttribute("class","form-submit");
-    submitBtn.type="submit";
-    submitBtn.value="Перезвоните мне";
-    submitBtn.addEventListener("click",formCallBackSubmit);
-    form.appendChild(submitBtn);
-
-    modalloadForm(null,form);
-
-},false);
-
-
-
-function formCallBackSubmit(){
-
-    alert('3');
-
-}

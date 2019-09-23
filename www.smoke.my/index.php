@@ -47,6 +47,9 @@ $Opt=new Opt('smoke');//Def opt
 
     <script async src="/js/common_v2.0.js"></script>
 
+    <script async src="/js/call_back.js"></script>
+    <script async src="/js/try.js"></script>
+
 
     <!--<script async src="/js/slider.php"></script>
     <script async src="/js/burger.php"></script>
@@ -148,10 +151,10 @@ $Opt=new Opt('smoke');//Def opt
             <li><a href="/"><i class="fa fa-home"></i>Главная</a></li>
             <li>
                 <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m1">
-                <a href="#" onclick="return false"><i class="fa fa-shopping-cart"></i>Продукция</a>
+                <a href="#" onclick="return false"><i class="fa fa-shopping-cart"></i>Кальяны</a>
                 <label for="sub_m1" class="toggleSubmenu"><i class="fa"></i></label>
                 <ul>
-                    <li><a href="#">Кальян один</a></li>
+                    <li><a href="#">Кальян белый</a></li>
                     <li><a href="#">Кальян два</a></li>
                     <li><a href="#">Кальян MobileSmoke</a></li>
                     <li><a href="#">Быт. химия</a></li>
@@ -193,7 +196,7 @@ $Opt=new Opt('smoke');//Def opt
                 <a href="#" onclick="return false"><i class="fa fa-cogs"></i>Инструкции</a>
                 <label for="sub_m2" class="toggleSubmenu"><i class="fa"></i></label>
                 <ul>
-                    <li><a href="#">Услуга1</a></li>
+                    <li><a href="#">Инструкции</a></li>
                     <li><a href="#">Услуга2</a></li>
                     <li><a href="#">Услуга3</a></li>
                     <li><a href="#">Услуга4</a></li>
@@ -227,7 +230,7 @@ $Opt=new Opt('smoke');//Def opt
 <div class="maxw rel">
     <div class="l_col rel"><?=$Opt::$l_content_up.$Opt::$l_content?>
 
-        Профилактика<br>Услуги
+        <!--Профилактика<br>Услуги-->
 
         <div class="cl"></div>
     </div>
@@ -320,8 +323,7 @@ $Opt=new Opt('smoke');//Def opt
     </div>
 
     <div id="pulseBtn" class="pulse_btn">
-        <div><!--class="pulse"-->
-            <!--<div class="pulse_btn_bloc"></div>-->
+        <div>
             <div class="pulse_btn_phone"><i class="fa fa-phone" aria-hidden="true"></i></div>
             <div class="pulse_btn_text">Кнопка связи</div>
         </div>
