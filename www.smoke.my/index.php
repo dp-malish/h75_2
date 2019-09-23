@@ -45,6 +45,8 @@ $Opt=new Opt('smoke');//Def opt
 
     <script async src="/js/scroll.php"></script>
 
+    <script async src="/js/common_v2.0.js"></script>
+
 
     <!--<script async src="/js/slider.php"></script>
     <script async src="/js/burger.php"></script>
@@ -316,16 +318,50 @@ $Opt=new Opt('smoke');//Def opt
     <div id="bf">
         <div id="up"> ^ Наверх</div>
     </div>
-    <div class="pulse_btn">
-        <div> <!--class="pulse"-->
+
+    <div id="pulseBtn" class="pulse_btn">
+        <div><!--class="pulse"-->
             <!--<div class="pulse_btn_bloc"></div>-->
             <div class="pulse_btn_phone"><i class="fa fa-phone" aria-hidden="true"></i></div>
             <div class="pulse_btn_text">Кнопка связи</div>
         </div>
     </div>
+
 </footer>
 
-<div class="form">6
-655</div>
+
+<!--<div class="form">
+
+    <div id="form-convas" class="form-convas">
+
+            <form>
+                <div><h3>Купить в один клик</h3></div>
+                <div><p>Мы Вам перезвоним</p></div>
+                <div class="form-input form-icon-men">
+                    <input type="text" name="username" placeholder="Введите логин">
+                </div>
+                <div class="form-input form-icon-tel">
+                    <input type="tel" name="tel" placeholder="Введите телефон" required>
+                </div>
+                <div class="form-input form-icon-pass">
+                    <input type="password" name="password" placeholder="Введите пароль">
+                </div>
+                <input class="form-submit" type="submit" name="submit" value="Заказать"><br />
+                <input class="form-submit" type="submit" name="submit" value="Перезвоните мне"><br />
+                <a href="#">Восстановить пароль</a>
+            </form>
+            <div class="form-social">
+                <i class="fa fa-vk" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </div>
+
+
+
+    </div>
+    <div class="closex">X</div>
+</div>-->
 
 </body></html>
