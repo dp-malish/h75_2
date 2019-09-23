@@ -57,8 +57,8 @@ document.getElementById("pulseBtn").addEventListener("click",function(){
 
     var form=document.createElement("form");
     form.id = "formCallBack";
-    //form.className = "form";
     form.innerHTML="<h4>Мы Вам перезвоним</h4>";
+    form.addEventListener("click", function(event){event.preventDefault();});
 
     var d=document.createElement("div");
     d.setAttribute("class","form-input form-icon-men");
@@ -96,10 +96,13 @@ document.getElementById("pulseBtn").addEventListener("click",function(){
     form.appendChild(submitBtn);
 
     modalloadForm(null,form);
+
 },false);
 
 
 
-function formCallBackSubmit() {
+function formCallBackSubmit(){
+
     alert('3');
+
 }

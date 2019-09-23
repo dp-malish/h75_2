@@ -77,7 +77,7 @@ border-color: red;
     }
 }
 
-.form-input input:hover{
+.form-input input:hover,.form-submit-btn:hover{
     box-shadow: 0 0 6px 3px rgba(58, 219, 253, 0.35);
 }
 
@@ -115,24 +115,24 @@ border-color: red;
 }
 
 
-.form-submit{
+.form-submit,.form-submit-btn{
     padding:13px 30px;
-    margin:5px 0 10px 0;
+    margin:5px auto 10px;
     font-size:18px;
     color:#fff;
     background-color:#2ca8c6;
-   /* border: none;*/
+    width:75%;
     border-radius:5px;
     /*border-bottom: 4px solid #6ee9fd;*/
     cursor: pointer;
 }
-.form-submit:hover{
+.form-submit:hover,.form-submit-btn:hover{
     transition: all 0.5s;
     background: #fff;
     color: #2c536c;
 }
 @media screen and (max-width:500px){
-    input[type="submit"]{
+    input[type="submit"],.form-submit-btn{
         width:80%;
         padding: 13px 10px;
     }
