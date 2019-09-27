@@ -1,13 +1,12 @@
 <!doctype html>
 <html lang="<?=$Opt::$lang?>">
 <head>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="author" content="Александр Баранов">
     <meta name="copyright" lang="<?=$Opt::$lang?>" content="MobileSmoke">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index,follow">
-
-    <!--<link rel="shortcut icon" href="/img/site/ico.png" type="image/png">-->
 
     <link rel="stylesheet" type="text/css" href="/css/default.css">
     <link rel="stylesheet" type="text/css" href="/css/frame.css">
