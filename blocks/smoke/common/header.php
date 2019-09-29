@@ -42,16 +42,11 @@
                 <div id="order" class="h_field">
                     <div id="fast_order">
 
-                        <div class="call_back ac">
-                            <span class="">Обратный звонок</span>
-
-
+                        <div id="fast_order_btn" class="call_back ac">
+                            <span>Обратный звонок</span>
                         </div>
-
-
                     </div>
                     <div id="full_order">
-
                         <!-- корзина-->
                     </div>
                     <div class="cl"></div>

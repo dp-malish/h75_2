@@ -6,16 +6,14 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../../../');spl_autoload_reg
 if(Post::issetPostArr()){
     if(!empty($_POST['call_me'])){
 
+        //\lib\Def\Validator::$ErrorForm[]='Error! Ваше сообщение не отправлено...';
+        //Post::answerErrJson();
+        //$xxx=CallBack::CallBackFun();
 
-        //echo json_encode(['err'=>false,'answer'=>'Спасибо! Ваше сообщение отправлено...']);
-
-        \lib\Def\Validator::$ErrorForm[]='Error! Ваше сообщение не отправлено...';
-        Post::answerErrJson();
-
-        /*if(Feedback::feedback()){
-            echo json_encode(['err'=>false,'answer'=>'Спасибо! Ваше сообщение отправлено...']);
+        if(CallBack::CallBackFun()){
+            echo json_encode(['err'=>false,'answer'=>'Спасибо! Мы Вам перезвоним в ближайшее время...']);
         }else{Post::answerErrJson();}
-        */
+
     }else echo $_SERVER['SERVER_NAME'];
     //-------------------------------------------------------------------
 }else echo $_SERVER['SERVER_NAME'];
