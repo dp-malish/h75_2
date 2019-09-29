@@ -18,7 +18,11 @@ class CallBack extends Post{
                         $sql=$DB->realEscape($sql,$param);
                         if(!$DB->boolSQL($sql)){
                           $err=true;
-                          Def\Validator::$ErrorForm[]='Ошибка соединения, повторите попытку позже...';}
+                          Def\Validator::$ErrorForm[]='Ошибка соединения, повторите попытку позже...';
+                        }/**/else{
+                            if(!mail('win@i.ua','Call Me',$name.'\n'.$tel.'\n'.$ip))
+                                Def\Validator::$ErrorForm[]='Хрен с почтой';
+                        }
                 }
 
         }else{$err=true;}
