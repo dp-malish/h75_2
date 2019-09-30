@@ -22,7 +22,15 @@ p{
     .hfc,.hsc{display:none}
 }
 
-
+.check::before{
+    content:'✔ ';
+}
+.item:hover .check{
+    color: red;
+}
+.item li:hover .check{
+    color:#9BEFF3;
+}
 
 
 
