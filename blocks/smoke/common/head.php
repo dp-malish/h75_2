@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index,follow">
 
-    <!--<link rel="stylesheet" type="text/css" href="/css/default_1_0.css">
+    <link rel="stylesheet" type="text/css" href="/css/default_1_0.css">
     <link rel="stylesheet" type="text/css" href="/css/frame.css">
     <link rel="stylesheet" type="text/css" href="/css/color.css">
     <link rel="stylesheet" type="text/css" href="/css/slider.css">
@@ -20,9 +20,9 @@
     <link rel="stylesheet" type="text/css" href="/css/pulse_btn.css">
 
     <link rel="stylesheet" type="text/css" href="/css/menu_art.css">
-    <link rel="stylesheet" type="text/css" href="/css/form.css">-->
-
-    <link rel="stylesheet" type="text/css" href="/css.php">
+    <link rel="stylesheet" type="text/css" href="/css/form.css">
+<!--
+    <link rel="stylesheet" type="text/css" href="/css.php">-->
 
     <script async src="/js/slider.php"></script>
 
