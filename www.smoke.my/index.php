@@ -39,12 +39,12 @@ if(Route::$index){include'../modul/smoke/main.php';}
 
 
 
-$Opt::$slider=false;
+//$Opt::$slider=false;
 
 
 require '../blocks/smoke/common/head.php';
 require '../blocks/smoke/common/header.php';
-//require '../blocks/smoke/menu/top_menu.php';
+require '../blocks/smoke/menu/top_menu.php';
 require '../blocks/smoke/common/l_col.php';
 require '../blocks/smoke/common/body.php';
 require '../blocks/smoke/common/footer.php';

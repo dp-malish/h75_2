@@ -5,7 +5,10 @@
     transform:translate(-50%,-50%);
     cursor:pointer;
     z-index: 200;
-}@media screen and(max-width:840px){.pulse_btn{display:none}}
+}
+@media screen and(max-width:840px){
+    .pulse_btn{display:none}
+}
 
 .pulse_btn>div{
     position:relative;
