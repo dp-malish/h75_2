@@ -1,4 +1,4 @@
-h1,h2,h3,h4{margin:4px 7px 4px;text-align: center}
+h1,h2,h3,h4{margin:4px 7px 4px;text-align:center}
 h1.monofont,h2.monofont,h3.monofont,h4.monofont{margin:4px 7px 4px;font-family:"Monotype Corsiva"}
 h1{font-size:35px}
 h2{font-size:30px}
@@ -34,9 +34,8 @@ p{
 
 
 
-/*навигация*/
 .nav_link a{margin:0 3px;display:inline-block}
-@media screen and (min-width:240px) and (max-width:780px){.nav_link a{margin:25px 24px}}
+@media screen and (min-width:40px) and (max-width:780px){.nav_link a{margin:25px 24px}}
 
 .nav1{
     margin:5px 0;
