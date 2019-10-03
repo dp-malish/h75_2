@@ -1,7 +1,5 @@
 h1,h2,h3,h4,.tegh{color:#000000}
 
-body{background-color:#fefef5}
-
 A:link,.link{color:#5c3317;text-decoration:underline}
 A:active{color:#5c3317}
 A:visited{color:#520c0e}
@@ -12,10 +10,5 @@ body{background-color:#EFEFEF}
 
 .grey{color:#969696}
 
-.fon_c,.fon_c0{
-	background:#FEFEE4;
-	background:rgba(254,255,244,0.92)
-}
-.fon_c{border:#353535 dotted thin;}
 #foot{background-color:#4D5055;}
 #up{background:#4D5055;color:#ffffdd;}

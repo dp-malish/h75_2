@@ -43,7 +43,6 @@
                             </li>
                         </ul>
                     </li>
-
                 </ul>
             </li>
             <li>
@@ -69,7 +68,6 @@
                     <li><a href="#">Гарантия</a></li>
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Кальяны оптом</a></li>
-
                 </ul>
             <li><a href="#"><i class="fa fa-envelope-open"></i>Контакты</a></li>
         </ul>

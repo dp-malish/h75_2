@@ -1,6 +1,15 @@
 /*Кнопка перезвони мне*/
 
-window.addEventListener("load", function(){
+(function(){
+    var css=document.createElement('link');
+    css.rel='stylesheet';
+    css.href='../css/form.php';
+    css.type='text/css';
+    var defer=document.getElementsByTagName('link')[0];
+    defer.parentNode.insertBefore(css,defer);
+})();
+
+window.addEventListener("load",function(){
 
     document.getElementById("pulseBtn").addEventListener("click",function(){
         formCalBackViewl();

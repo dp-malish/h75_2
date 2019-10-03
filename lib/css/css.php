@@ -20,6 +20,27 @@ class Css extends Def\Gzip{
         }
     }
 
+    /**
+     * @param $dir - каталог с исходным css
+     * @param $temp_name_f - имя файла в папке темп без расширения
+     * @param $css_arr_f - массив файлов
+     * @param int $site_folder_level вложенность папок на сайте /css/ - значит =1, по умолчанию корень сайта =0
+     */
+    function SendCssSelect($dir,$temp_name_f,$css_arr_f,$site_folder_level=0){
+        header('Content-type: text/css; charset: UTF-8');header('Cache-Control: public, max-age=14515200');
+        if(file_exists($this->dir.$temp_name_f.$this->def_f_ext)){
+            $this->SendGzip(file_get_contents($this->dir.$temp_name_f.$this->def_f_ext));
+        }else{
+            $site_folder='';
+            for($i=0;$i<$site_folder_level;$i++)$site_folder.='../';
+            foreach($css_arr_f as $v){$arr_file[]=$site_folder.'../css/'.$dir.'/'.$v.'.css';}
+            $css=$this->CashArrFile($arr_file);
+            $css=$this->ClearCss($css);
+            $this->WriteCss($css,$temp_name_f);
+            $this->SendGzip($css);
+        }
+    }
+
     private function SendCssMono($dir,$all_def){//отправка css без дополнений
         header('Content-type: text/css; charset: UTF-8');header('Cache-Control: public, max-age=14515200');
         if(file_exists($this->dir.$this->def_f_name.$this->def_f_ext)){
