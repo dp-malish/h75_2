@@ -8,7 +8,9 @@ A:hover,.link:hover{color:#B2251F;text-decoration:blink}
 body{background-color:#EFEFEF}
 .header,#headcontact{background-color:#4D5055}
 
-.grey{color:#969696}
+.grey{color:#969696;opacity:1;animation:teltext 2.2s infinite;}
+
+@keyframes teltext{0%{color:#969696;}40%{color:#fffff0;}100%{color:#969696;}}
 
 #foot{background-color:#4D5055;}
 #up{background:#4D5055;color:#ffffdd;}
