@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_URI']!='/'){
             case 'smoke'.Data::DatePass():$AdminCook->setCookieAdmin();Route::$index=1;break;
             //case $Opt::$setting:include'../modul/sota/admin/main.php';break;
 
-            //case 'cabinet':include'../modul/sota/cabinet.php';break;
+            case 'landing':include'../modul/smoke/landing.php';break;
 
             //case'bios-laptop':new \incl\win\Bios\Bios_laptop();break;
 
@@ -35,13 +35,22 @@ if($_SERVER['REQUEST_URI']!='/'){
 
 if(Route::$index){include'../modul/smoke/main.php';}
 
-$Opt::$css_down='<link rel="stylesheet" type="text/css" href="/css/fontawesome.php">';
+
 
 //$Opt::$slider=false;
+
+
+$Opt::$css_down.='<link rel="stylesheet" type="text/css" href="/css/fontawesome.php">';
 
 require '../blocks/smoke/common/head.php';
 require '../blocks/smoke/common/header.php';
 //require '../blocks/smoke/menu/top_menu.php';
-require '../blocks/smoke/common/l_col.php';
-require '../blocks/smoke/common/body.php';
+
+if($Opt::$body_column==3){
+    require '../blocks/smoke/common/l_col.php';
+    require '../blocks/smoke/common/body.php';
+}elseif($Opt::$body_column==1){
+    include '../blocks/smoke/common/body_col_1.php';
+}
+
 require '../blocks/smoke/common/footer.php';

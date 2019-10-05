@@ -1,9 +1,11 @@
 
 <!doctype html><html lang="ru"><head><link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="author" content="Александр Баранов"><meta name="copyright" lang="ru" content="MobileSmoke"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index,follow"><meta name="yandex-verification" content="cf7d12516e8b8b40"><meta name="google-site-verification" content="7bu1AuEffhwna4HjDMKrUwEOWW0KacyonJlt9VzYnKE"><meta name='wmail-verification' content='90961d9a291b4cba4672fe46efae4915'><script async src="/js/slider.php"></script><script async src="/js/scroll.php"></script><script async src="/js/common.php"></script><script async src="/js/call_back.php"></script><link rel="stylesheet" type="text/css" href="/css.php?v"><meta name="description" content="Большое количество наших клиентов смогли по достоинству оценить высокое качество и удобство горизонтальных кальянов MobileSmoke. Неповторимый густой и ароматный дым в сочетании с лёгкой тягой, сделают Ваш вечер оригинальным."><title>Плоские кальяны MobileSmoke - купить горизонтальный кальян MobileSmoke в Украине</title>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
 </head><body><header>
     <div class="header rel">
         <div class="headertop rel">
@@ -55,10 +57,16 @@
 
 
 
-                <a data-fancybox="gallery" href="/images/1.jpg"><img src="/images/1.jpg"></a>
-                <a data-fancybox="gallery" href="/images/2.jpg"><img src="/images/3.jpg"></a>
-                <a data-fancybox="gallery" href="/images/4.jpg"><img src="/images/4.jpg"></a>
-                <a data-fancybox="gallery" href="/images/5.jpg"><img src="/images/5.jpg"></a>
+
+
+                <!-- Add images to <div class="fotorama"></div> -->
+                <div class="fotorama" data-allowfullscreen="native" data-nav="thumbs" data-transition="crossfade" data-loop="true" data-autoplay="7000" data-keyboard="true" >
+                    <img src="https://s.fotorama.io/1.jpg">
+                    <img src="https://s.fotorama.io/2.jpg">
+                    <img src="/images/5.jpg">
+
+                    <img src="/images/4.jpg"><img src="/images/3.jpg"><img src="/images/1.jpg">
+                </div>
 
 
 

@@ -1,0 +1,17 @@
+.land_form{
+    position: relative;
+    width:450px;
+    margin:7px auto;
+    overflow:hidden;
+    /*padding:8px;*/
+    background-color:#72b572;
+    display: block;
+}
+.land_form>form>div>input {
+    display: block;
+    margin: 5px auto;
+}
+
+/*.land_form>form>div{
+     padding: 0 5px;
+ }*/
