@@ -1,17 +1,113 @@
-.land_form{
-    position: relative;
-    width:450px;
-    margin:7px auto;
-    overflow:hidden;
-    /*padding:8px;*/
-    background-color:#72b572;
-    display: block;
+#top_line_call_back_left{
+    width:49%;
+    float:left;
+    /*background-color: #0d95e8;*/
 }
-.land_form>form>div>input {
-    display: block;
-    margin: 5px auto;
+#top_line_call_back_left img{
+    border-radius:7%;
 }
 
-/*.land_form>form>div{
-     padding: 0 5px;
- }*/
+#top_line_call_back_right{
+    width:48%;
+    float:right;
+    /*background-color: #2c536c;*/
+    overflow:hidden;
+}
+
+@media screen and (max-width:840px){
+    #top_line_call_back_left{
+        width:100%;
+        float:none;
+    }
+    #top_line_call_back_right{
+        width:100%;
+        float:none;
+    }
+}
+
+.land_form{
+    position:relative;
+    width:87%;
+    margin:7px auto;
+    overflow:hidden;
+    /*background-color:#72b572;*/
+    display: block;
+}
+
+#land_form_call_back{
+    /*background-color:#723572;*/
+    display: block;
+
+}
+
+#land_form_call_back input{
+    width:80%;
+    height:40px;
+    font-size:18px;
+    display: block;
+    margin:28px auto;
+    border-radius:4px;
+    padding-left:40px
+}
+
+#land_form_call_back input[type="submit"]{
+    background-color:#9BEFF3;
+    height:47px;
+}
+
+#land_form_call_back input:hover{box-shadow:0 0 6px 3px rgba(58,219,253,.35)}
+
+#land_form_call_back .form-icon-men::before{
+    font-family:"FontAwesome";
+    content:"\f007";
+    position:absolute;
+    font-size:30px;
+    padding:9px 0 0 8%;
+    color:#2c536c;
+}
+
+#land_form_call_back .form-icon-tel::before{
+    font-family:"FontAwesome";
+    content:"\f095";
+    position:absolute;
+    font-size:30px;
+    padding:8px 0 0 8%;
+    color:#2c536c;
+}
+#land_form_call_back .form-icon-men:hover::before,#land_form_call_back .form-icon-tel:hover::before,#land_form_call_back .form-icon-pass:hover::before{
+    color:#319ebc;transition:all 0.3s;}
+
+@media screen and (max-width:350px){
+    #land_form_call_back .form-icon-men::before,#land_form_call_back .form-icon-tel::before{
+        padding-left:5%;
+    }
+}
+/*  после топа  */
+
+.land_fon_c{
+margin:8px 0;
+min-height:300px;
+padding:50px 0;
+}
+
+.land_fon_c_l{
+    float:left;
+    width:67%;
+    background-color:#2c536c;
+}
+.land_fon_c_r{
+    float:right;
+    width:32%;
+    background-color:#72b572;
+}
+@media screen and (max-width:840px){
+    .land_fon_c_l{
+        width:100%;
+        float:none;
+    }
+    .land_fon_c_r{
+        width:100%;
+        float:none;
+    }
+}
+

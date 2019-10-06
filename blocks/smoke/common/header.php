@@ -7,7 +7,7 @@
                         <div id="clock">
                             <div class="fl clock mt"></div>
                             <div class="fr five_">
-                                <div class="ac"><span class="grey">пн-пт:</span> 10:00-18:00</div><div class="ac"><span class="grey">сб:</span> 10:00-14:00</div><div class="ac"><span class="grey">вс:</span> выходной</div>
+                                <div class="ac"><span class="grey">пн-пт:</span> 08:00-21:00</div><div class="ac"><span class="grey">сб:</span> 09:00-20:00</div><div class="ac"><span class="grey">вс:</span> 10:00-20:00</div>
                             </div><div class="cl"></div>
                         </div>
                         <div id="tel">
@@ -41,7 +41,6 @@
             </div><div class="cl"></div>
         </div>
     </div><div class="cl"></div>
-    <div class="five five_"></div>
-<?php
+    <div class="five five_"></div><?php
     if(\incl\smoke\Def\OptSmoke::$slider)require '../blocks/smoke/slider/slider_main.php';
 ?></header>

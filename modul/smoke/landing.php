@@ -3,7 +3,7 @@ namespace lib\Def;
 Opt::$title='Плоские кальяны MobileSmoke - купить горизонтальный кальян MobileSmoke в Украине';
 Opt::$description='Большое количество наших клиентов смогли по достоинству оценить высокое качество и удобство горизонтальных кальянов MobileSmoke. Неповторимый густой и ароматный дым в сочетании с лёгкой тягой, сделают Ваш вечер оригинальным.';
 
-//Opt::$jscript.='<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>';
+Opt::$jscript.='<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>';
 
 
 Opt::$css.='<link rel="stylesheet" type="text/css" href="/css/landing.css">';
