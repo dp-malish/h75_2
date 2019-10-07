@@ -46,15 +46,28 @@
                 <div class="fotorama" data-allowfullscreen="native" data-nav="thumbs" data-transition="crossfade" data-loop="true" data-autoplay="7000" data-keyboard="true" >
                     <img src="https://s.fotorama.io/1.jpg">
                     <img src="https://s.fotorama.io/2.jpg">
+                    <img src="/images/7.jpg">
+                    <img src="/images/6.jpg">
                     <img src="/images/5.jpg">
                     <img src="/images/4.jpg">
                     <img src="/images/3.jpg">
+                    <img src="/images/2.jpg">
                     <img src="/images/1.jpg">
                 </div>
 
             </div>
-            <div class="land_fon_c_r">
-                rere
+            <div class="land_fon_c_r rel">
+                <h3 class="al">Кальян MobileSmoke</h3>
+                <div class="rel"></div>
+                <div class="land_price">
+                    720 грн  <span class="land_price_old">850 грн</span>
+                </div>
+                <div class="land_btn_buy">Купить</div>
+                <div>
+                    <p>Наши покупатели успели по достоинству оценить высокое качество и удобство горизонтальных кальянов MobileSmoke. Невероятно густой и ароматный дым, легкая тяга, оригинальный дизайн, прочность и мобильность - лишь основные преимущества кальянов MobileSmoke. Вы и Ваши друзья останетесь довольны кальяном MobileSmoke вне зависимости от того, где Вы намерены его использовать - на природе, на отдыхе, дома или на вечеринке.</p>
+
+
+                </div>
             </div>
         </div>
         <div class="cl"></div>

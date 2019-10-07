@@ -98,7 +98,8 @@ padding:50px 0;
 .land_fon_c_r{
     float:right;
     width:32%;
-    background-color:#72b572;
+/*    background-color:#72b572;*/
+    border: #0d95e8 1px solid;
 }
 @media screen and (max-width:840px){
     .land_fon_c_l{
@@ -109,5 +110,27 @@ padding:50px 0;
         width:100%;
         float:none;
     }
+}
+
+.land_price{
+    font-size: 200%;
+    margin:27px 0;
+}
+
+.land_price_old{
+    color:#BDBDBD;
+    text-decoration:line-through;
+}
+
+.land_btn_buy{
+    background-color:#FF4A4A;
+    height:30px;
+    width:120px;
+    border-radius:23px;
+    padding:17px;
+    color:#ffffdd;
+    font-weight: bold;
+    font-size:120%;
+    text-align: center;
 }
 
