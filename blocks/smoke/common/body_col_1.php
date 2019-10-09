@@ -62,11 +62,11 @@
                 <div class="land_price">
                     720 грн  <span class="land_price_old">850 грн</span>
                 </div>
-                <div class="land_btn_buy">Купить</div>
                 <div>
-                    <p>Наши покупатели успели по достоинству оценить высокое качество и удобство горизонтальных кальянов MobileSmoke. Невероятно густой и ароматный дым, легкая тяга, оригинальный дизайн, прочность и мобильность - лишь основные преимущества кальянов MobileSmoke. Вы и Ваши друзья останетесь довольны кальяном MobileSmoke вне зависимости от того, где Вы намерены его использовать - на природе, на отдыхе, дома или на вечеринке.</p>
-
-
+                <a class="land_btn_buy" href="#">Купить</a>
+                    <p>Наши покупатели успели по достоинству оценить высокое качество и удобство горизонтальных кальянов MobileSmoke. Невероятно густой и ароматный дым, легкая тяга, оригинальный дизайн, прочность и мобильность - лишь основные преимущества кальянов MobileSmoke. Вы и Ваши друзья останетесь довольны кальяном MobileSmoke вне зависимости от того, где Вы намерены его использовать.</p>
+                    <ul class="item"><li><span class="check"></span>Плоский корпус MobileSmoke;</li><li><span class="check"></span>Силиконовая чаша;</li><li><span class="check"></span>Шланг и мундштук MobileSmoke;</li><li><span class="check"></span>Устройство контроля нагрева табака (Kaloud Lotus);</li><li><span class="check"></span>Подсветка с пультом дистанционного управления;</li><li><span class="check"></span>Металлические щипцы.</li></ul>
+                <div class="cl"></div>
                 </div>
             </div>
         </div>
@@ -78,10 +78,40 @@
 
 
 <div>
-    <div class="maxw">
+    <div class="maxw land_benefits">
+        <div class="ac land_benefits_caption">
+            <h3>Наши преимущества</h3>
+            <p>В нашей компании вы получаете не только 100% качественный товар, но и индивидуальный подход к каждому клиенту!</p>
+        </div>
+        <div class="land_benefits_border cl"><br></div>
+        <div class="dwfte">
+            <div class="land_benefits_box five">
+                <span class="land_pay_i fl"></span>
+                <span><h4>Способы оплаты</h4><p>При получении на почте или на карту ПриватБанка</p></span>
+                <div class="cl"></div>
+            </div>
+            <div class="land_benefits_box five">
+                <span class="land_quality_i fl"></span>
+                <span><h4>Гарантия качества</h4><p>Возврат и обмен в течении 14 дней согласно закона</p></span>
+                <div class="cl"></div>
+            </div>
+        </div>
+        <div class="land_benefits_border cl"></div>
+        <div class="dwfte">
+            <div class="land_benefits_box five">
+                <span class="land_delivery_i fl"></span>
+                <span><h4>Быстрая доставка</h4><p>Получите свой заказ в течении 1-2 дней с момента заказа</p></span>
+                <div class="cl"></div>
+            </div>
+            <div class="land_benefits_box five">
+                <span class="land_price_i fl"></span>
+                <span><h4>Доступные цены</h4><p>Вы можете приобрести кальян MobileSmoke всего за 720 грн</p></span>
+                <div class="cl"></div>
+            </div>
+        </div>
 
     </div>
-    <div class="cl"></div>
+    <div class="cl five five_"></div>
 </div>
 
 
