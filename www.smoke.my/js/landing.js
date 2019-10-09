@@ -6,6 +6,10 @@ window.addEventListener("load",function(){
     document.getElementById("land_form_call_back").addEventListener("click",function(event){event.preventDefault();});
 
     document.getElementById("formCallBackSubmitLand").addEventListener("click",function(){formCalBackLand();},false);
+
+    document.getElementById("land_form_fast_buy").addEventListener("click",function(event){event.preventDefault();});
+
+    document.getElementById("formFastBuySubmitLand").addEventListener("click",function(){formFastBuyLand();},false);
 },true);
 
 function formCalBackLand(){
@@ -24,4 +28,11 @@ function formCallBackSubmitAnswerLand(arr){
     document.getElementById("formCallBackNameLand").value="";
     document.getElementById("formCallBackTelLand").value="";
     //document.getElementById("formCallBackSubmitLand").disabled=false;
+}
+
+
+function formFastBuyLand(){
+
+    alert("e");
+
 }

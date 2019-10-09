@@ -2,6 +2,7 @@
 
 <div class="rel">
     <div id="top_line_call_back" class="maxw rel">
+        <section>
         <h2>Горизонтальный кальян MobileSmoke -<br>
             тренд современности!</h2>
         <div class="five rel"><br></div>
@@ -29,6 +30,7 @@
             </div>
         </div>
         <div class="cl"></div>
+        </section>
     </div>
     <div class="cl"></div>
 </div>
@@ -42,17 +44,19 @@
 <div class="relt rel">
     <div class="land_fon_c rel">
         <div class="maxw rel">
+            <section>
             <div class="land_fon_c_l rel">
                 <div class="fotorama" data-allowfullscreen="native" data-nav="thumbs" data-transition="crossfade" data-loop="true" data-autoplay="7000" data-keyboard="true" >
-                    <img src="https://s.fotorama.io/1.jpg">
-                    <img src="https://s.fotorama.io/2.jpg">
-                    <img src="/images/7.jpg">
-                    <img src="/images/6.jpg">
-                    <img src="/images/5.jpg">
-                    <img src="/images/4.jpg">
-                    <img src="/images/3.jpg">
-                    <img src="/images/2.jpg">
-                    <img src="/images/1.jpg">
+                    <img src="/img/fast_order/black.jpg" alt="Кальян MobileSmoke - чёрный">
+                    <img src="/img/fast_order/black_box.jpg" alt="Кальян MobileSmoke - чёрный в коробке">
+                    <img src="/img/fast_order/black_kind.jpg" alt="Кальян MobileSmoke">
+                    <img src="/img/fast_order/white.jpg" alt="Кальян MobileSmoke - белый">
+                    <img src="/img/fast_order/white_box.jpg" alt="Кальян MobileSmoke - белый в коробке">
+                    <img src="/img/fast_order/box.jpg" alt="Кальян MobileSmoke в коробке">
+                    <img src="/img/fast_order/fon.jpg" alt="Кальян MobileSmoke">
+                    <img src="/img/fast_order/red.jpg" alt="Кальян MobileSmoke - красный">
+                    <img src="/img/fast_order/green.jpg" alt="Кальян MobileSmoke - зелёный">
+                    <img src="/img/fast_order/blue.jpg" alt="Кальян MobileSmoke - синий">
                 </div>
 
             </div>
@@ -69,6 +73,7 @@
                 <div class="cl"></div>
                 </div>
             </div>
+            </section>
         </div>
         <div class="cl"></div>
     </div>
@@ -79,6 +84,7 @@
 
 <div>
     <div class="maxw land_benefits">
+        <section>
         <div class="ac land_benefits_caption">
             <h3>Наши преимущества</h3>
             <p>В нашей компании вы получаете не только 100% качественный товар, но и индивидуальный подход к каждому клиенту!</p>
@@ -109,7 +115,7 @@
                 <div class="cl"></div>
             </div>
         </div>
-
+        </section>
     </div>
     <div class="cl five five_"></div>
 </div>
@@ -118,6 +124,7 @@
 <div>
     <div class="land_fon_c">
         <div class="maxw">
+            <article>
             <h3>Инструкция:</h3>
             <p>Горизонтальный кальян MobileSmoke абсолютно идентичен в эксплуатации, как обычный классический кальян, за исключением нескольких моментов:</p>
             <ul class="item">
@@ -132,6 +139,7 @@
             <li><span class="check"></span>Пока прогревается табак, устанавливаем шланг, после чего кальян можно использовать.</li>
             <li><span class="check"></span>После использования кальян рекомендуем промыть теплой водой со средством для мытья посуды, после чего ополоснуть кальян и дать ему просохнуть высохнуть. Также рекомендуем промыть шланг и мундштук. После сушки убрать кальян в коробку до следующего использования.</li>
             </ul>
+            </article>
         </div>
     </div>
     <div class="cl"></div>
@@ -143,8 +151,9 @@
 <div class="rel">
     <div class="maxw">
         <div id="land-fast-order" class="five"></div>
+        <section>
         <h3>Сделать заказать по акции:</h3>
-        <form class="land_form_fast_buy">
+        <form id="land_form_fast_buy" class="land_form_fast_buy">
             <div class="rel">
                 <input id="formFastFIOLand" name="username" type="text" size="33" title="Введите Ваше имя" placeholder="Фамилия и Имя *" required="">
             </div>
@@ -168,9 +177,10 @@
             </select>
             </div>
             <div class="rel">
-                <input type="submit" value="Заказать">
+                <input id="formFastBuySubmitLand" type="submit" value="Заказать">
             </div>
         </form>
+        </section>
     </div>
     <div class="cl"></div>
 </div>
