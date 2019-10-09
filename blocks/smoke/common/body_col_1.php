@@ -118,6 +118,46 @@
 <div>
     <div class="land_fon_c">
         <div class="maxw">
+            <h3>Инструкция:</h3>
+            <p>Горизонтальный кальян MobileSmoke абсолютно идентичен в эксплуатации, как обычный классический кальян, за исключением нескольких моментов:</p>
+            <ul class="item">
+            <li><span class="check"></span>В светодиодную шайбу вставляем батарейки (нужны 3 шт. батарейки ААА «мизинчиковые» - в комплект не входят);</li>
+            <li><span class="check"></span>Устанавливаем светодиодную шайбу в корпус кальяна в специальное отверстие на дне кальяна;</li>
+            <li><span class="check"></span>Заливаем в корпус воду через большое отверстие в верхней плоскости кальяна (по желанию добавляем лёд) по верхний уровень углубления светодиодной шайбы;</li>
+            <li><span class="check"></span></li>
+            <li><span class="check"></span></li>
+            <li><span class="check"></span></li>
+            <li><span class="check"></span></li>
+            <li><span class="check"></span></li>
+            <li><span class="check"></span></li>
+            <li><span class="check"></span></li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="cl"></div>
+</div>
+
+
+
+
+<div class="rel">
+    <div class="maxw">
+
+
+
+        re re er
+        rere
+
+    </div>
+    <div class="cl"></div>
+</div>
+
+
+
+<div>
+    <div class="land_fon_c">
+        <div class="maxw">
             re re er
             rere
         </div>
@@ -126,6 +166,11 @@
 </div>
 
 
+
+
+
+
+тут колонки
 <div class="maxw rel"><div class="l_col rel"><div class="cl"></div></div><div id="m_col" class="rel"><!--Пр кол--><div class="r_col"><div class="cl"></div></div><!--Центр кол--><div id="c_col" class="rel"><main>
 
 
