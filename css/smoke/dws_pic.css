@@ -12,7 +12,7 @@
 }
 
 .dws-wrapper a img{
- height: 400px;
+ max-height: 400px;
  width: 100%
 }
 
