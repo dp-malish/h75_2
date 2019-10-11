@@ -30,9 +30,28 @@ function formCallBackSubmitAnswerLand(arr){
     //document.getElementById("formCallBackSubmitLand").disabled=false;
 }
 
+/***************************************************************/
 
 function formFastBuyLand(){
 
-    alert("e");
+    if(document.getElementById("formFastFIOLand").value==""){
+        document.getElementById("formFastFIOLand").focus();
+    }else if(document.getElementById("formFastTelLand").value==""){
+        document.getElementById("formFastTelLand").focus();
+    }else if(document.getElementById("formFastTownLand").value==""){
+        document.getElementById("formFastTownLand").focus();
+    }else if(document.getElementById("formFastNPostLand").value==""){
+        document.getElementById("formFastNPostLand").focus();
+    }else if(document.getElementById("formFastColorLand").value==""){
+        document.getElementById("formFastColorLand").focus();
+    }else{
+        //document.getElementById("formFastBuySubmitLand").disabled=true;
+        ajaxPostSend("fast_order=1&name="+document.getElementById("formFastFIOLand").value+
+            "&tel="+document.getElementById("formFastTelLand").value+
+            "&town="+document.getElementById("formFastTownLand").value+
+            "&npost="+document.getElementById("formFastNPostLand").value+
+            "&color="+document.getElementById("formFastColorLand").value
+            ,formCallBackSubmitAnswerLand,true,true,"/ajax/order/fast_order.php");
+    }
 
 }

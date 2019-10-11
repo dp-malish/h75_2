@@ -164,10 +164,10 @@
                 <input id="formFastTownLand" name="town" type="text" size="13" title="Введите Ваш город" placeholder="Город">
             </div>
             <div class="rel">
-                <input id="formFastNPostLand" name="n_post" type="text" size="4" title="Введите номер Новой почты" placeholder="Номер отделения новой почты">
+                <input id="formFastNPostLand" name="n_post" type="number" min="1" title="Введите номер Новой почты" placeholder="Номер отделения новой почты">
             </div>
             <div class="rel">
-            <select class="rel" onchange="this.style.color='black'"><!--style="color:gray"-->
+            <select id="formFastColorLand" class="rel" onchange="this.style.color='black'"><!--style="color:gray"-->
                 <option value="">Выбрать цвет</option><!-- style="display:none"-->
                 <option value="black">Чёрный</option>
                 <option value="white">Белый</option>
