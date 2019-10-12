@@ -10,7 +10,8 @@ $map->StartCache();
 echo $map->StartSiteMap();
 
 echo $map->StaticFileMap('../modul/smoke/main.php','','monthly','0.5');
-//echo $map->StaticFileMap('../modul/stroy/contacts.php','контакты','monthly','0.5');
+
+echo $map->StaticFileMap('../modul/smoke/fast_order_ms.php','mobilesmoke-fast-order-in-ukraine','monthly','0.5');
 
 /*$res=$DB->arrSQL('SELECT link,data FROM def_content WHERE menu=1');
 foreach($res as $k=>$v){echo $map->DBUrlMap($v['link'],Def\Data::IntToStrMap($v['data']),'monthly');}*/

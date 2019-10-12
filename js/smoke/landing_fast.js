@@ -1,6 +1,3 @@
-
-
-
 window.addEventListener("load",function(){
 
     document.getElementById("land_form_call_back").addEventListener("click",function(event){event.preventDefault();});
@@ -45,7 +42,7 @@ function formFastBuyLand(){
     }else if(document.getElementById("formFastColorLand").value==""){
         document.getElementById("formFastColorLand").focus();
     }else{
-        //document.getElementById("formFastBuySubmitLand").disabled=true;
+        document.getElementById("formFastBuySubmitLand").disabled=true;
         ajaxPostSend("fast_order=1&name="+document.getElementById("formFastFIOLand").value+
             "&tel="+document.getElementById("formFastTelLand").value+
             "&town="+document.getElementById("formFastTownLand").value+

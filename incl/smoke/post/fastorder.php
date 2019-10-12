@@ -13,8 +13,9 @@ class FastOrder extends Post\Post{
            if(!$tel){$err=true;}
            $town=Def\Validator::auditText($_POST['town'],'город',33);
            if(!$town){$err=true;}
-           $npost=Def\Validator::paternInt($_POST['npost']);
-           if(!$npost){$err=true;Def\Validator::$ErrorForm[]='Новая почта - число';}
+           $npost=Def\Validator::html_cod($_POST['npost']);
+           $npost_err=Def\Validator::paternInt($npost);
+           if(!$npost_err){$err=true;Def\Validator::$ErrorForm[]='Новая почта - число';}
            $color=Def\Validator::auditText($_POST['color'],'цвет',20);
            if(!$color){$err=true;}
 
@@ -24,15 +25,14 @@ class FastOrder extends Post\Post{
                $sql='INSERT INTO order_fast(username,tel,town,npost,color,ip)VALUES(?,?,?,?,?,?)';
                $param=[$name,$tel,$town,$npost,$color,$ip];
                $sql=$DB->realEscape($sql,$param);
-            /*                        if(!$DB->boolSQL($sql)){
-                                     $err=true;
-                                     Def\Validator::$ErrorForm[]='Ошибка соединения, повторите попытку позже...';
-                                   }else{
-                                       if(!mail('win@i.ua','Call Me',$name.'\n'.$tel.'\n'.$ip))
-                                           Def\Validator::$ErrorForm[]='Хрен с почтой';
-                                   }*/
+               if(!$DB->boolSQL($sql)){
+                   $err=true;
+                   Def\Validator::$ErrorForm[]='Ошибка соединения, повторите попытку позже...';
+               }else{
+                   if(!mail('win@i.ua','Call Me',$name.'\n '.$tel.'\n '.$ip.'\n '.$town.'\n '.$npost.'\n '.$color))
+                   Def\Validator::$ErrorForm[]='Ошибка оповещёния...';
+               }
            }
-
         }else{$err=true;}
         return($err)?false:true;
     }

@@ -3,7 +3,7 @@
 (function(){
     var css=document.createElement('link');
     css.rel='stylesheet';
-    css.href='../css/form.php';
+    css.href='/css/form.php';
     css.type='text/css';
     var defer=document.getElementsByTagName('link')[0];
     defer.parentNode.insertBefore(css,defer);
