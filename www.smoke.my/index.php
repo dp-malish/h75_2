@@ -26,7 +26,7 @@ if($_SERVER['REQUEST_URI']!='/'){
             case 'mobilesmoke-fast-order-in-ukraine':include'../modul/smoke/fast_order_ms.php';break;
 
 
-            //case 'landing':include'../modul/smoke/landing.php';break;
+            case 'landing':include'../modul/smoke/landing.php';break;
 
             //case'bios-laptop':new \incl\win\Bios\Bios_laptop();break;
 
