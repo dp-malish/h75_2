@@ -138,6 +138,16 @@ padding:50px 0;
     text-decoration: none;
 }
 
+.land_btn_buy:hover{
+    background-color:#92434A;
+    box-shadow: 0 0 10px rgba(190,50,20,.5);
+}
+
+.land_btn_buy:active{
+    background-color:#994A4A;
+    box-shadow: 0 0 10px rgba(190,50,20,.9);
+}
+
 
 a.land_btn_buy{color:#fff;text-decoration:none}
 
@@ -275,6 +285,11 @@ a.land_btn_buy{color:#fff;text-decoration:none}
     transform:translateX(0%) translateY(-50%);
     /*animation: loader_animate 1.1s infinite linear;*/
 }
+.basket:active{
+    box-shadow: 0 0 10px rgba(10,10,10,.5);
+}
+
+
 .basket_calc{
     text-align:center;
     position: absolute;
