@@ -12,7 +12,7 @@ if(FastOrder::issetPostArr()){
 
         //echo json_encode(['err'=>false,'answer'=>'Спасибо! Мы Вам перезвоним в ближайшее время...']);
 
-        if(FastOrder::FastOrderFun()){
+        if(FastOrder::FastOrderFun(\incl\smoke\Def\OptSmoke::MAIL_WARNING)){
             echo json_encode(['err'=>false,'answer'=>'Спасибо! Мы Вам перезвоним в ближайшее время...']);
         }else{FastOrder::answerErrJson();}
 

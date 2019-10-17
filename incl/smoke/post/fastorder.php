@@ -2,9 +2,10 @@
 namespace incl\smoke\Post;
 use lib\Def as Def;
 use lib\Post as Post;
+use lib\Mail as Mail;
 class FastOrder extends Post\Post{
 
-    static function FastOrderFun(){$err=false;
+    static function FastOrderFun($to){$err=false;
 
        if(self::issetPostKey(['name','tel','town','npost','color'])){
            $name=Def\Validator::auditFIO($_POST['name']);
@@ -29,8 +30,10 @@ class FastOrder extends Post\Post{
                    $err=true;
                    Def\Validator::$ErrorForm[]='Ошибка соединения, повторите попытку позже...';
                }else{
-                   if(!mail('win@i.ua','Call Me',$name.'\n '.$tel.'\n '.$ip.'\n '.$town.'\n '.$npost.'\n '.$color))
-                   Def\Validator::$ErrorForm[]='Ошибка оповещёния...';
+                   //if(!mail('win@i.ua','Call Me',$name.'\n '.$tel.'\n '.$ip.'\n '.$town.'\n '.$npost.'\n '.$color))
+                   if(!Mail\Mail::sendMail($to,'Автоответчик <admin@'.$_SERVER['SERVER_NAME'].'>','Заказ','ФИО '.$name.'<br>Тел. '.$tel.'<br>ip adress: '.$ip.'<br>Город: '.$town.'<br> '.$npost.'<br>Цвет: '.$color)){
+                      Def\Validator::$ErrorForm[]='Ошибка оповещёния...';
+                   }
                }
            }
         }else{$err=true;}

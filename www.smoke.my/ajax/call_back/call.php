@@ -10,7 +10,7 @@ if(Post::issetPostArr()){
         //Post::answerErrJson();
         //$xxx=CallBack::CallBackFun();
 
-        if(CallBack::CallBackFun()){
+        if(CallBack::CallBackFun(\incl\smoke\Def\OptSmoke::MAIL_WARNING)){
             echo json_encode(['err'=>false,'answer'=>'Спасибо! Мы Вам перезвоним в ближайшее время...']);
         }else{Post::answerErrJson();}
 
