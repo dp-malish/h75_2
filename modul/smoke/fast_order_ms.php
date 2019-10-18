@@ -1,5 +1,8 @@
 <?php
 namespace lib\Def;
+
+Opt::$meta.='<meta property="og:image" content="https://mobilesmoke.com.ua/img/fast_order/dbpic.php?i=black"><meta property="og:title" content="Плоские кальяны MobileSmoke - купить горизонтальный кальян MobileSmoke"><meta property="og:description" content="Неповторимый густой и ароматный дым в сочетании с лёгкой тягой, сделают Ваш вечер оригинальным.">';
+
 Opt::$title='Плоские кальяны MobileSmoke - купить горизонтальный кальян MobileSmoke в Украине';
 Opt::$description='Большое количество наших клиентов смогли по достоинству оценить высокое качество и удобство горизонтальных кальянов MobileSmoke. Неповторимый густой и ароматный дым в сочетании с лёгкой тягой, сделают Ваш вечер оригинальным.';
 
