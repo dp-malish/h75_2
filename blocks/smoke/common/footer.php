@@ -5,7 +5,7 @@
 
 
 
-<!----><div id="formBackShadow" class="form-back-shadow ac"></div>
+<!--<div id="formBackShadow" class="form-back-shadow ac"></div>
 
 <div id="modalloadform" class="form">
     <div id="formLoadConvas" class="form-convas">
@@ -21,6 +21,7 @@
     </div>
     <div class="closex">X</div>
 </div>
+-->
 
 <div id="basket_land" class="basket">
     <div id="basket_calc_land" class="basket_calc"></div>
