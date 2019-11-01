@@ -14,6 +14,7 @@ class Optsql{
             case 'sota.my':$this->db_con=['root','root','sota'];break;
             case 'harvis2.my':$this->db_con=['root','root','harvi'];break;
             case 'smoke.my':$this->db_con=['root','root','smoke'];break;
+            case 'optstore.my':$this->db_con=['root','root','smoke'];break;
             default:Route::location();
             }
         }else{
