@@ -21,7 +21,7 @@ Opt::$main_content.='<main>
     <div id="top_line_call_back" class="maxw rel">
         <section><h2>Горизонтальный кальян MobileSmoke -<br>тренд современности!</h2>
         <div class="five rel"><br></div>
-        <div id="top_line_call_back_left" class="rel"><img src="/img/landing/dbpic.php?i=hookah" alt="Кальян горизонтальный"></div>
+        <div id="top_line_call_back_left" class="rel"><img src="/img/landing/dbpic.php?i=MobileSmoke" alt="Кальян горизонтальный"></div>
         <div id="top_line_call_back_right" class="rel">
             <div class="land_form rel">
                 <form id="land_form_call_back">
