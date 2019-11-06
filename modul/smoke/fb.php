@@ -1,10 +1,10 @@
 <?php
 namespace lib\Def;
 
-Opt::$meta.='<meta property="og:image" content="https://mobilesmoke.com.ua/img/fast_order/meta.jpg"><meta property="og:title" content="Топ кальяны MobileSmoke - купить горизонтальный кальян MobileSmoke"><meta property="og:description" content="Неповторимый густой и ароматный дым в сочетании с лёгкой тягой, сделают Ваш вечер оригинальным.">';
+Opt::$meta.='<meta property="og:image" content="https://mobilesmoke.com.ua/img/fast_order/meta.jpg"><meta property="og:title" content="Топ kaльяны MobileSmoke - купить горизонтальный kaльян MobileSmoke"><meta property="og:description" content="Неповторимый густой и ароматный дым в сочетании с лёгкой тягой, сделают Ваш вечер оригинальным.">';
 
-Opt::$title='Топ кальяны MobileSmoke - купить горизонтальный кальян MobileSmoke в Украине';
-Opt::$description='Большое количество наших клиентов смогли по достоинству оценить высокое качество и удобство горизонтальных кальянов MobileSmoke. Неповторимый густой и ароматный дым в сочетании с лёгкой тягой, сделают Ваш вечер оригинальным.';
+Opt::$title='Топ kaльяны MobileSmoke - купить горизонтальный kaльян MobileSmoke в Украине';
+Opt::$description='Большое количество наших клиентов смогли по достоинству оценить высокое качество и удобство горизонтальных kaльянов MobileSmoke. Неповторимый густой и ароматный дым в сочетании с лёгкой тягой, сделают Ваш вечер оригинальным.';
 
 Opt::$css_down.='<link rel="stylesheet" type="text/css" href="/css/landing_f_order.php"><link href="/css/fotorama.php" rel="stylesheet">';
 
@@ -19,9 +19,9 @@ Opt::$jscript.='<script async src="/js/landing_fast.php"></script><script type="
 Opt::$main_content.='<main>
 <div class="rel">
     <div id="top_line_call_back" class="maxw rel">
-        <section><h2>Горизонтальный кальян MobileSmoke -<br>тренд современности!</h2>
+        <section><h2>Горизонтальный kaльян MobileSmoke -<br>тренд современности!</h2>
         <div class="five rel"><br></div>
-        <div id="top_line_call_back_left" class="rel"><img src="/img/landing/dbpic.php?i=MobileSmoke" alt="Кальян горизонтальный"></div>
+        <div id="top_line_call_back_left" class="rel"><img src="/img/landing/dbpic.php?i=MobileSmoke" alt="MobileSmoke"></div>
         <div id="top_line_call_back_right" class="rel">
             <div class="land_form rel">
                 <form id="land_form_call_back">
@@ -47,25 +47,25 @@ Opt::$main_content.='<main>
             <section>
             <div class="land_fon_c_l rel">
                 <div class="fotorama" data-allowfullscreen="native" data-nav="thumbs" data-transition="crossfade" data-loop="true" data-autoplay="7000" data-keyboard="true" >
-                    <img src="/img/fast_order/dbpic.php?i=black" alt="Кальян MobileSmoke - чёрный">
-                    <img src="/img/fast_order/dbpic.php?i=black_box" alt="Кальян MobileSmoke - чёрный в коробке">
-                    <img src="/img/fast_order/dbpic.php?i=black_kind" alt="Кальян MobileSmoke">
-                    <img src="/img/fast_order/dbpic.php?i=white" alt="Кальян MobileSmoke - белый">
-                    <img src="/img/fast_order/dbpic.php?i=white_box" alt="Кальян MobileSmoke - белый в коробке">
-                    <img src="/img/fast_order/dbpic.php?i=box" alt="Кальян MobileSmoke в коробке">
-                    <img src="/img/fast_order/dbpic.php?i=fon" alt="Кальян MobileSmoke">
-                    <img src="/img/fast_order/dbpic.php?i=red" alt="Кальян MobileSmoke - красный">
-                    <img src="/img/fast_order/dbpic.php?i=green" alt="Кальян MobileSmoke - зелёный">
-                    <img src="/img/fast_order/dbpic.php?i=blue" alt="Кальян MobileSmoke - синий">
+                    <img src="/img/fast_order/dbpic.php?i=black" alt="MobileSmoke - чёрный">
+                    <img src="/img/fast_order/dbpic.php?i=black_box" alt="MobileSmoke - чёрный в коробке">
+                    <img src="/img/fast_order/dbpic.php?i=black_kind" alt="MobileSmoke">
+                    <img src="/img/fast_order/dbpic.php?i=white" alt="MobileSmoke - белый">
+                    <img src="/img/fast_order/dbpic.php?i=white_box" alt="MobileSmoke - белый в коробке">
+                    <img src="/img/fast_order/dbpic.php?i=box" alt="MobileSmoke в коробке">
+                    <img src="/img/fast_order/dbpic.php?i=fon" alt="MobileSmoke">
+                    <img src="/img/fast_order/dbpic.php?i=red" alt="MobileSmoke - красный">
+                    <img src="/img/fast_order/dbpic.php?i=green" alt="MobileSmoke - зелёный">
+                    <img src="/img/fast_order/dbpic.php?i=blue" alt="MobileSmoke - синий">
                 </div>
             </div>
             <div class="land_fon_c_r rel">
-                <h3 class="al">Кальян MobileSmoke</h3>
+                <h3 class="al">Kaльян MobileSmoke</h3>
                 <div class="rel"></div>
                 <div class="land_price">720 грн  <span class="land_price_old">850 грн</span></div>
                 <div>
                 <a class="land_btn_buy" href="#land-fast-order">Купить</a>
-                    <p>Наши покупатели успели по достоинству оценить высокое качество и удобство горизонтальных кальянов MobileSmoke. Невероятно густой и ароматный дым, легкая тяга, оригинальный дизайн, прочность и мобильность - лишь основные преимущества кальянов MobileSmoke. Вы и Ваши друзья останетесь довольны кальяном MobileSmoke вне зависимости от того, где Вы намерены его использовать.</p>
+                    <p>Наши покупатели успели по достоинству оценить высокое качество и удобство горизонтальных kaльянов MobileSmoke. Невероятно густой и ароматный дым, легкая тяга, оригинальный дизайн, прочность и мобильность - лишь основные преимущества kaльянов MobileSmoke. Вы и Ваши друзья останетесь довольны кальяном MobileSmoke вне зависимости от того, где Вы намерены его использовать.</p>
                     <ul class="item"><li><span class="check"></span>Плоский корпус MobileSmoke;</li><li><span class="check"></span>Силиконовая чаша;</li><li><span class="check"></span>Шланг и мундштук MobileSmoke;</li><li><span class="check"></span>Устройство контроля нагрева табака (Kaloud Lotus);</li><li><span class="check"></span>Подсветка с пультом дистанционного управления;</li><li><span class="check"></span>Металлические щипцы.</li></ul>
                 <div class="cl"></div>
                 </div>
@@ -115,7 +115,7 @@ Opt::$main_content.='<main>
     <div class="land_fon_c">
         <div class="maxw">
             <article><h3>Инструкция:</h3>
-            <p>Горизонтальный кальян MobileSmoke абсолютно идентичен в эксплуатации, как обычный классический кальян, за исключением нескольких моментов:</p>
+            <p>Горизонтальный kaльян MobileSmoke абсолютно идентичен в эксплуатации, как обычный классический кальян, за исключением нескольких моментов:</p>
             <ul class="item">
             <li><span class="check"></span>В светодиодную шайбу вставляем батарейки (нужны 3 шт. батарейки ААА «мизинчиковые» - в комплект не входят);</li>
             <li><span class="check"></span>Устанавливаем светодиодную шайбу в корпус кальяна в специальное отверстие на дне кальяна;</li>
