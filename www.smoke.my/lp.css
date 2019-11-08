@@ -1,0 +1,79 @@
+html,body{height:100%;
+    font:15px Verdana,Geneva,serif;
+    text-align:justify;
+    cursor:default
+}
+.maxw{
+    margin:0 auto;
+    max-width:1240px;
+    overflow:hidden;
+}
+/*++++++++++++++++++++++++++++++++*/
+
+body{
+
+}
+
+.min_h{
+    min-height:100px;
+}
+
+.fon{
+    background-color: #ffffdd;
+}
+.fon2{
+    background-color:#EFE0C8;
+}
+/************************************/
+
+.first_d{
+    /*background-image:url(img/lp/dym_top_fon.jpg);*/
+    background-color:#8E8B8B;
+    min-height: 900px;
+}
+.first_d>div{
+    height:165px;
+    background:linear-gradient(rgba(0,0,0,.9) 0,rgba(0,0,0,.7) 35%,rgba(0,0,0,.3) 70%,transparent 100%);
+}
+
+.dexter_menu{
+ color: #ffffdd;
+}
+
+.dexter_menu [type="checkbox"]{
+   display: none;
+}
+
+.dexter_menu label.toggleMenu span{
+    display:block;
+    background-color:#ffffdd;
+    width:33px;
+    height:4px;
+    margin:9px 0;
+}
+
+.dexter_menu input.toggleMenu:checked span{
+    display:none;
+    background-color:#ffffdd;
+    width:33px;
+    height:4px;
+    margin:9px 0;
+}
+
+.dexter_menu input.toggleMenu:checked .dexter_menu_span_c{
+/*    opacity:0;
+    display:none;*/
+    background-color: #00BC52;
+}
+
+/*.dexter_menu [type="checkbox"]:checked ~ ul{
+    display: none;
+}*/
+
+
+.dexter_menu input.toggleMenu:checked ~ ul{
+    display: none;
+    position: relative;
+    max-height: 5000px;
+    transition: max-height 2s ease-in;
+}
