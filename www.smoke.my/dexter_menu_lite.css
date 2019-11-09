@@ -1,0 +1,107 @@
+.dexter_menu{
+    color: #ffffdd;
+    width:53px;
+    position: relative;
+    text-align: center;
+    height: 40px;
+    font-family: 'Arial';
+}
+
+/********************/
+#dexter_menu_check{
+    display: none;
+}
+.dexter_menu label{
+    width:100px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*width: 100%;*/
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+    line-height: 40px;
+}
+
+/********************/
+.dexter_menu_label{display:none}
+/********** бургер крестик **********/
+.dexter-line{
+    position:absolute;
+    top:8px;
+    left:10px;
+    width:35px;
+    height:2px;
+    background-color:#fff;
+    transition:.5s all;
+}
+.dexter_menu .second,.dexter_menu .third{top:18px;}
+.dexter_menu .fourth{top:28px;}
+
+
+.dexter_menu .dexter-main-menu-top{/*див  с надписью menu*/
+    background-color: #000;
+    width:100%;
+    height: 100%;
+    transition: .5s all;
+}
+/*анимация крестика бурера*/
+#dexter_menu_check:checked~.first{display:none}
+#dexter_menu_check:checked~.fourth{display:none}
+#dexter_menu_check:checked~.second{transform:rotate(45deg)}
+#dexter_menu_check:checked~.third{transform:rotate(-45deg)}
+/********* сами пункты меню***********/
+
+.dexter_menu .dexter-main-menu{
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform:translateY(100%);/*раскрываться на 100% всех подменю*/
+    max-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    transition: .5s all;
+}
+.dexter_menu  .dexter-main-menu a{
+    display:block;
+    width:100%;
+    padding:13px 0;
+    color:#fffffd;
+    text-decoration: none;
+    border-top: 1px solid rgba(255,255,255,.3);
+    background-color: #000;
+}
+
+#dexter_menu_check:checked ~ .dexter-main-menu-top> .dexter_menu_label{
+    display: block;
+}
+
+@media screen and (max-width:800px){
+
+    #dexter_menu_check:checked ~ .dexter-main-menu-top{
+        padding-top:13px;
+        width:800px;
+        display: block;
+    }
+    #dexter_menu_check:checked ~ .dexter-main-menu{
+        max-height:600px;
+        font-size:16px;
+        width:100%;
+    }
+}
+/*
+
+    #dexter_menu_check:checked ~ .dexter-main-menu-top{
+        padding-top:13px;
+        width:325px;display: block;
+    }
+    #dexter_menu_check:checked ~ .dexter-main-menu{
+        max-height:600px;
+        font-size:16px;
+        width:325px;
+    }
+
+*/
