@@ -7,6 +7,7 @@ html,body{height:100%;
 .maxw{
     margin:0 auto;
     max-width:1240px;
+    overflow-y:hidden;
 
 }
 /*++++++++++++++++++++++++++++++++*/
@@ -28,14 +29,38 @@ body{
 /************************************/
 
 .first_d{
-    /*background-image:url(img/lp/dym_top_fon.jpg);*/
-    background-color:#8E8B8B;
+    background-image:url(img/lp/dym_top_fon.jpg);
+    /*background-color:#8E8B8B;*/
     min-height: 900px;
 }
 .first_d>div{
     height:165px;
     background:linear-gradient(rgba(0,0,0,.9) 0,rgba(0,0,0,.7) 35%,rgba(0,0,0,.3) 70%,transparent 100%);
     padding-top:25px;
+}
+#logo{
+    margin:0 0 0 7%;
+    float:left;
+    width:15%;
+    text-align: center;
+}
+@media screen and (min-width:1100px) and (max-width:1240px){
+    #logo{width:14%;}
+}
+@media screen and (min-width:1000px) and (max-width:1099px){
+    #logo{width:15%}
+}
+@media screen and (min-width:900px) and (max-width:999px){
+    #logo{width:16%}
+}
+@media screen and (min-width:740px) and (max-width:899px){
+    #logo{width:17%}
+}@media screen and (min-width:541px) and (max-width:739px){
+    #logo{width:19%}
+}
+@media screen and (max-width:540px){
+    #logo,.h_field{width:100%;margin:0}
+    #logo img{width:70%}
 }
 
 
