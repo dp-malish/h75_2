@@ -7,7 +7,7 @@ html,body{height:100%;
 .maxw{
     margin:0 auto;
     max-width:1240px;
-    overflow-y:hidden;
+    /*overflow-x:hidden;*/
 
 }
 /*++++++++++++++++++++++++++++++++*/
