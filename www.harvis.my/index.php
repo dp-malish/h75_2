@@ -26,6 +26,10 @@ if($_SERVER['REQUEST_URI']!='/'){
             }
         }
     }
-}else{Route::$index=1;}if(Route::$module404){Route::modul404();}
+}//else{Route::$index=1;}if(Route::$module404){Route::modul404();}
+
+
+
+
 if(Route::$index){include'../modul/harvis/main.php';}
 require'../blocks/harvis/common/block/slider.php';require'../blocks/harvis/menu/lmenu.php';require'../blocks/harvis/common/head_com.php';require'../blocks/harvis/common/befor_header.php';require'../blocks/harvis/common/header.php';require'../blocks/harvis/common/after_header.php';require'../blocks/harvis/common/left_column.php';require'../blocks/harvis/common/body_one.php';require'../blocks/harvis/common/foot.php';
