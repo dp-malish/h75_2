@@ -22,6 +22,20 @@ class Template extends Def\Language{
     static $mode_of_operation_top=[
         'ru'=>'Режим работы',
         'uk'=>'Режим роботи'];
+    static $mode_of_operation_top_day=[
+        'ru'=>'пн-пт',
+        'uk'=>'пн-пт'];
+    static $mode_of_operation_top_day_h=[
+        'ru'=>'сб',
+        'uk'=>'сб'];
+    //***************footer
+    static $service_name_foot=[
+        'ru'=>'сервисный центр «Винтех»',
+        'uk'=>'сервісний центр «Вінтех»'];
+    static $site_materials_foot=[
+        'ru'=>'Использование материалов сайта без разрешения правообладателя запрещено',
+        'uk'=>'Використання матеріалів сайту без згоди власника авторських прав заборонено'];
+
 
 
 

@@ -33,7 +33,7 @@ if($_SERVER['REQUEST_URI']!='/'){
 if(Route::$index){include'../modul/win/main.php';}
 
 //left - all stranici
-require'../blocks/win/menu/l/remont.php';
+require'../blocks/win/menu/l/remont_'.$Opt::$lang.'.php';
 //right - all stranici
 require'../blocks/win/menu/r/web.php';
 require'../blocks/win/menu/r/dop_mat.php';
