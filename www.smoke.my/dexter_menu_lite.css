@@ -7,7 +7,7 @@
     font-family: 'Arial';
     float:right;
 
-    /*background-color: #00BC52;*/
+    user-select: none;
 
 
 }
@@ -90,6 +90,7 @@
         font-size:0;
         overflow:hidden;
         transition:.5s all;
+        z-index: 9;
     }
     .dexter_menu .dexter-main-menu a{
         display:block;
@@ -98,13 +99,13 @@
         color:#fffffd;
         text-decoration:none;
         border-top:1px solid rgba(255,255,255,.3);
-        background-color:rgba(20,20,20,.8);
+        background-color:rgba(20,20,20,.85);
     }
     #dexter_menu_check:checked ~ .dexter-main-menu-top> .dexter_menu_label{
         display: block;
     }
     #dexter_menu_check:checked ~ .dexter-main-menu-top{
-        background-color:rgba(20,20,20,.8);
+        background-color:rgba(20,20,20,.85);
         padding-top:13px;
         width:100%;
         display:block;

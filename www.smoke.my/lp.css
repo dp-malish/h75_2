@@ -29,18 +29,16 @@ body{
 /************************************/
 
 .first_d{
-    background-image:url(img/lp/dym_top_fon.jpg);
-    /*background-color:#8E8B8B;*/
-    min-height: 900px;
+    background:url(img/lp/dym_top_fon.jpg) no-repeat center center fixed;
+    background-size:cover;
+    padding:45px 0 150px;
+}
+@media screen and (max-width:790px){
+    .first_d{
+        padding:40px 0;
+    }
 }
 
-
-
-.first_d>div{
-    height:165px;
-    background:linear-gradient(rgba(0,0,0,.9) 0,rgba(0,0,0,.7) 35%,rgba(0,0,0,.3) 70%,transparent 100%);
-    padding-top:25px;
-}
 #logo{
     margin:0 0 0 7%;
     float:left;
@@ -66,17 +64,32 @@ body{
     #logo img{width:70%}
 }
 
+#d_fon_top_img{
+    float:left;
+    width:48%;
+}
+#d_fon_top_r{
+    float:right;
+    width:48%
+}
+@media screen and (max-width:790px){
+    #d_fon_top_img,#d_fon_top_r{
+        float:none;
+        width:100%
+    }
+}
+
+
 .first_d h3{
     font-size:180%;
-    color: #ffffdd;
-    text-align: center;
-    margin:25px;
+    color:#ffffdd;
+    text-align:center;
+    margin:25px
 }
 
 .top_content img{
     margin:35px 0 0;
 }
-
 
 .first_d p{
     color: #ffffdd;
@@ -87,9 +100,25 @@ body{
 }
 
 #top_call_back_btn{
-    background-color: #00BC52;
-    width:25%;
+    border-radius:19px;
+    background-image:linear-gradient(to bottom right,rgba(0, 146, 80,.8),rgba(24, 122, 146,.6),#009250);
+   /* background-color: #009250;*/
+    width:55%;
     height:70px;
     display:block;
-    margin:15px auto;
+    margin:19px auto;
+    font-size:150%;
+    color: #ffffdd;
+    line-height:67px;
+    cursor:pointer;
+    user-select: none;
 }
+#top_call_back_btn:hover{
+    box-shadow: inset 2px 2px 5px rgba(0, 146, 80,.5), 1px 1px 5px rgba(255, 255, 255, 1);
+}
+#top_call_back_btn:active{
+    color:darkred;
+    background-image:linear-gradient(to bottom right,rgba(24, 122, 146,.6),rgba(0, 146, 80,.8),rgba(24, 122, 146,.6));
+}
+/********************end самый верх****************/
+
