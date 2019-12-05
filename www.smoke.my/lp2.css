@@ -1,0 +1,59 @@
+.land_fon_c{
+    margin:8px 0;
+    min-height:300px;
+    padding:50px 0;
+}
+
+.land_fon_c{
+    /*    margin:18px 0;
+   min-height:300px;*/
+    padding:50px 0;
+}
+
+.land_fon_c_l{
+    float:left;
+    width:55%}
+.land_fon_c_r{
+    float:right;
+    width:44%}
+@media screen and (max-width:840px){
+    .land_fon_c_l{
+        width:100%;
+        float:none;
+    }
+    .land_fon_c_r{
+        width:100%;
+        float:none;
+    }
+}
+.land_price{
+    font-size:200%;
+    margin:27px 7px;
+}
+
+.land_price_old{
+    color:#BDBDBD;
+    text-decoration:line-through;
+}
+
+.land_btn_buy{
+    border-radius:19px;
+    background-image:linear-gradient(to bottom right,rgba(0, 146, 80,.8),rgba(24, 122, 146,.6),#009250);
+    /* background-color: #009250;*/
+    width:55%;
+    height:70px;
+    display:block;
+    margin:19px auto;
+    font-size:150%;
+    color: #ffffdd;
+    line-height:67px;
+    cursor:pointer;
+    user-select: none;
+}
+.land_btn_buy:hover{
+    box-shadow: inset 2px 2px 5px rgba(0, 146, 80,.5), 1px 1px 5px rgba(55,55,55, 1);
+}
+.land_btn_buy:active{
+    color:darkred;
+    background-image:linear-gradient(to bottom right,rgba(24, 122, 146,.6),rgba(0, 146, 80,.8),rgba(24, 122, 146,.6));
+}
