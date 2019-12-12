@@ -33,6 +33,7 @@
                 <div id="order" class="h_field">
                     <div id="fast_order">
                         <div id="fast_order_btn" class="call_back ac"><span>Обратный звонок</span></div>
+                        <script>document.getElementById("fast_order_btn").addEventListener("click",function(){formCalBackViewl();},false);</script>
                     </div>
                     <div id="full_order">
                         <!-- корзина-->

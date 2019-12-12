@@ -5,7 +5,7 @@
     <title>Title</title>
 
 
-
+    <script async src="/js/common.php"></script><script async src="/js/call_back.php"></script>
 
 
     <link rel="stylesheet" href="/default.css">
@@ -14,9 +14,6 @@
     <link rel="stylesheet" href="/dexter_menu_lite.css">
 
     <link rel="stylesheet" href="/css/wow.css">
-
-
-
 
     <link rel="stylesheet" href="/lp2.css">
     <link rel="stylesheet" href="/lp3.css">
@@ -55,12 +52,10 @@
                 <div class="dexter-line third"></div>
                 <div class="dexter-line fourth"></div>
                 <nav class="dexter-main-menu">
-                    <a href="">Пункт 1</a>
+                    <a href="/">Главная</a>
                     <a href="#">Пункт 2</a>
                     <a href="#">Пункт 3</a>
-                    <a href="#">Пункт 4</a>
-                    <a href="#">Пункт 5</a>
-                    <a href="#">Пункт 6</a>
+
                 </nav>
 
 
@@ -78,6 +73,8 @@
                 <br><br><br><p class="wow bounceInRight">Оставьте заявку и мы с Вами свяжемся в ближайшее время, чтобы обсудить детали заказа в телефонном режиме. Или Вы можете продолжить покупки и оформить товар из корзины.</p>
 
                 <div id="top_call_back_btn" class="ac wow bounceInUp">Перезвонить мне</div>
+                <script>document.getElementById("top_call_back_btn").addEventListener("click",function(){
+                    formCalBackViewl();},false);</script>
             </div>
             <div class="cl"></div>
         </div>
@@ -168,7 +165,7 @@
 
 
 
-<div id="pulseBtn" class="pulse_btn"><div><div class="pulse_btn_phone"><i class="fa fa-phone" aria-hidden="true"></i><span class="grey">Тел</span></div><div class="pulse_btn_text">Кнопка связи</div></div></div>
+<div id="pulseBtn" class="pulse_btn"><div><div class="pulse_btn_phone"><i class="fa fa-phone" aria-hidden="true"></i><span class="grey"></span></div><div class="pulse_btn_text">Кнопка связи</div></div></div>
 
 
 <link href="/css/fotorama.php" rel="stylesheet">

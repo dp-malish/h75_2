@@ -10,14 +10,9 @@
 })();
 
 window.addEventListener("load",function(){
-
     document.getElementById("pulseBtn").addEventListener("click",function(){
         formCalBackViewl();
     },false);
-    document.getElementById("fast_order_btn").addEventListener("click",function(){
-        formCalBackViewl();
-    },false);
-
 },true);
 
 function formCalBackViewl(){
