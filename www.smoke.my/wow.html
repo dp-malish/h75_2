@@ -110,7 +110,22 @@
                     <div class="land_price wow bounceInRight">699 грн  <span class="land_price_old">800 грн</span></div>
                     <div>
 
-                        <div class="land_btn_buy ac wow bounceInUp">Заказать</div>
+                        <div id="land_btn_buy" class="land_btn_buy ac wow bounceInUp">Заказать</div>
+                        <script>
+                            document.getElementById("land_btn_buy").addEventListener("click",function(){
+                                var s=document.cookie;
+                                var l=s.length;
+
+                                if(l>4)
+                                    alert( s + l);
+                                else alert( l);
+
+                                },false);
+
+                        </script>
+
+
+
                         <p class="wow bounceInRight">Наши покупатели успели по достоинству оценить высокое качество и удобство горизонтальных kaльянов MobileSmoke. Невероятно густой и ароматный дым, легкая тяга, оригинальный дизайн, прочность и мобильность - лишь основные преимущества kaльянов MobileSmoke. Вы и Ваши друзья останетесь довольны кальяном MobileSmoke вне зависимости от того, где Вы намерены его использовать.</p>
                         <ul class="item wow bounceInLeft"><li><span class="check"></span>Плоский корпус MobileSmoke;</li><li><span class="check"></span>Силиконовая чаша;</li><li><span class="check"></span>Шланг и мундштук MobileSmoke;</li><li><span class="check"></span>Устройство контроля нагрева табака (Kaloud Lotus);</li><li><span class="check"></span>Подсветка с пультом дистанционного управления;</li><li><span class="check"></span>Металлические щипцы.</li></ul>
                         <div class="cl"></div>
