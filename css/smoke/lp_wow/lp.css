@@ -37,7 +37,7 @@ p{line-height:180%}
 /************************************/
 
 .first_d{
-    background:url(img/lp/dym_top_fon.jpg) no-repeat center center fixed;
+    background:url(/img/lp/dym_top_fon.jpg) no-repeat center center fixed;
     background-size:cover;
     padding:45px 0 150px;
 }
