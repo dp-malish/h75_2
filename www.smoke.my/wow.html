@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="copyright" lang="ru" content="MobileSmoke"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index,follow">
 
+    <meta property="og:image" content="/img/fast_order/meta.jpg"><meta property="og:title" content="MobileSmoke - горизонтальный MobileSmoke"><meta property="og:description" content="Неповторимый густой и ароматный дым в сочетании с лёгкой тягой, сделают Ваш вечер оригинальным.">
 
     <script async src="/js/common.php"></script><script async src="/js/call_back.php"></script>
 
@@ -25,6 +26,9 @@
     <script>
         new WOW().init();
     </script>
+
+    <title>MobileSmoke - горизонтальный MobileSmoke</title>
+    <meta name="description" content="Большое количество наших клиентов смогли по достоинству оценить высокое качество и удобство горизонтальных MobileSmoke. Неповторимый густой и ароматный дым в сочетании с лёгкой тягой, сделают Ваш вечер оригинальным.">
 
 </head>
 <body>
@@ -53,8 +57,8 @@
                 <div class="dexter-line fourth"></div>
                 <nav class="dexter-main-menu">
                     <a href="/">Главная</a>
-                    <a href="#">Пункт 2</a>
-                    <a href="#">Пункт 3</a>
+                    <a href="#zakazat">Заказать</a>
+                    <a href="#preimushestva">Преимущества</a>
 
                 </nav>
 
@@ -86,7 +90,7 @@
 </div>
 
 <!--вторая часть-->
-<div class="min_h fon rel">
+<div id="zakazat" class="min_h fon rel">
     <div class="land_fon_c rel">
         <div class="maxw rel">
             <section><link rel="stylesheet" href="/css/fotorama.php">
@@ -109,23 +113,15 @@
                     <div class="rel"></div>
                     <div class="land_price wow bounceInRight">699 грн  <span class="land_price_old">800 грн</span></div>
                     <div>
-
                         <div id="land_btn_buy" class="land_btn_buy ac wow bounceInUp">Заказать</div>
                         <script>
                             document.getElementById("land_btn_buy").addEventListener("click",function(){
                                 var s=document.cookie;
                                 var l=s.length;
-
                                 if(l>4)
-                                    alert( s + l);
-                                else alert( l);
-
+                                    location.href="/mobilesmoke-fast-order-in-ukraine#land-fast-order";
                                 },false);
-
                         </script>
-
-
-
                         <p class="wow bounceInRight">Наши покупатели успели по достоинству оценить высокое качество и удобство горизонтальных kaльянов MobileSmoke. Невероятно густой и ароматный дым, легкая тяга, оригинальный дизайн, прочность и мобильность - лишь основные преимущества kaльянов MobileSmoke. Вы и Ваши друзья останетесь довольны кальяном MobileSmoke вне зависимости от того, где Вы намерены его использовать.</p>
                         <ul class="item wow bounceInLeft"><li><span class="check"></span>Плоский корпус MobileSmoke;</li><li><span class="check"></span>Силиконовая чаша;</li><li><span class="check"></span>Шланг и мундштук MobileSmoke;</li><li><span class="check"></span>Устройство контроля нагрева табака (Kaloud Lotus);</li><li><span class="check"></span>Подсветка с пультом дистанционного управления;</li><li><span class="check"></span>Металлические щипцы.</li></ul>
                         <div class="cl"></div>
@@ -138,7 +134,7 @@
 
 
 <!--третья часть-->
-<div class="min_h fon2">
+<div id="preimushestva" class="min_h fon2">
 
     <div class="maxw land_benefits">
         <section>
@@ -175,14 +171,6 @@
         </section>
     </div>
     <div class="cl five five_"></div>
-
 </div>
-
-
-
 <div id="pulseBtn" class="pulse_btn"><div><div class="pulse_btn_phone"><i class="fa fa-phone" aria-hidden="true"></i><span class="grey"></span></div><div class="pulse_btn_text">Кнопка связи</div></div></div>
-
-
-<link href="/css/fotorama.php" rel="stylesheet">
-</body>
-</html>
+<link href="/css/fotorama.php" rel="stylesheet"></body></html>
