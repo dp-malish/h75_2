@@ -7,6 +7,7 @@
  */
 namespace lib\Def;
 use incl\smoke\Def As DefSmoke;
+use function PHPSTORM_META\elementType;
 
 Error_Reporting(E_ALL & ~E_NOTICE);ini_set('display_errors',1);
 
@@ -27,10 +28,10 @@ if($_SERVER['REQUEST_URI']!='/'){
 
 
             case 'fb':include'../modul/smoke/fb.php';break;
+            case 'mobilesmoke':include'../modul/smoke/last_fb.php';break;
 
             case 'landing':include'../modul/smoke/landing.php';break;
 
-            //case'bios-laptop':new \incl\win\Bios\Bios_laptop();break;
 
             //default:new \incl\sota\shop\DefShop();
             default:Route::$module404=true;
@@ -47,16 +48,20 @@ if(Route::$index){include'../modul/smoke/main.php';}
 //Шрифт по умолчанию
 $Opt::$css_down.='<link rel="stylesheet" type="text/css" href="/css/fontawesome.php">';
 
-require '../blocks/smoke/common/head.php';
-require '../blocks/smoke/common/header.php';
+
 //require '../blocks/smoke/menu/top_menu.php';
 
 if($Opt::$body_column==3){
+    require '../blocks/smoke/common/head.php';
+    require '../blocks/smoke/common/header.php';
     require '../blocks/smoke/common/l_col.php';
     require '../blocks/smoke/common/body.php';
+    require '../blocks/smoke/common/footer.php';
 }elseif($Opt::$body_column==1){
+    require '../blocks/smoke/common/head.php';
+    require '../blocks/smoke/common/header.php';
+    echo Opt::$main_content;//include '../blocks/smoke/common/body_col_1.php';
+    require '../blocks/smoke/common/footer.php';
+}elseif($Opt::$body_column==NULL){
     echo Opt::$main_content;
-    //include '../blocks/smoke/common/body_col_1.php';
 }
-
-require '../blocks/smoke/common/footer.php';
