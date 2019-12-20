@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="/css/lp_humidifier/lp5.css">
 
 
-
+    <link rel="stylesheet" href="css/lp_humidifier/form.css">
 
     <link rel="stylesheet" href="/css/lp_humidifier/pulse_btn_.css">
 
@@ -193,8 +193,31 @@
 <div class="min_h fon rel">
     <div class="land_fon_c rel">
         <div class="maxw rel">
-            <h3>Особенности</h3>
-            реапреапр
+            <div id="land-fast-order" class="five"></div>
+            <section><h3>Сделать заказать по акции:</h3>
+                <form id="land_form_fast_buy" class="land_form_fast_buy">
+                    <div class="rel">
+                        <input id="formFastFIOLand" name="username" type="text" size="33" title="Введите Ваше имя" placeholder="Фамилия и Имя *" required="">
+                    </div>
+                    <div class="rel">
+                        <input id="formFastTelLand" name="tel" type="text" size="13" title="Введите номер телефона" placeholder="Номер телефона *" required="">
+                    </div>
+                    <div class="rel">
+                        <input id="formFastTownLand" name="town" type="text" size="13" title="Введите Ваш город" placeholder="Город">
+                    </div>
+                    <div class="rel">
+                        <input id="formFastNPostLand" name="n_post" type="number" min="1" title="Введите номер Новой почты" placeholder="Номер отделения новой почты">
+                    </div>
+                    <div class="rel">
+                        <select id="formFastColorLand" class="rel" onchange="this.style.color='black'">
+                            <option value="">Выбрать цвет</option><option value="black">Чёрный</option><option value="white">Белый</option><option value="red">Красный</option><option value="green">Зелёный</option><option value="blue">Синий</option>
+                        </select>
+                    </div>
+                    <div class="rel"><input id="formFastBuySubmitLand" type="submit" value="Заказать"></div>
+                </form>
+            </section>
+            </div><div class="cl"></div>
+
         </div><div class="cl"></div>
     </div><div class="cl"></div>
 </div>
