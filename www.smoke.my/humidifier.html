@@ -21,9 +21,15 @@
 
 
     <link rel="stylesheet" href="css/lp_humidifier/form.css">
+    <link rel="stylesheet" href="/css/lp_humidifier/lp6.css">
 
     <link rel="stylesheet" href="/css/lp_humidifier/pulse_btn_.css">
 
+    <script async src="/js/common.php"></script><script async src="/js/call_back.php"></script><link rel="stylesheet" href="/css/lp_wow/body.php"><script src="/js/wow.php"></script><script>new WOW().init();</script>
+
+    <script async src="/js/scroll_only.js"></script>
+
+    <script src="js/lp_humidifier.js"></script>
 
 
 </head>
@@ -46,7 +52,7 @@
                     <nav class="dexter-main-menu">
                         <a href="/">Главная</a>
                         <a href="#zakazat">Заказать</a>
-                        <a href="#">Преимущества</a>
+                        <a href="#preimushestva">Преимущества</a>
                         <a href="#">Преимущества</a>
                         <a href="#">Преимущества</a>
                         <a href="#">Преимущества</a>
@@ -72,11 +78,11 @@
 </div>
 
 
-<!--вторая часть-->
+<!--вторая часть  fotorama.css нужен-->
 <div id="zakazat" class="min_h fon rel">
     <div class="land_fon_c rel">
         <div class="maxw rel">
-            <section><link rel="stylesheet" href="/css/fotorama.php">
+            <section>
                 <div class="land_fon_c_l rel">
                     <div class="fotorama" data-allowfullscreen="native" data-nav="thumbs" data-transition="crossfade" data-loop="true" data-autoplay="7000" data-keyboard="true" >
                         <img src="/img/fast_order/dbpic.php?i=black" alt="MobileSmoke - чёрный">
@@ -99,18 +105,22 @@
                         <div id="land_btn_buy" class="land_btn_buy ac wow bounceInUp">Заказать</div>
                         <script>
                             document.getElementById("land_btn_buy").addEventListener("click",function(){
-                                location.href="/";
+                                location.href="#order-buy";
                             },false);
                         </script>
-                        <p class="wow bounceInRight">Наши покупатели успели по достоинству оценить высокое качество и удобство горизонтальных kaльянов MobileSmoke. Невероятно густой и ароматный дым, легкая тяга, оригинальный дизайн, прочность и мобильность - лишь основные преимущества kaльянов MobileSmoke. Вы и Ваши друзья останетесь довольны кальяном MobileSmoke вне зависимости от того, где Вы намерены его использовать.</p>
+                        <p class="wow bounceInRight">Увлажнитель воздуха HUMIDIFIER – отличный выбор в сегменте портативных мини-увлажнителей воздуха и ароматизаторов с лаконичным дизайном и достойным функционалом.</p>
+                        <h4>Технические характеристики</h4>
                         <ul class="item wow bounceInLeft">
 
-                            <li><span class="check"></span>Плоский корпус MobileSmoke;</li>
-                            <li><span class="check"></span>Силиконовая чаша;</li>
-                            <li><span class="check"></span>Шланг и мундштук MobileSmoke;</li>
-                            <li><span class="check"></span>Устройство контроля нагрева табака (Kaloud Lotus);</li>
-                            <li><span class="check"></span>Подсветка с пультом дистанционного управления;</li>
-                            <li><span class="check"></span>Металлические щипцы.</li>
+                            <li><span class="check"></span>Обьем резервуара: 300мл;</li>
+                            <li><span class="check"></span>Скорость испарения жидкости: 30 мл.час;</li>
+                            <li><span class="check"></span>Мощность: 1.5-2Вт;</li>
+                            <li><span class="check"></span>Рабочее напряжение: 12V;</li>
+                            <li><span class="check"></span>Размер: 5,7*5,6*16,4см;</li>
+                            <li><span class="check"></span>Материал: АБС пластик, электронные компоненты;</li>
+                            <li><span class="check"></span>Шум: 36 Дб;</li>
+                            <li><span class="check"></span>Вес упаковки: 153 грамма;</li>
+                            <li><span class="check"></span>Цвет: белый, розовый, бирюзовый!</li>
                         </ul>
                         <div class="cl"></div>
                     </div>
@@ -190,11 +200,11 @@
 
 
 <!--шестая часть-->
-<div class="min_h fon rel">
+<div id="order-buy" class="min_h fon rel">
     <div class="land_fon_c rel">
         <div class="maxw rel">
             <div id="land-fast-order" class="five"></div>
-            <section><h3>Сделать заказать по акции:</h3>
+            <section><h2 class="ac">Сделать заказать по акции:</h2>
                 <form id="land_form_fast_buy" class="land_form_fast_buy">
                     <div class="rel">
                         <input id="formFastFIOLand" name="username" type="text" size="33" title="Введите Ваше имя" placeholder="Фамилия и Имя *" required="">
@@ -210,7 +220,10 @@
                     </div>
                     <div class="rel">
                         <select id="formFastColorLand" class="rel" onchange="this.style.color='black'">
-                            <option value="">Выбрать цвет</option><option value="black">Чёрный</option><option value="white">Белый</option><option value="red">Красный</option><option value="green">Зелёный</option><option value="blue">Синий</option>
+                            <option value="">Выбрать цвет</option>
+                            <option value="white">Белый</option>
+                            <option value="pink">Розовый</option>
+                            <option value="turquoise">Бирюзовый</option>
                         </select>
                     </div>
                     <div class="rel"><input id="formFastBuySubmitLand" type="submit" value="Заказать"></div>
@@ -223,6 +236,8 @@
 </div>
 
 
+<div id="pulseBtn" class="pulse_btn"><div><div class="pulse_btn_phone"><i class="fa fa-phone" aria-hidden="true"></i><span class="grey"></span></div><div class="pulse_btn_text">Кнопка связи</div></div></div><link rel="stylesheet" href="/css/lp_wow/pulse_btn.php"><link href="/css/fotorama.php" rel="stylesheet">
 
+<div id="bf"><div id="up"> ^ Наверх</div></div>
 </body>
 </html>
