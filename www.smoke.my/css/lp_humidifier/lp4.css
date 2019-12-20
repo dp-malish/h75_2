@@ -1,0 +1,18 @@
+
+
+.land_fon_c_l{
+    float:left;
+    width:55%}
+.land_fon_c_r{
+    float:right;
+    width:44%}
+@media screen and (max-width:840px){
+    .land_fon_c_l{
+        width:100%;
+        float:none;
+    }
+    .land_fon_c_r{
+        width:100%;
+        float:none;
+    }
+}

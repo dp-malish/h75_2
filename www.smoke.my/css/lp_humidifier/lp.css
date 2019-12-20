@@ -1,0 +1,112 @@
+html,body{height:100%;
+    font:15px Verdana,Geneva,serif;
+    text-align:justify;
+    cursor:default;
+    box-sizing:border-box;
+}
+.maxw{
+    margin:0 auto;
+    max-width:1240px;
+    /*overflow-x:hidden;*/
+
+}
+p,ol,ul,ul li{margin:10px}
+ul{list-style:none}
+p{line-height:180%}
+
+.check::before{
+    content:'✔ ';
+}
+.item:hover .check{
+    color:red
+}
+.item li:hover .check{
+    color:#9BEFF3
+}
+/*++++++++++++++++++++++++++++++++*/
+.min_h{
+    min-height:100px;
+}
+
+.fon{
+    background-color: #ffffdd;
+}
+.fon2{
+    background-color:#EFE0C8;
+}
+/************************************/
+
+.first_d{
+    background:url(/img/lp/dym_top_fon.jpg) no-repeat center center fixed;
+    background-size:cover;
+    padding:45px 0 150px;
+}
+@media screen and (max-width:790px){
+    .first_d{padding:40px 0}
+}
+#logo{
+    margin:0 0 0 7%;
+    float:left;
+    width:15%;
+    text-align: center;
+}
+@media screen and (min-width:1100px) and (max-width:1240px){#logo{width:14%;}}
+@media screen and (min-width:1000px) and (max-width:1099px){#logo{width:15%}}
+@media screen and (min-width:900px) and (max-width:999px){#logo{width:16%}}
+@media screen and (min-width:740px) and (max-width:899px){#logo{width:17%}}
+@media screen and (min-width:541px) and (max-width:739px){#logo{width:19%}}
+@media screen and (max-width:540px){#logo,.h_field{width:100%;margin:0}#logo img{width:70%}}
+
+#d_fon_top_img{
+    float:left;
+    width:48%
+}
+#d_fon_top_r{
+    float:right;
+    width:48%
+}
+@media screen and (max-width:790px){#d_fon_top_img,#d_fon_top_r{float:none;width:100%}}
+
+
+.first_d h3{
+    font-size:180%;
+    color:#ffffdd;
+    text-align:center;
+    margin:25px
+}
+
+.top_content img{
+    margin:35px 0 0;
+}
+
+.first_d p{
+    color: #ffffdd;
+    margin: 10px;
+    line-height: 180%;
+    letter-spacing:3px;
+    font-size:120%;
+}
+
+#top_call_back_btn{
+    border-radius:19px;
+    background-image:linear-gradient(to bottom right,rgba(0, 146, 80,.8),rgba(24, 122, 146,.6),#009250);
+   /* background-color: #009250;*/
+    width:55%;
+    height:70px;
+    display:block;
+    margin:19px auto;
+    font-size:150%;
+    color: #ffffdd;
+    line-height:67px;
+    cursor:pointer;
+    user-select: none;
+}
+#top_call_back_btn:hover{
+    box-shadow: inset 2px 2px 5px rgba(0, 146, 80,.5), 1px 1px 5px rgba(255, 255, 255, 1);
+}
+#top_call_back_btn:active{
+    color:darkred;
+    background-image:linear-gradient(to bottom right,rgba(24, 122, 146,.6),rgba(0, 146, 80,.8),rgba(24, 122, 146,.6));
+}
+/********************end самый верх****************/
+
