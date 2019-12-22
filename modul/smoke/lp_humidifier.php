@@ -1,4 +1,9 @@
-<!DOCTYPE html><html lang="ru"><head><link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index,follow">
+<?php
+namespace lib\Def;
+
+\incl\smoke\Def\OptSmoke::$body_column=NULL;
+
+Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index,follow">
 <meta property="og:image" content="/img/humidifier/humidifier-packaging.jpg"><meta property="og:title" content="Humidifier - ультразвуковой увлажнитель воздуха"><meta property="og:description" content="Увлажнитель воздуха HUMIDIFIER – отличный выбор в сегменте портативных мини-увлажнителей воздуха и ароматизаторов с лаконичным дизайном и достойным функционалом."><title>Humidifier - ультразвуковой увлажнитель воздуха</title><meta name="description" content="Увлажнитель воздуха HUMIDIFIER – отличный выбор в сегменте портативных мини-увлажнителей воздуха и ароматизаторов с лаконичным дизайном и достойным функционалом.">
 <script async src="/js/common.php"></script><script async src="/js/call_back.php"></script>
 <link rel="stylesheet" href="/css/lp_humidifier/body.php"><script src="/js/wow.php"></script><script>new WOW().init();</script>
@@ -170,7 +175,7 @@
                         <input id="formFastNPostLand" name="n_post" type="number" min="1" title="Введите номер Новой почты" placeholder="Номер отделения новой почты">
                     </div>
                     <div class="rel">
-                        <select id="formFastColorLand" class="rel" onchange="this.style.color='black'">
+                        <select id="formFastColorLand" class="rel" onchange="this.style.color=\'black\'">
                             <option value="">Выбрать цвет</option>
                             <option value="white-Humidifier">Белый</option>
                             <option value="pink-Humidifier">Розовый</option>
@@ -184,4 +189,4 @@
         </div><div class="cl"></div>
     </div><div class="cl"></div>
 </div>
-<div id="pulseBtn" class="pulse_btn"><div><div class="pulse_btn_phone"><i class="fa fa-phone" aria-hidden="true"></i><span class="grey"></span></div><div class="pulse_btn_text">Кнопка связи</div></div></div><link rel="stylesheet" href="/css/lp_humidifier/pulse_btn.php"><link href="/css/fotorama.php" rel="stylesheet"><div id="bf"><div id="up"> ^ Наверх</div></div></body></html>
+<div id="pulseBtn" class="pulse_btn"><div><div class="pulse_btn_phone"><i class="fa fa-phone" aria-hidden="true"></i><span class="grey"></span></div><div class="pulse_btn_text">Кнопка связи</div></div></div><link rel="stylesheet" href="/css/lp_humidifier/pulse_btn.php"><link href="/css/fotorama.php" rel="stylesheet"><div id="bf"><div id="up"> ^ Наверх</div></div></body></html>';
