@@ -39,7 +39,7 @@ if($_SERVER['REQUEST_URI']!='/'){
     }
 }else{Route::$index=1;}if(Route::$module404){Route::modul404();}
 
-if(Route::$index){include'../modul/smoke/main.php';}
+if(Route::$index){include'../modul/smoke/main_sopt.php';}
 
 
 

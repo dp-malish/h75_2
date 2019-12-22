@@ -7,7 +7,27 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
 <meta property="og:image" content="/img/humidifier/humidifier-packaging.jpg"><meta property="og:title" content="Humidifier - ультразвуковой увлажнитель воздуха"><meta property="og:description" content="Увлажнитель воздуха HUMIDIFIER – отличный выбор в сегменте портативных мини-увлажнителей воздуха и ароматизаторов с лаконичным дизайном и достойным функционалом."><title>Humidifier - ультразвуковой увлажнитель воздуха</title><meta name="description" content="Увлажнитель воздуха HUMIDIFIER – отличный выбор в сегменте портативных мини-увлажнителей воздуха и ароматизаторов с лаконичным дизайном и достойным функционалом.">
 <script async src="/js/common.php"></script><script async src="/js/call_back.php"></script>
 <link rel="stylesheet" href="/css/lp_humidifier/body.php"><script src="/js/wow.php"></script><script>new WOW().init();</script>
-<script async src="/js/scroll_only.php"></script><script async src="../js/smoke/lp_humidifier.php"></script></head><body>
+<script async src="/js/scroll_only.php"></script><script async src="/js/lp_humidifier.php"></script></head><body><!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version=\'2.0\';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,\'script\',
+        \'https://connect.facebook.net/en_US/fbevents.js\');
+    fbq(\'init\', \'2534848886552351\');
+    fbq(\'track\', \'PageView\');
+    fbq(\'track\', \'ViewContent\');
+    fbq(\'track\', \'Purchase\');
+</script>
+<noscript>
+    <img height="1" width="1"
+         src="https://www.facebook.com/tr?id=2534848886552351&ev=PageView
+&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
 <div class="min_h first_d rel">
     <div class="rel">
         <div class="maxw rel">

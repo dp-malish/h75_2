@@ -29,7 +29,7 @@
                 </div><div class="cl"></div>
             </div>
             <div class="maxw rel ">
-                <div id="logo"><a href="/" title="Mobile Smoke - кальяны в Украине"><img src="/img/site/dbpic.php?i=logo&ep=1" alt="Mobile Smoke - кальяны в Украине"></a></div>
+                <div id="logo"><a href="/" title="SOpt Store - в Украине"><img src="/img/site/dbpic.php?i=logo&ep=1" alt="SOpt Store - в Украине"></a></div>
                 <div id="order" class="h_field">
                     <div id="fast_order">
                         <div id="fast_order_btn" class="call_back ac"><span>Обратный звонок</span></div>

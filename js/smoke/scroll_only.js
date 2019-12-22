@@ -1,6 +1,3 @@
-window.onresize=function () {
-    document.getElementById('headcontact').style.position="relative";
-};
 window.onscroll=function(){
     //при скролле показывать и прятать блок
     if(window.pageYOffset>0&&document.body.clientWidth>840){
@@ -11,8 +8,6 @@ window.onscroll=function(){
         document.getElementById('up').style.opacity=0;//alert('jf');
     }
 };
-
-
 function scrollUpStart(i){
     if(i<10)window.scrollTo(0,0);
     else window.scrollTo(0,i)
