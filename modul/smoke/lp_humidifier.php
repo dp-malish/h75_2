@@ -4,7 +4,7 @@ namespace lib\Def;
 \incl\smoke\Def\OptSmoke::$body_column=NULL;
 
 Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index,follow">
-<meta property="og:image" content="/img/humidifier/humidifier-packaging.jpg"><meta property="og:title" content="Humidifier - ультразвуковой увлажнитель воздуха"><meta property="og:description" content="Увлажнитель воздуха HUMIDIFIER – отличный выбор в сегменте портативных мини-увлажнителей воздуха и ароматизаторов с лаконичным дизайном и достойным функционалом."><title>Humidifier - ультразвуковой увлажнитель воздуха</title><meta name="description" content="Увлажнитель воздуха HUMIDIFIER – отличный выбор в сегменте портативных мини-увлажнителей воздуха и ароматизаторов с лаконичным дизайном и достойным функционалом.">
+<meta property="og:image" content="/img/humidifier/humidifier-two.jpg"><meta property="og:title" content="Humidifier - ультразвуковой увлажнитель воздуха"><meta property="og:description" content="Увлажнитель воздуха HUMIDIFIER – отличный выбор в сегменте портативных мини-увлажнителей воздуха и ароматизаторов с лаконичным дизайном и достойным функционалом."><title>Humidifier - ультразвуковой увлажнитель воздуха</title><meta name="description" content="Увлажнитель воздуха HUMIDIFIER – отличный выбор в сегменте портативных мини-увлажнителей воздуха и ароматизаторов с лаконичным дизайном и достойным функционалом.">
 <script async src="/js/common.php"></script><script async src="/js/call_back.php"></script>
 <link rel="stylesheet" href="/css/lp_humidifier/body.php"><script src="/js/wow.php"></script><script>new WOW().init();</script>
 <script async src="/js/scroll_only.php"></script><script async src="/js/lp_humidifier.php"></script></head><body><!-- Facebook Pixel Code -->
@@ -72,16 +72,17 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
             <section>
                 <div class="land_fon_c_l rel">
                     <div class="fotorama" data-allowfullscreen="native" data-nav="thumbs" data-transition="crossfade" data-loop="true" data-autoplay="7000" data-keyboard="true" >
-                        <img src="/img/humidifier/dbpic.php?i=humidifier-main" alt="Humidifier - презентация"><img src="/img/humidifier/dbpic.php?i=humidifier-two" alt="Humidifier - пара"><img src="/img/humidifier/dbpic.php?i=humidifier-avto" alt="Humidifier - авто"><img src="/img/humidifier/dbpic.php?i=humidifier-fon" alt="Humidifier - фон"><img src="/img/humidifier/dbpic.php?i=humidifier-blue" alt="Humidifier - голубой"><img src="/img/humidifier/dbpic.php?i=humidifier-pink" alt="Humidifier - розовый"><img src="/img/humidifier/dbpic.php?i=humidifier-white" alt="Humidifier - белый"><img src="/img/humidifier/dbpic.php?i=humidifier-home" alt="Humidifier - дом"><img src="/img/humidifier/dbpic.php?i=humidifier-office" alt="Humidifier - офис"><img src="/img/humidifier/dbpic.php?i=humidifier-packaging" alt="Humidifier - офис"><img src="/img/humidifier/dbpic.php?i=humidifier-details" alt="Humidifier - деталировка"><img src="/img/humidifier/dbpic.php?i=humidifier-econom" alt="Humidifier - эконом">
+                        <img src="/img/humidifier/dbpic.php?i=humidifier-two" alt="Humidifier - пара"><img src="/img/humidifier/dbpic.php?i=humidifier-main" alt="Humidifier - презентация"><img src="/img/humidifier/dbpic.php?i=humidifier-avto" alt="Humidifier - авто"><img src="/img/humidifier/dbpic.php?i=humidifier-fon" alt="Humidifier - фон"><img src="/img/humidifier/dbpic.php?i=humidifier-blue" alt="Humidifier - голубой"><img src="/img/humidifier/dbpic.php?i=humidifier-pink" alt="Humidifier - розовый"><img src="/img/humidifier/dbpic.php?i=humidifier-white" alt="Humidifier - белый"><img src="/img/humidifier/dbpic.php?i=humidifier-home" alt="Humidifier - дом"><img src="/img/humidifier/dbpic.php?i=humidifier-office" alt="Humidifier - офис"><img src="/img/humidifier/dbpic.php?i=humidifier-packaging" alt="Humidifier - офис"><img src="/img/humidifier/dbpic.php?i=humidifier-details" alt="Humidifier - деталировка"><img src="/img/humidifier/dbpic.php?i=humidifier-econom" alt="Humidifier - эконом">                        
+                        <a href="https://youtu.be/2UCxDNoc2GA"></a>
                     </div>
                 </div>
                 <div class="land_fon_c_r rel">
-                    <h3 class="wow pulse">Humidifier - ультразвуковой увлажнитель воздуха</h3>
+                    <h3 class="pulse">Humidifier - ультразвуковой увлажнитель воздуха</h3>
                     <div class="rel"></div>
-                    <div class="land_price wow bounceInRight">416 грн  <span class="land_price_old">629 грн</span></div>
+                    <div class="land_price wow bounceInRight">349 грн  <span class="land_price_old">450 грн</span></div>
                     <div>
                         <div id="land_btn_buy" class="land_btn_buy ac wow bounceInUp">Заказать</div><script>document.getElementById("land_btn_buy").addEventListener("click",function(){location.href="#order-buy";},false);</script>
-                        <p class="wow bounceInRight">Увлажнитель воздуха HUMIDIFIER – отличный выбор в сегменте портативных мини-увлажнителей воздуха и ароматизаторов с лаконичным дизайном и достойным функционалом.</p>
+                        <p class="bounceInRight">Увлажнитель воздуха HUMIDIFIER – отличный выбор в сегменте портативных мини-увлажнителей воздуха и ароматизаторов с лаконичным дизайном и достойным функционалом.</p>
                         <p>Увлажнитель Humidifier абсолютно безшумный, кабель USB позволяет подключить его в любом удобном для вас месте, а благодаря оригинальной LED подсветке (7 цветов), его можно использовать в комнате как ночник.</p>
                         <h4>Технические характеристики</h4>
                         <ul class="item wow bounceInLeft">
@@ -112,12 +113,12 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
             </div>
             <div class="land_benefits_border cl"><br></div>
             <div class="dwfte">
-                <div class="land_benefits_box five wow rollIn">
+                <div class="land_benefits_box five rollIn">
                     <span class="land_pay_i fl"></span>
                     <span><h4>Способы оплаты</h4><p>При получении на почте или на карту ПриватБанка</p></span>
                     <div class="cl"></div>
                 </div>
-                <div class="land_benefits_box five wow lightSpeedIn">
+                <div class="land_benefits_box five lightSpeedIn">
                     <span class="land_quality_i fl"></span>
                     <span><h4>Гарантия качества</h4><p>Возврат и обмен в течении 14 дней согласно закона</p></span>
                     <div class="cl"></div>
@@ -125,14 +126,14 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
             </div>
             <div class="land_benefits_border cl"></div>
             <div class="dwfte">
-                <div class="land_benefits_box five wow rollIn">
+                <div class="land_benefits_box five rollIn">
                     <span class="land_delivery_i fl"></span>
                     <span><h4>Быстрая доставка</h4><p>Получите свой заказ в течении 1-2 дней с момента заказа</p></span>
                     <div class="cl"></div>
                 </div>
-                <div class="land_benefits_box five wow lightSpeedIn">
+                <div class="land_benefits_box five lightSpeedIn">
                     <span class="land_price_i fl"></span>
-                    <span><h4>Доступные цены</h4><p>Вы можете приобрести кальян MobileSmoke всего за 416 грн</p></span>
+                    <span><h4>Доступные цены</h4><p>Вы можете приобрести ультразвуковой увлажнитель воздуха всего за 349 грн</p></span>
                     <div class="cl"></div>
                 </div>
             </div>
@@ -164,7 +165,7 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
     <div class="maxw">
         <h3 class="ac">Оптимальное решение для ВАС</h3><br>
         <p class="wow bounceInLeft">Сухой воздух – довольно частая проблема для замкнутых помещений, будь то комната или салон автомобиля. Мало того, что им просто неприятно дышать, так он еще и неблаготворно сказывается на вашем здоровье, является причиной целого ряда заболеваний.</p>
-        <p class=" wow bounceInRight">С этим небольшим и недорогим устройством ваши поездки станут намного комфортнее!</p>
+        <p class="bounceInRight">С этим небольшим и недорогим устройством ваши поездки станут намного комфортнее!</p>
         <ul class="item wow bounceInLeft">
             <li><span class="check"></span>Сохраняет увлажненность воздуха в салоне автомобиля</li>
             <li><span class="check"></span>Применяется как аромалампа</li>
@@ -180,7 +181,7 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
     <div class="land_fon_c rel">
         <div class="maxw rel">
             <div id="land-fast-order" class="five"></div>
-            <section><h2 class="ac wow bounceInDown">Сделать заказать по акции:</h2>
+            <section><h2 class="ac bounceInDown">Сделать заказать по акции:</h2>
                 <form id="land_form_fast_buy" class="land_form_fast_buy">
                     <div class="rel">
                         <input id="formFastFIOLand" name="username" type="text" size="33" title="Введите Ваше имя" placeholder="Фамилия и Имя *" required="">
@@ -202,7 +203,7 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
                             <option value="turquoise-Humidifier">Бирюзовый</option>
                         </select>
                     </div>
-                    <div class="rel"><input id="formFastBuySubmitLand" class="wow bounceInUp" type="submit" value="Заказать"></div>
+                    <div class="rel"><input id="formFastBuySubmitLand" class="bounceInUp" type="submit" value="Заказать"></div>
                 </form>
             </section>
             </div><div class="cl"></div>
