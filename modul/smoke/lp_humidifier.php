@@ -85,7 +85,7 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
                         <p class="bounceInRight">Увлажнитель воздуха HUMIDIFIER – отличный выбор в сегменте портативных мини-увлажнителей воздуха и ароматизаторов с лаконичным дизайном и достойным функционалом.</p>
                         <p>Увлажнитель Humidifier абсолютно безшумный, кабель USB позволяет подключить его в любом удобном для вас месте, а благодаря оригинальной LED подсветке (7 цветов), его можно использовать в комнате как ночник.</p>
                         <h4>Технические характеристики</h4>
-                        <ul class="item wow bounceInLeft">
+                        <ul class="item bounceInLeft">
                             <li><span class="check"></span>Обьем резервуара: 300мл;</li>
                             <li><span class="check"></span>Скорость испарения жидкости: 30 мл.час;</li>
                             <li><span class="check"></span>Мощность: 1.5-2Вт;</li>
@@ -146,7 +146,7 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
     <div class="land_fon_c rel">
         <div class="maxw rel">
             <h3 class="ac">Простота использования</h3><br>
-            <ul class="item wow bounceInLeft">
+            <ul class="item bounceInLeft">
                 <li><span class="check"></span>Перед тем как применять устройство, налить в резервуар чистой воды.</li>
                 <li><span class="check"></span>Подключить увлажнитель к прикуривателю.
                 <li><span class="check"></span>Если растворить в воде пару капель ароматического масла, то в добавок к увлажнению происходит освежение салона. Важно использовать только растворимые в воде масла.</li>
@@ -156,7 +156,7 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
                 <li><span class="check"></span>При соблюдении этих условий, увлажнитель воздуха повысит качество поездки и приятно освежит воздух в салоне.</li>
             </ul>
             <br>
-            <p class="wow bounceInUp">Если вы хотите, чтобы вас всегда сопровождал приятный аромат- то увлажнитель Humidifier для Вас!</p>
+            <p class="bounceInUp">Если вы хотите, чтобы вас всегда сопровождал приятный аромат- то увлажнитель Humidifier для Вас!</p>
         </div><div class="cl"></div>
     </div><div class="cl"></div>
 </div>
@@ -164,9 +164,9 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
 <div id="primenenie" class="min_h fon2">
     <div class="maxw">
         <h3 class="ac">Оптимальное решение для ВАС</h3><br>
-        <p class="wow bounceInLeft">Сухой воздух – довольно частая проблема для замкнутых помещений, будь то комната или салон автомобиля. Мало того, что им просто неприятно дышать, так он еще и неблаготворно сказывается на вашем здоровье, является причиной целого ряда заболеваний.</p>
+        <p class="bounceInLeft">Сухой воздух – довольно частая проблема для замкнутых помещений, будь то комната или салон автомобиля. Мало того, что им просто неприятно дышать, так он еще и неблаготворно сказывается на вашем здоровье, является причиной целого ряда заболеваний.</p>
         <p class="bounceInRight">С этим небольшим и недорогим устройством ваши поездки станут намного комфортнее!</p>
-        <ul class="item wow bounceInLeft">
+        <ul class="item bounceInLeft">
             <li><span class="check"></span>Сохраняет увлажненность воздуха в салоне автомобиля</li>
             <li><span class="check"></span>Применяется как аромалампа</li>
             <li><span class="check"></span>В режиме освежителя снимает психологическое напряжение</li>
