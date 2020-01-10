@@ -84,11 +84,11 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
                     </div>
                 </div>
                 <div class="land_fon_c_r rel">
-                    <h3 class="wow pulse">MobileSmoke</h3>
+                    <h3 class="pulse">MobileSmoke</h3>
                     <div class="rel"></div>
-                    <div class="land_price wow bounceInRight">699 грн  <span class="land_price_old">800 грн</span></div>
+                    <div class="land_price bounceInRight">699 грн  <span class="land_price_old">800 грн</span></div>
                     <div>
-                        <div id="land_btn_buy" class="land_btn_buy ac wow bounceInUp">Заказать</div>
+                        <div id="land_btn_buy" class="land_btn_buy ac bounceInUp">Заказать</div>
                         <script>
                             document.getElementById("land_btn_buy").addEventListener("click",function(){
                                 var s=document.cookie;
@@ -97,8 +97,8 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
                                 if(l>4)location.href=link;
                             },false);
                         </script>
-                        <p class="wow bounceInRight">Наши покупатели успели по достоинству оценить высокое качество и удобство горизонтальных kaльянов MobileSmoke. Невероятно густой и ароматный дым, легкая тяга, оригинальный дизайн, прочность и мобильность - лишь основные преимущества kaльянов MobileSmoke. Вы и Ваши друзья останетесь довольны кальяном MobileSmoke вне зависимости от того, где Вы намерены его использовать.</p>
-                        <ul class="item wow bounceInLeft"><li><span class="check"></span>Плоский корпус MobileSmoke;</li><li><span class="check"></span>Силиконовая чаша;</li><li><span class="check"></span>Шланг и мундштук MobileSmoke;</li><li><span class="check"></span>Устройство контроля нагрева табака (Kaloud Lotus);</li><li><span class="check"></span>Подсветка с пультом дистанционного управления;</li><li><span class="check"></span>Металлические щипцы.</li></ul>
+                        <p class="bounceInRight">Наши покупатели успели по достоинству оценить высокое качество и удобство горизонтальных kaльянов MobileSmoke. Невероятно густой и ароматный дым, легкая тяга, оригинальный дизайн, прочность и мобильность - лишь основные преимущества kaльянов MobileSmoke. Вы и Ваши друзья останетесь довольны кальяном MobileSmoke вне зависимости от того, где Вы намерены его использовать.</p>
+                        <ul class="item bounceInLeft"><li><span class="check"></span>Плоский корпус MobileSmoke;</li><li><span class="check"></span>Силиконовая чаша;</li><li><span class="check"></span>Шланг и мундштук MobileSmoke;</li><li><span class="check"></span>Устройство контроля нагрева табака (Kaloud Lotus);</li><li><span class="check"></span>Подсветка с пультом дистанционного управления;</li><li><span class="check"></span>Металлические щипцы.</li></ul>
                         <div class="cl"></div>
                     </div>
                 </div>
@@ -116,12 +116,12 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
             </div>
             <div class="land_benefits_border cl"><br></div>
             <div class="dwfte">
-                <div class="land_benefits_box five wow rollIn">
+                <div class="land_benefits_box five rollIn">
                     <span class="land_pay_i fl"></span>
                     <span><h4>Способы оплаты</h4><p>При получении на почте или на карту ПриватБанка</p></span>
                     <div class="cl"></div>
                 </div>
-                <div class="land_benefits_box five wow lightSpeedIn">
+                <div class="land_benefits_box five lightSpeedIn">
                     <span class="land_quality_i fl"></span>
                     <span><h4>Гарантия качества</h4><p>Возврат и обмен в течении 14 дней согласно закона</p></span>
                     <div class="cl"></div>
@@ -129,12 +129,12 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
             </div>
             <div class="land_benefits_border cl"></div>
             <div class="dwfte">
-                <div class="land_benefits_box five wow rollIn">
+                <div class="land_benefits_box five rollIn">
                     <span class="land_delivery_i fl"></span>
                     <span><h4>Быстрая доставка</h4><p>Получите свой заказ в течении 1-2 дней с момента заказа</p></span>
                     <div class="cl"></div>
                 </div>
-                <div class="land_benefits_box five wow lightSpeedIn">
+                <div class="land_benefits_box five lightSpeedIn">
                     <span class="land_price_i fl"></span>
                     <span><h4>Доступные цены</h4><p>Вы можете приобрести кальян MobileSmoke всего за 699 грн</p></span>
                     <div class="cl"></div>
