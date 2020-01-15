@@ -6,7 +6,7 @@ namespace lib\Def;
 Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index,follow">
 <meta property="og:image" content="/img/humidifier/meta.jpg"><meta property="og:title" content="Humidifier - ультразвуковой увлажнитель воздуха"><meta property="og:description" content="Увлажнитель воздуха HUMIDIFIER – отличный выбор в сегменте портативных мини-увлажнителей воздуха и ароматизаторов с лаконичным дизайном и достойным функционалом."><title>Humidifier - ультразвуковой увлажнитель воздуха</title><meta name="description" content="Увлажнитель воздуха HUMIDIFIER – отличный выбор в сегменте портативных мини-увлажнителей воздуха и ароматизаторов с лаконичным дизайном и достойным функционалом.">
 <script async src="/js/common.php"></script><script async src="/js/call_back.php"></script>
-<link rel="stylesheet" href="/css/lp_humidifier/body.php"><script src="/js/wow.php"></script><script>new WOW().init();</script>
+<link rel="stylesheet" href="/css/lp_humidifier/body.php"><!--<script src="/js/wow.php"></script><script>new WOW().init();</script>-->
 <script async src="/js/scroll_only.php"></script><script async src="/js/lp_humidifier.php"></script></head><body><!-- Facebook Pixel Code -->
 <script>
     !function(f,b,e,v,n,t,s)
@@ -51,14 +51,14 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
             </nav>
             <div class="cl"></div>
             <div class="rel top_content">
-                <h3 class="wow pulse">Humidifier - ультразвуковой увлажнитель воздуха</h3>
+                <h3 class="pulse">Humidifier - ультразвуковой увлажнитель воздуха</h3>
                 <div id="d_fon_top_img">
-                    <img src="/img/fast_order/humidifier_fon.png" alt="Humidifier - ультразвуковой увлажнитель воздуха" class="wow bounceInLeft">
+                    <img src="/img/fast_order/humidifier_fon.png" alt="Humidifier - ультразвуковой увлажнитель воздуха" class="bounceInLeft">
                     <div class="cl"></div>
                 </div>
                 <div id="d_fon_top_r" class="fr">
-                    <br><br><br><p class="wow bounceInRight">Оставьте заявку и мы с Вами свяжемся в ближайшее время, чтобы обсудить детали заказа в телефонном режиме. Или Вы можете продолжить покупки и оформить товар из корзины.</p>
-                    <div id="top_call_back_btn" class="ac wow bounceInUp">Перезвонить мне</div>
+                    <br><br><br><p class="bounceInRight">Оставьте заявку и мы с Вами свяжемся в ближайшее время, чтобы обсудить детали заказа в телефонном режиме. Или Вы можете продолжить покупки и оформить товар из корзины.</p>
+                    <div id="top_call_back_btn" class="ac bounceInUp">Перезвонить мне</div>
                     <script>document.getElementById("top_call_back_btn").addEventListener("click",function(){formCalBackViewl();},false);</script>
                 </div><div class="cl"></div>
             </div><div class="cl"></div>
@@ -79,9 +79,9 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
                 <div class="land_fon_c_r rel">
                     <h3 class="pulse">Humidifier - ультразвуковой увлажнитель воздуха</h3>
                     <div class="rel"></div>
-                    <div class="land_price wow bounceInRight">349 грн  <span class="land_price_old">450 грн</span></div>
+                    <div class="land_price bounceInRight">349 грн  <span class="land_price_old">450 грн</span></div>
                     <div>
-                        <div id="land_btn_buy" class="land_btn_buy ac wow bounceInUp">Заказать</div><script>document.getElementById("land_btn_buy").addEventListener("click",function(){location.href="#order-buy";},false);</script>
+                        <div id="land_btn_buy" class="land_btn_buy ac bounceInUp">Заказать</div><script>document.getElementById("land_btn_buy").addEventListener("click",function(){location.href="#order-buy";},false);</script>
                         <p class="bounceInRight">Увлажнитель воздуха HUMIDIFIER – отличный выбор в сегменте портативных мини-увлажнителей воздуха и ароматизаторов с лаконичным дизайном и достойным функционалом.</p>
                         <p>Увлажнитель Humidifier абсолютно безшумный, кабель USB позволяет подключить его в любом удобном для вас месте, а благодаря оригинальной LED подсветке (7 цветов), его можно использовать в комнате как ночник.</p>
                         <h4>Технические характеристики</h4>

@@ -4,7 +4,7 @@ namespace lib\Def;
 \incl\smoke\Def\OptSmoke::$body_column=NULL;
 
 Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index,follow">
-<meta property="og:image" content="/img/fast_order/meta.jpg"><meta property="og:title" content="MobileSmoke - горизонтальный MobileSmoke"><meta property="og:description" content="Неповторимый густой и ароматный дым в сочетании с лёгкой тягой, сделают Ваш вечер оригинальным."><script async src="/js/common.php"></script><script async src="/js/call_back.php"></script><link rel="stylesheet" href="/css/lp_wow/body.php"><script src="/js/wow.php"></script><script>new WOW().init();</script><title>MobileSmoke - горизонтальный MobileSmoke</title><meta name="description" content="Большое количество наших клиентов смогли по достоинству оценить высокое качество и удобство горизонтальных MobileSmoke. Неповторимый густой и ароматный дым в сочетании с лёгкой тягой, сделают Ваш вечер оригинальным.">
+<meta property="og:image" content="/img/fast_order/meta.jpg"><meta property="og:title" content="MobileSmoke - горизонтальный MobileSmoke"><meta property="og:description" content="Неповторимый густой и ароматный дым в сочетании с лёгкой тягой, сделают Ваш вечер оригинальным."><script async src="/js/common.php"></script><script async src="/js/call_back.php"></script><link rel="stylesheet" href="/css/lp_wow/body.php"><!--<script src="/js/wow.php"></script><script>new WOW().init();</script>--><title>MobileSmoke - горизонтальный MobileSmoke</title><meta name="description" content="Большое количество наших клиентов смогли по достоинству оценить высокое качество и удобство горизонтальных MobileSmoke. Неповторимый густой и ароматный дым в сочетании с лёгкой тягой, сделают Ваш вечер оригинальным.">
 </head><body>
 <!-- Facebook Pixel Code -->
 <script>
@@ -48,14 +48,14 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
         </nav>
         <div class="cl"></div>
         <div class="rel top_content">
-            <h3 class="wow pulse">MobileSmoke - мобильные кальяны в Украине</h3>
+            <h3 class="pulse">MobileSmoke - мобильные кальяны в Украине</h3>
             <div id="d_fon_top_img">
-                <img src="/img/fast_order/hookah_fon.png" alt="MobileSmoke" class="wow bounceInLeft">
+                <img src="/img/fast_order/hookah_fon.png" alt="MobileSmoke" class="bounceInLeft">
                 <div class="cl"></div>
             </div>
             <div id="d_fon_top_r" class="fr">
-                <br><br><br><p class="wow bounceInRight">Оставьте заявку и мы с Вами свяжемся в ближайшее время, чтобы обсудить детали заказа в телефонном режиме. Или Вы можете продолжить покупки и оформить товар из корзины.</p>
-                <div id="top_call_back_btn" class="ac wow bounceInUp">Перезвонить мне</div>
+                <br><br><br><p class="bounceInRight">Оставьте заявку и мы с Вами свяжемся в ближайшее время, чтобы обсудить детали заказа в телефонном режиме. Или Вы можете продолжить покупки и оформить товар из корзины.</p>
+                <div id="top_call_back_btn" class="ac bounceInUp">Перезвонить мне</div>
                 <script>document.getElementById("top_call_back_btn").addEventListener("click",function(){
                     formCalBackViewl();},false);</script>
             </div><div class="cl"></div>
