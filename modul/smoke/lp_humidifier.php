@@ -79,7 +79,7 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
                 <div class="land_fon_c_r rel">
                     <h3 class="pulse">Humidifier - ультразвуковой увлажнитель воздуха</h3>
                     <div class="rel"></div>
-                    <div class="land_price bounceInRight">349 грн  <span class="land_price_old">450 грн</span></div>
+                    <div class="land_price bounceInRight">349 грн  <span class="land_price_old">560 грн</span></div>
                     <div>
                         <div id="land_btn_buy" class="land_btn_buy ac bounceInUp">Заказать</div><script>document.getElementById("land_btn_buy").addEventListener("click",function(){location.href="#order-buy";},false);</script>
                         <p class="bounceInRight">Увлажнитель воздуха HUMIDIFIER – отличный выбор в сегменте портативных мини-увлажнителей воздуха и ароматизаторов с лаконичным дизайном и достойным функционалом.</p>

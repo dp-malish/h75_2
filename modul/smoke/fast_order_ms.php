@@ -62,7 +62,7 @@ Opt::$main_content.='<main>
             <div class="land_fon_c_r rel">
                 <h3 class="al">Кальян MobileSmoke</h3>
                 <div class="rel"></div>
-                <div class="land_price">699 грн  <span class="land_price_old">800 грн</span></div>
+                <div class="land_price">699 грн  <span class="land_price_old">1100 грн</span></div>
                 <div>
                 <a class="land_btn_buy" href="#land-fast-order">Купить</a>
                     <p>Наши покупатели успели по достоинству оценить высокое качество и удобство горизонтальных кальянов MobileSmoke. Невероятно густой и ароматный дым, легкая тяга, оригинальный дизайн, прочность и мобильность - лишь основные преимущества кальянов MobileSmoke. Вы и Ваши друзья останетесь довольны кальяном MobileSmoke вне зависимости от того, где Вы намерены его использовать.</p>

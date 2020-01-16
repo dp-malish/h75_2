@@ -86,7 +86,7 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
                 <div class="land_fon_c_r rel">
                     <h3 class="pulse">MobileSmoke</h3>
                     <div class="rel"></div>
-                    <div class="land_price bounceInRight">699 грн  <span class="land_price_old">800 грн</span></div>
+                    <div class="land_price bounceInRight">699 грн  <span class="land_price_old">1100 грн</span></div>
                     <div>
                         <div id="land_btn_buy" class="land_btn_buy ac bounceInUp">Заказать</div>
                         <script>
