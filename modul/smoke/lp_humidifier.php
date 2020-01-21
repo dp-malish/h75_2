@@ -92,7 +92,7 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
                             <li><span class="check"></span>Рабочее напряжение: 12V;</li>
                             <li><span class="check"></span>Размер: 5,7*5,6*16,4см;</li>
                             <li><span class="check"></span>Материал: АБС пластик, электронные компоненты;</li>
-                            <li><span class="check"></span>Шум: 36 Дб;</li>
+                            <li><span class="check"></span>Шум: 30 Дб;</li>
                             <li><span class="check"></span>Вес упаковки: 153 грамма;</li>
                             <li><span class="check"></span>Цвет: белый, розовый, бирюзовый!</li>
                         </ul>
