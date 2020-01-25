@@ -29,6 +29,7 @@ if($_SERVER['REQUEST_URI']!='/'){
             case 'mobilesmoke':include'../modul/smoke/last_fb.php';break;
 
             case 'humidifier':include'../modul/smoke/lp_humidifier.php';break;
+            case 'humidifier-fb':include'../modul/smoke/lp_humidifier_2.php';break;
 
             case 'landing':include'../modul/smoke/landing.php';break;
 
