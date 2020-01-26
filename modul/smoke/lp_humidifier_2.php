@@ -112,10 +112,12 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
            <section>
                <div class="land_fon_c_l rel">
                    <div class="fotorama" data-allowfullscreen="native" data-nav="thumbs" data-transition="crossfade" data-loop="true" data-autoplay="7000" data-keyboard="true" >
-                       <img src="/img/humidifier/dbpic.php?i=humidifier-two" alt="Humidifier - пара">
+<img src="/img/humidifier2/dbpic.php?i=humidifier_meta2" alt="Humidifier - дом">
+<img src="/img/humidifier/dbpic.php?i=humidifier-two" alt="Humidifier - пара">
 <img src="/img/humidifier/dbpic.php?i=humidifier-main" alt="Humidifier - презентация">
 <img src="/img/humidifier/dbpic.php?i=humidifier-avto" alt="Humidifier - авто">
-<img src="/img/humidifier/dbpic.php?i=humidifier-fon" alt="Humidifier - фон"><img src="/img/humidifier/dbpic.php?i=humidifier-blue" alt="Humidifier - голубой"><img src="/img/humidifier/dbpic.php?i=humidifier-pink" alt="Humidifier - розовый"><img src="/img/humidifier/dbpic.php?i=humidifier-white" alt="Humidifier - белый"><img src="/img/humidifier/dbpic.php?i=humidifier-home" alt="Humidifier - дом"><img src="/img/humidifier/dbpic.php?i=humidifier-office" alt="Humidifier - офис">
+<img src="/img/humidifier/dbpic.php?i=humidifier-fon" alt="Humidifier - фон"><img src="/img/humidifier/dbpic.php?i=humidifier-blue" alt="Humidifier - голубой"><img src="/img/humidifier/dbpic.php?i=humidifier-pink" alt="Humidifier - розовый"><img src="/img/humidifier/dbpic.php?i=humidifier-white" alt="Humidifier - белый">
+<img src="/img/humidifier/dbpic.php?i=humidifier-office" alt="Humidifier - офис">
 <img src="/img/humidifier/dbpic.php?i=humidifier-packaging" alt="Humidifier - офис"><img src="/img/humidifier/dbpic.php?i=humidifier-details" alt="Humidifier - деталировка"><img src="/img/humidifier/dbpic.php?i=humidifier-econom" alt="Humidifier - эконом">
                        <a href="https://youtu.be/2UCxDNoc2GA"></a>
                    </div>
