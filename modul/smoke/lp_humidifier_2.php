@@ -125,7 +125,7 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
                    <div class="rel"></div>
                    <div class="land_price bounceInRight">349 грн  <span class="land_price_old">560 грн</span></div>
                    <div>
-                       <div id="land_btn_buy" class="land_btn_buy ac bounceInUp">Заказать</div><script>document.getElementById("land_btn_buy").addEventListener("click",function(){location.href="#order-buy";},false);</script>
+                       <div id="land_btn_buy" class="land_btn_buy ac bounceInUp">Заказать</div><script>document.getElementById("land_btn_buy").addEventListener("click",function(){location.href="#zakazat";},false);</script>
                        <p class="bounceInRight">Увлажнитель воздуха HUMIDIFIER – отличный выбор в сегменте портативных мини-увлажнителей воздуха и ароматизаторов с лаконичным дизайном и достойным функционалом.</p>
                        <p>Увлажнитель Humidifier абсолютно безшумный, кабель USB позволяет подключить его в любом удобном для вас месте, а благодаря оригинальной LED подсветке (7 цветов), его можно использовать в комнате как ночник.</p>
                        <h4>Технические характеристики</h4>
