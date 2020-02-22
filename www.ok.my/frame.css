@@ -33,11 +33,14 @@ html,body{height:100%;
 
 
 #logo{
+	position: relative;
 	float:left;
 	/*width:13%;*/
 	width:170px;
 	text-align: center;
 	height:90px;
+
+	background-color: #5C4B3F;
 }
 
 
@@ -59,6 +62,37 @@ html,body{height:100%;
 @media screen and (max-width:540px){
 	#logo{width:100%}
 }
+
+#logo_vint_out{
+	position:relative;
+	margin:5px;
+	width:80px;
+	height:80px;
+
+
+	/*background-color:#00afea;*/
+}
+#logo_vint_in{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 80px;
+	height: 80px;
+
+	animation: vint-auto-rotating 5s linear infinite;
+
+
+	/*background-color: #72b572;*/
+}
+@keyframes vint-auto-rotating {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
 
 /*
 
