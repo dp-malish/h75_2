@@ -35,8 +35,8 @@ html,body{height:100%;
 #logo{
 	position: relative;
 	float:left;
-	/*width:13%;*/
-	width:370px;
+	width:13%;
+	/*width:370px;*/
 	text-align: center;
 	height:90px;
 
