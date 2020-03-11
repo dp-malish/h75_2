@@ -1,0 +1,14 @@
+/*Первая часть*/
+#part1{
+    position:relative;
+    background:url("/img/site/background.jpg") no-repeat;
+    background-size:100%;
+    min-height:560px;
+
+}
+#logo{
+    width:200px;
+    height:90px;
+
+    background-color: #2ca8c6;
+}

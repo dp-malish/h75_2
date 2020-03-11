@@ -9,11 +9,19 @@ ul{list-style:none}
 
 *{box-sizing:border-box}
 
+html,body{height:100%;
+    font:15px Verdana,Geneva,serif;
+    text-align:justify;
+    cursor:default;
+    background-color:#fff;
+}
+.maxw{
+    margin:0 auto;
+    min-width:240px;
+    max-width:1240px
+}
+
 .fon,.fon_c{margin:0 0 7px}
 @media screen and (max-width: 920px){.fon,.fon_c{margin:0 0 7px}}
 #l_col .fon,#l_col .fon_c,#r_col .fon,#r_col .fon_c{margin:0 0 7px}
-
-
-
-
 
