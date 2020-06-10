@@ -28,7 +28,10 @@ if($_SERVER['REQUEST_URI']!='/'){
 
             case 'mobilesmoke':include'../modul/smoke/last_fb.php';break;
 
-            case 'landing':include'../modul/smoke/landing.php';break;
+
+            //case 'humidifier':include'../modul/smoke/lp_humidifier2.php';break;
+
+            //case 'landing':include'../modul/smoke/landing.php';break;
 
 
             //default:new \incl\sota\shop\DefShop();
@@ -37,7 +40,7 @@ if($_SERVER['REQUEST_URI']!='/'){
     }
 }else{Route::$index=1;}if(Route::$module404){Route::modul404();}
 
-if(Route::$index){include'../modul/smoke/main.php';}
+if(Route::$index){include'../modul/smoke/main/*_sopt*/.php';}
 
 
 

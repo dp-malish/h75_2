@@ -31,7 +31,9 @@ if($_SERVER['REQUEST_URI']!='/'){
             case 'humidifier':include'../modul/smoke/lp_humidifier.php';break;
             case 'humidifier-fb':include'../modul/smoke/lp_humidifier_2.php';break;
 
-            case 'landing':include'../modul/smoke/landing.php';break;
+
+            //Разрабатывал
+            //case 'landing':include'../modul/smoke/landing.php';break;
 
 
             //default:new \incl\sota\shop\DefShop();

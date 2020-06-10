@@ -86,7 +86,7 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
                 <div class="land_fon_c_r rel">
                     <h3 class="pulse">MobileSmoke</h3>
                     <div class="rel"></div>
-                    <div class="land_price bounceInRight">729 грн  <span class="land_price_old">1100 грн</span></div>
+                    <div class="land_price bounceInRight">799 грн  <span class="land_price_old">1100 грн</span></div>
                     <div>
                         <div id="land_btn_buy" class="land_btn_buy ac bounceInUp">Заказать</div>
                         <script>
@@ -136,7 +136,7 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
                 </div>
                 <div class="land_benefits_box five lightSpeedIn">
                     <span class="land_price_i fl"></span>
-                    <span><h4>Доступные цены</h4><p>Вы можете приобрести кальян MobileSmoke всего за 729 грн</p></span>
+                    <span><h4>Доступные цены</h4><p>Вы можете приобрести кальян MobileSmoke всего за 799 грн</p></span>
                     <div class="cl"></div>
                 </div>
             </div>
