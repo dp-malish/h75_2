@@ -22,3 +22,10 @@
 .lng_uk::before{
      content: url("/img/flag/Ukraine.png");
  }
+
+.lng_btn{
+    background-color: #ffffdd;
+
+    height: 100px;
+    width: 240px;
+}
