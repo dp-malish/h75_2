@@ -1,7 +1,14 @@
 <div id="header" class="maxw">
     <header>
         <div id="logo" class="fl rel"><a href="/"><img src="/img/site/dbpic.php?i=logo&ep=0" alt="WinTeH" title="WinTeH"></a><div class="cl"></div></div>
-        <div class="h_field">&nbsp;</div>
+        <div class="h_field">
+            <link rel="stylesheet" type="text/css" href="/lng.css">
+            <div class="lng_btn">
+                <span class="lng_en" title="english"></span>
+                <span class="lng_ru" title="русский"></span>
+                <span class="lng_uk" title="українська"></span>
+            </div>
+        </div>
         <div class="fon_c h_field ac"><h2><?=\incl\win\Def\Template::$service_name[\lib\Def\Opt::$lang];?></h2></div>
         <div class="fon_c h_field">
             <div class="top_l ac"><strong><?=\incl\win\Def\Template::$tel_top[\lib\Def\Opt::$lang];?>:</strong><br>

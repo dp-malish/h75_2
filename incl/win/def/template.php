@@ -43,6 +43,7 @@ class Template extends Def\Language{
     function __construct(){
         parent::__construct();
         switch(Def\Opt::$lang){
+            case'en':Def\Opt::$lang='en';break;
             case'uk':Def\Opt::$lang='uk';break;
             default:Def\Opt::$lang='ru';
         }
