@@ -7,25 +7,13 @@
     box-sizing:border-box;
 }
 
+
 .lng_en:hover,.lng_ru:hover,.lng_uk:hover{
 
     border-top:red 2px solid;
     border-bottom:red 2px solid;
 }
 
-.lng_en::before{
-    content: url("/img/flag/United-Kingdom.png");
-}
-.lng_ru::before{
-     content: url("/img/flag/Russia.png");
- }
-.lng_uk::before{
-     content: url("/img/flag/Ukraine.png");
- }
-
-.lng_btn{
-    background-color: #ffffdd;
-
-    height: 100px;
-    width: 240px;
-}
+.lng_en::before{content:url("/img/flag/United-Kingdom.png")}
+.lng_ru::before{content:url("/img/flag/Russia.png")}
+.lng_uk::before{content:url("/img/flag/Ukraine.png")}

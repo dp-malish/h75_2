@@ -5,12 +5,12 @@
             <link rel="stylesheet" type="text/css" href="/lng.css">
             <div class="lng_btn">
                 <span id="lng_en_btn" class="lng_en" title="english" data-lng="en" onClick="lngBtn(this);"></span>
-                <span id="lng_ru_btn" class="lng_ru" title="русский" onClick="alert('rrtgr');"></span>
-                <span id="lng_uk_btn" class="lng_uk" title="українська" onClick="alert('rrtgr');"></span>
+                <span id="lng_ru_btn" class="lng_ru" title="русский" data-lng="ru" onClick="lngBtn(this);"></span>
+                <span id="lng_uk_btn" class="lng_uk" title="українська" data-lng="uk" onClick="lngBtn(this);"></span>
                 <script type="application/javascript">
                     function lngBtn(el){
                         alert(el.dataset.lng);
-                        //this.style.backgroundColor="red";
+
 
                     };
 
