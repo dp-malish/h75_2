@@ -4,15 +4,15 @@
         <div class="h_field">
             <link rel="stylesheet" type="text/css" href="/lng.css">
             <div class="lng_btn">
-                <span id="lng_en_btn" class="lng_en" title="english" onClick="alert("rrtgr");">ygujyuytuytu657</span>
-                <span id="lng_ru_btn" class="lng_ru" title="русский" onClick="alert("rrtgr");">67</span>
-                <span id="lng_uk_btn" class="lng_uk" title="українська" onClick="alert("rrtgr");">678</span>
+                <span id="lng_en_btn" class="lng_en" title="english" data-lng="en" onClick="lngBtn(this);"></span>
+                <span id="lng_ru_btn" class="lng_ru" title="русский" onClick="alert('rrtgr');"></span>
+                <span id="lng_uk_btn" class="lng_uk" title="українська" onClick="alert('rrtgr');"></span>
                 <script type="application/javascript">
-                    function lngBtn(){
-                        alert("rrtgr");
+                    function lngBtn(el){
+                        alert(el.dataset.lng);
                         //this.style.backgroundColor="red";
 
-                    })
+                    };
 
                 </script>
             </div>
