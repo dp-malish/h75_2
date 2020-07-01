@@ -9,11 +9,9 @@
                 <span id="lng_uk_btn" class="lng_uk" title="українська" data-lng="uk" onClick="lngBtn(this);"></span>
                 <script type="application/javascript">
                     function lngBtn(el){
-                        alert(el.dataset.lng);
-
-
-                    };
-
+                        document.cookie="lng="+el.dataset.lng+";domain=."+document.location.host;
+                        location.href='/';
+                    }
                 </script>
             </div>
         </div>
