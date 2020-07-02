@@ -35,11 +35,11 @@ if(Post\Post::issetPostArr()){
     }else echo $_SERVER['SERVER_NAME'];
     //-------------------------------------------------------------------
 }else echo $_SERVER['SERVER_NAME'];
-
-?><form method="post">
+/*
+<form method="post">
     <input type="hidden" name="freewebhostingarea" value="1">
     <input type="email" name="mail" value="winteh@i.ua">
     <input type="text" name="login" value="host.com.ua">
     <input type="password" name="pass" value="123456789dfSA">
     <input type="submit">
-</form>
+</form>*/
