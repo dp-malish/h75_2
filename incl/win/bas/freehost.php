@@ -15,7 +15,6 @@ class FreeHost extends Post{
 
 
     static function freewebhostingarea(){$err=false;
-
         if(self::issetPostKey(['mail','login','pass'])){
             $mail=Def\Validator::auditMail($_POST['mail']);
             if(!$mail){$err=true;}
@@ -32,7 +31,7 @@ class FreeHost extends Post{
                     Def\Validator::$ErrorForm[]='Ошибка соединения, повторите попытку позже...';
                 }
             }
-        }else{$err=true;}
+        }else{$err=true;Def\Validator::$ErrorForm[]='ninioioo';  }
         return($err)?false:true;
     }
 

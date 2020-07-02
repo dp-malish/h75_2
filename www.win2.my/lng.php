@@ -5,8 +5,11 @@
  * Date: 30.06.2020
  * Time: 10:47
  */
+
 namespace lib\Def;
-use incl\win\Def\Template;
+
+use incl\win\Bas\FreeHost;
+
 use lib\Post As Post;
 
 Error_Reporting(E_ALL & ~E_NOTICE);ini_set('display_errors',1);
@@ -23,20 +26,20 @@ $bot=new UserAgent();
 if(Post\Post::issetPostArr()){
     if(!empty($_POST['freewebhostingarea'])){
 
-        echo "ede";
-
-        /*if(Feedback::feedback()){
-            echo json_encode(['err'=>false,'answer'=>'Спасибо! Ваше сообщение отправлено...']);
-        }else{Post\Post::answerErrJson();}*/
+        if(FreeHost::freewebhostingarea()){
+            echo "Сюда можно/нужно вставить задержку";//json_encode(['err'=>false,'answer'=>'Спасибо! Ваше сообщение отправлено...']);
+        }else{
+            //Post\Post::answerErrJson();
+            echo "Лажа ";//.Validator::$ErrorForm[0];
+        }
     }else echo $_SERVER['SERVER_NAME'];
     //-------------------------------------------------------------------
 }else echo $_SERVER['SERVER_NAME'];
 
-
-new Template();
-
-
-
-
-
-
+?><form method="post">
+    <input type="hidden" name="freewebhostingarea" value="1">
+    <input type="email" name="mail" value="winteh@i.ua">
+    <input type="text" name="login" value="host.com.ua">
+    <input type="password" name="pass" value="123456789dfSA">
+    <input type="submit">
+</form>
