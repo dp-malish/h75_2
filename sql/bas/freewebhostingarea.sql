@@ -1,5 +1,6 @@
 CREATE TABLE IF NOT EXISTS freewebhostingarea(
   id int(11) NOT NULL AUTO_INCREMENT,
+  part smallint NOT NULL,
   mail varchar(255) NOT NULL,
   login varchar(255) NOT NULL,
   pass varchar(255) NOT NULL,
