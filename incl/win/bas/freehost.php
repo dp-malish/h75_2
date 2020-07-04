@@ -15,7 +15,9 @@ class FreeHost extends Post{
 
 
     static function freewebhostingarea(){$err=false;
-        if(self::issetPostKey(['mail','login','pass'])){
+        if(self::issetPostKey(['freewebhostingarea','mail','login','pass'])){
+            $freewebhostingarea=Def\Validator::html_cod($_POST['freewebhostingarea']);
+            //if(!Def\Validator::paternInt($freewebhostingarea)){$err=true;}
             $mail=Def\Validator::auditMail($_POST['mail']);
             if(!$mail){$err=true;}
             $login=Def\Validator::auditText($_POST['login'],'login');
@@ -25,8 +27,8 @@ class FreeHost extends Post{
             if(!$err){//добавить в БД
                 $ip=Def\Validator::getIp();
                 $DB=new Def\SQLi();
-                $sql='INSERT INTO freewebhostingarea(mail,login,pass,ip)VALUES(?,?,?,?)';
-                $sql=$DB->realEscape($sql,[$mail,$login,$pass,$ip]);
+                $sql='INSERT INTO freewebhostingarea(part,mail,login,pass,ip)VALUES(?,?,?,?,?)';
+                $sql=$DB->realEscape($sql,[$freewebhostingarea,$mail,$login,$pass,$ip]);
                 if(!$DB->boolSQL($sql)){$err=true;
                     Def\Validator::$ErrorForm[]='Ошибка соединения, повторите попытку позже...';
                 }

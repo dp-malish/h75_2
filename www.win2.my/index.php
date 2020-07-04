@@ -12,7 +12,7 @@ $bot=new UserAgent();
 
 //if(!$bot->isBot()){include'../blocks/win/rek/google.php';}
 
-new Template();
+new Template('ru');
 
 if($_SERVER['REQUEST_URI']!='/'){
     if(Route::requestURI(3)){
