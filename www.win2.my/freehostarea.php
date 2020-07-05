@@ -34,11 +34,11 @@ if(Post\Post::issetPostArr()){
         }
     }else echo $_SERVER['SERVER_NAME'];
     //-------------------------------------------------------------------
-}else
+}else echo $_SERVER['SERVER_NAME'];
 
-Route::location301();
+//Route::location301();
 
-    //echo $_SERVER['SERVER_NAME'];
+
 /*
 
 <form method="post">
