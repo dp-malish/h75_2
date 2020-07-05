@@ -30,17 +30,21 @@ if(Post\Post::issetPostArr()){
             echo "Сюда можно/нужно вставить задержку";//json_encode(['err'=>false,'answer'=>'Спасибо! Ваше сообщение отправлено...']);
         }else{
             //Post\Post::answerErrJson();
-            echo "Лажа ";//.Validator::$ErrorForm[0];
+            echo "0";//.Validator::$ErrorForm[0];
         }
     }else echo $_SERVER['SERVER_NAME'];
     //-------------------------------------------------------------------
-}else echo $_SERVER['SERVER_NAME'];
-/**/
-?>
+}else
+
+Route::location301();
+
+    //echo $_SERVER['SERVER_NAME'];
+/*
+
 <form method="post">
     <input type="hidden" name="freewebhostingarea" value="1">
     <input type="email" name="mail" value="winteh@i.ua">
     <input type="text" name="login" value="host.com.ua">
     <input type="password" name="pass" value="123456789dfSA">
     <input type="submit">
-</form>
+</form>*/

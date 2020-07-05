@@ -12,7 +12,6 @@ $bot=new UserAgent();
 
 //if(!$bot->isBot()){include'../blocks/win/rek/google.php';}
 
-new Template('ru');
 
 if($_SERVER['REQUEST_URI']!='/'){
     if(Route::requestURI(3)){
@@ -30,7 +29,9 @@ if($_SERVER['REQUEST_URI']!='/'){
         }
     }
 }else{Route::$index=1;}if(Route::$module404){Route::modul404();}
-if(Route::$index){include'../modul/win/main.php';}
+
+
+if(Route::$index){new Template();include'../modul/win/main.php';}
 
 //left - all stranici
 require'../blocks/win/menu/l/remont_'.$Opt::$lang.'.php';
