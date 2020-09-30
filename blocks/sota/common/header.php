@@ -2,8 +2,22 @@
     <div class="header rel">
         <div class="headertop rel" id="getsizehed">
             <div id="headcontact" class="maxw five_ headerimg">
+                <div class="lng_btn">
+                        <span id="lng_en_btn" class="lng_en" title="english" data-lng="en" onClick="lngBtn(this);"></span>
+                        <span id="lng_ru_btn" class="lng_ru" title="русский" data-lng="ru" onClick="lngBtn(this);"></span>
+                        <span id="lng_uk_btn" class="lng_uk" title="українська" data-lng="uk" onClick="lngBtn(this);"></span>
+                        <script type="application/javascript">
+                            function lngBtn(el){
+                                document.cookie="lng="+el.dataset.lng+";domain=."+document.location.host;
+                                location.href='/';
+                            }
+                        </script>
+                </div>
+                <div class="cl"></div>
                 <div id="logo"><a href="/"><img src="/img/site/dbpic.php?i=logo&ep=1"></a></div>
-                <div id="logoname" class="h_field ac"><h1 class="monofont">Сервисный центр «Cота плюс»</h1></div>
+                <div id="logoname" class="h_field ac">
+                    <h1 class="monofont">Сервисный центр «Cота плюс»</h1>
+                </div>
                 <div id="topcontact" class="h_field">
                     <div class="dwf">
                         <div id="clock">

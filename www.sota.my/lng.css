@@ -1,0 +1,37 @@
+.lng_btn{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    right: 0;
+    float:right;
+    background-color: #9BEFF3;
+}
+@media screen and (max-width:800px){
+    .lng_btn{
+        position:relative;
+    }
+}
+
+.lng_en,.lng_ru,.lng_uk{
+    width: 24px;
+    height: 28px;
+    margin:0 3px;
+    float: right;
+    cursor: pointer;
+    box-sizing:border-box;
+}
+@media screen and (max-width:800px){
+    .lng_en,.lng_ru,.lng_uk{
+        margin:0 12px;
+    }
+}
+
+.lng_en:hover,.lng_ru:hover,.lng_uk:hover{
+
+    border-top:red 2px solid;
+    border-bottom:red 2px solid;
+}
+
+.lng_en::before{content:url("/img/flag/United-Kingdom.png")}
+.lng_ru::before{content:url("/img/flag/Russia.png")}
+.lng_uk::before{content:url("/img/flag/Ukraine.png")}

@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="/img/site/ico.png" type="image/png">
 
     <link rel="stylesheet" type="text/css" href="/css.php">
+    <link rel="stylesheet" type="text/css" href="/lng.css">
     <link rel="stylesheet" type="text/css" href="/temp.css">
 
 
