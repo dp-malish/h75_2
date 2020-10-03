@@ -1,0 +1,19 @@
+.lng_en,.lng_ru,.lng_uk{
+    width: 24px;
+    height: 28px;
+    margin:11px 3px;
+    float: right;
+    cursor: pointer;
+    box-sizing:border-box;
+}
+
+
+.lng_en:hover,.lng_ru:hover,.lng_uk:hover{
+
+    border-top:#AA0500 2px solid;
+    border-bottom:#AA0500 2px solid;
+}
+
+/*.lng_en::before{content:url("/img/flag/United-Kingdom.png")}*/
+.lng_ru::before{content:url("/img/flag/Russia.png")}
+.lng_uk::before{content:url("/img/flag/Ukraine.png")}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" type="text/css" href="/default.css">
     <link rel="stylesheet" type="text/css" href="/frame.css">
+    <link rel="stylesheet" type="text/css" href="/lng.css">
     <link rel="stylesheet" type="text/css" href="/css.css">
 
 
@@ -16,26 +17,36 @@
 
 <div id="bh">
     <div class="maxw">
-        <div id="bflocation">
+        <div id="bhlocation">
             <span class="location">  Мариуполь</span>
         </div>
-        <div id="bftimew">
+        <div id="bhtimew">
             Работаем с 10:00 до 22:00
         </div>
-        <div id="bfmenu">
+        <div id="bhmenu">
             <a href="/">Доставка</a>
             <a href="/">Контакты</a>
         </div>
 
+        <div id="bhtel">
+            <img class="svg" src="/img/site/phone-header.svg" alt="телефон">76 <br>98p
+        </div>
 
 
-
-
+        <div class="lng_btn">
+            <span id="lng_en_btn" class="lng_en" title="english" data-lng="en" onClick="lngBtn(this);"></span>
+            <span id="lng_ru_btn" class="lng_ru" title="русский" data-lng="ru" onClick="lngBtn(this);"></span>
+            <span id="lng_uk_btn" class="lng_uk" title="українська" data-lng="uk" onClick="lngBtn(this);"></span>
+            <script type="application/javascript">
+                function lngBtn(el){
+                    document.cookie="lng="+el.dataset.lng+";domain=."+document.location.host;
+                    //location.href='/';
+                }
+            </script>
+        </div>
         <div class="cl"></div>
     </div>
 </div>
-
-
 
 
 

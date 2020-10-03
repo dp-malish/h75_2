@@ -15,53 +15,62 @@ body{background:#000 url("../img/site/dbpic.php?i=bg")fixed repeat;}
 }
 
 #bh{
-	height:50px;
+	min-height:50px;
 	/*padding:15px 2px 1px;*/
 	background-color: #373737;
 	font:16px Times, Times New Roman, serif;
 }
-#bflocation{
+#bhlocation{
 	float:left;
 	height:50px;
-	width:150px;
+	width:230px;
 	overflow:hidden; /* всё, что выходит за рамки блока обрезается */
 	white-space:nowrap; /* блок может содержать не более одной строки */
 	text-align:center;
-	line-height:3em; /* не поддерживается Opera Mini [opera.com] */
+	line-height:3em
 
 }
 .location:before{content:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAWCAYAAAAmaHdCAAAB9klEQVQ4jY3UO0iWURgH8N/7+kESfoGLRTewnMqwAnEoE5OKtsrFKeiyZEPXMSga2oqE5ooQEjKQmoIagigi6OJlzEGoEILQRAqSr+Gctz5Pn9J/OZzn+Z/nPPdsdliKTbiCrViHevzAJ0xE3WRBLvdWlKoer8BdHIwP3mAAn7EWe9GOt3iCo/iJP0ZW4jma408DqCQe3kOGM7iEl+jEfB4JQ9iA/bhZw0CBStTvi6EOQY4udONadLUaW3ASHYn8XeR3f3+YdWWzw0bQgm1VHtThEfZgHg0YwwHMRE6GUXzMo4HxJISr2IVTWB0fr8ftJLRxtORowofE3XahnIPx/iKG0JzwRtGUR7fmEuVXbMSaeK+PBmYS3hyyUlS0JspzeCUkegybsQrHEl4rZnJMoS1RTmMH7sffnmK70IDVaMNUSWiiW+jBsyrCDC5YGj3Rk9PZ7LAMr9EYf0/zUwsNQqK/oSMXStWHMh78hwGRV0ZfubdSKdp+EhexW5id5XA58i7Gd/Iq5aAwC2eFwaqFTqFyQ/72kCzZJ3XCdDZhpxBzgUah5NNCNy8Q9kluMRZwSFgRI0IjiudIlB8pDBRIjcAX9At9cSPKrsd7v7CkFqGUCiIeC8N2HL9wAnei/B/U8qTAebwXElmcNbGckYqQnwkctvS28xs34nkGq4bfkgAAAABJRU5ErkJggg==');
 }
 
-#bftimew{
+#bhtimew{
 	float:left;
 	height:50px;
-	width:200px;
-	overflow:hidden; /* всё, что выходит за рамки блока обрезается */
-	white-space:nowrap; /* блок может содержать не более одной строки */
+	width:230px;
+	overflow:hidden;
+	white-space:nowrap;
 	text-align:center;
-	line-height:3em; /* не поддерживается Opera Mini [opera.com] */
-
+	line-height:3em
 }
-#bfmenu{
+#bhmenu{
 	float:left;
 	height:50px;
 	width:250px;
-	/*overflow:hidden;  всё, что выходит за рамки блока обрезается */
-	white-space:nowrap; /* блок может содержать не более одной строки */
+	overflow:hidden;
+	white-space:nowrap; /*блок может содержать не более одной строки */
 	text-align:center;
-	line-height:3em;
+ 	line-height:3em;
 }
-#bfmenu a{
-	display:inline;
+#bhmenu a{
+	color:#ffffdd;
+	display:inline-block;
 	margin:0 12px;
 	width:75px;
 	text-decoration:none;
 }
 
-#bfmenu a:hover{color:#AA0500;text-decoration:#00BC52;text-decoration:underline}
-#bfmenu a:link{color:#ffffdd}
-#bfmenu a:visited{color:#ffffdd}
+#bhmenu a:visited{color:#ffffdd}/*!!!!:visited, а затем идёт :hover*/
+#bhmenu a:hover{color:#AA0500}
+
+#bhtel{
+	float: left;
+	height: 50px;
+	width:100px;
+	overflow: hidden;
+	background-color: #9BEFF3;
+}
+
+
 
 /*
 #header{
