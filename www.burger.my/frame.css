@@ -21,18 +21,46 @@ body{background:#000 url("../img/site/dbpic.php?i=bg")fixed repeat;}
 	font:16px Times, Times New Roman, serif;
 }
 #bflocation{
+	float:left;
 	height:50px;
 	width:150px;
-	overflow: hidden; /* всё, что выходит за рамки блока обрезается */
-	white-space: nowrap; /* блок может содержать не более одной строки */
-	text-align: center;
-	/*height: 7em;   не в % */
+	overflow:hidden; /* всё, что выходит за рамки блока обрезается */
+	white-space:nowrap; /* блок может содержать не более одной строки */
+	text-align:center;
 	line-height:3em; /* не поддерживается Opera Mini [opera.com] */
-	background-color:#2c536c;
+
 }
 .location:before{content:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAWCAYAAAAmaHdCAAAB9klEQVQ4jY3UO0iWURgH8N/7+kESfoGLRTewnMqwAnEoE5OKtsrFKeiyZEPXMSga2oqE5ooQEjKQmoIagigi6OJlzEGoEILQRAqSr+Gctz5Pn9J/OZzn+Z/nPPdsdliKTbiCrViHevzAJ0xE3WRBLvdWlKoer8BdHIwP3mAAn7EWe9GOt3iCo/iJP0ZW4jma408DqCQe3kOGM7iEl+jEfB4JQ9iA/bhZw0CBStTvi6EOQY4udONadLUaW3ASHYn8XeR3f3+YdWWzw0bQgm1VHtThEfZgHg0YwwHMRE6GUXzMo4HxJISr2IVTWB0fr8ftJLRxtORowofE3XahnIPx/iKG0JzwRtGUR7fmEuVXbMSaeK+PBmYS3hyyUlS0JspzeCUkegybsQrHEl4rZnJMoS1RTmMH7sffnmK70IDVaMNUSWiiW+jBsyrCDC5YGj3Rk9PZ7LAMr9EYf0/zUwsNQqK/oSMXStWHMh78hwGRV0ZfubdSKdp+EhexW5id5XA58i7Gd/Iq5aAwC2eFwaqFTqFyQ/72kCzZJ3XCdDZhpxBzgUah5NNCNy8Q9kluMRZwSFgRI0IjiudIlB8pDBRIjcAX9At9cSPKrsd7v7CkFqGUCiIeC8N2HL9wAnei/B/U8qTAebwXElmcNbGckYqQnwkctvS28xs34nkGq4bfkgAAAABJRU5ErkJggg==');
 }
 
+#bftimew{
+	float:left;
+	height:50px;
+	width:200px;
+	overflow:hidden; /* всё, что выходит за рамки блока обрезается */
+	white-space:nowrap; /* блок может содержать не более одной строки */
+	text-align:center;
+	line-height:3em; /* не поддерживается Opera Mini [opera.com] */
+
+}
+#bfmenu{
+	float:left;
+	height:50px;
+	width:250px;
+	/*overflow:hidden;  всё, что выходит за рамки блока обрезается */
+	white-space:nowrap; /* блок может содержать не более одной строки */
+	text-align:center;
+	line-height:3em;
+}
+#bfmenu a{
+	display: block;
+	width: 75px;
+}
+
+#bfmenu a:hover{background-color:#f78f07}
+
+#bfmenu a:link{color:#ffffdd}
+#bfmenu a:visited{color:#fffff0}
 
 /*
 #header{
