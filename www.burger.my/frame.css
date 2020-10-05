@@ -108,15 +108,25 @@ body{background:#000 url("../img/site/dbpic.php?i=bg")fixed repeat;}
 	background-color:#ff1;
 }
 
-
-
-/*
 	#logo{
-	width:240px;
-	overflow:hidden;
-	min-height:inherit
+		float: left;
+		height: 50px;
+		width:240px;
+		overflow:hidden;
+		min-height:inherit;
+		background-color: #01c1c1;
 	}
-	.h_field{
+
+	#burgermenu{
+		float: left;
+		height: 50px;
+		width: 300px;
+		background-color: #9BEFF3;
+	}
+
+
+
+/*	.h_field{
     box-sizing:border-box;
 	min-width:240px;
 	max-width:1260px;

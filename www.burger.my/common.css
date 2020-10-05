@@ -1,0 +1,47 @@
+h1,h2,h3,h4{margin:4px 7px 4px;}
+
+h1{font-size:35px}
+h2{font-size:30px}
+h3{font-size:25px}
+h4{font-size:20px}
+
+p,ol,ul,ul li{margin:5px}
+ul{list-style:none}
+
+
+.fon,.fon_c{margin:0 0 7px}
+@media screen and (max-width: 920px){.fon,.fon_c{margin:0 0 7px}}
+#l_col .fon,#l_col .fon_c,#r_col .fon,#r_col .fon_c{margin:0 0 7px}
+
+
+
+/*.colorbox{cursor: url(../img/site/colorbox/zoomin.cur),pointer !important;}*/
+
+/*навигация*/
+.nav_link a{margin:0 3px;display:inline-block}
+@media screen and (min-width:240px) and (max-width:780px){.nav_link a{margin:25px 24px}}
+
+.nav1{
+    margin:5px 0;
+    text-align:center;
+}
+.nav1 span{
+    display:inline-block;
+    margin:3px;
+    width:35px;
+    height:38px;
+    background-color:#1e1e1e;
+    color:#FFFFFF;
+    border-radius:6px;
+    line-height:36px;
+    font-size:110%;
+    font-weight:500;
+}
+.nav1 span a{
+    text-decoration:none;
+    display:block;
+    color:#f78f07
+}
+.nav1 span a:hover{
+    color:#ffffff;
+}
