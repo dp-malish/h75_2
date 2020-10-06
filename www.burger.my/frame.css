@@ -105,22 +105,24 @@ body{background:#000 url("../img/site/dbpic.php?i=bg")fixed repeat;}
 	position:relative;
 	background-color:#111;
 	background-color:rgba(17,17,17,.94);
-	background-color:#ff1;
+	/*background-color:#ff1;*/
+	height:110px;
 }
 
 	#logo{
 		float: left;
-		height: 50px;
-		width:240px;
+		padding:0 40px;
+		width:140px;
 		overflow:hidden;
-		min-height:inherit;
 		background-color: #01c1c1;
 	}
 
 	#burgermenu{
+		box-sizing:border-box;
 		float: left;
-		height: 50px;
-		width: 300px;
+		height:110px;
+		min-width:240px;
+		max-width:1010px;
 		background-color: #9BEFF3;
 	}
 
