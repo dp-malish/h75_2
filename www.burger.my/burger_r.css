@@ -1,16 +1,37 @@
 .burger{
     /*display:none;*/
-    position:relative;
-    height:50px;
-    width:55px;
-    background-color:#FC761E;
-    border-radius:0 0 10px 0
+    cursor:pointer;
+    position:absolute;
+    top:15px;
+    right:0;
+    height:40px;
+    width:40px;
+    background-color:#F2BD3B;
 }
-
 .burger_line{
-    height:7px;
-    margin:6px 0;
+    height:3px;
+    width:40px;
+    position: absolute;
+    left:0;
     background-color:#ffffdd;
     border-radius:2px;
+}
+.burger>div:nth-child(1){top:9px}
+.burger>div:nth-child(2){top:18px}
+.burger>div:nth-child(3){top:27px}
+.burger:hover .burger_line{background-color:rgba(255,255,255,.7)}
+
+.burger:active>div:first-child{
+    transform:rotate(45deg);
+    position:absolute;
+    top:18px;
+    background-color: #00afea;
 
 }
+.burger:active>div:last-child{
+    transform:rotate(-45deg);
+    position:absolute;
+    top:18px;
+    background-color: #00BC52;
+}
+.burger:active>div:nth-child(2){display:none}
