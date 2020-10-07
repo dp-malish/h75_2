@@ -1,0 +1,16 @@
+.burger{
+    /*display:none;*/
+    position:relative;
+    height:50px;
+    width:55px;
+    background-color:#FC761E;
+    border-radius:0 0 10px 0
+}
+
+.burger_line{
+    height:7px;
+    margin:6px 0;
+    background-color:#ffffdd;
+    border-radius:2px;
+
+}
