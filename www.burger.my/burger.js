@@ -1,46 +1,28 @@
-
 function burgerClickOpen(){
-/*    document.getElementById('burger').style.position="fixed";
-    document.getElementById('burger_menu').style.display="blocks";
-
-    document.getElementById('burger').style.left=0;
-    document.getElementById('burger').style.top=0;
-    document.getElementById('burger').style.zIndex=13;
-
-    document.getElementById('burger_menu').style.height=window.innerHeight+"px";
-    document.getElementById('burger_menu').style.width="240px";
-    document.getElementById('burger_menu').style.display="block";*/
-
-    alert("65");
+    document.getElementById('burger_ln_1').style.top="9px";
+    document.getElementById('burger_ln_3').style.top="27px";
+    document.getElementById('burger_ln_c').style.display="block";
+    document.getElementById('burger_ln_1').classList.remove('burger_active_L1');
+    document.getElementById('burger_ln_3').classList.remove('burger_active_L3');
+    burgerClickClose.position=false;
 
 }
-
 function burgerClickClose(){
-    /*document.getElementById('burger').style.position="relative";
-    document.getElementById('burger_menu').style.height=0;
-    document.getElementById('burger_menu').style.width=0;
-    document.getElementById('burger_menu').style.display="none";*/
-    var papa=document.getElementById('burger');
-
+    document.getElementById('burger_ln_1').style.top="18px";
+    document.getElementById('burger_ln_3').style.top="18px";
     document.getElementById('burger_ln_c').style.display="none";
-    //var el=document.getElementById('burger').childNodes[2];
-
-    //el.style.display="none";
-
-    alert('e');
+    document.getElementById('burger_ln_1').classList.add('burger_active_L1');
+    document.getElementById('burger_ln_3').classList.add('burger_active_L3');
+    burgerClickClose.position=true;
 
 }
-
-
+burgerClickClose.position=false;
 
 window.addEventListener("load", function(){
-    try{
-        document.getElementById("burger").addEventListener('click', function() {
-            if(document.getElementById('burgermenu').clientHeight<1){
-                burgerClickOpen();
-            }else{
-                burgerClickClose();
-            }
-        });
-    }catch(e){}
+ try{
+     document.getElementById("burger").addEventListener('click', function(){
+         if(burgerClickClose.position==true){burgerClickOpen();
+         }else{burgerClickClose();}
+     });
+ }catch(e){}
 },true);
