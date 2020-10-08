@@ -10,8 +10,8 @@
 
 .lng_en:hover,.lng_ru:hover,.lng_uk:hover{
 
-    border-top:#AA0500 2px solid;
-    border-bottom:#AA0500 2px solid;
+    border-top:#FF0000 2px solid;
+    border-bottom:#FF0000 2px solid;
 }
 
 /*.lng_en::before{content:url("/img/flag/United-Kingdom.png")}*/
