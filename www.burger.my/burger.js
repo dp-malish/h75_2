@@ -6,6 +6,9 @@ function burgerClickOpen(){
     document.getElementById('burger_ln_3').classList.remove('burger_active_L3');
     burgerClickClose.position=false;
 
+
+
+
 }
 function burgerClickClose(){
     document.getElementById('burger_ln_1').style.top="18px";
