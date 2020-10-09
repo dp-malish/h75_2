@@ -83,3 +83,25 @@
     background-color:#FC761E;
     z-index:120;
 }
+.burger_mob{
+    margin:20px auto;
+    height:80%;
+    min-width:150px;
+    max-width:250px;
+    background-color: #9BEFF3;
+
+}
+
+.burger_mob li{
+    display:block;
+    text-align:center;
+    padding:13px;
+
+    background-color: #00afea;
+}
+.burger_mob a{
+    display:block;
+  /*  margin: 13px;*/
+    background-color: #ffffdd;
+
+}

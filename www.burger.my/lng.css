@@ -1,15 +1,16 @@
 .lng_en,.lng_ru,.lng_uk{
-    width: 24px;
-    height: 28px;
+    width:24px;
+    height:28px;
     margin:11px 3px;
-    float: right;
-    cursor: pointer;
+    float:right;
+    cursor:pointer;
     box-sizing:border-box;
 }
-
+@media screen and (max-width:800px){
+    .lng_ru,.lng_uk{margin:11px 13px;}
+}
 
 .lng_en:hover,.lng_ru:hover,.lng_uk:hover{
-
     border-top:#FF0000 2px solid;
     border-bottom:#FF0000 2px solid;
 }
