@@ -32,7 +32,7 @@ body{background:#000 url("../img/site/dbpic.php?i=bg")fixed repeat;}
 }
 @media screen and (max-width:1100px){#bhlocation{margin:0}}
 @media screen and (max-width:970px){#bhlocation{width:120px}}
-@media screen and (max-width:380px){#bhlocation{display: none}}
+@media screen and (max-width:397px){#bhlocation{display: none}}
 .location:before{content:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAWCAYAAAAmaHdCAAAB9klEQVQ4jY3UO0iWURgH8N/7+kESfoGLRTewnMqwAnEoE5OKtsrFKeiyZEPXMSga2oqE5ooQEjKQmoIagigi6OJlzEGoEILQRAqSr+Gctz5Pn9J/OZzn+Z/nPPdsdliKTbiCrViHevzAJ0xE3WRBLvdWlKoer8BdHIwP3mAAn7EWe9GOt3iCo/iJP0ZW4jma408DqCQe3kOGM7iEl+jEfB4JQ9iA/bhZw0CBStTvi6EOQY4udONadLUaW3ASHYn8XeR3f3+YdWWzw0bQgm1VHtThEfZgHg0YwwHMRE6GUXzMo4HxJISr2IVTWB0fr8ftJLRxtORowofE3XahnIPx/iKG0JzwRtGUR7fmEuVXbMSaeK+PBmYS3hyyUlS0JspzeCUkegybsQrHEl4rZnJMoS1RTmMH7sffnmK70IDVaMNUSWiiW+jBsyrCDC5YGj3Rk9PZ7LAMr9EYf0/zUwsNQqK/oSMXStWHMh78hwGRV0ZfubdSKdp+EhexW5id5XA58i7Gd/Iq5aAwC2eFwaqFTqFyQ/72kCzZJ3XCdDZhpxBzgUah5NNCNy8Q9kluMRZwSFgRI0IjiudIlB8pDBRIjcAX9At9cSPKrsd7v7CkFqGUCiIeC8N2HL9wAnei/B/U8qTAebwXElmcNbGckYqQnwkctvS28xs34nkGq4bfkgAAAABJRU5ErkJggg==');}
 
 #bhtimew{
@@ -46,8 +46,8 @@ body{background:#000 url("../img/site/dbpic.php?i=bg")fixed repeat;}
 	margin:0 25px
 }
 @media screen and (max-width:1080px){#bhtimew{margin:0}}
-@media screen and (max-width:870px){#bhtimew{width:180px}}
-@media screen and (max-width:760px){#bhtimew{display:none}}
+@media screen and (max-width:870px){#bhtimew{width:175px}}
+@media screen and (max-width:790px){#bhtimew{display:none}}
 
 #bhmenu{
 	float:left;
@@ -61,8 +61,8 @@ body{background:#000 url("../img/site/dbpic.php?i=bg")fixed repeat;}
 	margin:0 30px
 }
 @media screen and (max-width:1030px){#bhmenu{margin:0}}
-@media screen and (max-width:813px){#bhmenu{width:200px}}
-@media screen and (max-width:580px){#bhmenu{display:none}}
+@media screen and (max-width:813px){#bhmenu{width:180px;margin:0 15px}}
+@media screen and (max-width:610px){#bhmenu{display:none}}
 #bhmenu a{
 	color:#ffffdd;
 	display:inline-block;

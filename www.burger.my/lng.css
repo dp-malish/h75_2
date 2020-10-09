@@ -7,7 +7,10 @@
     box-sizing:border-box;
 }
 @media screen and (max-width:800px){
-    .lng_ru,.lng_uk{margin:11px 13px;}
+    .lng_en,.lng_ru,.lng_uk{margin:11px 8px;}
+}
+@media screen and (max-width:285px){
+    .lng_en,.lng_ru,.lng_uk{display:none}
 }
 
 .lng_en:hover,.lng_ru:hover,.lng_uk:hover{
