@@ -11,6 +11,16 @@ function topContactScroll(){
         document.getElementById('bh').style.zIndex=3;
 
         document.getElementById('headerback').style.height="50px";
+
+        document.getElementById('header').style.position="fixed";
+        document.getElementById('header').style.width="100%";
+        document.getElementById('header').style.margin="auto";
+        document.getElementById('header').style.top="50px";
+        document.getElementById('header').style.left=0;
+        document.getElementById('header').style.right=0;
+        document.getElementById('header').style.zIndex=3;
+
+
     }else{
         document.getElementById('bh').style.position="relative";
         document.getElementById('headerback').style.height="0px";
