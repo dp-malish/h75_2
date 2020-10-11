@@ -1,0 +1,46 @@
+.unit{
+    position: relative;
+    height:320px;
+    width:350px;
+
+    text-align: center;
+
+    background-color:rgba(17,17,17,.55);
+    /*background-color: #9BEFF3;*/
+}
+
+.unit_img{
+
+    height:250px;
+    width:300px;
+    margin: 5px auto;
+
+   /* background-color: #fff56d;*/
+}
+.unit_img img{
+    width: 100%;
+}
+
+.unit_hit{
+    position:absolute;
+    left:0;
+    top:-1px;
+    width:150px;
+    height:150px;
+    background:rgba(0,0,0,.01) url("../img/tile/hit.png") no-repeat;
+    z-index:2;
+
+}
+.unit_capt{
+    font-size:140%;
+    font-weight: bold;
+}
+.unit_ves{
+    position:absolute;
+    right:0;
+    bottom:10px;
+    width:150px;
+    height:150px;
+    /*background:rgba(0,0,0,.01) url("../img/tile/hit.png") no-repeat;*/
+    z-index:2;
+}

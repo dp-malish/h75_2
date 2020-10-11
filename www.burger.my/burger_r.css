@@ -88,11 +88,11 @@
 
     overflow:hidden;
 
-
-    background-color:rgba(10,10,10,.94);
-    /*background-color: #72b572;*/
-
+    background-color:rgba(10,10,10,.85);
     z-index:120;
+}
+@media screen and (min-width:801px){
+    #burger_mob{display:none;}
 }
 .burger_mob{
     margin:20px auto;

@@ -10,7 +10,7 @@ function topContactScroll(){
         document.getElementById('bh').style.right=0;
         document.getElementById('bh').style.zIndex=3;
 
-        document.getElementById('headerback').style.height="50px";
+        document.getElementById('headerback').style.height="90px";
 
         document.getElementById('header').style.position="fixed";
         document.getElementById('header').style.width="100%";
@@ -23,13 +23,17 @@ function topContactScroll(){
 
     }else{
         document.getElementById('bh').style.position="relative";
+        document.getElementById('header').style.position="relative";
+        document.getElementById('header').style.top="0";
         document.getElementById('headerback').style.height="0px";
     }
 }
 
 
-window.onresize=function () {
+window.onresize=function(){
     document.getElementById('bh').style.position="relative";
+    document.getElementById('header').style.position="relative";
+    //document.getElementById('burger_mob').style.position="fixed";
 };
 window.onscroll=function(){
             topContactScroll();
