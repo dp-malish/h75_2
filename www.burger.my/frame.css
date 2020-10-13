@@ -134,7 +134,9 @@ body{background:#000 url("../img/site/dbpic.php?i=bg")fixed repeat;}
 		/*background-color: #9BEFF3;*/
 	}
 
-
+#burger_part,#pizza_part{
+	padding:60px 50px 50px;
+}
 
 /*	.h_field{
     box-sizing:border-box;

@@ -1,19 +1,21 @@
 .unit{
     position: relative;
-    height:320px;
+    height:400px;
     width:350px;
 
     text-align: center;
 
     background-color:rgba(17,17,17,.55);
-    /*background-color: #9BEFF3;*/
+    background-color: #9BEFF3;
 }
 
 .unit_img{
 
-    height:250px;
-    width:300px;
+    height:230px;
+    min-width:250px;
+    max-width:300px;
     margin: 5px auto;
+    overflow: hidden;
 
    /* background-color: #fff56d;*/
 }
@@ -32,15 +34,34 @@
 
 }
 .unit_capt{
+    padding:13px 0;
     font-size:140%;
     font-weight: bold;
+    background-color: #9B12F3;
 }
 .unit_ves{
     position:absolute;
     right:0;
-    bottom:10px;
-    width:150px;
-    height:150px;
+    bottom:105px;
+    width:80px;
+    height:25px;
+
+    font-weight:600;
     /*background:rgba(0,0,0,.01) url("../img/tile/hit.png") no-repeat;*/
+    background-color: #00afea;
     z-index:2;
+}
+.unit_hint{
+    background-color:#cc77cc;
+    padding:4px;
+}
+.unit_price{
+    background-color: #00BC52;
+    position: absolute;
+    right: 0;
+    bottom:10px;
+    height:30px;
+    width:150px;
+    font-size:150%;
+    font-weight:700;
 }
