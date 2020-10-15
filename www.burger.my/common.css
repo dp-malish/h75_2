@@ -45,3 +45,11 @@ ul{list-style:none}
 .nav1 span a:hover{
     color:#ffffff;
 }
+
+#up{
+    color: #ffffdd;
+    border:none;
+    border:1px solid #f78f07;
+    background:rgba(0,0,0,.4);
+    border-radius: 0 13px 0 13px;
+}

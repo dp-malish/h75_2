@@ -33,7 +33,7 @@ function topContactScroll(){
 window.onresize=function(){
     document.getElementById('bh').style.position="relative";
     document.getElementById('header').style.position="relative";
-    //document.getElementById('burger_mob').style.position="fixed";
+
 };
 window.onscroll=function(){
             topContactScroll();
@@ -41,8 +41,11 @@ window.onscroll=function(){
     //при скролле показывать и прятать блок
     if(window.pageYOffset>0&&document.body.clientWidth>800){
         //document.getElementById('up').style.display='block';//alert('j+');
+        document.getElementById('up').style.opacity='1';
+
     }else{
         //document.getElementById('up').style.display='none';//alert('jf');
+        document.getElementById('up').style.opacity='0';
     }
 };
 
