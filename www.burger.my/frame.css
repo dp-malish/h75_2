@@ -117,6 +117,7 @@ body{background:#000 url("../img/site/dbpic.php?i=bg")fixed repeat;}
 		width:140px;
 		overflow:hidden;
 		/*background-color: #01c1c1;*/
+		z-index: 2;
 	}
 	@media screen and (min-width:801px) and (max-width:900px){
 	#logo{
@@ -125,6 +126,9 @@ body{background:#000 url("../img/site/dbpic.php?i=bg")fixed repeat;}
 	@media screen and (max-width:800px){
 	#logo{width:100px}
 	}
+/*#logo a{
+	display: block;
+}*/
 
 	#burgermenu{
 		box-sizing:border-box;
