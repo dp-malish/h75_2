@@ -2,9 +2,9 @@
     <div id="bh">
         <div class="maxw">
             <div id="bhlocation"><span class="location">  <?=\incl\burger\Def\Template::$city_top[\lib\Def\Opt::$lang];?></span></div>
-            <div id="bhtimew">Работаем с 08:00 до 19:00</div>
+            <div id="bhtimew"><?=\incl\burger\Def\Template::$time_work_top[\lib\Def\Opt::$lang];?> 08:00 до 19:00</div>
             <div id="bhmenu">
-                <a href="/">Доставка</a><a href="/">Контакты</a>
+                <a href="/"><?=\incl\burger\Def\Template::$m_t_dostavka[\lib\Def\Opt::$lang];?></a><a href="/"><?=\incl\burger\Def\Template::$m_t_contact[\lib\Def\Opt::$lang];?></a>
             </div>
             <div id="bhtel">
                 <a href="tel:+380963035583"> +38(096)303-55-83</a>
@@ -27,7 +27,7 @@
     <div id="headerback"></div>
     <div id="header">
         <div class="maxw rel">
-            <div id="logo"><a href="/"><img src="img/site/dbpic.php?i=logo&ep=1" alt="Барин Бургер"></a></div>
+            <div id="logo"><a href="/"><img src="img/site/dbpic.php?i=logo&ep=1" alt="<?=\incl\burger\Def\Template::$service_name[\lib\Def\Opt::$lang];?>" title="<?=\incl\burger\Def\Template::$service_name[\lib\Def\Opt::$lang];?>"></a></div>
             <nav>
                 <div id="burgermenu" class="rel">
                     <div id="burger_mob">
@@ -39,10 +39,10 @@
 
                         <div id="burger_mob_1" class="burger_mob">
                             <ul>
-                                <li><a href="#burger_part" onclick="burgerClickClose();">Бургеры</a></li>
-                                <li><a href="#pizza_part" onclick="burgerClickClose();">Пиццы</a></li>
-                                <li><a href="/" onclick="burgerClickClose();">Нагитсы</a></li>
-                                <li><a href="/" onclick="burgerClickClose();">Напитки</a></li>
+                                <li><a href="#burger-section" onclick="burgerClickClose();"><?=\incl\burger\Def\Template::$m_b_burger[\lib\Def\Opt::$lang];?></a></li>
+                                <li><a href="#pizza-section" onclick="burgerClickClose();"><?=\incl\burger\Def\Template::$m_b_pizza[\lib\Def\Opt::$lang];?></a></li>
+                                <li><a href="/#nuggets-section" onclick="burgerClickClose();"><?=\incl\burger\Def\Template::$m_b_nuggets[\lib\Def\Opt::$lang];?></a></li>
+                                <li><a href="/#beverages-section" onclick="burgerClickClose();"><?=\incl\burger\Def\Template::$m_b_beverages[\lib\Def\Opt::$lang];?></a></li>
                             </ul>
                         </div>
 
@@ -50,10 +50,10 @@
 
                     <div id="burger_pc">
                         <ul>
-                            <li><a href="/#burger_part">Бургеры</a></li>
-                            <li><a href="/#pizza_part">Пиццы</a></li>
-                            <li><a href="/">Нагитсы</a></li>
-                            <li><a href="/">Напитки</a></li>
+                            <li><a href="/#burger-section"><?=\incl\burger\Def\Template::$m_b_burger[\lib\Def\Opt::$lang];?></a></li>
+                            <li><a href="/#pizza-section"><?=\incl\burger\Def\Template::$m_b_pizza[\lib\Def\Opt::$lang];?></a></li>
+                            <li><a href="/#nuggets-section"><?=\incl\burger\Def\Template::$m_b_nuggets[\lib\Def\Opt::$lang];?></a></li>
+                            <li><a href="/#beverages-section"><?=\incl\burger\Def\Template::$m_b_beverages[\lib\Def\Opt::$lang];?></a></li>
                         </ul>
                     </div>
 
