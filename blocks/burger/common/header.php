@@ -1,7 +1,7 @@
 <body><header>
     <div id="bh">
         <div class="maxw">
-            <div id="bhlocation"><span class="location">  Мариуполь</span></div>
+            <div id="bhlocation"><span class="location">  <?=\incl\burger\Def\Template::$city_top[\lib\Def\Opt::$lang];?></span></div>
             <div id="bhtimew">Работаем с 08:00 до 19:00</div>
             <div id="bhmenu">
                 <a href="/">Доставка</a><a href="/">Контакты</a>
@@ -14,10 +14,10 @@
                 <span id="lng_ru_btn" class="lng_ru" title="русский" data-lng="ru" onClick="lngBtn(this);"></span>
                 <span id="lng_uk_btn" class="lng_uk" title="українська" data-lng="uk" onClick="lngBtn(this);"></span>
                 <div class="cl"></div>
-                <script type="application/javascript">
+                <script type="text/javascript">
                     function lngBtn(el){
                         document.cookie="lng="+el.dataset.lng+";domain=."+document.location.host;
-                        //location.href='/';
+                        location.href='/';
                     }
                 </script>
             </div>
@@ -27,7 +27,7 @@
     <div id="headerback"></div>
     <div id="header">
         <div class="maxw rel">
-            <div id="logo"><a href="/"><img src="img/site/dbpic.php?i=logo&ep=1" alt="Barin Burger"></a></div>
+            <div id="logo"><a href="/"><img src="img/site/dbpic.php?i=logo&ep=1" alt="Барин Бургер"></a></div>
             <nav>
                 <div id="burgermenu" class="rel">
                     <div id="burger_mob">

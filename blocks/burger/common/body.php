@@ -1,0 +1,1 @@
+<main><?=$Opt::$main_content?></main>

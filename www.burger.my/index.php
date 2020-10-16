@@ -1,5 +1,7 @@
 <?php
 namespace lib\Def;
+//use incl\win\Def\Template;
+
 /*
 Error_Reporting(E_ALL & ~E_NOTICE);ini_set('display_errors',1);*/
 
@@ -25,7 +27,7 @@ if($_SERVER['REQUEST_URI']!='/'){
         }
     }
 }else{Route::$index=1;}if(Route::$module404){Route::modul404();}
-//if(Route::$index){include'../modul/win/main.php';}
+if(Route::$index){new \incl\burger\Index\IndexContent();}
 
 
 //require '../blocks/sota/menu/burger.php';
@@ -35,6 +37,5 @@ if($_SERVER['REQUEST_URI']!='/'){
 
 require '../blocks/burger/common/head.php';
 require '../blocks/burger/common/header.php';
-/*require '../blocks/burger/common/l_col.php';
-require '../blocks/burger/common/body.php';*/
+require '../blocks/burger/common/body.php';
 require '../blocks/burger/common/foot.php';
