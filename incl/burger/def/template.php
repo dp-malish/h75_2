@@ -74,9 +74,9 @@ class Template extends Def\Language{
         if($lngDB==''){
             switch(Def\Opt::$lang){
                 //case'en':Def\Opt::$lang='en';break;
-                case'uk':Def\Opt::$lang='uk';break;
-                case'ru':Def\Opt::$lang='ru';break;
-                default:Def\Opt::$lang='ru';Def\Cookie::setCookie('lng',Def\Opt::$lang);
+                case'uk':Def\Opt::$lang='uk';Def\Opt::$lang_alternate='ru';break;
+                case'ru':Def\Opt::$lang='ru';Def\Opt::$lang_alternate='uk';break;
+                default:Def\Opt::$lang='ru';Def\Opt::$lang_alternate='uk';Def\Cookie::setCookie('lng',Def\Opt::$lang);
             }
         }
     }

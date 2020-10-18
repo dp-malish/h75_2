@@ -17,6 +17,9 @@ class IndexContent{
   function __construct(){
 
       $lng=new Template();
+
+      (Def\Opt::$lang_alternate!=''?Def\Opt::$lang_alternate_link='<link rel="alternate" hreflang="'.Def\Opt::$lang_alternate.'" href="'.Def\Opt::$protocol.Def\Opt::$site.'/">':'');
+
       Def\Opt::$title=$this->title[Def\Opt::$lang];
       Def\Opt::$description=$this->description[Def\Opt::$lang];
 

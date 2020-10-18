@@ -9,8 +9,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#202020">
 
 
-
-
     <meta name="robots" content="index,follow">
 
     <link rel="shortcut icon" href="/img/site/ico.png" type="image/png">
@@ -27,7 +25,6 @@
     <script src="/burger.js"></script>
     <script src="/scroll.js"></script>
 
-    <?=$Opt::$jscript.$Opt::$css.'<meta name="description" content="'.$Opt::$description.'"><title>'.$Opt::$title.'</title>';?>
-
+    <?=$Opt::$jscript.$Opt::$css.'<meta name="description" content="'.$Opt::$description.'"><title>'.$Opt::$title.'</title>'.$Opt::$lang_alternate_link;?>
 
 </head>

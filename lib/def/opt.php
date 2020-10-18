@@ -5,6 +5,8 @@ class Opt{
 	const COOKIE_SALT="tryam";
 
 	static $lang='ru';
+	static $lang_alternate='';
+	static $lang_alternate_link='';
 
 	static $protocol='https://';
 	static $site='';
