@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS def_content(
+CREATE TABLE IF NOT EXISTS food(
   id int(11) NOT NULL AUTO_INCREMENT,
   category tinyint(4) default 1,
   link_turn tinyint(4),
@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS def_content(
   img_title_ua varchar(255),
   short_text_ru text,
   short_text_ua text,
-  weight SMALLINT,
-  price SMALLINT,
+  kind varchar(255),
+  price varchar(255),
   PRIMARY KEY (id)
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
