@@ -1,6 +1,7 @@
 <?php
 namespace incl\burger\Def;
 use lib\Def;
+use lib\Get as Get;
 
 class Template extends Def\Language{
 
@@ -71,6 +72,10 @@ class Template extends Def\Language{
 
     function __construct($lngDB=''){
         parent::__construct($lngDB='');
+        /*if(Get\Get::issetGetArr()){
+
+        }*/
+
         if($lngDB==''){
             switch(Def\Opt::$lang){
                 //case'en':Def\Opt::$lang='en';break;
@@ -80,4 +85,8 @@ class Template extends Def\Language{
             }
         }
     }
+
+
+
+
 }

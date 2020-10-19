@@ -1,5 +1,14 @@
 <?php
 namespace lib\Def;
+use lib\Get as Get;
+
+/*
+*Входной параметр для языка $_GET['lng']
+*
+*/
+
+
+
 class Language{
     function __construct($lngDB=''){
         if($lngDB==''){
@@ -17,5 +26,12 @@ class Language{
             Opt::$lang=$lngDB;
             Cookie::setCookie('lng',Opt::$lang);
         }
+    }
+    protected function takeGetLng(){
+        if(Get\Get::issetGetArr()){
+            if (Get\Get::issetGetKey(['lng'])){
+                return Opt::$lang=Validator::html_cod($_GET['lng']);
+            }else return false;
+        }else return false;
     }
 }
