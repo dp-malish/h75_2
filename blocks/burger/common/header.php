@@ -16,7 +16,7 @@
                 <div class="cl"></div>
                 <script type="text/javascript">
                     function lngBtn(el){
-                        document.cookie="lng="+el.dataset.lng+";domain=."+document.location.host;
+                        document.cookie="lng="+el.dataset.lng+";domain=."+document.location.host+";path=/; max-age=2678400;";
                         var flag=0;
                         switch(el.dataset.lng){
                             case "uk":flag=1;break;
@@ -24,6 +24,7 @@
                         }
                         var nUri="/";
                         if(flag){nUri+=el.dataset.lng+"/";}
+                        alert(document.location.host);
                         location.href=nUri;
                     }
                 </script>
