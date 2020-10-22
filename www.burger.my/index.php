@@ -10,7 +10,7 @@ $Opt=new Opt('burger');//Def opt
 
 Cache_File::$cash=new Cache_File(['burger'],true);
 
-
+if(isset($_GET['lng']))Opt::$setting='gettetete';else Opt::$setting='нет';
 
 
 if($_SERVER['REQUEST_URI']!='/'){

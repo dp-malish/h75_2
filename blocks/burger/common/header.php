@@ -1,4 +1,4 @@
-<body><header>
+<body><header><?=\lib\Def\Opt::$setting;?>
     <div id="bh">
         <div class="maxw">
             <div id="bhlocation"><span class="location">  <?=\incl\burger\Def\Template::$city_top[\lib\Def\Opt::$lang];?></span></div>
@@ -17,7 +17,14 @@
                 <script type="text/javascript">
                     function lngBtn(el){
                         document.cookie="lng="+el.dataset.lng+";domain=."+document.location.host;
-                        location.href='/';
+                        var langGet="";
+                            switch(el.dataset.lng){
+                                case "uk": langGet="?lng="+el.dataset.lng;break;
+                                default:langGet="";
+                            }
+
+                        alert(langGet);
+                        location.href=langGet;
                     }
                 </script>
             </div>
