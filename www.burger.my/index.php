@@ -10,20 +10,19 @@ $Opt=new Opt('burger');//Def opt
 
 Cache_File::$cash=new Cache_File(['burger'],true);
 
-if(isset($_GET['lng']))Opt::$setting='gettetete';else Opt::$setting='нет';
-
 
 if($_SERVER['REQUEST_URI']!='/'){
     if(Route::requestURI(3)){
         switch(Route::$uri_parts[0]){
             //case 'sota'.Data::DatePass():$AdminCook->setCookieAdmin();Route::$index=1;break;
-            case $Opt::$setting:include'../modul/sota/admin/main.php';break;
+            //case $Opt::$setting:include'../modul/sota/admin/main.php';break;
 
-            case 'cabinet':include'../modul/sota/cabinet.php';break;
+            //case 'cabinet':include'../modul/sota/cabinet.php';break;
 
             //case'bios-laptop':new \incl\win\Bios\Bios_laptop();break;
 
-            default:new \incl\sota\shop\DefShop();
+            //default:new \incl\sota\shop\DefShop();
+            default:new \incl\burger\Index\IndexContent();;
         }
     }
 }else{Route::$index=1;}if(Route::$module404){Route::modul404();}

@@ -1,4 +1,4 @@
-<body><header><?=\lib\Def\Opt::$setting;?>
+<body><header>
     <div id="bh">
         <div class="maxw">
             <div id="bhlocation"><span class="location">  <?=\incl\burger\Def\Template::$city_top[\lib\Def\Opt::$lang];?></span></div>
@@ -17,14 +17,14 @@
                 <script type="text/javascript">
                     function lngBtn(el){
                         document.cookie="lng="+el.dataset.lng+";domain=."+document.location.host;
-                        var langGet="";
-                            switch(el.dataset.lng){
-                                case "uk": langGet="?lng="+el.dataset.lng;break;
-                                default:langGet="";
-                            }
-
-                        alert(langGet);
-                        location.href=langGet;
+                        var flag=0;
+                        switch(el.dataset.lng){
+                            case "uk":flag=1;break;
+                            default:flag=0;
+                        }
+                        var nUri="/";
+                        if(flag){nUri+=el.dataset.lng+"/";}
+                        location.href=nUri;
                     }
                 </script>
             </div>
@@ -34,7 +34,7 @@
     <div id="headerback"></div>
     <div id="header">
         <div class="maxw rel">
-            <div id="logo"><a href="/"><img src="img/site/dbpic.php?i=logo&ep=1" alt="<?=\incl\burger\Def\Template::$service_name[\lib\Def\Opt::$lang];?>" title="<?=\incl\burger\Def\Template::$service_name[\lib\Def\Opt::$lang];?>"></a></div>
+            <div id="logo"><a href="/"><img src="/img/site/dbpic.php?i=logo&ep=1" alt="<?=\incl\burger\Def\Template::$service_name[\lib\Def\Opt::$lang];?>" title="<?=\incl\burger\Def\Template::$service_name[\lib\Def\Opt::$lang];?>"></a></div>
             <nav>
                 <div id="burgermenu" class="rel">
                     <div id="burger_mob">
