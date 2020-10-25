@@ -13,5 +13,6 @@ CREATE TABLE IF NOT EXISTS food(
   short_text_uk text,
   kind varchar(255),
   price varchar(255),
+  hit tinyint(1) DEFAULT NULL,
   PRIMARY KEY (id)
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;

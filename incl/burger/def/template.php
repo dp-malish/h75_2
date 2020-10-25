@@ -64,7 +64,10 @@ class Template extends Def\Language{
     function __construct(){
         if(Def\Route::$uri_parts!==[]){
             $this->setLng(Def\Route::$uri_parts[0]);
-        }else parent::__construct();
+        }else{
+            parent::__construct();
+            $this->setLng(Def\Opt::$lang);//для установки Def\Opt::$lang_alternate
+        }
     }
     private function setLng($lng){
         switch($lng){

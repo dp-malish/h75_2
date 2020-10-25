@@ -23,7 +23,7 @@ class IndexContent{
 
       $DB=new Def\SQLi();
       $res=$DB->arrSQL('SELECT id,category,link_turn,cap_'.Def\Opt::$lang.',img,img_alt_'.Def\Opt::$lang.',
-      img_title_'.Def\Opt::$lang.',short_text_'.Def\Opt::$lang.',kind,price FROM food ORDER BY category');
+      img_title_'.Def\Opt::$lang.',short_text_'.Def\Opt::$lang.',kind,price,hit FROM food ORDER BY category');
 
       $burger_txt='';
 
@@ -34,14 +34,17 @@ class IndexContent{
 
               if($v['img']!=''){$img='<img src="'.BurDef\SqlTable::getImgDirTable('food_img').$v['img'].'" alt="'.$v['img_alt_'.Def\Opt::$lang].'" title="'.$v['img_title_'.Def\Opt::$lang].'">';}else{$img='';}
 
-
               $burger_txt.='<div class="unit" data-id="'.$v['id'].'" data-price="'.$v['price'].'">
-                    <div class="unit_img">'.$img.'</div>'
+                    <div class="unit_img">'.$img.'</div>';
+              if($v['hit']){$burger_txt.='<div class="unit_hit"></div>';}
 
-                  .$v['category'].$v['cap_'.Def\Opt::$lang].
-
-
-                  '</div>';
+              ///если бургер шаблон
+              $burger_txt.='<div class="unit_kind_bur">'.$v['kind'].' г</div>';
+              $burger_txt.='<div class="unit_capt">'.$v['cap_'.Def\Opt::$lang].'</div>';
+              $burger_txt.='<div class="unit_hint">'.$v['short_text_'.Def\Opt::$lang].'</div>';
+              $burger_txt.='<div class="unit_price">'.$v['price'].' ₴</div>';
+              //$v['category']
+              $burger_txt.='</div>';
 
           }
 
@@ -51,7 +54,7 @@ class IndexContent{
 
 
 
-      (Def\Opt::$lang_alternate!=''?Def\Opt::$lang_alternate_link='<link rel="alternate" hreflang="'.Def\Opt::$lang_alternate.'" href="'.Def\Opt::$protocol.Def\Opt::$site.'/">':'');
+      (Def\Opt::$lang_alternate!=''?Def\Opt::$lang_alternate_link='<link rel="alternate" hreflang="'.Def\Opt::$lang_alternate.'" href="'.Def\Opt::$protocol.Def\Opt::$site.'/'.(Def\Opt::$lang_alternate!='ru'?Def\Opt::$lang_alternate.'/':'').'">':'');
 
       Def\Opt::$title=$this->title[Def\Opt::$lang];
       Def\Opt::$description=$this->description[Def\Opt::$lang];
