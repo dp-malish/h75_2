@@ -55,38 +55,23 @@ class Template extends Def\Language{
 //*****************Заголовки caption конец
 
 
-
-
-
-
-
-
 //***************footer
     static $site_materials_foot=[
         'ru'=>'Использование материалов сайта без разрешения правообладателя запрещено',
         'uk'=>'Використання матеріалів сайту без згоди власника авторських прав заборонено'];
 
 
-
-
-
-    function __construct($lngDB=''){
-        parent::__construct($lngDB='');
-        /*if(Get\Get::issetGetArr()){
-
-        }*/
-
-        if($lngDB==''){
-            switch(Def\Opt::$lang){
-                //case'en':Def\Opt::$lang='en';break;
-                case'uk':Def\Opt::$lang='uk';Def\Opt::$lang_alternate='ru';break;
-                case'ru':Def\Opt::$lang='ru';Def\Opt::$lang_alternate='uk';break;
-                default:Def\Opt::$lang='ru';Def\Opt::$lang_alternate='uk';Def\Cookie::setCookie('lng',Def\Opt::$lang);
-            }
-        }
+    function __construct(){
+        if(Def\Route::$uri_parts!==[]){
+            $this->setLng(Def\Route::$uri_parts[0]);
+        }else parent::__construct();
     }
-
-
-
-
+    private function setLng($lng){
+        switch($lng){
+            case'uk':$lang='uk';Def\Opt::$lang_alternate='ru';break;
+            case'ru':$lang='ru';Def\Opt::$lang_alternate='uk';break;
+            default:$lang='ru';Def\Opt::$lang_alternate='uk';
+        }
+        parent::__construct($lang);
+    }
 }

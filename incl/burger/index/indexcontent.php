@@ -3,7 +3,8 @@
 
 namespace incl\burger\Index;
 use lib\Def as Def;
-use incl\burger\Def\Template;
+use incl\burger\Def as BurDef;
+//use incl\burger\Def\Template;
 
 class IndexContent{
 
@@ -18,14 +19,44 @@ class IndexContent{
 
   function __construct(){
 
-      $lng=new Template();
+      $lng=new BurDef\Template();
+
+      $DB=new Def\SQLi();
+      $res=$DB->arrSQL('SELECT id,category,link_turn,cap_'.Def\Opt::$lang.',img,img_alt_'.Def\Opt::$lang.',
+      img_title_'.Def\Opt::$lang.',short_text_'.Def\Opt::$lang.',kind,price FROM food ORDER BY category');
+
+      $burger_txt='';
+
+      if($res){
+          $burger_txt='<div class="tile dwfe maxw">';
+
+          foreach($res as $k=>$v){
+
+              if($v['img']!=''){$img='<img src="'.BurDef\SqlTable::getImgDirTable('food_img').$v['img'].'" alt="'.$v['img_alt_'.Def\Opt::$lang].'" title="'.$v['img_title_'.Def\Opt::$lang].'">';}else{$img='';}
+
+
+              $burger_txt.='<div class="unit" data-id="'.$v['id'].'" data-price="'.$v['price'].'">
+                    <div class="unit_img">'.$img.'</div>'
+
+                  .$v['category'].$v['cap_'.Def\Opt::$lang].
+
+
+                  '</div>';
+
+          }
+
+          $burger_txt.='</div>';
+      }else{Def\Route::$module404=true;}
+
+
+
 
       (Def\Opt::$lang_alternate!=''?Def\Opt::$lang_alternate_link='<link rel="alternate" hreflang="'.Def\Opt::$lang_alternate.'" href="'.Def\Opt::$protocol.Def\Opt::$site.'/">':'');
 
       Def\Opt::$title=$this->title[Def\Opt::$lang];
       Def\Opt::$description=$this->description[Def\Opt::$lang];
 
-      Def\Opt::$main_content.='<div id="burger-section"><h2>'.$lng::$caption_burger[Def\Opt::$lang].'</h2></div><br><br><br><br><br><br><br><br>';
+      Def\Opt::$main_content.='<div id="burger-section"><h2>'.$lng::$caption_burger[Def\Opt::$lang].'</h2></div>'.$burger_txt;
 
 
 
