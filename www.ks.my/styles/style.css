@@ -1,0 +1,759 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,cyrillic);
+
+::selection { background-color: #19a9d5; color: white; }
+::-moz-selection { background-color: #19a9d5; color: white; }
+::-webkit-selection { background-color: #19a9d5; color: white; }
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+a {
+	text-decoration: none;
+	color: #3b5998;
+}
+
+ul, li {
+	list-style: none;
+}
+
+input, textarea { outline:none; }
+input:active, textarea:active { outline:none; }
+:focus { outline:none; }
+
+.clear {
+	clear: both;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+body {
+	font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+	font-size: 14px;
+	background: #fff;
+	color: #3A3A3A;
+	font-weight: 400;
+	height:100%;
+}
+
+.header {
+	margin-top: -85px;
+	border-bottom: 1px solid #E9E4DE;
+}
+
+#glavnaya {
+	background-image: url('../images/public/bg_header.jpg');
+	background-size: cover;
+	height: 620px;
+}
+
+#registration_page {
+	background-image: url('../images/public/bg_header_registr.jpg');
+	background-position: top center;
+	background-repeat: no-repeat;
+	height: 520px;
+}
+
+#glavnaya h2 {
+	margin-top: 35px;
+}
+
+.content {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.content2 {
+	max-width: 850px;
+	margin: 0px auto 40px;
+}
+
+.margin_top_25px {
+	margin-top: 25px;
+}
+
+.top_menu {
+	height: 70px;
+	z-index: 5;
+}
+
+.top_menu ul li {
+	float: left;
+}
+
+.top_menu ul li a {
+	margin-right: 30px;
+	color: #013F6B;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.top_menu ul li a.login_logout {
+	margin-right: 0px;
+}
+
+.top_menu ul li a:hover, .top_menu ul li a.active {
+	border-bottom: 2px solid #0364A8;
+}
+
+.top_menu img {
+	height: 65px;
+	margin-left: 70px;
+}
+
+footer {
+	border-top: 1px solid #E9E4DE;
+	padding: 20px 0px;
+}
+
+footer a {
+	color: #3A3A3A;
+}
+
+.top_text {
+	width: 50%;
+	margin-top: 60px;
+}
+
+.top_text h2 {
+	font-weight: normal;
+	font-size: 35px;
+	letter-spacing: 3px;
+	margin-bottom: 120px;
+	color: #0364A8;
+}
+
+.knopka_prisoedinitsya {
+	text-align: center;
+}
+
+.knopka_prisoedinitsya a, .top_menu a.login_logout {
+	color: #fff;
+	background-color: rgb(59,188,38) ;
+	padding: 3px 10px;
+	font-size: 16px;
+	font-weight: 300;
+	border: 2px solid rgb(52,172,32);
+	border-radius: 5px 5px 5px 5px;
+	-o-border-radius: 5px 5px 5px 5px;
+	-ms-border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-icab-border-radius: 5px 5px 5px 5px;
+	-khtml-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	transition: background 0.4s ease;
+	-o-transition: background 0.4s ease;
+	-ms-transition: background 0.4s ease;
+	-moz-transition: background 0.4s ease;
+	-webkit-transition: background 0.4s ease;
+	text-transform: uppercase;
+}
+
+.knopka_prisoedinitsya a{
+	font-size: 30px !important;
+	padding-left: 45px;
+	padding-right: 45px;
+	padding-bottom: 5px;
+}
+
+.knopka_prisoedinitsya a:hover, .top_menu a.login_logout:hover {
+	background-color: rgb(76, 208, 54);
+	border: 2px solid rgb(52,172,32);
+}
+
+.osnovnoy_block {
+	background: #fff;
+	padding-top: 20px;
+}
+
+#zagolovok-top-glavnaya {
+	font-weight: normal;
+	text-align: center;
+	color: #0364A8;
+	margin: 0px 0px 20px;
+	text-transform: uppercase;
+}
+
+#video_landing_middle {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#video_landing_middle iframe {
+	box-shadow: 0px 0px 8px #DBDBDB;
+}
+
+.fast_payments {
+	background: #e7ebf2;
+	padding-top: 20px;
+	/*margin-top: 30px;*/
+}
+
+.fast_payments h1, .last_otziv h1 {
+	text-align: center;
+	color: #494949;
+	font-weight: normal;
+	margin-bottom: 30px;
+	margin-top: 20px;
+}
+
+.block_payments_systems {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.block_payments_systems p {
+	margin-top: 10px;
+	font-size: 16px;
+	color: #494949;
+}
+
+.last_otziv {
+	margin-top: 35px;
+	margin-bottom: 40px;
+}
+
+.user_photo_glavnaya {
+	margin: 0px 15px 5px 0px;
+}
+
+.user_photo_glavnaya img {
+	border-radius: 50%;
+	width: 90px;
+	border: 3px solid #3b5998;
+}
+
+.last_otziv p.user_name {
+	font-size: 21px;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+#read_all_testimonials {
+	font-size: 22px;
+	text-align: right;
+	margin-top: 15px;
+}
+
+#read_all_testimonials a {
+	color: rgb(59,188,38);
+}
+
+#read_all_testimonials a i.fa-angle-right {
+	border: 2px solid rgb(59,188,38);
+	border-radius: 50%;
+	padding: 2px 9px;
+}
+
+.blue_line_regist {
+	background: #3b5998;
+	padding: 40px 0px;
+}
+
+.blue_line_regist p {
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+.blue_line_regist p a {
+	background: rgb(59,188,38);
+	margin-left: 15px;
+	padding: 10px 30px;
+	/*background: rgb(87, 194, 70);*/
+	border-radius: 10px;
+	color: #fff;
+}
+
+.blue_line_regist p a:hover {
+	background: #fff;
+	color: rgb(59,188,38);
+	transition: background 0.4s ease;
+	-o-transition: background 0.4s ease;
+	-ms-transition: background 0.4s ease;
+	-moz-transition: background 0.4s ease;
+	-webkit-transition: background 0.4s ease;
+}
+
+/*Страница регистрации*/
+#registration_page h2 {
+	color: #fff;
+	margin-bottom: 15px;
+	font-size: 40px;
+	letter-spacing: 1px;
+	margin-top: 70px;
+	margin-left: 15%;
+}
+
+#help_people_registration_top {
+	margin-top: 60px;
+	margin-left: 15%;
+	color: #fff;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+#block_with_form_and_logo {
+	width: 750px;
+	margin: 0px auto 20px;
+}
+
+#register_form {
+	width: 70%;
+	padding-right: 5px;
+	border-right: 1px solid #0364A8;
+}
+
+#logo_with_register_form {
+	width: 29.2%;
+	margin-top: 50px;
+}
+
+#logo_with_register_form img {
+	width: 100%;
+}
+
+.control-label {
+	text-align: right;
+	width: 240px;
+	margin-right: 10px;
+}
+
+.label-top-padding {
+	padding-top: 15px;
+	font-size: 16px;
+}
+
+.controls {
+	width: 275px;
+	margin-left: auto;
+}
+
+#register_submit_block {
+	margin-bottom: 15px;
+	margin-right: 5px;
+}
+
+/*стили страницы - Система изнутри*/
+#page_about_system {
+	background-image: url('../images/public/bg_header_about_system.jpg');
+	background-position: top center;
+	background-repeat: no-repeat;
+	height: 520px;
+}
+
+#page_about_system .top_text {
+	width: 100%;
+}
+
+#page_about_system .top_text h2 {
+	text-align: center;
+	margin-top: 80px;
+	color: #fff;
+	/*font-size: 26px;*/
+}
+
+.content2 p {
+	margin: 10px 0px;
+}
+
+.h1_top {
+	text-align: center;
+	font-size: 30px;
+	font-weight: normal;
+	margin: 20px 0px 40px 0px;
+}
+
+p.zagolovok {
+	font-size: 20px;
+	margin-bottom: 25px;
+	font-weight: normal;
+}
+
+span.punkt_number {
+	margin-right: 15px;
+	padding: 2px 10px;
+	border-radius: 50%;
+	border: 2px solid #3b5998;
+}
+
+#page_about_system_img_bg_middle_page {
+	background-image: url('../images/public/map_with_people.jpg');
+	background-size: cover;
+	min-height: 610px;
+	box-shadow: 0px 2px 2px #D3CCEA;
+}
+
+#money_raspredelenie {
+	margin: 30px 0px;
+	width: 50%;
+}
+
+p.text_raspredelenie_sredstv {
+	margin-top: 65px;
+}
+
+img#diagramma {
+	width: 100%;
+	margin-top: 30px;
+}
+
+.info_block {
+	background: rgba(161, 184, 233, 0.43);
+	border-radius: 7px;
+	padding: 15px;
+}
+
+.info_block h2 {
+	font-weight: normal;
+	font-size: 18px;
+	margin-bottom: 25px;
+}
+
+.info_block h2 i.fa-exclamation-triangle {
+	color: #9ccf07;
+}
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------------
+Стили для модального окна
+--------------------------------------------------------------------------------------------------------------*/
+
+.overlay{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: none;
+}
+
+.modal{
+	display: none;
+	background-color: #fff;
+	overflow:auto;
+	z-index:1001;
+	position:absolute;
+	padding: 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0px 0px 8px rgba(0,0,0,0.4);
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.4);
+}
+
+.modal h1 {
+	text-align: center;
+	border-bottom: none;
+	font-weight: bold;
+	font: 700 16px Helvetica, Arial, sans-serif;
+	margin-bottom: 0px;
+}
+
+.modal-login, .modal-recoverpass, .modal-register {
+	width: 365px;
+}
+
+
+.modal a.closeLoginModal {/*Стили для кнопки закрыть модальное окно*/
+	position: relative;
+	font-size: 12px;
+	margin-top: -13px;
+	margin-right: -13px;
+	color: #fff;
+	border-radius: 50%;
+	background-color: rgb(153, 153, 153);
+	padding: 0px 4px 1px;
+	font-weight: normal;
+}
+
+.social-login {
+	text-align: center;
+}
+
+/*.cf {
+	zoom: 1;
+}
+
+.divi-new {
+	margin-top: 15px;
+	background: transparent url("../images/grey_line.png") repeat-x left 9px;
+	text-align: center;
+	height: 16px;
+	padding-bottom: 20px;
+}
+
+.divi-new span {
+	background-color: #fff;
+	font-size: 14px;
+	line-height: 16px;
+	text-transform: lowercase;
+	padding: 0 10px;
+}*/
+
+.popup-link-footer {
+	background-color: #eeeeee;
+	display: block;
+	font-size: 13px;
+	line-height: 17px;
+	text-align: center;
+	margin: 25px -20px -20px -20px;
+	padding: 10px 20px 13px 20px;
+	border-top: 1px solid #e1e1e1;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+}
+
+.popup-link-footer a, a.recover {
+	font-size: 13px;
+	color: #39a5e2;
+	text-decoration: none;
+}
+
+.popup-link-footer a:hover, a.recover:hover {
+	text-decoration: underline;
+}
+
+/*рамер шрифта ошибок во всплывающем окне*/ 
+#error_login_email, #error_password_email, #recover_msg {
+	font-size: 12px;
+}
+
+/*------------------------------------------------------------------------------------------------------
+Стили для формы авторизации
+------------------------------------------------------------------------------------------------------*/
+input.usermail {
+	padding: 12px 10px 12px 10px;
+	font-size: 16px;
+	width: 100%;
+	height: 40px;
+	-webkit-transition: padding 0.1s;
+	-moz-transition: padding 0.1s;
+	-o-transition: padding 0.1s;
+	transition: padding 0.1s;
+}
+
+input.userpassword {
+	padding: 12px 10px 12px 10px;
+	font-size: 16px;
+	width: 100%;
+	height: 40px;
+	-webkit-transition: padding 0.1s;
+	-moz-transition: padding 0.1s;
+	-o-transition: padding 0.1s;
+	transition: padding 0.1s;
+	margin-top: 15px;
+}
+
+input[type="text"], input[type="password"] {
+	-webkit-appearance: none;
+	background-color: #fff;
+	font: 400 14px Helvetica, Arial, sans-serif;
+	color: #777777;
+	border: 1px #b2b2b2 solid;
+	padding: 6px 7px 7px 7px;
+	resize: none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-top: 10px;
+}
+
+a.recover {
+	color: #39a5e2;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+a.recover:hover {
+	text-decoration: underline;
+}
+
+.modal-recoverpass p {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+textarea:active, textarea:focus, input[type="date"]:active, input[type="date"]:focus, input[type="datetime"]:active, input[type="datetime"]:focus, input[type="datetime-local"]:active, input[type="datetime-local"]:focus, input[type="email"]:active, input[type="email"]:focus, input[type="month"]:active, input[type="month"]:focus, input[type="number"]:active, input[type="number"]:focus, input[type="password"]:active, input[type="password"]:focus, input[type="search"]:active, input[type="search"]:focus, input[type="tel"]:active, input[type="tel"]:focus, input[type="text"]:active, input[type="text"]:focus, input[type="time"]:active, input[type="time"]:focus, input[type="url"]:active, input[type="url"]:focus, input[type="week"]:active, input[type="week"]:focus {
+border: 1px #39a5e2 solid;
+color: #555555;
+-webkit-box-shadow: inset 2px 2px 2px #e3e3e3;
+-moz-box-shadow: inset 2px 2px 2px #e3e3e3;
+box-shadow: inset 2px 2px 2px #e3e3e3;
+}
+
+.login-submit{
+	text-align: center;
+}
+
+input.submit {
+	background-color: #00b22d;
+	font-weight: 700;
+	font-size: 16px;
+	color: #fff !important;
+	border: 1px solid #028a25;
+	padding-left: 10px;
+	padding-right: 10px;
+	-webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+	width: 100%;
+	height: 47px;
+	border-radius: 3px;
+	margin-top: 15px;
+
+}
+
+input.submit:hover {
+	cursor: pointer;
+	color: #fff;
+	border-color: #028a25;
+	text-decoration: none;
+	-webkit-box-shadow: 0 2px 5px 1px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 2px 5px 1px rgba(0,0,0,0.3);
+	box-shadow: 0 2px 5px 1px rgba(0,0,0,0.3);
+}
+
+input.submit:active {
+	background-color: #00b22d;
+	border: none!important;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 0 0 15px rgba(255, 255, 255, 0.3) inset;
+	-webkit-box-shadow:	0 0 15px rgba(255, 255, 255, 0.3) inset;
+	box-shadow: 0 0 15px rgba(255, 255, 255, 0.3) inset;
+}
+
+/*Стили для кнопок социальных сетей в модальном окне*/
+.social-block i {
+	font-size: 30px;
+}
+
+span#vk, span#google, span#facebook {
+	padding-left: 10px;
+}
+
+a.vk, a.google {
+	margin-right: 5px;
+}
+
+a.vk, a.google, a.facebook {
+	display: inline-block;
+	padding: 4px 12px;
+	border-radius: 5px;
+	text-decoration: none;
+	-webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+	box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+a.vk:active, a.google:active, a.facebook:active {
+	-webkit-box-shadow: inset 2px 2px 2px #e3e3e3;
+	-moz-box-shadow: inset 2px 2px 2px #e3e3e3;
+	box-shadow: inset 2px 2px 2px #e3e3e3;
+}
+
+a.vk {
+	color: #4e729a;
+	border: 1px solid #4e729a;
+}
+
+a.google {
+	color: #dd4b39;
+	border: 1px solid #dd4b39;
+}
+
+a.facebook {
+	color: #617ac3;
+	border: 1px solid #617ac3;
+
+}
+
+/*Стили для формы регистрации, точнее для сообщения, что юзер зарегистрирован*/
+div#you_register_ok, div#you_login_ok {
+	text-align: center;
+	color: #00b22d;
+}
+
+#error_register_email p, #error_register_password p {
+	color: red;
+}
+
+/*------------------------------------------------------------------------------------------------------
+Стили для мгновенного валидатора email'a - и для общей валидации
+------------------------------------------------------------------------------------------------------*/
+
+ .modal label.error {
+ 	position: relative;
+	z-index: 1;
+}
+
+.modal label {
+	cursor: pointer;
+	/*float: left;*/
+	font-size: 13px;
+	line-height: 16px;
+}
+
+ input.error {
+	border: 1px solid red !important;
+}
+
+label.error {
+	color: red !important;
+	margin: 5px 0;
+}
+
+/*Стили для placeholder*/
+input::-webkit-input-placeholder {color: #777777; font-size: 16px;}
+input:-moz-placeholder {color: #777777; font-size: 16px;}
+
+
+/*стили для ошибок валидации при регистрации*/
+.register_error {
+	color: red;
+	font-size: 12px;
+	text-align: center;
+}
+
+/*Стили для 404-й страницы*/
+#content_404_page {
+	width: 750px;
+	margin: 0px auto;
+}
+
+/*Стили 404-й ошибки*/
+#static_content {
+line-height: 1.4em;
+color: #494949;
+margin: 40px 0px 40px 0px;
+}
+
+#static_content img {
+/*display: block;*/
+padding: 20px 0px 15px 0px;
+margin: 7px auto;
+background-color: #3b5998;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+}
