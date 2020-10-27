@@ -10,7 +10,7 @@ function topContactScroll(){
         document.getElementById('bh').style.right=0;
         document.getElementById('bh').style.zIndex=3;
 
-        document.getElementById('headerback').style.height="120px";
+        document.getElementById('headerback').style.height="170px";
 
         document.getElementById('header').style.position="fixed";
         document.getElementById('header').style.width="100%";
