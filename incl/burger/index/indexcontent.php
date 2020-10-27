@@ -35,12 +35,18 @@ class IndexContent{
       img_title_'.Def\Opt::$lang.',short_text_'.Def\Opt::$lang.',kind,price,hit FROM food ORDER BY category');
 
       $burger_txt='';
+      $pizza_txt='';
       $nuggets_txt='';
 
       if($res){//$v['category']
           foreach($res as $k=>$v){
               switch($v['category']){
                   case 1:$burger_txt.=$this->unitTemplates($v['img'],$v['img_alt_'.Def\Opt::$lang],$v['img_title_'.Def\Opt::$lang],$v['id'],$v['price'],$v['hit'],$v['kind'],$this->ves[Def\Opt::$lang],$v['cap_'.Def\Opt::$lang],$v['short_text_'.Def\Opt::$lang]);
+                  break;
+
+                  case 2:
+                      $kind=json_decode($v['kind']);
+                      $pizza_txt.=$this->unitTemplatesKind2($v['img'],$v['img_alt_'.Def\Opt::$lang],$v['img_title_'.Def\Opt::$lang],$v['id'],$v['price'],$v['hit'],$kind,$this->sm[Def\Opt::$lang],$v['cap_'.Def\Opt::$lang],$v['short_text_'.Def\Opt::$lang]);
                   break;
 
                   case 3:
@@ -63,7 +69,7 @@ class IndexContent{
 
       Def\Opt::$main_content.='<div id="burger-section"><h2>'.$lng::$caption_burger[Def\Opt::$lang].'</h2></div><div class="tile dwfe maxw">'.$burger_txt.'</div>';
 
-      Def\Opt::$main_content.='<div id="pizza-section"><h2>'.$lng::$caption_pizza[Def\Opt::$lang].'</h2></div><br><br><br><br><br><br><br><br>';
+      Def\Opt::$main_content.='<div id="pizza-section"><h2>'.$lng::$caption_pizza[Def\Opt::$lang].'</h2></div><div class="tile dwfe maxw">'.$pizza_txt.'</div>';
 
       Def\Opt::$main_content.='<div id="nuggets-section"><h2>'.$lng::$caption_nuggets[Def\Opt::$lang].'</h2></div><div class="tile dwfe maxw">'.$nuggets_txt.'</div>';
 

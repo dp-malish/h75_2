@@ -2,7 +2,7 @@
 При прокрутике фиксировать верхние контакты
  */
 function topContactScroll(){
-    if(window.pageYOffset>0&&window.pageYOffset<510&&document.body.clientWidth>400){
+    if(window.pageYOffset>0&&window.pageYOffset<910&&document.body.clientWidth>700){
         document.getElementById('bh').style.position="fixed";
         document.getElementById('bh').style.width="100%";
         document.getElementById('bh').style.margin="auto";
@@ -10,7 +10,7 @@ function topContactScroll(){
         document.getElementById('bh').style.right=0;
         document.getElementById('bh').style.zIndex=3;
 
-        document.getElementById('headerback').style.height="170px";
+        document.getElementById('headerback').style.height="200px";
 
         document.getElementById('header').style.position="fixed";
         document.getElementById('header').style.width="100%";
