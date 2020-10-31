@@ -36,22 +36,27 @@ class IndexContent{
       if($res){//$v['category']
           foreach($res as $k=>$v){
               switch($v['category']){
-                  case 1:$burger_txt.=$this->unitTemplates($v['img'],$v['img_alt_'.Def\Opt::$lang],$v['img_title_'.Def\Opt::$lang],$v['id'],$v['price'],$v['hit'],$v['kind'],$this->ves[Def\Opt::$lang],$v['cap_'.Def\Opt::$lang],$v['short_text_'.Def\Opt::$lang]);
+                  case 1:$burger_txt.=$this->unitTemplates($v['img'],$v['img_alt_'.Def\Opt::$lang],$v['img_title_'.Def\Opt::$lang],$v['id'],$v['price'],$v['hit'],$v['kind'],$this->ves[Def\Opt::$lang],$v['cap_'.Def\Opt::$lang],$v['short_text_'.Def\Opt::$lang],'unit_2');
                   break;
                   case 2:
                       $kind=json_decode($v['kind']);
                       $pizza_txt.=$this->unitTemplatesKind2($v['img'],$v['img_alt_'.Def\Opt::$lang],$v['img_title_'.Def\Opt::$lang],$v['id'],$v['price'],$v['hit'],$kind,$this->sm[Def\Opt::$lang],$v['cap_'.Def\Opt::$lang],$v['short_text_'.Def\Opt::$lang]);
                   break;
-                  case 3:
+                  case 3://naggets
                       $kind=json_decode($v['kind']);
                       if(is_array($kind)){
-                      $nuggets_txt.=$this->unitTemplatesKind2($v['img'],$v['img_alt_'.Def\Opt::$lang],$v['img_title_'.Def\Opt::$lang],$v['id'],$v['price'],$v['hit'],$kind,$this->ves[Def\Opt::$lang],$v['cap_'.Def\Opt::$lang],$v['short_text_'.Def\Opt::$lang]);
-                      }else{$nuggets_txt.=$this->unitTemplates($v['img'],$v['img_alt_'.Def\Opt::$lang],$v['img_title_'.Def\Opt::$lang],$v['id'],$v['price'],$v['hit'],$v['kind'],$this->ves[Def\Opt::$lang],$v['cap_'.Def\Opt::$lang],$v['short_text_'.Def\Opt::$lang]);}
+                      $nuggets_txt.=$this->unitTemplatesKind2($v['img'],$v['img_alt_'.Def\Opt::$lang],$v['img_title_'.Def\Opt::$lang],$v['id'],$v['price'],$v['hit'],$kind,$this->ves[Def\Opt::$lang],$v['cap_'.Def\Opt::$lang],$v['short_text_'.Def\Opt::$lang],'unit_1');
+                      }else{$nuggets_txt.=$this->unitTemplates($v['img'],$v['img_alt_'.Def\Opt::$lang],$v['img_title_'.Def\Opt::$lang],$v['id'],$v['price'],$v['hit'],$v['kind'],$this->ves[Def\Opt::$lang],$v['cap_'.Def\Opt::$lang],$v['short_text_'.Def\Opt::$lang],'unit_1');}
                   break;
 
-                  case 4:
+                  case 4://холодные напитки
                       $kind=json_decode($v['kind']);
-                      $cool_drink_txt.=$this->unitTemplatesKind2($v['img'],$v['img_alt_'.Def\Opt::$lang],$v['img_title_'.Def\Opt::$lang],$v['id'],$v['price'],$v['hit'],$kind,$this->vesH2O[Def\Opt::$lang],$v['cap_'.Def\Opt::$lang],$v['short_text_'.Def\Opt::$lang]);
+                      $cool_drink_txt.=$this->unitTemplatesKind2($v['img'],$v['img_alt_'.Def\Opt::$lang],$v['img_title_'.Def\Opt::$lang],$v['id'],$v['price'],$v['hit'],$kind,$this->vesH2O[Def\Opt::$lang],$v['cap_'.Def\Opt::$lang],$v['short_text_'.Def\Opt::$lang],'unit_0');
+                  break;
+
+                  case 5://горячие напитки
+                      $kind=json_decode($v['kind']);
+                      $hot_drink_txt.=$this->unitTemplatesKind2($v['img'],$v['img_alt_'.Def\Opt::$lang],$v['img_title_'.Def\Opt::$lang],$v['id'],$v['price'],$v['hit'],$kind,$this->vesH2O[Def\Opt::$lang],$v['cap_'.Def\Opt::$lang],$v['short_text_'.Def\Opt::$lang],'unit_0');
               }
           }
       }else{Def\Route::$module404=true;}
@@ -95,9 +100,9 @@ class IndexContent{
   }
 
 
-  private function unitTemplates($img,$img_alt,$img_title,$id,$price,$hit,$kind,$kind_ext,$cap,$short_text){
+  private function unitTemplates($img,$img_alt,$img_title,$id,$price,$hit,$kind,$kind_ext,$cap,$short_text,$unit_css='unit'){
       if($img!=''){$img='<img src="'.BurDef\SqlTable::getImgDirTable('food_img').$img.'" alt="'.$img_alt.'" title="'.$img_title.'">';}else{$img='';}
-      $txt='<div class="unit" data-id="'.$id.'" data-price="'.$price.'"><div class="unit_img">'.$img.'</div>';
+      $txt='<div class="'.$unit_css.'" data-id="'.$id.'" data-price="'.$price.'"><div class="unit_img">'.$img.'</div>';
       if($hit){$txt.='<div class="unit_hit"></div>';}
       ///если бургер шаблон
       $txt.='<div class="unit_kind_bur">'.$kind.' '.$kind_ext.'</div>';
@@ -109,7 +114,7 @@ class IndexContent{
   }
 
 //вид как у пиццы
-  private function unitTemplatesKind2($img,$img_alt,$img_title,$id,$price,$hit,$kind,$kind_ext,$cap,$short_text){
+  private function unitTemplatesKind2($img,$img_alt,$img_title,$id,$price,$hit,$kind,$kind_ext,$cap,$short_text,$unit_css='unit'){
         if($img!=''){$img='<img src="'.BurDef\SqlTable::getImgDirTable('food_img').$img.'" alt="'.$img_alt.'" title="'.$img_title.'">';}else{$img='';}
         $arr_kind_count=count($kind);
         $price=json_decode($price);
@@ -117,7 +122,7 @@ class IndexContent{
         for($i=0;$i<$arr_kind_count;$i++){
             $kind_html.='<div class="unit_kind_pizza'.($i==0?' unit_kind_pizza_select':'').'" onclick="selectUnit(this);" data-price="'.$price[$i].'">'.$kind[$i].'</div>';
         }
-        $txt='<div class="unit" data-id="'.$id.'" data-price="'.$price[0].'"><div class="unit_img">'.$img.'</div>';
+        $txt='<div class="'.$unit_css.'" data-id="'.$id.'" data-price="'.$price[0].'"><div class="unit_img">'.$img.'</div>';
         if($hit){$txt.='<div class="unit_hit"></div>';}
         $txt.='<div class="unit_kind"><span>'.$kind_ext.'</span>'.$kind_html.'</div>';;
         $txt.='<div class="unit_capt">'.$cap.'</div>';
