@@ -19,7 +19,6 @@
     <link rel="stylesheet" type="text/css" href="/common.css">
     <link rel="stylesheet" type="text/css" href="/burger_r.css">
     <link rel="stylesheet" type="text/css" href="/tile.css">
-    <link rel="stylesheet" type="text/css" href="/css.css">
 
 
     <script src="/burger.js"></script>
