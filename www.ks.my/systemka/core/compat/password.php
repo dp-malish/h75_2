@@ -118,7 +118,8 @@ if ( ! function_exists('password_hash'))
 		{
 			if (defined('MCRYPT_DEV_URANDOM'))
 			{
-				$options['salt'] = mcrypt_create_iv(16, MCRYPT_DEV_URANDOM);
+				//$options['salt'] = mcrypt_create_iv(16, MCRYPT_DEV_URANDOM);
+				$options['salt'] = md5(MCRYPT_DEV_URANDOM);
 			}
 			elseif (function_exists('openssl_random_pseudo_bytes'))
 			{
