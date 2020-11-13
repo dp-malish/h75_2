@@ -200,7 +200,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `partner_id`, `parent_id`, `left_key`, `right_key`, `level`, `provider`, `name`, `last_name`, `email`, `password`, `phone_number`, `skype`, `sex`, `date_register`, `avatar`, `activation_code`, `activation_status`, `advcash_ru`, `activate_year`, `activate_time_year`, `earn_last_year`, `all_earn`, `zabanen`) VALUES
-(1, 'FAsd8652RsTG', 'FAsd8652RsTG', 1, 2, 0, 'my_form_landing', 'Валентина', 'Витальевна', 'system@system.com', '123', '+7123456789', 'Не указан', 1, 1388829356, 'valentina_vitalievna.png', 'fhsdgreergr', 1, 'R123456789', 1, 1426716438, 0, 0, 0);
+(1, 'FAsd8652RsTG', 'FAsd8652RsTG', 1, 2, 0, 'my_form_landing', 'Валентина', 'Витальевна', 'system@system.com', '$2y$10$i07BvzakKFtEBS4XTnSsmuHnQh92WgrP6169VOZ7CdmVdFchQpnFK', '+7123456789', 'Не указан', 1, 1388829356, 'valentina_vitalievna.png', 'fhsdgreergr', 1, 'R123456789', 1, 1426716438, 0, 0, 0);
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц

@@ -407,7 +407,7 @@ class CI_Output {
 		// Note:  We use load_class() because we can't use $CI =& get_instance()
 		// since this function is sometimes called by the caching mechanism,
 		// which happens before the CI super object is available.
-		$BM =& load_class('Benchmark', 'core');
+
 		$CFG =& load_class('Config', 'core');
 
 		// Grab the super object if we can.
@@ -432,19 +432,6 @@ class CI_Output {
 		if ($this->cache_expiration > 0 && isset($CI) && ! method_exists($CI, '_output'))
 		{
 			$this->_write_cache($output);
-		}
-
-		// --------------------------------------------------------------------
-
-		// Parse out the elapsed time and memory usage,
-		// then swap the pseudo-variables with the data
-
-		$elapsed = $BM->elapsed_time('total_execution_time_start', 'total_execution_time_end');
-
-		if ($this->parse_exec_vars === TRUE)
-		{
-			$memory	= round(memory_get_usage() / 1024 / 1024, 2).'MB';
-			$output = str_replace(array('{elapsed_time}', '{memory_usage}'), array($elapsed, $memory), $output);
 		}
 
 		// --------------------------------------------------------------------
@@ -492,7 +479,7 @@ class CI_Output {
 
 			echo $output;
 			log_message('debug', 'Final output sent to browser');
-			log_message('debug', 'Total execution time: '.$elapsed);
+			//log_message('debug', 'Total execution time: '.$elapsed);
 			return;
 		}
 
@@ -529,7 +516,7 @@ class CI_Output {
 		}
 
 		log_message('debug', 'Final output sent to browser');
-		log_message('debug', 'Total execution time: '.$elapsed);
+		//log_message('debug', 'Total execution time: '.$elapsed);
 	}
 
 	// --------------------------------------------------------------------
