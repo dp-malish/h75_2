@@ -56,7 +56,10 @@ class IndexContent{
 
                   case 5://горячие напитки
                       $kind=json_decode($v['kind']);
+                      if(is_array($kind)){
                       $hot_drink_txt.=$this->unitTemplatesKind2($v['img'],$v['img_alt_'.Def\Opt::$lang],$v['img_title_'.Def\Opt::$lang],$v['id'],$v['price'],$v['hit'],$kind,$this->vesH2O[Def\Opt::$lang],$v['cap_'.Def\Opt::$lang],$v['short_text_'.Def\Opt::$lang],'unit_0');
+                      }else{$hot_drink_txt.=$this->unitTemplates($v['img'],$v['img_alt_'.Def\Opt::$lang],$v['img_title_'.Def\Opt::$lang],$v['id'],$v['price'],$v['hit'],$v['kind'],$this->ves[Def\Opt::$lang],$v['cap_'.Def\Opt::$lang],$v['short_text_'.Def\Opt::$lang],'unit_0');}
+                  break;
               }
           }
       }else{Def\Route::$module404=true;}
