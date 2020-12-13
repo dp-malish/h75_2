@@ -47,16 +47,34 @@ Opt::$main_content.='<main>
             <section>
             <div class="land_fon_c_l rel">
                 <div class="fotorama" data-allowfullscreen="native" data-nav="thumbs" data-transition="crossfade" data-loop="true" data-autoplay="7000" data-keyboard="true" >
-                    <img src="/img/fast_order/dbpic.php?i=black" alt="Кальян MobileSmoke - чёрный">
-                    <img src="/img/fast_order/dbpic.php?i=black_box" alt="Кальян MobileSmoke - чёрный в коробке">
-                    <img src="/img/fast_order/dbpic.php?i=black_kind" alt="Кальян MobileSmoke">
-                    <img src="/img/fast_order/dbpic.php?i=white" alt="Кальян MobileSmoke - белый">
-                    <img src="/img/fast_order/dbpic.php?i=white_box" alt="Кальян MobileSmoke - белый в коробке">
-                    <img src="/img/fast_order/dbpic.php?i=box" alt="Кальян MobileSmoke в коробке">
-                    <img src="/img/fast_order/dbpic.php?i=fon" alt="Кальян MobileSmoke">
-                    <img src="/img/fast_order/dbpic.php?i=red" alt="Кальян MobileSmoke - красный">
-                    <img src="/img/fast_order/dbpic.php?i=green" alt="Кальян MobileSmoke - зелёный">
-                    <img src="/img/fast_order/dbpic.php?i=blue" alt="Кальян MobileSmoke - синий">
+                    <img src="/img/mobilesmoke/dbpic.php?i=box" alt="MobileSmoke - упаковка">
+                        <img src="/img/mobilesmoke/dbpic.php?i=box_one" alt="MobileSmoke - упаковка">
+                        <img src="/img/mobilesmoke/dbpic.php?i=white" alt="MobileSmoke - белый">
+                        <img src="/img/mobilesmoke/dbpic.php?i=red" alt="MobileSmoke - красный">
+                        <img src="/img/mobilesmoke/dbpic.php?i=blue" alt="MobileSmoke - синий">
+                        <img src="/img/mobilesmoke/dbpic.php?i=smoke_blue" alt="MobileSmoke - синий дым">
+                        <img src="/img/mobilesmoke/dbpic.php?i=smoke_blue_box" alt="MobileSmoke - синий дым">
+                        <img src="/img/mobilesmoke/dbpic.php?i=smoke_green_box" alt="MobileSmoke - зелёный дым">
+                        <img src="/img/mobilesmoke/dbpic.php?i=smoke_red_box" alt="MobileSmoke - красный дым">
+                        <img src="/img/mobilesmoke/dbpic.php?i=ugol" alt="MobileSmoke - уголь">
+                        <img src="/img/mobilesmoke/dbpic.php?i=smoke_red_box_2" alt="MobileSmoke - красный дым">
+                        <img src="/img/mobilesmoke/dbpic.php?i=smoke_white_box" alt="MobileSmoke - красный дым">
+                        <img src="/img/mobilesmoke/dbpic.php?i=palma" alt="MobileSmoke">
+                        <img src="/img/mobilesmoke/dbpic.php?i=palma2" alt="MobileSmoke">
+                        <img src="/img/mobilesmoke/dbpic.php?i=for_hom" alt="MobileSmoke">
+                        <img src="/img/mobilesmoke/dbpic.php?i=table" alt="MobileSmoke">
+                        <img src="/img/mobilesmoke/dbpic.php?i=table2" alt="MobileSmoke">
+                        <img src="/img/mobilesmoke/dbpic.php?i=table_ny" alt="MobileSmoke">
+                        <img src="/img/mobilesmoke/dbpic.php?i=table3" alt="MobileSmoke">
+                        <img src="/img/mobilesmoke/dbpic.php?i=table_love" alt="MobileSmoke">
+                        <img src="/img/mobilesmoke/dbpic.php?i=table4" alt="MobileSmoke">
+                        <img src="/img/mobilesmoke/dbpic.php?i=table5" alt="MobileSmoke">
+                        <img src="/img/mobilesmoke/dbpic.php?i=table6" alt="MobileSmoke">
+                        <img src="/img/mobilesmoke/dbpic.php?i=box_red" alt="MobileSmoke - упаковка">
+                        <img src="/img/mobilesmoke/dbpic.php?i=box_pur" alt="MobileSmoke - упаковка">
+                        <img src="/img/mobilesmoke/dbpic.php?i=box_oran" alt="MobileSmoke - упаковка">
+                        <img src="/img/mobilesmoke/dbpic.php?i=box_blue" alt="MobileSmoke - упаковка">                        
+                        <img src="/img/mobilesmoke/dbpic.php?i=ugol2" alt="MobileSmoke - уголь">
                 </div>
             </div>
             <div class="land_fon_c_r rel">

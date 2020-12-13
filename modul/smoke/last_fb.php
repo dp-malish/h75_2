@@ -85,17 +85,20 @@ Opt::$main_content.='<!DOCTYPE html><html lang="ru"><head><link rel="shortcut ic
                         <img src="/img/mobilesmoke/dbpic.php?i=smoke_white_box" alt="MobileSmoke - красный дым">
                         <img src="/img/mobilesmoke/dbpic.php?i=palma" alt="MobileSmoke">
                         <img src="/img/mobilesmoke/dbpic.php?i=palma2" alt="MobileSmoke">
-                        
-                        
-                        
-                        
-                        <img src="/img/fast_order/dbpic.php?i=white" alt="MobileSmoke - белый">
-                        <img src="/img/fast_order/dbpic.php?i=white_box" alt="MobileSmoke - белый в коробке">
-  
-                        <img src="/img/fast_order/dbpic.php?i=fon" alt="MobileSmoke">
-
-                        <img src="/img/fast_order/dbpic.php?i=green" alt="MobileSmoke - зелёный">
-                        
+                        <img src="/img/mobilesmoke/dbpic.php?i=for_hom" alt="MobileSmoke">
+                        <img src="/img/mobilesmoke/dbpic.php?i=table" alt="MobileSmoke">
+                        <img src="/img/mobilesmoke/dbpic.php?i=table2" alt="MobileSmoke">
+                        <img src="/img/mobilesmoke/dbpic.php?i=table_ny" alt="MobileSmoke">
+                        <img src="/img/mobilesmoke/dbpic.php?i=table3" alt="MobileSmoke">
+                        <img src="/img/mobilesmoke/dbpic.php?i=table_love" alt="MobileSmoke">
+                        <img src="/img/mobilesmoke/dbpic.php?i=table4" alt="MobileSmoke">
+                        <img src="/img/mobilesmoke/dbpic.php?i=table5" alt="MobileSmoke">
+                        <img src="/img/mobilesmoke/dbpic.php?i=table6" alt="MobileSmoke">
+                        <img src="/img/mobilesmoke/dbpic.php?i=box_red" alt="MobileSmoke - упаковка">
+                        <img src="/img/mobilesmoke/dbpic.php?i=box_pur" alt="MobileSmoke - упаковка">
+                        <img src="/img/mobilesmoke/dbpic.php?i=box_oran" alt="MobileSmoke - упаковка">
+                        <img src="/img/mobilesmoke/dbpic.php?i=box_blue" alt="MobileSmoke - упаковка">                        
+                        <img src="/img/mobilesmoke/dbpic.php?i=ugol2" alt="MobileSmoke - уголь">
                     </div>
                 </div>
                 <div class="land_fon_c_r rel">
