@@ -8,7 +8,15 @@ use incl\uni\Def as UniDef;
 class View{
 
     function __construct(){
-        Def\Opt::$main_content.=UniDef\OptUni::$currency[0][1];
+
+
+
+
+
+        Def\Opt::$main_content.=UniDef\OptUni::CURRENCY[0][0];
+
+
+
     }
 
 
