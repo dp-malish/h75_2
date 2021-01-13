@@ -32,10 +32,37 @@ class View{
 
                 //доход = сумма/100*процент
                 $arrBank[$v['id']]['income'].=$v['amount']/100*$v['percent'];
-                //прибыль = доход минус 20%
-                $arrBank[$v['id']]['profit'].=$arrBank[$v['id']]['income']-($arrBank[$v['id']]['income']*0.2);
+                //прибыль = доход минус 20% и округлим
+                $arrBank[$v['id']]['profit'].=round($arrBank[$v['id']]['income']-($arrBank[$v['id']]['income']*0.2),2);
+
+                //доход мес (30 дней) = (%/365*30)*сумма/100
+                $arrBank[$v['id']]['income_month'].=($v['percent']/365*30)*$v['amount']/100;
+                //прибыль мес доход мес-(доход мес*0,2)
+                $arrBank[$v['id']]['profit_month'].=round($arrBank[$v['id']]['income_month']-($arrBank[$v['id']]['income_month']*0.2),2);
+                $arrBank[$v['id']]['date_closing'].=$v['date_closing'];
 
             }
+            $arrBankTotal=[];
+            foreach ($arrBank as $val){
+
+                //if($val['bank'])
+
+                if($val['currency']==0){
+                    $arrBankTotal[$val['bank']]['usd']+=$val['amount'];
+                    $arrBankTotal[$val['bank']]['usd_profit']+=$val['profit'];
+                    $arrBankTotal[$val['bank']]['usd_profit_month']+=$val['profit_month'];
+
+                }elseif($val['currency']==1){
+                    $arrBankTotal[$val['bank']]['hrn'] += $val['amount'];
+                    $arrBankTotal[$val['bank']]['hrn_profit']+=$val['profit'];
+                    $arrBankTotal[$val['bank']]['hrn_profit_month']+=$val['profit_month'];
+                }
+                echo $val['date_closing'] . '<br>';
+            }
+
+
+
+
         }
         /* if ($res) {
 
@@ -74,6 +101,9 @@ class View{
          }*/
 
         var_dump($arrBank);
+
+        echo '<br><br><br>';
+        print_r($arrBankTotal);
 
 
 
