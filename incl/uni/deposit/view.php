@@ -44,26 +44,45 @@ class View{
             }
             $arrBankTotal=[];
             foreach ($arrBank as $val){
-
-                //if($val['bank'])
-
                 if($val['currency']==0){
                     $arrBankTotal[$val['bank']]['usd']+=$val['amount'];
+                    $arrBankTotal[$val['bank']]['usd_count']++;
                     $arrBankTotal[$val['bank']]['usd_profit']+=$val['profit'];
                     $arrBankTotal[$val['bank']]['usd_profit_month']+=$val['profit_month'];
-
                 }elseif($val['currency']==1){
                     $arrBankTotal[$val['bank']]['hrn'] += $val['amount'];
+                    $arrBankTotal[$val['bank']]['hrn_count']++;
                     $arrBankTotal[$val['bank']]['hrn_profit']+=$val['profit'];
                     $arrBankTotal[$val['bank']]['hrn_profit_month']+=$val['profit_month'];
                 }
                 echo $val['date_closing'] . '<br>';
             }
-
-
-
-
         }
+        Def\Opt::$main_content .='<table border="1" align="center"><tr><td>Банк</td><td>Назначение</td><td>Процент</td><td colspan="2">Сумма</td>
+             <td colspan="2">Доход</td><td colspan="2">Прибыль</td></tr>';
+
+        $flag=0;
+        Def\Opt::$main_content.=$flag;
+        foreach($arrBank as $k => $vk){
+
+
+
+            if($flag==$vk['bank']){
+            $rowspan=$arrBankTotal[$vk['bank']]['usd_count']+$arrBankTotal[$vk['bank']]['hrn_count'];
+            $flag=$vk['bank'];
+            }else{$rowspan=0;}
+
+
+            Def\Opt::$main_content.='<tr>';
+            Def\Opt::$main_content.='<td rowspan="'.$rowspan.'">'.$vk['bank_txt'].'</td>';
+            Def\Opt::$main_content.='<td>'.$vk['target'].'</td>';
+
+
+            Def\Opt::$main_content.='</tr>';
+        }
+        Def\Opt::$main_content .='</table>';
+
+
         /* if ($res) {
 
              Def\Opt::$main_content .='<table border="1" align="center"><tr><td>Банк</td><td>Назначение</td><td>Процент</td><td colspan="2">Сумма</td>
@@ -87,35 +106,15 @@ class View{
 
 
                  //Def\Opt::$main_content.='Валюта - '.UniDef\OptUni::CURRENCY[$v['currency']][0]. '<br>';
-
                  Def\Opt::$main_content .='</tr>';
              }
              Def\Opt::$main_content .='</table>';
-
-
              Def\Opt::$main_content.=UniDef\OptUni::BANK[$v['bank']][0];
-
-
-
-
          }*/
-
         var_dump($arrBank);
-
-        echo '<br><br><br>';
+        echo '<br><br>';
         print_r($arrBankTotal);
 
-
-
-
-
     }
-
-
-public function Info(){
-
-
-}
-
-
+public function Info(){}
 }
