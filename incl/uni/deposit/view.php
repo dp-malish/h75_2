@@ -70,13 +70,14 @@ class View{
                 $rowspan=' rowspan="'.($arrBankTotal[$vk['bank']]['usd_count']+$arrBankTotal[$vk['bank']]['hrn_count']).'"';
                 $flag=$vk['bank'];
                 Def\Opt::$main_content.='<td'.$rowspan.'>'.$vk['bank_txt'].'</td>';
-            }//else{$rowspan="";}
-
+            }
             Def\Opt::$main_content.='<td>'.$vk['target'].'</td>';
             Def\Opt::$main_content.='<td>'.$vk['percent'].'</td>';
-            Def\Opt::$main_content.='<td>'.$vk['amount_txt'].'</td>';
-
-
+               if($vk['currency']==0){
+                   Def\Opt::$main_content.='<td>'.$vk['amount_txt'].'</td><td></td>';
+               }else{
+                   Def\Opt::$main_content.='<td></td><td>'.$vk['amount_txt'].'</td>';
+               }
             Def\Opt::$main_content.='</tr>';
         }
         Def\Opt::$main_content .='</table>';
