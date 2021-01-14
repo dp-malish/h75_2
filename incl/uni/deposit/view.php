@@ -61,21 +61,20 @@ class View{
         Def\Opt::$main_content .='<table border="1" align="center"><tr><td>Банк</td><td>Назначение</td><td>Процент</td><td colspan="2">Сумма</td>
              <td colspan="2">Доход</td><td colspan="2">Прибыль</td></tr>';
 
-        $flag=0;
-        Def\Opt::$main_content.=$flag;
-        foreach($arrBank as $k => $vk){
-
-
-
-            if($flag==$vk['bank']){
-            $rowspan=$arrBankTotal[$vk['bank']]['usd_count']+$arrBankTotal[$vk['bank']]['hrn_count'];
-            $flag=$vk['bank'];
-            }else{$rowspan=0;}
-
+        $flag=-1;
+           foreach($arrBank as $k => $vk){
 
             Def\Opt::$main_content.='<tr>';
-            Def\Opt::$main_content.='<td rowspan="'.$rowspan.'">'.$vk['bank_txt'].'</td>';
+
+            if($flag!=$vk['bank']){
+                $rowspan=' rowspan="'.($arrBankTotal[$vk['bank']]['usd_count']+$arrBankTotal[$vk['bank']]['hrn_count']).'"';
+                $flag=$vk['bank'];
+                Def\Opt::$main_content.='<td'.$rowspan.'>'.$vk['bank_txt'].'</td>';
+            }//else{$rowspan="";}
+
             Def\Opt::$main_content.='<td>'.$vk['target'].'</td>';
+            Def\Opt::$main_content.='<td>'.$vk['percent'].'</td>';
+            Def\Opt::$main_content.='<td>'.$vk['amount_txt'].'</td>';
 
 
             Def\Opt::$main_content.='</tr>';
