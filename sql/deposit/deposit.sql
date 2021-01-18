@@ -8,4 +8,3 @@ CREATE TABLE IF NOT EXISTS deposit(
   date_opening date NOT NULL COMMENT 'дата открытия',
   date_closing date NOT NULL COMMENT 'дата закрытия',
   PRIMARY KEY (id)
-)ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
