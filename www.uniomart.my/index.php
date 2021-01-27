@@ -24,7 +24,7 @@ if($_SERVER['REQUEST_URI']!='/'){
 
             case 'deposit':new \incl\uni\Deposit\View();break;
 
-
+            case 'nomenclature':new \incl\uni\Store\Nomenclature('insert');break;
 
             default:new \incl\win\Def\DefContent();
         }
