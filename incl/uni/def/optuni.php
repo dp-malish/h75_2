@@ -40,7 +40,11 @@ class OptUni{
     ];
     const MANUFACTURER=[
         ['NoName'],
-        ['']
+        ['Asus']
+    ];
+    const PROVIDER=[
+        ['MobiMag'],
+        ['Microtron']
     ];
 
 

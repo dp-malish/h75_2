@@ -1,3 +1,4 @@
+<script async src="/js/common.php"></script>
 <form id="addimg" class="form" enctype="multipart/form-data" method="post" onsubmit="return FileUpload();">
     <input type="hidden" name="imgadd" value="1">
     <select id="arrHEADING" name="arrHEADING" onchange="setSection()"><option value="">Выбрать заголовка</option>
@@ -14,12 +15,32 @@
     </select>
     <br>
     <br>
-    <input type="text" placeholder="Название продукта" size="88">
+    <input type="text" placeholder="Название продукта" size="80">
+    <br>
+    <br>
+    <input type="text" placeholder="Штрих код продукта" size="80">
+    <br>
+    <br>
+    <select id="arrMANUFACTURER" name="arrMANUFACTURER"><option value="" selected>Выбрать производителя</option>
+        <?php
+        $arrMANUFACTURER=\incl\uni\def\OptUni::MANUFACTURER;
+        for($i=0;$i<count($arrMANUFACTURER);$i++){echo'<option value="'.$i.'">'.$arrMANUFACTURER[$i][0].'</option>';}?>
+    </select>
+    <br>
+    <br>
+    <select id="arrPROVIDER" name="arrPROVIDER"><option value="" selected>Выбрать поставщика</option>
+        <?php
+        $arrPROVIDER=\incl\uni\def\OptUni::PROVIDER;
+        for($i=0;$i<count($arrPROVIDER);$i++){echo'<option value="'.$i.'">'.$arrPROVIDER[$i][0].'</option>';}?>
+    </select>
+    <br>
+    <br>
+    <input type="text" placeholder="Код продукта поставщика" size="80">
     <br>
     <br>
 
-    <!--<input type="file" id="imgfile" name="imgfile" accept="image/jpeg,image/png">
-    <input type="submit" value="Загрузить (jpg/jpeg/png8)">-->
+    <!--<input type="file" id="imgfile" name="imgfile" accept="image/jpeg,image/png">-->
+    <input type="submit" value="Загрузить...">
 </form>
 
 
@@ -38,8 +59,6 @@
         var x=parseInt(arrHEADING.value, 10)+1;
         document.cookie = "arrHEADING="+x+"; path=/; expires=" + date.toUTCString();
     }
-    //alert(document.cookie); // показываем все куки
-    //var r=document.cookie.match("(^|;) ?imgsection=([^;]*)(;|$)");
     // возвращает куки с указанным name,
     // или undefined, если ничего не найдено
     function getCookie(name) {
@@ -52,4 +71,23 @@
 
     if(r!="NaN")document.getElementById('arrHEADING').options[r].selected=true;
     else alert('Заголовок не забит :-)');
+
+
+    //ajaxPostSend("add_update=1&id="+GetUserInfoView.id+
+    //                "&f="+GetUserInfoView.f+
+    //                "&i="+GetUserInfoView.i+
+    //                "&o="+GetUserInfoView.o+
+    //                "&tel="+GetUserInfoView.tel+
+    //                "&tel2="+GetUserInfoView.tel2+
+    //                "&mail="+GetUserInfoView.mail+
+    //                "&level="+GetUserInfoView.level+
+    //                "&note="+GetUserInfoView.note
+    //                ,callbackAddUser,true,true,"/ajax/site/aj_login.php");
+
+    function callbackAddUser(arr){
+        alert(arr.answer);
+        //modalloadFormAnswer("<p>"+arr.answer+"</p>");
+
+    }
+
 </script>
