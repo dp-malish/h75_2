@@ -1,6 +1,6 @@
 <script async src="/js/common.php"></script>
-<form id="addimg" class="form" enctype="multipart/form-data" method="post" onsubmit="return FileUpload();">
-    <input type="hidden" name="imgadd" value="1">
+<form id="addimg" class="form">
+
     <select id="arrHEADING" name="arrHEADING" onchange="setSection()"><option value="">Выбрать заголовка</option>
         <?php
         $arrHEADING=\incl\uni\def\OptUni::HEADING;
@@ -15,7 +15,7 @@
     </select>
     <br>
     <br>
-    <input type="text" placeholder="Название продукта" size="80">
+    <input type="text" id="productName" placeholder="Название продукта" size="80">
     <br>
     <br>
     <input type="text" placeholder="Штрих код продукта" size="80">
@@ -38,20 +38,30 @@
     <input type="text" placeholder="Код продукта поставщика" size="80">
     <br>
     <br>
+    <div id="nomInsAns"></div>
+    <!--<input type="file" id="imgfile" name="imgfile" accept="image/jpeg,image/png">
+    <input type="submit" value="Загрузить...">-->
 
-    <!--<input type="file" id="imgfile" name="imgfile" accept="image/jpeg,image/png">-->
-    <input type="submit" value="Загрузить...">
-</form>
+</form> <button onclick="NomInsert();" >Загрузить...</button>
 
 
 <script>
-    function FileUpload(){
+    function NomInsert(){
         if(document.getElementById('arrHEADING').value==''){
-            alert("Не выбрана таблица ;-)");return false;
+            alert("Не выбрана таблица ;-)");
         }else{
-            if(imgfile.value==""){
-                alert("Файл не выбран ;-)");return false;
-            }else return true;}
+
+                ajaxPostSend("insert-nomenklature=1&arrHEADING="+document.getElementById('arrHEADING').value+
+                                "&arrCATEGORY="+document.getElementById('arrCATEGORY').value+
+                                "&productName="+document.getElementById('productName').value+
+                //                "&o="+GetUserInfoView.o+
+                //                "&tel="+GetUserInfoView.tel+
+                //                "&tel2="+GetUserInfoView.tel2+
+                //                "&mail="+GetUserInfoView.mail+
+                //                "&level="+GetUserInfoView.level+
+                //                "&note="+GetUserInfoView.note
+                                ,callbackNomInsert,true,true,"/ajax/store/ajax_store.php");
+            }
     }
     //document.getElementById('addimg').setAttribute("action",decodeURI(window.location.pathname));
     function setSection(){
@@ -73,18 +83,9 @@
     else alert('Заголовок не забит :-)');
 
 
-    //ajaxPostSend("add_update=1&id="+GetUserInfoView.id+
-    //                "&f="+GetUserInfoView.f+
-    //                "&i="+GetUserInfoView.i+
-    //                "&o="+GetUserInfoView.o+
-    //                "&tel="+GetUserInfoView.tel+
-    //                "&tel2="+GetUserInfoView.tel2+
-    //                "&mail="+GetUserInfoView.mail+
-    //                "&level="+GetUserInfoView.level+
-    //                "&note="+GetUserInfoView.note
-    //                ,callbackAddUser,true,true,"/ajax/site/aj_login.php");
 
-    function callbackAddUser(arr){
+
+    function callbackNomInsert(arr){
         alert(arr.answer);
         //modalloadFormAnswer("<p>"+arr.answer+"</p>");
 

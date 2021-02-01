@@ -16,7 +16,7 @@ class Nomenclature{
 
      Def\Opt::$main_content.=Def\Cache_File::$cash->SendHTML('../model/uni/store/FormAddNomenklature.php');
 
-     Def\Opt::$main_content.='insert';
+     //Def\Opt::$main_content.='insert';
 
  }
 
