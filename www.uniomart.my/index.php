@@ -1,8 +1,36 @@
 <?php
 namespace lib\Def;
-use incl\win\Def\Template;
 
-Error_Reporting(E_ALL & ~E_NOTICE);ini_set('display_errors',1);
+
+
+
+//1890176882:AAHOxChA95OIsZSeDF29uRgNvKQesz0cuLk
+//use incl\win\Def\Template;
+
+$GET_INPUT=file_get_contents('php://input');
+
+const TOKEN='1890176882:AAHOxChA95OIsZSeDF29uRgNvKQesz0cuLk';
+
+const API_URL='https://api.telegram.org/bot';
+
+function printAnswer($str){
+    echo '<pre>';
+    print_r($str);
+    echo '</pre>';
+}
+
+function getTelegramApi($metod,$options=null){
+    $str_request=API_URL.TOKEN.'/'.$metod;
+    if($options){
+        $str_request.='?'.http_build_query($options);
+    }
+    $request=file_get_contents($str_request);
+    return json_decode($request,1);
+}
+
+
+
+/*Error_Reporting(E_ALL & ~E_NOTICE);ini_set('display_errors',1);
 set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register();
 $Opt=new Opt('uni');//Def opt
 
@@ -32,7 +60,7 @@ if($_SERVER['REQUEST_URI']!='/'){
 }else{Route::$index=1;}if(Route::$module404){Route::modul404();}
 
 
-if(Route::$index){/*new Template();include'../modul/win/main.php';*/}
+//if(Route::$index){new Template();include'../modul/win/main.php';}*/
 
 //left - all stranici
 //require'../blocks/win/menu/l/remont_'.$Opt::$lang.'.php';
@@ -43,4 +71,4 @@ if(Route::$index){/*new Template();include'../modul/win/main.php';*/}
 //require'../blocks/win/common/head.php';
 //require '../blocks/win/common/b_header.php';require'../blocks/win/common/header.php';require '../blocks/win/common/a_header.php';require '../blocks/win/common/l_column.php';require'../blocks/win/common/body_two_ext.php';require '../blocks/win/common/b_footer.php';require'../blocks/win/common/foot.php';
 
-echo $Opt::$main_content;
+//echo $Opt::$main_content;
