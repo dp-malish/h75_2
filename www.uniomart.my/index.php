@@ -2,7 +2,9 @@
 namespace lib\Def;
 
 
+//https://www.youtube.com/watch?v=N3GW7_-DIu4
 
+//https://www.youtube.com/watch?v=4H1Kcww3izY
 
 //1890176882:AAHOxChA95OIsZSeDF29uRgNvKQesz0cuLk
 //use incl\win\Def\Template;
@@ -28,7 +30,15 @@ function getTelegramApi($metod,$options=null){
     return json_decode($request,1);
 }
 
+function setHook($set=1){
+    $url='https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+    printAnswer(getTelegramApi('setWebhook',[
+        'url'=>$set?$url:''
+    ]));
+    exit();
+}
 
+setHook(1);
 
 /*Error_Reporting(E_ALL & ~E_NOTICE);ini_set('display_errors',1);
 set_include_path(get_include_path().PATH_SEPARATOR.'../');spl_autoload_register();
