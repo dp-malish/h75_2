@@ -24,7 +24,9 @@ $message = $data['message']['text'];
 # Формируем массив для отправления в телеграм
 $params = [
     'chat_id' => $data['message']['chat']['id'],
-    'text'    => $message.' - Мой Великий Белый Господин!!!'
+    'text'    => $message.' - Мой Великий Белый Господин!!!',
+    'request_contact'    => false,
+    'request_location'    => false
 ];
 
 # Отправляем запрос в телеграм
